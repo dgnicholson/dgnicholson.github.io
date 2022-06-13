@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta http-equiv=content-security-policy content="default-src 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' https://fonts.gstatic.com; frame-src 'self' https:; img-src 'self' data: https:; connect-src 'self' https:; worker-src blob:;">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Create a Couchbase Capella Account | Couchbase Docs</title>
+<title>Creating Free Account &amp; Cluster | Couchbase Docs</title>
 <link rel="canonical" href="https://dgnicholson.github.io/AV-36621/cloud/get-started/create-account.html">
 <link rel="stylesheet" href="../../_/css/site.css">
 <script src="../../_/js/vendor/jquery.js"></script>
+<meta name="description" content="You need to create a Couchbase Capella account to start using Capella to manage your data.">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 
 
@@ -693,7 +694,7 @@
 </div>
 <article class="doc">
 <div class="page-heading-title">
-<h1 class="page">Create a Couchbase Capella Account</h1>
+<h1 class="page">Creating Free Account &amp; Cluster</h1>
 </div>
 <div class="contributor-list-box">
 <span class="last-commit-date" id="commitdate">    </span>
@@ -716,11 +717,16 @@ You need to create a Couchbase Capella account to start using Capella to manage 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="paragraph">
-<p>If you are starting a Sales Assisted or Proof-of-Concept account, and you have been provided an Activation ID, first follow <a href="#sign-up-free-trial">Sign Up for Your Free Trial</a> on this page, then you will be shown how to activate your account on the next page.</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p>If you are starting a Sales Assisted or Proof-of-Concept account and you have been provided an Activation ID, first follow <a href="#sign-up-free-trial">Sign Up for Your Free Trial</a> on this page.
+Next, on the <a href="#getting-started">Getting Started</a> page, click the <b class="button">Activate Now</b> button and add your Activation ID.</p>
+</li>
+<li>
 <p>If you&#8217;ve received an invitation to join Couchbase Capella from someone within your organization, refer to  <a href="#sign-up-invitation">Accept an Invitation to Join Couchbase Capella</a> below for instructions.</p>
+</li>
+</ul>
 </div>
 </td>
 </tr>
@@ -792,12 +798,13 @@ Enter the following information to create your account:</p>
 <p>Review the <a href="https://www.couchbase.com/CapellaCSSA10192021" target="_blank" rel="noopener">Terms of Service</a>.</p>
 </li>
 <li>
-<p>Click <b class="button">Sign Up</b> to accept the Terms of Service and create your account.</p>
+<p>Click <b class="button">Get started</b> to accept the Terms of Service and create your account.</p>
 </li>
 <li>
 <p>Confirm your account.</p>
 <div class="paragraph">
-<p>An email will be sent to you asking you to confirm your email address. Once you click the confirmation link, your account will be confirmed and you’ll be able to sign into Couchbase Cloud at <a href="https://cloud.couchbase.com/">cloud.couchbase.com</a>.</p>
+<p>Couchbase will send you an email asking you to verify your email address.
+Once you click the verification link, your account is confirmed and you&#8217;ll be able to sign into Couchbase Capella at <a href="https://cloud.couchbase.com/">cloud.couchbase.com</a>.</p>
 </div>
 </li>
 </ol>
@@ -805,89 +812,98 @@ Enter the following information to create your account:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="deploying-your-cluster"><a class="anchor" href="#deploying-your-cluster"></a>Deploying Your Cluster</h2>
+<h2 id="getting-started"><a class="anchor" href="#getting-started"></a>Deploying Your Cluster</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>After signing in, you’ll be brought to a Getting Started page.</p>
+<p>After signing in, you&#8217;ll be brought to a Getting Started page.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/signing-up-ui-overview/2B.png" alt="2B">
+<img src="_images/signing-up-ui-overview/2C.png" alt="The first 'Get Started' page where you configure and deploy a trial cluster.">
 </div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Select your preferred region for the trial.</p>
+<p>In the Deploy Trial Cluster block, choose the cloud provider where you want to deploy your trial cluster.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Google Cloud is only available as a cloud provider option for trial clusters at this time.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select a region in your chosen cloud provider where Capella will deploy this new trial cluster.</p>
 </li>
 <li>
 <p>Leave the CIDR block to the default.</p>
 </li>
 <li>
-<p>Click <b class="button">Deploy Now</b>.</p>
+<p>Click <b class="button">Deploy Cluster</b>.</p>
+<div class="paragraph">
+<p>You are taken to another <em>Getting Started</em> page.</p>
+</div>
 </li>
-<li>
-<p>You will now be taken to the <em>Getting Started with Your Free Trial</em> page.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="control-plane-ui-overview"><a class="anchor" href="#control-plane-ui-overview"></a>Control Plane UI Overview</h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
 <li>
 <p>Couchbase Capella will proceed with automatically deploying the cluster.</p>
-</li>
-<li>
-<p>A cluster will generally take under 2 minutes to deploy.</p>
-</li>
-</ol>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A cluster will generally take under 2 minutes to deploy.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>While Capella prepares the cluster for you, the <em>Getting Started</em> page shows the status of the cluster and links to <a href="#learning">learning resources</a>.
+When the cluster is ready, more sections are shown that provide direct links to various cluster management tools.
+Links to the cluster itself and the Capella contact form are at the top of the page.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/signing-up-ui-overview/3b.png" alt="3b">
+<img src="_images/signing-up-ui-overview/3c.png" alt="The 'Get Started' page showing your trial cluster status with a list of links and resources.">
 </div>
 </div>
 <div class="paragraph">
-<p>In the middle section, you will see three sections: <em>Set Up</em>, <em>Access</em>, and <em>Work With Data</em>.</p>
+<p>The three sections on the <em>Getting Started</em> page include <em>Work With Data</em>, <em>Access</em>, and <em>Learning Resources</em>.</p>
 </div>
+<div class="openblock">
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Set Up</strong>: Provides a link to the Clusters area, the Welcome Video and this tutorial.</p>
+<p><strong>Work With Data</strong>: Links to the pre-loaded <em>travel-sample</em> bucket, documents within this bucket, its indexes, and the <a href="../clusters/query-service/query-workbench.html" class="page">Query Workbench tool</a>.
+You will also find a link to the Import tab in your cluster where you can find and add more sample buckets.</p>
 </li>
 <li>
-<p><strong>Access</strong>: Provides links to establishing credentials for external database access and the area for setting up allowed IP addresses.</p>
+<p><strong>Access</strong>: Provides a link to the Connect tab in your cluster where you can add your IP to the cluster&#8217;s list of <a href="../clusters/allow-ip-address.html" class="page">allowed IPs</a> and <a href="../clusters/manage-database-users.html" class="page">configure database credentials</a>.</p>
 </li>
 <li>
-<p><strong>Work With Data</strong>: Links to the sample data import tool.</p>
+<p><a id="learning"></a><strong>Learning Resources</strong>: Provides links to the <a href="https://www.youtube.com/watch?v=46715VbaHvk">Get Started with Couchbase Capella Video</a>, this getting started guide, the <em>Create Cluster</em> page, and the <a href="https://forums.couchbase.com/c/couchbase-capella/41">Couchbase Capella forum</a>.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>On the right, you will see three sections: <em>Cluster Status</em>, <em>What’s Next</em>, and <em>Want to Know More?</em>.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Cluster Status</strong>: Links to where you can see all of your database clusters.</p>
-</li>
-<li>
-<p><strong>What’s Next</strong>: Links to many helpful resources and access to the Capella Forum.</p>
-</li>
-<li>
-<p><strong>Want to Know More?</strong>: Here you can contact the Couchbase Team.</p>
-</li>
-</ul>
 </div>
 <div class="paragraph">
-<p>On the left, you will see the main navigation items, like <em>Clusters</em>, <em>Projects</em>, and <em>Users</em>.</p>
+<p>On the left side of the page, you will see the main navigation items, like <em>Clusters</em>, <em>Projects</em>, and <em>Users</em>.</p>
 </div>
-<div class="paragraph">
+</li>
+<li>
 <p>Now move on to <a href="#next-steps">Next Steps</a> below.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -895,8 +911,19 @@ Enter the following information to create your account:</p>
 <h2 id="sign-up-invitation"><a class="anchor" href="#sign-up-invitation"></a>Accept an Invitation to Join Couchbase Capella</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If an existing Couchbase Capella user invites you to their organization, you will receive an email inviting you to create a new Couchbase Capella account.
-(If you already have a Capella account under the same email address, you will instead receive an email inviting you to join the new organization.)</p>
+<p>If an existing Couchbase Capella user invites you to their organization, you will receive an email inviting you to create a new Couchbase Capella account.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you already have a Capella account under the same email address an invitation was sent to, you will instead receive an email inviting you to join the new organization.
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -925,11 +952,7 @@ Enter the following information to create your account:</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>Once your account has been confirmed, you can use your credentials at <a href="https://cloud.couchbase.com/" target="_blank" rel="noopener">cloud.couchbase.com</a> to log into the Couchbase Capella UI.
-When you log in for the first time, you&#8217;ll be brought to the Dashboard of the organization you were invited to.</p>
-</div>
-<div class="paragraph">
-<p>Feel free to move on to <a href="#next-steps">Next Steps</a> below.</p>
+<p>Once your account is confirmed, you can use your credentials at <a href="https://cloud.couchbase.com/" target="_blank" rel="noopener">cloud.couchbase.com</a> to log into the Couchbase Capella UI.</p>
 </div>
 </div>
 </div>
@@ -937,7 +960,7 @@ When you log in for the first time, you&#8217;ll be brought to the Dashboard of 
 <h2 id="next-steps"><a class="anchor" href="#next-steps"></a>Next Steps</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The next step is to <a href="cluster-and-data.html" class="page">explore Capella further</a>&#8201;&#8212;&#8201;loading data, and configuring the Cluster.</p>
+<p>The next step is to <a href="cluster-and-data.html" class="page">connect to your database</a>&#8201;&#8212;&#8201;creating database credentials, adding allowed IP addresses, using SDKs, and adding your data.</p>
 </div>
 </div>
 </div>

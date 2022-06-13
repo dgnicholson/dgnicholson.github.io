@@ -708,8 +708,9 @@ A <a href="backup-restore.html" class="page">backup</a> can be restored onto the
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Restoring data from bucket backups should only be considered in worst-case scenarios.
-Other methods of recovery, such as <a href="xdcr/xdcr.html" class="page">XDCR replication</a> from a redundant cluster, should be considered the first lines of recovery.</p>
+<p>Use the procedures on this page to restore data from a bucket backup.
+If you would like to create and manage buckets, see <a href="manage-backup.html" class="page">Manage Backups</a>.
+To learn more about how backups work in Couchbase Capella, see <a href="backup-restore.html" class="page">Backup and Restore Cluster Data</a>.</p>
 </div>
 </div>
 </div>
@@ -772,6 +773,10 @@ This means that if a key-value pair in the target bucket is newer than the one i
 <div class="sect1">
 <h2 id="restore-bucket"><a class="anchor" href="#restore-bucket"></a>Restore a Bucket</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Restoring data from bucket backups should only be considered in worst-case scenarios.
+Other methods of recovery, such as <a href="xdcr/xdcr.html" class="page">XDCR replication</a> from a redundant cluster, should be considered the first lines of recovery.</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
