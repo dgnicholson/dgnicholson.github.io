@@ -4,16 +4,17 @@
 <meta charset="utf-8">
 <meta http-equiv=content-security-policy content="default-src 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' https://fonts.gstatic.com; frame-src 'self' https:; img-src 'self' data: https:; connect-src 'self' https:; worker-src blob:;">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Project Roles | Couchbase Docs</title>
-<link rel="canonical" href="https://dgnicholson.github.io/AV-36621/cloud/projects/project-roles.html">
+<title>Google Cloud Platform (GCP) | Couchbase Docs</title>
+<link rel="canonical" href="https://dgnicholson.github.io/AV-36621/cloud/reference/gcp.html">
 <link rel="stylesheet" href="../../_/css/site.css">
 <script src="../../_/js/vendor/jquery.js"></script>
+<meta name="description" content="Couchbase Capella supports deploying clusters onto Google Cloud Platform (GCP).">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 
 
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
-<meta name="page-url" content="/cloud/projects/project-roles.html">
+<meta name="page-url" content="/cloud/reference/gcp.html">
 <meta name="generator" content="Antora 3.0.0-alpha.7">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
@@ -181,22 +182,22 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="projects.html">Projects</a>
+    <a class="menu_title menu_link" href="../projects/projects.html">Projects</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="manage-projects.html">Manage Projects</a>
+    <a class="menu_title menu_link" href="../projects/manage-projects.html">Manage Projects</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="manage-project-users.html">Manage Project Users</a>
+    <a class="menu_title menu_link" href="../projects/manage-project-users.html">Manage Project Users</a>
   </span>
 </li>
-<li class="menu_list is-current-page" data-depth="2">
+<li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link is-current-page" href="project-roles.html">Project Roles</a>
+    <a class="menu_title menu_link" href="../projects/project-roles.html">Project Roles</a>
   </span>
 </li>
 </ul>
@@ -531,7 +532,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../reference/rest-endpoints-all.html">Public API Reference</a>
+    <a class="menu_title menu_link" href="rest-endpoints-all.html">Public API Reference</a>
   </span>
 </li>
 </ul>
@@ -563,34 +564,34 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../reference/aws.html">Amazon Web Services (AWS)</a>
+    <a class="menu_title menu_link" href="aws.html">Amazon Web Services (AWS)</a>
   </span>
 </li>
-<li class="menu_list" data-depth="2">
+<li class="menu_list is-current-page" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../reference/gcp.html">Google Cloud Platform (GCP)</a>
+    <a class="menu_title menu_link is-current-page" href="gcp.html">Google Cloud Platform (GCP)</a>
   </span>
 </li>
 </ul>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../reference/cloud-instances.html">Supported Instance Types</a>
+    <a class="menu_title menu_link" href="cloud-instances.html">Supported Instance Types</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../reference/sdk-compatibility.html">SDK Compatibility</a>
+    <a class="menu_title menu_link" href="sdk-compatibility.html">SDK Compatibility</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../reference/browser-compatibility.html">Supported Browsers</a>
+    <a class="menu_title menu_link" href="browser-compatibility.html">Supported Browsers</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../reference/user-management-migration.html">User Management Migration</a>
+    <a class="menu_title menu_link" href="user-management-migration.html">User Management Migration</a>
   </span>
 </li>
 </ul>
@@ -631,7 +632,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/projects/pages/project-roles.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/reference/pages/gcp.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -690,287 +691,464 @@
 <nav class="crumbs" aria-label="breadcrumbs">
 <ul>
 <li class="crumb"><a href="../index.html">Couchbase Capella</a></li>
-<li class="crumb">Organizations &amp; Access</li>
-<li class="crumb"><a href="projects.html">Projects</a></li>
-<li class="crumb"><a href="project-roles.html">Project Roles</a></li>
+<li class="crumb">Reference</li>
+<li class="crumb">Supported Cloud Providers</li>
+<li class="crumb"><a href="gcp.html">Google Cloud Platform (GCP)</a></li>
 </ul>
 </nav>
 </div>
 <article class="doc">
 <div class="page-heading-title">
-<h1 class="page">Project Roles</h1>
+<h1 class="page">Google Cloud Platform (GCP)</h1>
 </div>
 <div class="contributor-list-box">
 <span class="last-commit-date" id="commitdate">    </span>
 <ul id="contributorList"></ul>
 <span  id="otherContributor"> + </span>
-</div><div class="quoteblock abstract">
+</div><div id="preamble">
+<div class="sectionbody">
+<div class="quoteblock abstract">
 <blockquote>
-Project roles are used to grant privileges to project members.
+Couchbase Capella supports deploying clusters onto Google Cloud Platform (GCP).
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Each project member is assigned one or more <em>project roles</em> that determine their privileges within the project.
-Project roles are separate from <a href="../organizations/organization-user-roles.html" class="page">organization roles</a>, which grant overall privileges to Couchbase Capella.
-Project roles control who can create database credentials and their level of access to cluster data.</p>
+<p>Couchbase Capella provides fully managed Couchbase Server clusters that can be deployed onto GCP.
+This page describes the various regions and configurations that are available to you when using Capella with GCP.</p>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+GCP is only supported in Capella&#8217;s fully managed DBaaS option.
+For those still using Couchbase Server 6.6, hosted in their own cloud provider&#8217;s VPC, refer to the <a href="../clouds/cloud-providers.html" class="page">Cloud Provider Requirements</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="supported-regions"><a class="anchor" href="#supported-regions"></a>Supported Regions</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>The following table describes the available project roles and their associated privileges.</p>
+<p>Couchbase Capella&#8217;s fully managed DBaaS supports the following GCP regions.</p>
 </div>
-<table id="table-project-roles" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Project Roles</caption>
+<div class="tabset is-loading">
+<div class="ulist tabs">
+<ul>
+<li>
+<p><a id="tabset1_americas"></a>Americas</p>
+</li>
+<li>
+<p><a id="tabset1_europe"></a>Europe</p>
+</li>
+<li>
+<p><a id="tabset1_asia-pacific"></a>Asia Pacific</p>
+</li>
+</ul>
+</div>
+<div class="content">
+<div class="tab-pane" aria-labelledby="tabset1_americas">
+<table id="supported-regions-americas" class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 66.6667%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Role</th>
-<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">GCP Region</th>
+<th class="tableblock halign-left valign-top">Location</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div id="project-owner-role" class="paragraph">
-<p><code><strong>Project Owner</strong></code></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Provides complete cluster-management access. Users with this role can access data within any cluster in a project.</p>
-</div>
-<div class="paragraph">
-<p>It includes the following privileges:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Create and manage clusters</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Edit cluster configurations and settings</p>
-</li>
-<li>
-<p>Manage cluster services, including cluster scaling</p>
-</li>
-<li>
-<p>Manage replications</p>
-</li>
-<li>
-<p>Manage backups</p>
-</li>
-<li>
-<p>Restore from backups</p>
-</li>
-<li>
-<p>Configure allowed IP addresses</p>
-</li>
-<li>
-<p>Create and manage buckets</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Create and manage database credentials for all clusters in the project</p>
-</li>
-<li>
-<p>Access data within any cluster in the project</p>
-</li>
-<li>
-<p>Manage project members and their roles</p>
-</li>
-<li>
-<p>Delete the project</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>A user with the <a href="../organizations/organization-user-roles.html#organization-role-organization-owner" class="page"><code>Organization Owner</code></a> role automatically has <a href="#project-owner-role"><code>Project Owner</code></a> privileges for all projects in the organization.</p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>us-east1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">US East (South Carolina)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div id="project-cluster-manager-role" class="paragraph">
-<p><code><strong>Cluster Manager</strong></code></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Provides access to management actions for all clusters in a project. This role can create and delete clusters but does not provide access to data.</p>
-</div>
-<div class="paragraph">
-<p>It includes the following privileges within the project:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Create and manage clusters</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Edit cluster configurations and settings</p>
-</li>
-<li>
-<p>Manage cluster services, including cluster scaling</p>
-</li>
-<li>
-<p>Configure allowed IP addresses</p>
-</li>
-<li>
-<p>Create and manage buckets</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>us-east4</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">US East (N. Virginia)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div id="project-cluster-viewer-role" class="paragraph">
-<p><code><strong>Cluster Viewer</strong></code></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Provides read-only access to view all clusters in a project. This role does not provide access to data.</p>
-</div>
-<div class="paragraph">
-<p>It includes the following privileges within the project:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>View all clusters in the project</p>
-<div class="ulist">
-<ul>
-<li>
-<p>View cluster activity, statistics, and logs</p>
-</li>
-<li>
-<p>View cluster configuration details and settings</p>
-</li>
-<li>
-<p>View allowed IP addresses</p>
-</li>
-<li>
-<p>View buckets</p>
-</li>
-<li>
-<p>View database credentials and their permissions</p>
-</li>
-<li>
-<p>View cluster certificates</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>View database credentials for the clusters in the project</p>
-</li>
-<li>
-<p>View members of the project and their roles</p>
-</li>
-<li>
-<p>View project activity</p>
-</li>
-</ul>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>us-west1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">US West (Oregon)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div id="project-cluster-data-reader" class="paragraph">
-<p><code><strong>Cluster Data Reader</strong></code></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Provides read-only access to view data within any cluster in a project. This role allows use of tools like Query Workbench to read data but can&#8217;t modify or write data.</p>
-</div>
-<div class="paragraph">
-<p>It includes the following privileges within the project:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>View all clusters in the project</p>
-<div class="ulist">
-<ul>
-<li>
-<p>View cluster activity, statistics, and logs</p>
-</li>
-<li>
-<p>View cluster configuration details and settings</p>
-</li>
-<li>
-<p>View allowed IP addresses</p>
-</li>
-<li>
-<p>View database credentials and their permissions</p>
-</li>
-<li>
-<p>View cluster certificates</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>View database credentials for the clusters in the project</p>
-</li>
-<li>
-<p>View members of the project and their roles</p>
-</li>
-<li>
-<p>View project activity</p>
-</li>
-<li>
-<p>Read data within any cluster in the project</p>
-</li>
-</ul>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>us-west3</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">US West (Utah)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div id="project-cluster-data-reader-writer" class="paragraph">
-<p><code><strong>Cluster Data Reader/Writer</strong></code></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Provides read and write access to data within any cluster in a project.</p>
-</div>
-<div class="paragraph">
-<p>It includes the following privileges within the project:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>View all clusters in the project</p>
-<div class="ulist">
-<ul>
-<li>
-<p>View cluster activity, statistics, and logs</p>
-</li>
-<li>
-<p>View cluster configuration details and settings</p>
-</li>
-<li>
-<p>View allowed IP addresses</p>
-</li>
-<li>
-<p>View database credentials and their permissions</p>
-</li>
-<li>
-<p>View cluster certificates</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>View database credentials for the clusters in the project</p>
-</li>
-<li>
-<p>View members of the project and their roles</p>
-</li>
-<li>
-<p>View project activity</p>
-</li>
-<li>
-<p>Read and write data within any cluster in the project</p>
-</li>
-</ul>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>us-west4</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">US West (Nevada)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>us-central1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">US Central (Iowa)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>northamerica-northeast1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Canada (Montréal)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>northamerica-northeast2</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Canada (Toronto)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>southamerica-east1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brazil (São Paulo)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>southamerica-west1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chile (Santiago)</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="tab-pane" aria-labelledby="tabset1_europe">
+<table id="supported-regions-europe" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">GCP Region</th>
+<th class="tableblock halign-left valign-top">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>europe-west1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Belgium</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>europe-west2</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">London</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>europe-west3</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frankfurt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>europe-west4</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Netherlands</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>europe-west6</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zurich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>europe-west8</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Milan</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>europe-central2</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warsaw</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>europe-north1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Finland</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tab-pane" aria-labelledby="tabset1_asia-pacific">
+<table id="supported-regions-asia-pacific" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">GCP Region</th>
+<th class="tableblock halign-left valign-top">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>asia-east1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Taiwan</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>asia-east2</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hong Kong</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>asia-northeast1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tokyo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>asia-northeast2</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Osaka</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>asia-northeast3</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Seoul</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>asia-south1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mumbai</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>asia-south2</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delhi</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>asia-southeast1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Singapore</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>asia-southeast2</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jakarta</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>australia-southeast1</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sydney</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>australia-southeast2</code></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Melbourne</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="zones"><a class="anchor" href="#zones"></a>Zones</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each Google Cloud region contains a number of independent zones.
+These consist of one or more discrete data centers that are isolated from failures in other zones.
+Capella can automatically distribute cluster nodes across multiple zones in a region for the highest availability.
+Every cluster in Capella is deployed with a minimum of three <a href="#nodes">nodes</a>.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Multiple Zones</strong> option is the default when creating clusters using the Developer Pro or Enterprise <a href="../billing/billing.html#support-plans" class="page">Service Plans</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The option to deploy across multiple Google Cloud zones is only available for clusters that use the Developer Pro or Enterprise Service Plans.
+Clusters using the Basic service plan deploy all nodes to the same zone.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration-options"><a class="anchor" href="#configuration-options"></a>Configuration Options</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Clusters deployed onto Google Cloud have several configuration options that allow you to customize clusters to fit your requirements.</p>
+</div>
+<div class="sect2">
+<h3 id="nodes"><a class="anchor" href="#nodes"></a>Nodes</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As they&#8217;re intended for evaluation purposes only, self-service trial clusters only include 1 node.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Clusters have a minimum of 3 nodes and a maximum of 27.</p>
+</div>
+<div class="paragraph">
+<p>Clusters consist of service groups that include the Couchbase services deployed and system resources.
+Each service group has a node quantity to represent the number of nodes in the cluster with that configuration.
+Individual service groups can have between 2 and 27 nodes but cannot collectively exceed 27.
+The service group that includes the <a href="../clusters/data-service/data-service.html" class="page">Data Service</a> requires at least 3 nodes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="compute-and-memory"><a class="anchor" href="#compute-and-memory"></a>Compute and Memory</h3>
+<div class="paragraph">
+<p>Capella provides the following compute configurations for clusters deployed onto Google Cloud.</p>
+</div>
+<table id="aws-configurations" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Google Cloud Compute Engine configurations</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">vCPU</th>
+<th class="tableblock halign-left valign-top">Memory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#footnote-1"><span class="icon"><i class="fa fa-star" title="Available in self-service trials"></i></span></a> 2 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">128 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">128 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">36 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">72 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">48 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">96 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">512 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">72 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">144 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">320 GB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">640 GB</p></td>
+</tr>
+</tbody>
+</table>
+<div id="footnote-1" class="paragraph">
+<p><span class="icon"><i class="fa fa-star fa-star"></i></span> This configuration is only available for <a href="https://cloud.couchbase.com/sign-up">self-service trial</a> clusters in Capella.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="storage-size"><a class="anchor" href="#storage-size"></a>Storage Size</h3>
+<div class="paragraph">
+<p>Capella clusters deployed onto Google Cloud use SSD persistent disks (PD-SSD).
+These are suited for high-performance database needs that require lower latency and more IOPS than standard persistent disks provide.</p>
+</div>
+<div class="paragraph">
+<p>The amount of storage available per node in your cluster is configurable from a minimum of 50 GB (the maximum for self-service trials).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="storage-speed"><a class="anchor" href="#storage-speed"></a>Storage Speed</h3>
+<div class="paragraph">
+<p>Storage speed is measured in IOPS (input/output operations per second) that the cluster performs.
+Persistent disk speed is determined by the disk size and cannot be customized on its own.
+PD-SSDs receive 30 read and 30 write IOPS per GB provisioned, for an overall 60 IOPS per GB.</p>
+</div>
+<div class="paragraph">
+<p>To increase the read and write performance of the disk, increase the storage size.
+For example, the default 50 GB storage has a maximum read speed of 1500 IOPS and a maximum write speed of 1500 IOPS.
+Increasing the storage to 100 GB increases the maximum read speed to 3000 IOPS and the maximum write speed to 3000 IOPS.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="see-also"><a class="anchor" href="#see-also"></a>See Also</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://cloud.google.com/compute/docs/regions-zones">GCP Regions and Zones</a></p>
+</li>
+<li>
+<p><a href="https://cloud.google.com/compute/docs/disks/performance#performance_limits">GCP storage performance limits</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="next-steps"><a class="anchor" href="#next-steps"></a>Next Steps</h3>
+<div class="paragraph">
+<p>To create or modify a Couchbase Capella cluster deployed onto GCP, see the following pages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../clusters/create-cluster.html" class="page">Create a cluster</a></p>
+</li>
+<li>
+<p><a href="../clusters/modify-cluster.html" class="page">Modify a cluster</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </article>
 </main>
 </div>
