@@ -708,9 +708,8 @@ An XDCR replication allows bucket data to be replicated continuously from a spec
 </blockquote>
 </div>
 <div class="paragraph">
-<p>An <a href="xdcr.html" class="page">XDCR replication</a> is created on the cluster that is to be the source of the data replication.
-This cluster is known as the <em>source cluster</em>, and it contains the data you want to replicate.
-Each replication targets a bucket on a different cluster, known as the <em>destination cluster</em> or <em>target cluster</em>, in which the data will be replicated.</p>
+<p>Use the procedures on this page to create and manage XDCR (Cross Data Center Replication) between Capella clusters.
+For general information on XDCR in Couchbase Capella and how it works, see <a href="xdcr.html" class="page">Cross Data Center Replication (XDCR)</a>.</p>
 </div>
 </div>
 </div>
@@ -837,6 +836,11 @@ The normal state is <strong class="ui">Replicating</strong>, which indicates the
 <h2 id="create-replication"><a class="anchor" href="#create-replication"></a>Create a Replication</h2>
 <div class="sectionbody">
 <div class="paragraph">
+<p>An <a href="xdcr.html" class="page">XDCR replication</a> is created on the cluster that is to be the source of the data replication.
+This cluster is known as the <em>source cluster</em>, and it contains the data you want to replicate.
+Each replication targets a bucket on a different cluster, known as the <em>destination cluster</em> or <em>target cluster</em>, in which the data will be replicated.</p>
+</div>
+<div class="paragraph">
 <p>To create a replication, you must have the <a href="../../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the projects that contain both the source <em>and</em> destination clusters.</p>
 </div>
 <div class="admonitionblock note">
@@ -856,6 +860,9 @@ The normal state is <strong class="ui">Replicating</strong>, which indicates the
 </li>
 <li>
 <p>Capella Hosted (AWS) &#8592;&#8594; Capella Hosted (AWS)</p>
+</li>
+<li>
+<p>Capella Hosted (GCP) &#8592;&#8594; Capella Hosted (GCP)</p>
 </li>
 </ul>
 </div>

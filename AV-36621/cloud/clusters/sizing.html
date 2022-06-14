@@ -789,10 +789,16 @@ This is because the amount of RAM and vCPUs is always a multiple of the RAM and 
 <div class="sect2">
 <h3 id="disk-type"><a class="anchor" href="#disk-type"></a>Disk Type</h3>
 <div class="paragraph">
+<div class="title">AWS</div>
 <p>The required SSD volume type in AWS EBS for the service.
 The options are GP3 or IO2.
 GP3 is general purpose to balance price and performance where you can provision performance independent of storage capacity.
 IO2 is higher performance, and more durable with better reliability.</p>
+</div>
+<div class="paragraph">
+<div class="title">GCP</div>
+<p>Capella clusters deployed onto Google Cloud use SSD persistent disks (PD-SSD).
+These are suited for high-performance database needs that require lower latency and more IOPS than standard persistent disks provide.</p>
 </div>
 </div>
 <div class="sect2">
@@ -820,6 +826,25 @@ Capella automatically selects the optimal storage <em>type</em> available from y
 <div class="paragraph">
 <p>The required amount of input and output operations per second (IOPS) for the service.
 Increase the IOPS for a better disk throughput, but this does cost more to do so.</p>
+</div>
+<div class="paragraph">
+<div class="title">AWS</div>
+<p>Each cluster service group has a default input/output operations per second (IOPS) rate of 3000.
+The storage speed is configurable based on the volume type used:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>GP3</strong>: 3000 to 16000 IOPS</p>
+</li>
+<li>
+<p><strong>IO2</strong>: 1000 to 64000 IOPS</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">GCP</div>
+<p>This value is automatically set by Capella based on the specified storage size and does not allow for direct user customization.</p>
 </div>
 </div>
 </div>
@@ -924,6 +949,9 @@ Each node configuration represents a service group row in the Deployment Configu
 <p>Input and output operations per second (IOPS)</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>For more detail on how to create a custom deployment, see <a href="create-cluster.html" class="page">Create a Cluster</a>.</p>
 </div>
 </div>
 </div>
