@@ -803,13 +803,13 @@ IO2 is higher performance and more durable with better reliability.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>IOPS</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#change-ips">Change IOPS</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#change-iops">Change IOPS</a></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>AWS</strong>: The available IOPS range depends on the disk type.</p>
 </div>
 <div class="paragraph">
 <p><strong>GCP</strong>: IOPS is not a directly configurable value.
-It&#8217;s set based on the amount of storage you&#8217;ve assigned to a service group (30 IOPS per GB).</p>
+It&#8217;s set based on the amount of storage you&#8217;ve assigned to a service group (30 read IOPS and 30 write IOPS per GB).</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1157,7 +1157,7 @@ Storage cannot be removed from a service configuration once added.
 <td class="content">
 <div class="title">Limitations</div>
 IOPS (Input/Output Operations per Second) is not a directly configurable value for clusters deployed with GCP.
-Instead, it&#8217;s automatically set at 30 IOPS per GB of storage provisioned.
+Instead, it&#8217;s automatically set at 30 read IOPS and 30 write IOPS per GB of storage provisioned.
 </td>
 </tr>
 </table>
