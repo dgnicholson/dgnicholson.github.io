@@ -628,7 +628,7 @@
 </aside>
 <aside class="toc sidebar"
       data-title="Contents"
-      data-levels="2">
+      data-levels="1">
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
@@ -712,22 +712,59 @@ Setting up a private network enables your application to interact with Couchbase
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Using a private network provides an added layer of security for organizations by avoiding communication over the Internet.
-It also results in a significant reduction in latency and egress costs.</p>
+<p>Use the procedures on this page to configure a private network connection from Couchbase Capella clusters hosted with AWS or GCP to your application&#8217;s VPC.
+If you are managing Capella in your own cloud provider&#8217;s VPC, you will find relevant instructions at the <a href="#invpc">end of the page</a>.</p>
 </div>
 <div class="paragraph">
-<p>If you are managing Capella in your own cloud provider&#8217;s VPC, you will find relevant instructions at the <a href="#invpc">end of the page</a>.
-Otherwise, read on for connecting your Couchbase-managed Capella cluster to your application&#8217;s VPC over a private network.</p>
+<p>Using a private network (also known as network peering) provides an added layer of security for organizations by avoiding communication over the Internet.
+It also results in a significant reduction in latency and egress costs.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Capella does <em>not</em> support setting up a private network between different cloud providers.
+For example, you cannot set up private networking between a Capella cluster hosted in GCP with an application hosted on AWS.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2>
+<h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Setting up a Private Network</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>To set up a private network, use the instructions provided on the tab that corresponds with your Capella cluster&#8217;s cloud provider.</p>
+</div>
+<div class="tabset is-loading">
+<div class="ulist tabs">
+<ul>
+<li>
+<p><a id="tabset1_aws"></a>AWS</p>
+</li>
+<li>
+<p><a id="tabset1_gcp"></a>GCP</p>
+</li>
+</ul>
+</div>
+<div class="content">
+<div class="tab-pane" aria-labelledby="tabset1_aws">
+<div class="paragraph">
+<p><strong>Prerequisites</strong></p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>To configure Couchbase Capella private networking, you need to complete the following prerequisites steps:</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Enable DNS hostnames for the VPC:</p>
+<p>In AWS, enable <em>DNS hostnames</em> for the VPC:</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/pn1-dns-hostname.png" alt="Enable DNS hostnames for the VPC.">
@@ -735,7 +772,7 @@ Otherwise, read on for connecting your Couchbase-managed Capella cluster to your
 </div>
 </li>
 <li>
-<p>Enable DNS resolution for the VPC:</p>
+<p>In AWS, enable <em>DNS resolution</em> for the VPC:</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/pn2-dns-res.png" alt="Enable DNS resolution for the VPC.">
@@ -743,64 +780,95 @@ Otherwise, read on for connecting your Couchbase-managed Capella cluster to your
 </div>
 </li>
 <li>
-<p>You must also ensure that your cluster CIDR block (specified when setting up the cluster) does not overlap with the application VPC CIDR block.
-You can retrieve the CIDR block for a cluster <a href="#reference:rest-endpoints-alladoc.adoc#samples-26" class="page unresolved">using the public API</a>.</p>
+<p>You must also ensure that your Capella cluster&#8217;s CIDR block (specified when setting up the cluster) does not overlap with the application VPC CIDR block.
+You can retrieve the CIDR block for a cluster <a href="../reference/rest-endpoints-all.html#samples-26" class="page">using the public API</a>.</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="setting-up-a-private-network"><a class="anchor" href="#setting-up-a-private-network"></a>Setting up a Private Network</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="creating-a-private-network"><a class="anchor" href="#creating-a-private-network"></a>Creating a Private Network</h3>
+<div class="paragraph">
+<p><strong>Creating a Private Network</strong></p>
+</div>
+<div class="openblock">
+<div class="content">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go to Cluster &#8594; Connect &#8594; Virtual Networks</p>
-<div class="ulist">
-<ul>
+<p>In Capella, add a new private network for your cluster.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>Setup new private network</p>
+<p>Open the cluster where you want to create the new private network.</p>
 </li>
 <li>
-<p>Accept the prerequisites (just what you did in the previous section).</p>
+<p>Click the <strong>Connect</strong> tab.</p>
+<div class="paragraph">
+<p>This opens the <em>Database Access</em> page.</p>
+</div>
+</li>
+<li>
+<p>Inside the <em>Virtual Network</em> block, click <b class="button">Manage Private Networks</b>.</p>
+</li>
+<li>
+<p>Click  <b class="button">Setup Private Network</b>.</p>
+</li>
+<li>
+<p>In the <strong>Setup Private Network</strong> fly-out menu, confirm the prerequisites and click <b class="button">Next</b>.</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/pn3-prereq.png" alt="Accepting prerequisites.">
 </div>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </li>
 <li>
-<p>Now fill in the network screen.</p>
-<div class="ulist">
-<ul>
+<p>In Capella, configure your private network details.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>Choose any name that you wish.
-You can find all the other required info on the page for your chosen VPC:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/pn4-name.png" alt="">
-</div>
-</div>
-</li>
-<li>
-<p>The region is the region that the VPC is deployed in (can be seen in the top-right corner of the AWS console).</p>
-</li>
-<li>
-<p>If you have multiple CIDR blocks associated with a VPC you will need to set up multiple private networks, one for each CIDR block.</p>
-<div class="paragraph">
-<p>For example:</p>
-</div>
+<p>Fill out the <em>Network Details</em> fields.</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/pn5-cidr.png" alt="Filling in the CIDR block(s).">
 </div>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can find most of the required info for these fields on the page for your chosen VPC in AWS.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Name</dt>
+<dd>
+<p>Enter any name that you wish.</p>
+</dd>
+<dt class="hdlist1">AWS Account ID</dt>
+<dd>
+<p>The numeric AWS Account ID.</p>
+</dd>
+<dt class="hdlist1">Virtual Network ID</dt>
+<dd>
+<p>The alphanumeric VPC ID which starts with <code>vpc-</code>.</p>
+</dd>
+<dt class="hdlist1">Available Regions</dt>
+<dd>
+<p>The AWS region where your VPC is deployed (this can be seen in the top-right corner of the AWS console).</p>
+</dd>
+<dt class="hdlist1">CIDR Block</dt>
+<dd>
+<p>The AWS VPC CIDR block of network in which your application runs.
+This cannot overlap with your Capella CIDR Block.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -808,21 +876,25 @@ You can find all the other required info on the page for your chosen VPC:</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<strong>AWS Account ID</strong> is AWS&#8217;s numeric ID&#8201;&#8212;&#8201;not your own alias.
+If you have multiple CIDR blocks associated with a VPC you will need to set up multiple private networks, one for each CIDR block.
 </td>
 </tr>
 </table>
 </div>
-</li>
-</ul>
+</dd>
+</dl>
 </div>
 </li>
 <li>
-<p>When you click 'Link' then Capella is setting up the Private Network, this may take up to a minute.
+<p>Click <b class="button">Link</b>.</p>
+<div class="paragraph">
+<p>Capella will set up the private network.
+This typically takes up to a minute.
 If successful you should see the private network added to the list of private networks, then you may briefly see the cluster enter a "Deploying" state while the new network is set up.</p>
-</li>
-<li>
+</div>
+<div class="paragraph">
 <p>If there&#8217;s a problem with the private network then Capella will tell you via an error message, such as in the case of overlapping CIDR blocks.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/pn6-cidr-problem.png" alt="CIDR overlap warning message.">
@@ -831,9 +903,16 @@ If successful you should see the private network added to the list of private ne
 </li>
 </ol>
 </div>
+</li>
+</ol>
 </div>
-<div class="sect2">
-<h3 id="finishing-private-network-setup"><a class="anchor" href="#finishing-private-network-setup"></a>Finishing Private Network Setup</h3>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Finishing Private Network Setup</strong></p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -951,13 +1030,175 @@ Take the CIDR block of the <code>RequesterVpcInfo</code> from the VPC peering re
 </ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="verifying-connectivity-to-private-networks"><a class="anchor" href="#verifying-connectivity-to-private-networks"></a>Verifying Connectivity to Private Networks</h3>
-<div class="paragraph">
-<p>Now that the private network has been set up, it&#8217;s important to ensure that applications connecting from the application VPC are using the private network correctly.</p>
 </div>
-<div class="sect3">
-<h4 id="hostname-resolution"><a class="anchor" href="#hostname-resolution"></a>Hostname Resolution</h4>
+</div>
+<div class="tab-pane" aria-labelledby="tabset1_gcp">
+<div class="paragraph">
+<p><strong>Creating a Private Network</strong></p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Capella, add a new private network for your cluster.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open the cluster where you want to create the new private network.</p>
+</li>
+<li>
+<p>Click the <strong>Connect</strong> tab.</p>
+<div class="paragraph">
+<p>This opens the <em>Database Access</em> page.</p>
+</div>
+</li>
+<li>
+<p>Inside the <em>Virtual Network</em> block, click <b class="button">Manage Private Networks</b>.</p>
+</li>
+<li>
+<p>Click  <b class="button">Setup Private Network</b>.</p>
+</li>
+<li>
+<p>In the <strong>Setup Private Network</strong> fly-out menu, confirm the prerequisites and click <b class="button">Next</b>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/pn3-prereq-gcp.png" alt="Accepting prerequisites.">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>In Capella, configure your private network details.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Fill out the <em>Network Details</em> fields.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/gcp-pn3-config.png" alt="The Network Details fields.">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can find most of the required info for these fields on the page for your chosen VPC in GCP.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Name</dt>
+<dd>
+<p>Enter a descriptive name for the new private network.</p>
+</dd>
+<dt class="hdlist1">GCP Project ID</dt>
+<dd>
+<p>The unique identifier for your <a href="https://cloud.google.com/resource-manager/docs/creating-managing-projects" target="_blank" rel="noopener">GCP project</a>.
+This is typically autogenerated in the form of <code>rock-galaxy-123456</code> or similar.</p>
+</dd>
+<dt class="hdlist1">GCP Network Name</dt>
+<dd>
+<p>The <a href="https://cloud.google.com/vpc/docs/create-modify-vpc-networks#viewing-networks" target="_blank" rel="noopener">GCP VPC network name</a>.</p>
+</dd>
+<dt class="hdlist1">CIDR Block</dt>
+<dd>
+<p>The GCP VPC CIDR block of network in which your application runs.
+This cannot overlap with your Capella CIDR Block.</p>
+</dd>
+<dt class="hdlist1">Service Account Email</dt>
+<dd>
+<p>The email address of the associated <a href="https://cloud.google.com/iam/docs/service-accounts" target="_blank" rel="noopener">service account</a>.
+This looks like <code>&lt;service-account-id&gt;@rock-galaxy-123456.iam.gserviceaccount.com</code>.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Click <b class="button">Link</b>.</p>
+<div class="paragraph">
+<p>Capella will set up the private network.
+This typically takes up to a minute.
+If successful you should see the private network added to the list of private networks, then you may briefly see the cluster enter a "Deploying" state while the new network is set up.</p>
+</div>
+<div class="paragraph">
+<p>If there&#8217;s a problem with the private network then Capella will tell you via an error message.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Finishing Private Network Setup</strong></p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Once setup is complete, you will see the new network listed in the list of networks:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/pn7-network-list.png" alt="New private network now listed.">
+</div>
+</div>
+<div class="paragraph">
+<p>While the status of the network says "Complete" there are a final few steps you need to carry out before you can access your Capella cluster from your VPC over this private network.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click the listing for the new Private Network.</p>
+<div class="paragraph">
+<p>This shows you two commands that you must run to accept the peering request and also link your VPC to the appropriate DNS server for hostname resolution. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ gcloud compute networks peerings create &lt;your-peer-name&gt; --network=&lt;your-vpc-network-name&gt; --peer-project &lt;your-gcp-project-id&gt; --peer-network &lt;capella-vpc-network-name&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ gcloud dns managed-zones create &lt;your-zone-name&gt; --description="Peering Zone to Capella" --dns-name=&lt;dns-name-suffix&gt; --account=&lt;service-account-email-address&gt; --networks=&lt;your-vpc-network-name&gt; --target-network=&lt;your-vpc-network-name&gt; --target-project=&lt;your-gcp-project-id&gt; --visibility=private</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Run the commands provided by Capella using gcloud CLI.</p>
+</li>
+<li>
+<p><a href="#verify-connectivity">Verify connectively</a> to ensure that the applications connecting from the application VPC are using the private correct.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="verify-connectivity"><a class="anchor" href="#verify-connectivity"></a>Verifying Connectivity to Private Networks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With private network set up, it&#8217;s important to ensure that applications connecting from the application VPC are using the private network correctly.</p>
+</div>
+<div class="paragraph">
+<p><strong>Hostname Resolution</strong></p>
+</div>
+<div class="openblock">
+<div class="content">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1021,8 +1262,12 @@ If you see that the public IP is returned for this node then you should validate
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="network-connectivity"><a class="anchor" href="#network-connectivity"></a>Network Connectivity</h4>
+</div>
+<div class="paragraph">
+<p><strong>Network Connectivity</strong></p>
+</div>
+<div class="openblock">
+<div class="content">
 <div class="paragraph">
 <p>Now that you have validated that DNS resolution is working correctly, you should validate the network connectivity between your application instances and your Capella cluster.</p>
 </div>
@@ -1060,6 +1305,8 @@ If you see that the public IP is returned for this node then you should validate
 </li>
 </ol>
 </div>
+</div>
+</div>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -1071,8 +1318,6 @@ If you are having trouble setting up the connection, see the <a href="#troublesh
 </td>
 </tr>
 </table>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -1113,15 +1358,15 @@ Setting up private networking differs in this case, as outlined in the following
 <div class="ulist tabs">
 <ul>
 <li>
-<p><a id="tabset1_aws"></a>AWS</p>
+<p><a id="tabset2_aws"></a>AWS</p>
 </li>
 <li>
-<p><a id="tabset1_azure"></a>Azure</p>
+<p><a id="tabset2_azure"></a>Azure</p>
 </li>
 </ul>
 </div>
 <div class="content">
-<div class="tab-pane" aria-labelledby="tabset1_aws">
+<div class="tab-pane" aria-labelledby="tabset2_aws">
 <div class="ulist">
 <ul>
 <li>
@@ -1136,7 +1381,7 @@ Setting up private networking differs in this case, as outlined in the following
 </ul>
 </div>
 </div>
-<div class="tab-pane" aria-labelledby="tabset1_azure">
+<div class="tab-pane" aria-labelledby="tabset2_azure">
 <div class="ulist">
 <ul>
 <li>
@@ -1158,7 +1403,7 @@ Setting up private networking differs in this case, as outlined in the following
 </div>
 </div>
 <div class="sect2">
-<h3 id="setting-up-a-private-network-2"><a class="anchor" href="#setting-up-a-private-network-2"></a>Setting up a Private Network</h3>
+<h3 id="setting-up-a-private-network"><a class="anchor" href="#setting-up-a-private-network"></a>Setting up a Private Network</h3>
 <div class="paragraph">
 <p>Setting up a private network involves the following steps:</p>
 </div>
