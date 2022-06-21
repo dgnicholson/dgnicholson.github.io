@@ -1145,12 +1145,7 @@ If successful you should see the private network added to the list of private ne
 <div class="openblock">
 <div class="content">
 <div class="paragraph">
-<p>Once setup is complete, you will see the new network listed in the list of networks:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/pn7-network-list.png" alt="New private network now listed.">
-</div>
+<p>Once setup is complete, you will see the new network listed in the list of networks.</p>
 </div>
 <div class="paragraph">
 <p>While the status of the network says "Complete" there are a final few steps you need to carry out before you can access your Capella cluster from your VPC over this private network.</p>
@@ -1158,7 +1153,7 @@ If successful you should see the private network added to the list of private ne
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Click the listing for the new Private Network.</p>
+<p>On the <strong>Private Networks</strong> screen, click the listing for the new Private Network.</p>
 <div class="paragraph">
 <p>This shows you two commands that you must run to accept the peering request and also link your VPC to the appropriate DNS server for hostname resolution. For example:</p>
 </div>
@@ -1174,10 +1169,10 @@ If successful you should see the private network added to the list of private ne
 </div>
 </li>
 <li>
-<p>Run the commands provided by Capella using gcloud CLI.</p>
+<p>Using the <a href="https://cloud.google.com/sdk/gcloud" target="_blank" rel="noopener">gcloud CLI</a>, run the commands provided by Capella.</p>
 </li>
 <li>
-<p><a href="#verify-connectivity">Verify connectively</a> to ensure that the applications connecting from the application VPC are using the private correct.</p>
+<p><a href="#verify-connectivity">Verify connectively</a> to ensure that the applications connecting from the application VPC are using the private network correctly.</p>
 </li>
 </ol>
 </div>
@@ -1192,7 +1187,7 @@ If successful you should see the private network added to the list of private ne
 <h2 id="verify-connectivity"><a class="anchor" href="#verify-connectivity"></a>Verifying Connectivity to Private Networks</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>With private network set up, it&#8217;s important to ensure that applications connecting from the application VPC are using the private network correctly.</p>
+<p>With a private network set up, it&#8217;s important to ensure that applications connecting from the application VPC are using the private network correctly.</p>
 </div>
 <div class="paragraph">
 <p><strong>Hostname Resolution</strong></p>
@@ -1203,7 +1198,22 @@ If successful you should see the private network added to the list of private ne
 <ol class="arabic">
 <li>
 <p>The first step whenever an application connects to a Capella cluster is to resolve the hostnames of all nodes in the cluster.
-Within the Capella UI, you can see the URL for the cluster, which is an SRV record containing multiple nodes of the cluster. This hostname can be resolved using a command such as the following:</p>
+Within the Capella UI, you can see the URL for the cluster, which is an SRV record containing multiple nodes of the cluster.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can retrieve the DNS SRV record for your cluster within the <em>Wide Area Network</em> section of the <strong>Connect</strong> tab.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This hostname can be resolved using a command such as the following:</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">nslookup -type=SRV _couchbases._tcp.cb.a-lxzt-gdkzoqfuu.cloud.couchbase.com</code></pre>
@@ -1274,7 +1284,7 @@ If you see that the public IP is returned for this node then you should validate
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>To validate the routing is correctly set up for your VPC, you can run a <code>traceroute</code> to one of the nodes in your cluster (retrieved from the previous DNS resolution step). For example:</p>
+<p>To validate that the routing is correctly set up for your VPC, you can run a <code>traceroute</code> to one of the nodes in your cluster (retrieved from the previous DNS resolution step). For example:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">traceroute -T 9qvj8x-f2oxhahtz.a-lxzt-gdkzoqfuu.cloud.couchbase.com -p 18091</code></pre>
