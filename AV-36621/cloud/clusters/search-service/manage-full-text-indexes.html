@@ -826,8 +826,7 @@ An index can be searched as soon as it&#8217;s created, but only partial results
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Indexing progress is determined by <code>index_doc_count</code> / <code>source_doc_count</code>, with <code>index_doc_count</code> being retrieved from the Search Service endpoint and <code>source_doc_count</code> being retrieved from a Data Service endpoint.
-If one or more Data Service nodes in the cluster become unavailable and/or become failed over, the indexing progress may show a value greater than 100% since <code>source_doc_count</code> for the bucket would be missing some active partitions.</p>
+<p>If one or more Data Service nodes in the cluster become unavailable and/or become failed over, the indexing progress may show a value greater than 100%.</p>
 </div>
 </td>
 </tr>

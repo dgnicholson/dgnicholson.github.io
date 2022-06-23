@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta http-equiv=content-security-policy content="default-src 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' https://fonts.gstatic.com; frame-src 'self' https:; img-src 'self' data: https:; connect-src 'self' https:; worker-src blob:;">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Cross Data Center Replication (XDCR) | Couchbase Docs</title>
-<link rel="canonical" href="https://dgnicholson.github.io/AV-36621/cloud/clusters/xdcr/xdcr.html">
-<link rel="stylesheet" href="../../../_/css/site.css">
-<script src="../../../_/js/vendor/jquery.js"></script>
+<title>Configure Access to App Services | Couchbase Docs</title>
+<link rel="canonical" href="https://dgnicholson.github.io/AV-36621/cloud/get-started/configuring-app-services.html">
+<link rel="stylesheet" href="../../_/css/site.css">
+<script src="../../_/js/vendor/jquery.js"></script>
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 
 
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
-<meta name="page-url" content="/cloud/clusters/xdcr/xdcr.html">
+<meta name="page-url" content="/cloud/get-started/configuring-app-services.html">
 <meta name="generator" content="Antora 3.0.0-alpha.7">
-<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
 <header class="header fixed-top">
@@ -25,13 +25,13 @@
               <ul class="navbar-brand-list">
                 <li class="brand-logo">
                   <a class="navbar-brand" href="https://www.couchbase.com">
-                    <img src="../../../_/img/couchbase-logo.svg" alt="Couchbase" />
+                    <img src="../../_/img/couchbase-logo.svg" alt="Couchbase" />
                   </a>
                 </li>
                 <li>
                   <a class="navbar-brand cb-documentation" href="https://dgnicholson.github.io/AV-36621/home/index.html">
-                    <img src="../../../_/img/cb-documentation.svg" alt="Couchbase Documentation" class="cb-docs" />
-                    <img src="../../../_/img/cb-docs-hover.svg" alt="Couchbase Documentation" class="hide cb-hover-docs" />
+                    <img src="../../_/img/cb-documentation.svg" alt="Couchbase Documentation" class="cb-docs" />
+                    <img src="../../_/img/cb-docs-hover.svg" alt="Couchbase Documentation" class="hide cb-hover-docs" />
                   </a>
                 </li>
               </ul>
@@ -56,22 +56,22 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../../../home/server.html">
+                    <a class="nav-link" href="../../home/server.html">
                       Server
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../../../home/mobile.html">
+                    <a class="nav-link" href="../../home/mobile.html">
                       Mobile
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../../index.html">
+                    <a class="nav-link" href="../index.html">
                       Capella
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../../../home/sdk.html">
+                    <a class="nav-link" href="../../home/sdk.html">
                       SDKs
                     </a>
                   </li>
@@ -99,7 +99,7 @@
     <a href="#" class="menu-expand-toggle"><span>Navigation</span><i class="fas fa-times-circle"></i><i class="fas fa-chevron-circle-left"></i></a>
 <div class="components">
   <div class="components_group-title">
-    <a href="../../index.html">Capella</a>
+    <a href="../index.html">Capella</a>
   </div>
   <ul class="components_list">
     <li class="components_list-items">
@@ -117,27 +117,27 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../../get-started/get-started.html">Start Here</a>
+    <a class="menu_title menu_link" href="get-started.html">Start Here</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../get-started/create-account.html">Creating Free Account &amp; Cluster</a>
+    <a class="menu_title menu_link" href="create-account.html">Creating Free Account &amp; Cluster</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../get-started/cluster-and-data.html">Connecting to Your Database</a>
+    <a class="menu_title menu_link" href="cluster-and-data.html">Connecting to Your Database</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../get-started/run-first-queries.html">Query Data with Query Workbench</a>
+    <a class="menu_title menu_link" href="run-first-queries.html">Query Data with Query Workbench</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../get-started/other-data-tools.html">Other Utilities &amp; Services</a>
+    <a class="menu_title menu_link" href="other-data-tools.html">Other Utilities &amp; Services</a>
   </span>
 </li>
 </ul>
@@ -152,28 +152,28 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../organizations/organization-projects-overview.html">Overview</a>
+    <a class="menu_title menu_link" href="../organizations/organization-projects-overview.html">Overview</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../../organizations/organizations.html">Organizations</a>
+    <a class="menu_title menu_link" href="../organizations/organizations.html">Organizations</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../organizations/manage-organizations.html">Manage Organizations</a>
+    <a class="menu_title menu_link" href="../organizations/manage-organizations.html">Manage Organizations</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../organizations/manage-organization-users.html">Manage Users</a>
+    <a class="menu_title menu_link" href="../organizations/manage-organization-users.html">Manage Users</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../organizations/organization-user-roles.html">Organization Roles</a>
+    <a class="menu_title menu_link" href="../organizations/organization-user-roles.html">Organization Roles</a>
   </span>
 </li>
 </ul>
@@ -181,29 +181,29 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../../projects/projects.html">Projects</a>
+    <a class="menu_title menu_link" href="../projects/projects.html">Projects</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../projects/manage-projects.html">Manage Projects</a>
+    <a class="menu_title menu_link" href="../projects/manage-projects.html">Manage Projects</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../projects/manage-project-users.html">Manage Project Users</a>
+    <a class="menu_title menu_link" href="../projects/manage-project-users.html">Manage Project Users</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../projects/project-roles.html">Project Roles</a>
+    <a class="menu_title menu_link" href="../projects/project-roles.html">Project Roles</a>
   </span>
 </li>
 </ul>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../organizations/manage-account.html">Manage Your Couchbase Capella Account</a>
+    <a class="menu_title menu_link" href="../organizations/manage-account.html">Manage Your Couchbase Capella Account</a>
   </span>
 </li>
 </ul>
@@ -216,27 +216,27 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../clouds/clouds.html">Overview</a>
+    <a class="menu_title menu_link" href="../clouds/clouds.html">Overview</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../clouds/cloud-providers.html">Cloud Provider Requirements</a>
+    <a class="menu_title menu_link" href="../clouds/cloud-providers.html">Cloud Provider Requirements</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../clouds/manage-clouds.html">Connect &amp; Manage Clouds</a>
+    <a class="menu_title menu_link" href="../clouds/manage-clouds.html">Connect &amp; Manage Clouds</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../clouds/private-network.html">Configure Private Network</a>
+    <a class="menu_title menu_link" href="../clouds/private-network.html">Configure Private Network</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../clouds/get-capella-host-name.html">Getting the Capella Host Name</a>
+    <a class="menu_title menu_link" href="../clouds/get-capella-host-name.html">Getting the Capella Host Name</a>
   </span>
 </li>
 </ul>
@@ -249,7 +249,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../clusters.html">Overview</a>
+    <a class="menu_title menu_link" href="../clusters/clusters.html">Overview</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
@@ -260,78 +260,65 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../create-cluster.html">Create a Cluster</a>
+    <a class="menu_title menu_link" href="../clusters/create-cluster.html">Create a Cluster</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../modify-cluster.html">Modify a Cluster</a>
+    <a class="menu_title menu_link" href="../clusters/modify-cluster.html">Modify a Cluster</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../delete-cluster.html">Delete a Cluster</a>
+    <a class="menu_title menu_link" href="../clusters/delete-cluster.html">Delete a Cluster</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../upgrade-cluster.html">Upgrade a Cluster</a>
+    <a class="menu_title menu_link" href="../clusters/upgrade-cluster.html">Upgrade a Cluster</a>
   </span>
 </li>
 </ul>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../sizing.html">Cluster Sizing</a>
+    <a class="menu_title menu_link" href="../clusters/sizing.html">Cluster Sizing</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../scale-cluster.html">Cluster Scaling</a>
+    <a class="menu_title menu_link" href="../clusters/scale-cluster.html">Cluster Scaling</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../allow-ip-address.html">Configure Allowed IPs</a>
+    <a class="menu_title menu_link" href="../clusters/allow-ip-address.html">Configure Allowed IPs</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../manage-database-users.html">Configure Database Credentials</a>
+    <a class="menu_title menu_link" href="../clusters/manage-database-users.html">Configure Database Credentials</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../monitoring/monitoring.html">Monitoring</a>
+    <a class="menu_title menu_link" href="../clusters/monitoring/monitoring.html">Monitoring</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../monitoring/activity-explorer.html">Activity Explorer</a>
+    <a class="menu_title menu_link" href="../clusters/monitoring/activity-explorer.html">Activity Explorer</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../monitoring/metrics-dashboard.html">Metrics Dashboard</a>
+    <a class="menu_title menu_link" href="../clusters/monitoring/metrics-dashboard.html">Metrics Dashboard</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../monitoring/alerts.html">Alerts &amp; Notifications</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-current-page is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link is-current-page" href="xdcr.html">Replication (XDCR)</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="manage-xdcr-replications.html">Manage Replications</a>
+    <a class="menu_title menu_link" href="../clusters/monitoring/alerts.html">Alerts &amp; Notifications</a>
   </span>
 </li>
 </ul>
@@ -339,17 +326,30 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../backup-restore.html">Backup &amp; Restore</a>
+    <a class="menu_title menu_link" href="../clusters/xdcr/xdcr.html">Replication (XDCR)</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../manage-backup.html">Manage Backups</a>
+    <a class="menu_title menu_link" href="../clusters/xdcr/manage-xdcr-replications.html">Manage Replications</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="../clusters/backup-restore.html">Backup &amp; Restore</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../clusters/manage-backup.html">Manage Backups</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../manage-restore.html">Restore a Backup</a>
+    <a class="menu_title menu_link" href="../clusters/manage-restore.html">Restore a Backup</a>
   </span>
 </li>
 </ul>
@@ -365,27 +365,27 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../data-service/data-service.html">Data Service</a>
+    <a class="menu_title menu_link" href="../clusters/data-service/data-service.html">Data Service</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../data-service/manage-buckets.html">Manage Buckets</a>
+    <a class="menu_title menu_link" href="../clusters/data-service/manage-buckets.html">Manage Buckets</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../data-service/scopes-collections.html">Manage Scopes &amp; Collections</a>
+    <a class="menu_title menu_link" href="../clusters/data-service/scopes-collections.html">Manage Scopes &amp; Collections</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../data-service/manage-documents.html">Manage Documents</a>
+    <a class="menu_title menu_link" href="../clusters/data-service/manage-documents.html">Manage Documents</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../data-service/import-data-documents.html">Import Data</a>
+    <a class="menu_title menu_link" href="../clusters/data-service/import-data-documents.html">Import Data</a>
   </span>
 </li>
 </ul>
@@ -393,12 +393,12 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../query-service/query-service.html">Query Service</a>
+    <a class="menu_title menu_link" href="../clusters/query-service/query-service.html">Query Service</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../query-service/query-workbench.html">Query Workbench</a>
+    <a class="menu_title menu_link" href="../clusters/query-service/query-workbench.html">Query Workbench</a>
   </span>
 </li>
 </ul>
@@ -406,12 +406,12 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../index-service/index-service.html">Index Service</a>
+    <a class="menu_title menu_link" href="../clusters/index-service/index-service.html">Index Service</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../index-service/manage-indexes.html">Manage Indexes</a>
+    <a class="menu_title menu_link" href="../clusters/index-service/manage-indexes.html">Manage Indexes</a>
   </span>
 </li>
 </ul>
@@ -419,22 +419,22 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../search-service/search-service.html">Search Service</a>
+    <a class="menu_title menu_link" href="../clusters/search-service/search-service.html">Search Service</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../search-service/create-full-text-indexes.html">Create Full Text Indexes</a>
+    <a class="menu_title menu_link" href="../clusters/search-service/create-full-text-indexes.html">Create Full Text Indexes</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../search-service/manage-full-text-indexes.html">Manage Full Text Indexes</a>
+    <a class="menu_title menu_link" href="../clusters/search-service/manage-full-text-indexes.html">Manage Full Text Indexes</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../search-service/perform-full-text-searches.html">Perform Full Text Searches</a>
+    <a class="menu_title menu_link" href="../clusters/search-service/perform-full-text-searches.html">Perform Full Text Searches</a>
   </span>
 </li>
 </ul>
@@ -442,22 +442,22 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../analytics-service/analytics-service.html">Analytics Service</a>
+    <a class="menu_title menu_link" href="../clusters/analytics-service/analytics-service.html">Analytics Service</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../analytics-service/analytics-workbench.html">Analytics Workbench</a>
+    <a class="menu_title menu_link" href="../clusters/analytics-service/analytics-workbench.html">Analytics Workbench</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../analytics-service/analytics-links.html">Analytics Links</a>
+    <a class="menu_title menu_link" href="../clusters/analytics-service/analytics-links.html">Analytics Links</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../analytics-service/analytics-monitor.html">Analytics Monitor</a>
+    <a class="menu_title menu_link" href="../clusters/analytics-service/analytics-monitor.html">Analytics Monitor</a>
   </span>
 </li>
 </ul>
@@ -465,12 +465,12 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../eventing-service/eventing-service.html">Eventing Service</a>
+    <a class="menu_title menu_link" href="../clusters/eventing-service/eventing-service.html">Eventing Service</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../eventing-service/manage-functions.html">Manage Functions</a>
+    <a class="menu_title menu_link" href="../clusters/eventing-service/manage-functions.html">Manage Functions</a>
   </span>
 </li>
 </ul>
@@ -485,7 +485,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../security/security.html">Security Best Practices</a>
+    <a class="menu_title menu_link" href="../security/security.html">Security Best Practices</a>
   </span>
 </li>
 </ul>
@@ -498,12 +498,12 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../billing/billing.html">Overview</a>
+    <a class="menu_title menu_link" href="../billing/billing.html">Overview</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../billing/manage-billing.html">Manage Billing</a>
+    <a class="menu_title menu_link" href="../billing/manage-billing.html">Manage Billing</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -521,17 +521,17 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../public-api-guide/introducing-public-api.html">Overview</a>
+    <a class="menu_title menu_link" href="../public-api-guide/introducing-public-api.html">Overview</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../public-api-guide/using-cloud-public-api.html">How to use the API</a>
+    <a class="menu_title menu_link" href="../public-api-guide/using-cloud-public-api.html">How to use the API</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/rest-endpoints-all.html">Public API Reference</a>
+    <a class="menu_title menu_link" href="../reference/rest-endpoints-all.html">Public API Reference</a>
   </span>
 </li>
 </ul>
@@ -544,7 +544,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../release-notes/release-notes.html">Capella Release Notes</a>
+    <a class="menu_title menu_link" href="../release-notes/release-notes.html">Capella Release Notes</a>
   </span>
 </li>
 </ul>
@@ -563,34 +563,34 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/aws.html">Amazon Web Services (AWS)</a>
+    <a class="menu_title menu_link" href="../reference/aws.html">Amazon Web Services (AWS)</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/gcp.html">Google Cloud Platform (GCP)</a>
+    <a class="menu_title menu_link" href="../reference/gcp.html">Google Cloud Platform (GCP)</a>
   </span>
 </li>
 </ul>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/cloud-instances.html">Supported Instance Types</a>
+    <a class="menu_title menu_link" href="../reference/cloud-instances.html">Supported Instance Types</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/sdk-compatibility.html">SDK Compatibility</a>
+    <a class="menu_title menu_link" href="../reference/sdk-compatibility.html">SDK Compatibility</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/browser-compatibility.html">Supported Browsers</a>
+    <a class="menu_title menu_link" href="../reference/browser-compatibility.html">Supported Browsers</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/user-management-migration.html">User Management Migration</a>
+    <a class="menu_title menu_link" href="../reference/user-management-migration.html">User Management Migration</a>
   </span>
 </li>
 </ul>
@@ -603,17 +603,17 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../support/support.html">Overview</a>
+    <a class="menu_title menu_link" href="../support/support.html">Overview</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../support/manage-support.html">Request Support</a>
+    <a class="menu_title menu_link" href="../support/manage-support.html">Request Support</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../support/feedback.html">Provide Feedback</a>
+    <a class="menu_title menu_link" href="../support/feedback.html">Provide Feedback</a>
   </span>
 </li>
 </ul>
@@ -631,7 +631,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/clusters/pages/xdcr/xdcr.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/get-started/pages/configuring-app-services.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -689,199 +689,35 @@
 <div class="article-header">
 <nav class="crumbs" aria-label="breadcrumbs">
 <ul>
-<li class="crumb"><a href="../../index.html">Couchbase Capella</a></li>
-<li class="crumb">Clusters Management</li>
-<li class="crumb"><a href="xdcr.html">Replication (XDCR)</a></li>
+<li class="crumb"><a href="../index.html">Couchbase Capella</a></li>
+<li class="crumb"><a href="configuring-app-services.html">Configure Access to App Services</a></li>
 </ul>
 </nav>
 </div>
 <article class="doc">
 <div class="page-heading-title">
-<h1 class="page">Cross Data Center Replication (XDCR)</h1>
+<h1 class="page">Configure Access to App Services</h1>
+<div class="labels">
+<ul>
+<li class="status"><span>UNDER CONSTRUCTION</span></li>
+</ul>
+</div>
 </div>
 <div class="contributor-list-box">
 <span class="last-commit-date" id="commitdate">    </span>
 <ul id="contributorList"></ul>
 <span  id="otherContributor"> + </span>
-</div><div id="preamble">
-<div class="sectionbody">
-<div class="quoteblock abstract">
-<blockquote>
-<em>Cross Data Center Replication</em> (XDCR) allows data to be replicated across clusters that are potentially located in different clouds and different data centers.
-</blockquote>
-</div>
-<div class="paragraph">
-<p>Cross Data Center Replication (XDCR) can be used to replicate data between clusters.
-XDCR can protect against data-center failure, and also provide high-performance access to data for globally distributed mission-critical applications.
-Replications, once established, continuously replicate data until they are paused or deleted.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="replication-sources-and-destinations"><a class="anchor" href="#replication-sources-and-destinations"></a>Replication Sources and Destinations</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>XDCR replicates data from a specific bucket on a source cluster to a specific bucket on a destination cluster.
-Data from the source bucket is pushed to the destination bucket using an XDCR agent, running on the source cluster, using the Database Change Protocol.
-Any bucket on a cluster can be specified as a source or a destination for one or more XDCR replications.</p>
-</div>
-<div class="paragraph">
-<p>Replication sources and destinations can be on clusters in an organization.
-The source cluster can be in a different <a href="../../projects/projects.html" class="page">project</a> from the destination cluster.
-Source and destination clusters can also be on different <a href="../../clouds/clouds.html" class="page">connected clouds</a>&#8201;&#8212;&#8201;with replications being sent efficiently over your cloud provider&#8217;s regional networks.</p>
-</div>
-<div class="sect2">
-<h3 id="about-scopes-and-collections"><a class="anchor" href="#about-scopes-and-collections"></a>About Scopes and Collections</h3>
-<div class="paragraph">
-<p>Those clusters using Couchbase Server 7&#8201;&#8212;&#8201;this includes all clusters hosted on Couchbase&#8217;s Cloud account&#8201;&#8212;&#8201;have the option to replicate data from a specific scope and collection on the source cluster to a specific scope and collection on a destination cluster.
-Scopes and collections that do not exist on a target cluster with the same name as the source will not be replicated.
-The data will instead be added to the target&#8217;s <code>_default</code> scope and collection.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="intra-cluster-xdcr"><a class="anchor" href="#intra-cluster-xdcr"></a>About <em>Intra</em>-Cluster XDCR</h3>
-<div class="paragraph">
-<p>XDCR is traditionally used for inter-cluster replication: the source bucket and the destination bucket are on different clusters.
-However, Capella also supports <em>intra</em>-cluster XDCR&#8201;&#8212;&#8201;where the source bucket and the destination bucket are on the <em>same</em> cluster.</p>
-</div>
-<div class="paragraph">
-<p>To set up intra-cluster XDCR, you will specify the source cluster as the destination cluster when <a href="#clusters:xdcr/create-replication.adoc" class="page unresolved">creating a replication</a>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="what-can-be-replicated"><a class="anchor" href="#what-can-be-replicated"></a>What Can Be Replicated</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>XDCR only replicates bucket data; it does not replicate indexes.
-You&#8217;ll need to reproduce indexes manually.
-Indexes can only be replicated manually, or by administrator-provided automation: when the definitions are pushed to the destination cluster, the indexes are regenerated there.</p>
-</div>
-<div class="paragraph">
-<p>When encountered on the source cluster, non-UTF-8 encoded document IDs are automatically filtered out of replication: they are therefore not transferred to the destination cluster. For each such ID, the warning output is written to <code>xdcr_errors.*</code> log files on the source cluster.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="xdcr-direction"><a class="anchor" href="#xdcr-direction"></a>Replication Direction</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>XDCR can occur between source and destination clusters in either of the following ways:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Unidirectional (One Way)</dt>
-<dd>
-<p>The data contained in a specified source bucket is replicated to a specified destination bucket.
-Although the replicated data on the destination cluster could be used for the routine serving of data, it is in fact intended principally as a backup, to support disaster recovery.</p>
-</dd>
-<dt class="hdlist1">Bidirectional (Two Way)</dt>
-<dd>
-<p>The data contained in a specified source bucket is replicated to a specified destination bucket; and the data contained in the destination bucket is, in turn, replicated back to the source bucket.
-This allows both buckets to be used for the serving of data, which may provide faster data access for users and applications in remote geographies.</p>
-<div class="paragraph">
-<p>Technically, XDCR only performs unidirectional replication.
-A bidirectional topology is created by implementing two unidirectional replications, in opposite directions, between two clusters; such that a bucket on each cluster functions as both source and destination.</p>
-</div>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>When <a href="manage-xdcr-replications.html#create-replication" class="page">creating a replication</a>, you will specify whether to make the replication <em>bidirectional</em>.
-If left unspecified, the replication will be unidirectional from the source bucket to the destination bucket and will appear under the <strong class="ui">Replications</strong> tab of the source cluster.
-If the replication is configured to be bidirectional, the replication will appear under the <strong class="ui">Replications</strong> tab of both the source cluster <em>and</em> the destination cluster.</p>
-</div>
-<div class="paragraph">
-<p>Learn more about XDCR direction and topology in the <a href="#server:learn:clusters-and-availability/xdcr-overview.adoc#xdcr-direction-and-topology" class="page unresolved">Couchbase Server documentation</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="xdcr-advanced-filtering"><a class="anchor" href="#xdcr-advanced-filtering"></a>Replication Filtering</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>XDCR filtering allows specified subsets of documents to be replicated from the source bucket.
-A document can be included in or excluded from, a filtered replication, based on the document&#8217;s fields and values.</p>
-</div>
-<div class="paragraph">
-<p>When a replication starts, the cluster examines the specified source bucket, and determines which documents to replicate:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>If XDCR filtering is <em>not</em> applied, each document in the source bucket is replicated to the target.</p>
-</li>
-<li>
-<p>If XDCR filtering <em>is</em> applied, each document in the source bucket is examined; but only those documents that meet the specified filtering criteria are replicated.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>XDCR filters are normally configured when <a href="manage-xdcr-replications.html#create-replication" class="page">creating a replication</a>, but can also be specified when modifying an existing replication.</p>
-</div>
-<div class="sect2">
-<h3 id="supported-filters"><a class="anchor" href="#supported-filters"></a>Supported Filters</h3>
-<div class="paragraph">
-<p>Filter match requirements are specified using:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><em>Regular Expressions</em>.
-These can be used to specify case-sensitive character-matches, and thereby determine whether a field-name or value may entitle a document to be included in a replication.</p>
-</li>
-<li>
-<p><em>Filtering Expressions</em>.
-These allow comparisons and calculations to be made on the fields and values identified using <em>regular</em> expressions: based on the results, a document either is or is not included in a replication.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Learn more about XDCR expressions in the <a href="#server:learn:clusters-and-availability/xdcr-filtering.adoc" class="page unresolved">Couchbase Server documentation</a>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="conflict-resolution"><a class="anchor" href="#conflict-resolution"></a>Conflict Resolution</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In some cases, especially when bi-directionally replicated data is being modified by applications in different locations, <em>conflicts</em> may arise: meaning that the data of one or more documents have been differently modified more or less simultaneously, requiring resolution.
-XDCR provides two types of <em>conflict resolution</em>, based on either <em>sequence number</em> or <em>timestamp</em>, whereby conflicted data can be saved consistently on source and target.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Sequence Number</dt>
-<dd>
-<p>Conflicts can be resolved by referring to documents' <em>sequence numbers</em>.
-Sequence numbers are maintained per document, and are incremented on every document-update.
-The sequence numbers of source and target documents are compared, and the document with the higher sequence number prevails.</p>
-</dd>
-<dt class="hdlist1">Timestamp</dt>
-<dd>
-<p>Timestamp-based conflict resolution uses the document <em>timestamp</em> (stored in the CAS) to resolve conflicts.
-The timestamps associated with the most recent updates of source and target documents are compared.
-The document whose updates have the more recent timestamp prevails.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>The type of conflict resolution that is used for a given replication is determined by the conflict resolution policy that is configured on the source and destination <em>buckets</em>.
-Conflict resolution is configured on a per-bucket basis at <a href="../data-service/manage-buckets.html#add-bucket" class="page">bucket creation time</a>, and cannot be changed later.</p>
-</div>
-<div class="paragraph">
-<p>Learn more about XDCR conflict resolution in the <a href="#server:learn:clusters-and-availability/xdcr-conflict-resolution.adoc" class="page unresolved">Couchbase Server documentation</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="administering-replications"><a class="anchor" href="#administering-replications"></a>Administering Replications</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>For information on how to create, manage, and delete replications, refer to <a href="manage-xdcr-replications.html" class="page">Manage Replications</a>.</p>
-</div>
-</div>
+</div><div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is a placeholder page AV-38281
+</td>
+</tr>
+</table>
 </div>
 </article>
 </main>
@@ -892,7 +728,7 @@ Conflict resolution is configured on a per-bucket basis at <a href="../data-serv
       <div class="col">
         <div class="footer-logo">
           <a href="https://www.couchbase.com" class="icon">
-            <img src="../../../_/img/couchbase-logo.svg" alt="Couchbase">
+            <img src="../../_/img/couchbase-logo.svg" alt="Couchbase">
           </a>
         </div>
       </div>
@@ -969,9 +805,9 @@ Conflict resolution is configured on a per-bucket basis at <a href="../data-serv
   <iframe class="run-code-output" name="run-code-output"></iframe>
 </div>
 </template>
-<script id="site-script" src="../../../_/js/site.js"></script>
-<script defer src="../../../_/js/vendor/fontawesome-icon-defs.js"></script>
-<script defer src="../../../_/js/vendor/fontawesome.js" data-search-pseudo-elements="true"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
+<script id="site-script" src="../../_/js/site.js"></script>
+<script defer src="../../_/js/vendor/fontawesome-icon-defs.js"></script>
+<script defer src="../../_/js/vendor/fontawesome.js" data-search-pseudo-elements="true"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
 </body>
 </html>
