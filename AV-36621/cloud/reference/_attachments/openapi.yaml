@@ -3520,7 +3520,6 @@ components:
       enum:
       - GP3
       - IO2
-      - PD-SSD
       example: GP3
       type: string
     v3SupportPackageTimezones:
@@ -3547,19 +3546,9 @@ components:
       enum:
       - draft
       - deploying
-      - scaling
-      - upgrading
-      - rebalancing
-      - peering
       - destroying
       - healthy
       - degraded
-      - deploymentFailed
-      - scaleFailed
-      - upgradeFailed
-      - rebalanceFailed
-      - peeringFailed
-      - destroyFailed
       example: deploying
       type: string
     v3BucketRoles:
@@ -3684,8 +3673,8 @@ components:
         type:
           $ref: '#/components/schemas/v3StorageType'
         IOPS:
-          description: Required for GP3 and IO2. Min 3000 for GP3, 1000 if IO2. If
-            storageType="GP3", max = 16000. If storageType= "IO2", max= 64000
+          description: Min 3000 for GP3, 1000 if IO2. If storageType="GP3", max =
+            16000.  If storageType= "IO2", max= 64000
           example: 3000
           type: integer
         size:
@@ -3695,6 +3684,7 @@ components:
           minimum: 50
           type: integer
       required:
+      - IOPS
       - size
       - type
       type: object
