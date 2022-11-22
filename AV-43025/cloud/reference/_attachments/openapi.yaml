@@ -1607,6 +1607,115 @@ paths:
       summary: Get Cluster Info V3
       tags:
       - clusters v3
+  /v3/clusters/{id}/auditlogs:
+    get:
+      description: |
+        Returns a list of all audit log export requests. The list starts with the most recent request. The information returned for each request includes the time of the request's creation, the start and end times of the period for which records are required, a download URL for retrieval of a compressed file that contains the log files, and the progress-status of the request. When progress-status is 'ready', the compressed file can be manually downloaded, using the download URL.
+      operationId: clusters/v3auditlogs-list
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/V3ClusterAuditLogExportList'
+          description: Success
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Resource was not found
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Request validation error
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Internal server error
+      summary: List Cluster Audit Log Exports
+      tags:
+      - clusters v3
+    post:
+      description: |
+        Creates a new request for the export of audit log files that cover a user-specified time-period. The returned value includes a download ID, which can be referenced in a subsequent Get Audit Log Request call. Time stamps must be in RFC3339 format.
+      operationId: clusters/v3auditlogs-create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/V3ClusterAuditLogExportCreate'
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/V3ClusterAuditLogExportDownloadID'
+          description: Success
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Access forbidden
+        "405":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Method not allowed
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Request validation error
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Internal server error
+      summary: Create Cluster Audit Log Export
+      tags:
+      - clusters v3
+  /v3/clusters/{id}/auditlogs/{downloadId}:
+    get:
+      description: |
+        Returns a specific audit log export request. The request is specified with a download ID, previously returned by Create Audit Log Request: the download ID must be appended to the URI of Get Audit Log Request. The information returned for the specified request includes the time of the request's creation, the start and end times of the period for which records are required, a download URL for retrieval of a compressed file that contains the log files, and the progress-status of the request. When progress-status is 'ready', the compressed file can be manually downloaded, using the download URL.
+      operationId: clusters/v3auditlogs-show
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/V3ClusterAuditLogExport'
+          description: Success, job being processed
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Resource was not found
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Request validation error
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Internal server error
+      summary: Get Cluster Audit Log Request
+      tags:
+      - clusters v3
   /v3/clusters/{id}/status:
     get:
       description: Gets cluster status
@@ -1834,6 +1943,257 @@ paths:
       summary: Create cluster user
       tags:
       - clusters v3
+  /v3/clusters/{id}/audit:
+    get:
+      description: |
+        Retrieves the current audit settings for the cluster; including a list of all enabled audit events, a list of disabled users, and the overall enablement status of the cluster.
+      operationId: clusters/v3get-audit
+      parameters:
+      - description: Cluster ID
+        example: 83143c02-a1b6-4bdf-ba4e-7a85aab633e6
+        in: path
+        name: id
+        required: true
+        schema:
+          format: uuid
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/V3ClusterAuditSettings'
+          description: |
+            Returns the current Audit settings for the cluster
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Access forbidden
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Resource was not found
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Internal server error
+      summary: Get Cluster Audit Settings
+      tags:
+      - clusters v3
+    post:
+      description: |
+        Configures the audit settings for the cluster. This allows auditing to be enabled or disabled for the cluster. It also allows specific audit events to be enabled, and specific users to be disabled.
+      operationId: clusters/v3configure-audit
+      parameters:
+      - description: Cluster ID
+        example: 83143c02-a1b6-4bdf-ba4e-7a85aab633e6
+        in: path
+        name: id
+        required: true
+        schema:
+          format: uuid
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/V3ClusterAuditSettings'
+      summary: Configure Cluster Audit Settings
+      tags:
+      - clusters v3
+  /v3/clusters/{id}/auditdescriptors:
+    get:
+      description: |
+        Returns the list of all filterable audit events for the cluster. Filterable audit events are those that can be either disabled or enabled. If a filterable audit event is currently disabled, it can be enabled through its inclusion in the enabledEventIDs field of Configure Cluster Audit Settings.
+      operationId: clusters/v3get-audit-descriptors
+      parameters:
+      - description: Cluster ID
+        example: 83143c02-a1b6-4bdf-ba4e-7a85aab633e6
+        in: path
+        name: id
+        required: true
+        schema:
+          format: uuid
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/V3ClusterAuditFilterableEventList'
+          description: |
+            Returns the list of filterable Audit Events for the cluster.
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Access forbidden
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Resource was not found
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Internal server error
+      summary: List Filterable Audit Events
+      tags:
+      - clusters v3
+  /v3/events:
+    get:
+      description: Return a paginated list of organization Events.
+      operationId: events/v3list
+      parameters:
+      - description: Sets how many results you would like to have on each page
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+      - description: Sets what page you would like to view
+        in: query
+        name: perPage
+        required: false
+        schema:
+          type: integer
+      - allowReserved: true
+        description: Sets order of how you would like to sort results and also the
+          key you would like to order by
+        example: name.desc
+        in: query
+        name: sortBy
+        required: false
+        schema:
+          type: string
+      - description: Start point in the last 24 hours, RFC3339 format. Defaults to
+          24 hours before request.
+        in: query
+        name: from
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: End datetime in the last 24 hours, RFC3339 format. Defaults to
+          Now.
+        in: query
+        name: to
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: Filter by user UUID. Default returns all.
+        in: query
+        name: actor
+        required: false
+        schema:
+          format: uuid
+          type: string
+      - description: filter by cluster. Default is to return all.
+        in: query
+        name: cluster
+        required: false
+        schema:
+          type: string
+      - description: Filter by project. Default is to return all.
+        in: query
+        name: project
+        required: false
+        schema:
+          type: string
+      - description: Filter by severity. Default is to return all.
+        in: query
+        name: severity
+        required: false
+        schema:
+          type: string
+      - description: Filter by tag(s). Default is to return all. Tags are availability,
+          billing, maintenance, performance, security, alert.
+        in: query
+        name: tag
+        required: false
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListEventsResponse'
+          description: Successfully exported events
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Access forbidden
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Request validation error
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Internal server error
+      summary: List Events
+      tags:
+      - events v3
+  /v3/events/{id}:
+    get:
+      description: |
+        Return an event
+      operationId: events/v3show
+      parameters:
+      - description: Event ID
+        example: 48582ae5-2990-431a-b310-6f4b57fde72f
+        in: path
+        name: id
+        required: true
+        schema:
+          format: uuid
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListEventsResponse'
+          description: Success
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Access forbidden
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Request validation error
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/goof'
+          description: Internal server error
+      summary: List Event
+      tags:
+      - events v3
 components:
   schemas:
     StatusOK:
@@ -3150,6 +3510,103 @@ components:
       - updatedAt
       - version
       type: object
+    V3ClusterAuditLogExportList:
+      example:
+        cursor:
+          pages:
+            next: 6
+            totalItems: 2
+            perPage: 5
+            previous: 1
+            last: 5
+            page: 0
+          hrefs:
+            next: https://openapi-generator.tech
+            last: https://openapi-generator.tech
+            previous: https://openapi-generator.tech
+            first: https://openapi-generator.tech
+        data:
+        - createdAt: 2000-01-23T04:56:07.000+00:00
+          downloadURL: downloadURL
+          start: 2000-01-23T04:56:07.000+00:00
+          downloadID: downloadID
+          expiration: 2000-01-23T04:56:07.000+00:00
+          end: 2000-01-23T04:56:07.000+00:00
+          status: status
+        - createdAt: 2000-01-23T04:56:07.000+00:00
+          downloadURL: downloadURL
+          start: 2000-01-23T04:56:07.000+00:00
+          downloadID: downloadID
+          expiration: 2000-01-23T04:56:07.000+00:00
+          end: 2000-01-23T04:56:07.000+00:00
+          status: status
+      properties:
+        cursor:
+          $ref: '#/components/schemas/cursor'
+        data:
+          items:
+            $ref: '#/components/schemas/V3ClusterAuditLogExport'
+          type: array
+      required:
+      - cursor
+      - data
+      type: object
+    V3ClusterAuditLogExport:
+      example:
+        createdAt: 2000-01-23T04:56:07.000+00:00
+        downloadURL: downloadURL
+        start: 2000-01-23T04:56:07.000+00:00
+        downloadID: downloadID
+        expiration: 2000-01-23T04:56:07.000+00:00
+        end: 2000-01-23T04:56:07.000+00:00
+        status: status
+      properties:
+        status:
+          type: string
+        downloadID:
+          type: string
+        downloadURL:
+          nullable: true
+          type: string
+        expiration:
+          format: date-time
+          nullable: true
+          type: string
+        createdAt:
+          format: date-time
+          type: string
+        start:
+          format: date-time
+          type: string
+        end:
+          format: date-time
+          type: string
+      type: object
+    V3ClusterAuditLogExportDownloadID:
+      example:
+        downloadID: downloadID
+      properties:
+        downloadID:
+          type: string
+      type: object
+    V3ClusterAuditLogExportCreate:
+      example:
+        start: 2000-01-23T04:56:07.000+00:00
+        end: 2000-01-23T04:56:07.000+00:00
+      properties:
+        start:
+          description: Start time of requested audit logs. Must be at least 15 minutes
+            in the past, and not exceed 30 days in the past.
+          format: date-time
+          type: string
+        end:
+          description: End time of requested audit logs. Must be at least 15 minutes
+            after the given start time. Defaults to now.
+          format: date-time
+          type: string
+      required:
+      - start
+      type: object
     V3ClusterStatusResponse:
       example:
         status: deploying
@@ -3235,6 +3692,243 @@ components:
       required:
       - password
       - username
+      type: object
+    V3ClusterAuditSettings:
+      example:
+        auditdEnabled: true
+        disabledUsers:
+        - domain: local
+          name: name
+        - domain: local
+          name: name
+        enabledEventIDs:
+        - 112
+        - 112
+      properties:
+        auditdEnabled:
+          description: Controls whether Audit logging is enabled or disabled.
+          example: true
+          type: boolean
+        enabledEventIDs:
+          description: |
+            The disabled parameter indicates which individual filterable events are disabled. Its value must be one or more filterable-event IDs. Filterable-event IDs can be retrieved by means of the GET /clusters/{id}/audit/descriptors method and URI.
+          items:
+            description: A filterable event ID.
+            example: 112
+            type: integer
+          type: array
+        disabledUsers:
+          description: |
+            The disabledUsers parameter disables filterable-event auditing on a per user basis. Its value must be an array of users, specified as objects with both name and domain fields. Each user may be:
+              - A local user, specified in the form `{name:"localusername",
+                domain:"local"}`.
+              - An external user, specified in the form
+                `{name:"externalusername", domain:"external"}`.
+              - An internal user, specified in the form
+                `{name:"@internalusername", domain:"local"}`.
+            Available internal users are @eventing, `@cbq-engine`, `@ns_server`, `@index`, `@projector`, `@goxdcr`, `@fts`, and `@cbas`. If `auditdEnabled` is true, and one or more users are specified as the value of disabledUsers, only filterable events are ignored for those users: non-filterable events continue to be audited.
+          items:
+            $ref: '#/components/schemas/V3ClusterAuditSettings_disabledUsers'
+          type: array
+      required:
+      - auditdEnabled
+      type: object
+    V3ClusterAuditFilterableEventList:
+      example:
+        events:
+        - module: module
+          name: name
+          description: description
+          id: 0
+        - module: module
+          name: name
+          description: description
+          id: 0
+      properties:
+        events:
+          items:
+            $ref: '#/components/schemas/V3ClusterAuditFilterableEvent'
+          type: array
+      type: object
+    V3ClusterAuditFilterableEvent:
+      description: A list of all filterable events. These events may be enabled by
+        passing their event IDs to the enabledEventIDs parameter of POST /clusters/{id}/audit
+      example:
+        module: module
+        name: name
+        description: description
+        id: 0
+      properties:
+        id:
+          description: The event ID.
+          type: integer
+        name:
+          description: The event name.
+          type: string
+        module:
+          description: The event module.
+          type: string
+        description:
+          description: A description of the event.
+          type: string
+      type: object
+    ListEventsResponse:
+      example:
+        cursor:
+          pages:
+            next: 6
+            totalItems: 2
+            perPage: 5
+            previous: 1
+            last: 5
+            page: 0
+          hrefs:
+            next: https://openapi-generator.tech
+            last: https://openapi-generator.tech
+            previous: https://openapi-generator.tech
+            first: https://openapi-generator.tech
+        data:
+        - severity: severity
+          summary: summary
+          actorName: actorName
+          clusterId: clusterId
+          sessionId: sessionId
+          syncGatewayName: syncGatewayName
+          actorId: actorId
+          tenantName: tenantName
+          cloudName: cloudName
+          syncGatewayId: syncGatewayId
+          requestId: requestId
+          cloudId: cloudId
+          clusterName: clusterName
+          tenantId: tenantId
+          id: id
+          time: 2000-01-23T04:56:07.000+00:00
+          projectName: projectName
+          projectId: projectId
+          key: key
+        - severity: severity
+          summary: summary
+          actorName: actorName
+          clusterId: clusterId
+          sessionId: sessionId
+          syncGatewayName: syncGatewayName
+          actorId: actorId
+          tenantName: tenantName
+          cloudName: cloudName
+          syncGatewayId: syncGatewayId
+          requestId: requestId
+          cloudId: cloudId
+          clusterName: clusterName
+          tenantId: tenantId
+          id: id
+          time: 2000-01-23T04:56:07.000+00:00
+          projectName: projectName
+          projectId: projectId
+          key: key
+      properties:
+        cursor:
+          $ref: '#/components/schemas/cursor'
+        data:
+          items:
+            $ref: '#/components/schemas/EventResponse'
+          type: array
+      required:
+      - cursor
+      - data
+      type: object
+    EventResponse:
+      example:
+        severity: severity
+        summary: summary
+        actorName: actorName
+        clusterId: clusterId
+        sessionId: sessionId
+        syncGatewayName: syncGatewayName
+        actorId: actorId
+        tenantName: tenantName
+        cloudName: cloudName
+        syncGatewayId: syncGatewayId
+        requestId: requestId
+        cloudId: cloudId
+        clusterName: clusterName
+        tenantId: tenantId
+        id: id
+        time: 2000-01-23T04:56:07.000+00:00
+        projectName: projectName
+        projectId: projectId
+        key: key
+      properties:
+        id:
+          description: Unique ID of the event
+          type: string
+        key:
+          description: Key defines the specific kind of Event. One from availability,
+            billing, maintenance, performance or security
+          type: string
+        severity:
+          description: The severity of the event. One from info, warning or critical
+          type: string
+        time:
+          description: When the event happened, in RFC3339 format
+          format: date-time
+          type: string
+        tenantId:
+          description: The TenantID this Event belongs to
+          type: string
+        tenantName:
+          description: The name of the tenant at the time of event
+          type: string
+        cloudId:
+          description: The CloudID this Event refers to, only populated for In-VPC
+            cluster
+          type: string
+        cloudName:
+          description: CloudName is the name of the cloud at the time of event emission.
+          type: string
+        projectId:
+          description: The ProjectID this Event refers to
+          type: string
+        projectName:
+          description: ProjectName is the name of the project at the time of event
+            emission
+          type: string
+        clusterId:
+          description: The ClusterID this Event refers to
+          type: string
+        clusterName:
+          description: ClusterName is the name of the cluster at the time of event
+            emission
+          type: string
+        syncGatewayId:
+          description: The SyncGatewayID this Event refers to
+          type: string
+        syncGatewayName:
+          description: SyncGatewayName is the name of the sync gateway at the time
+            of event emission
+          type: string
+        actorId:
+          description: ActorID is the user id that initiated the request for this
+            Event
+          type: string
+        actorName:
+          description: ActorName is the name of the associated user at the time of
+            event emission
+          type: string
+        sessionId:
+          description: SessionID is the user that initiated the request for this Event
+          type: string
+        requestId:
+          description: RequestID string
+          type: string
+        summary:
+          description: Summary of the event
+          type: string
+      required:
+      - id
+      - key
+      - tenantId
+      - time
       type: object
     cursor:
       example:
@@ -3817,6 +4511,23 @@ components:
       - access
       - name
       - scope
+      type: object
+    V3ClusterAuditSettings_disabledUsers:
+      example:
+        domain: local
+        name: name
+      properties:
+        name:
+          description: The name of the user.
+          type: string
+        domain:
+          description: The domain of the user.
+          enum:
+          - local
+          - external
+          type: string
+      required:
+      - name
       type: object
     cursor_pages:
       example:

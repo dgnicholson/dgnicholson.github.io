@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://dgnicholson.github.io/AV-43025/cloud/clusters/manage-restore.html">
 <link rel="stylesheet" href="../../_/css/site.css">
 <script src="../../_/js/vendor/jquery.js"></script>
-<meta name="description" content="A xref:clusters:backup-restore.adoc[backup] can be restored onto the same cluster that it was created on, or it can be restored onto another cluster.">
+<meta name="description" content="You can restore a backup to the same database where it was created or another database in the same organization.">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 
 
@@ -115,6 +115,11 @@
     <span class="menu_title menu_text">Get Started</span>
   </span>
 <ul class="menu_row">
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="https://cloud.couchbase.com/sign-up">Sign up</a>
+  </span>
+</li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
@@ -123,28 +128,344 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../get-started/create-account.html">Creating Free Account, Cluster, and App Service</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../get-started/cluster-and-data.html">Connecting to Your Database</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
     <a class="menu_title menu_link" href="../get-started/run-first-queries.html">Query Data with Query Workbench</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../get-started/other-data-tools.html">Other Utilities &amp; Services</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../get-started/configuring-app-services.html">Configuring App Services (Mobile sync)</a>
   </span>
+</li>
+</ul>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../clouds/get-capella-host-name.html">Get the Capella Host Name</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="0">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Connect an App</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../clouds/connect-an-sdk.html">Connect an App&#8201;&#8212;&#8201;SDKs</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../clouds/private-network.html">Configure Private Networking to Speed up Your App</a>
+  </span>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="../public-api-guide/introducing-public-api.html">Public API</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../public-api-guide/using-cloud-public-api.html">How to use the API</a>
+  </span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="0">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Your Data</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="data-service/data-service.html">Data Service</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="data-service/manage-buckets.html">Manage Buckets</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="data-service/scopes-collections.html">Manage Scopes &amp; Collections</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="data-service/manage-documents.html">Manage Documents</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="data-service/import-data-documents.html">Import Data</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="data-service/storage-engines.html">Storage Engines</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="query-service/query-service.html">{sqlpp} Query Service</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="query-service/query-workbench.html">Query Workbench</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="index-service/index-service.html">Index Service</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="index-service/manage-indexes.html">Manage Indexes</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="search-service/search-service.html">Search Service</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="search-service/create-full-text-indexes.html">Create Full Text Indexes</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="search-service/manage-full-text-indexes.html">Manage Full Text Indexes</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="search-service/perform-full-text-searches.html">Perform Full Text Searches</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="analytics-service/analytics-service.html">Analytics Service</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="analytics-service/analytics-workbench.html">Analytics Workbench</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="analytics-service/analytics-links.html">Analytics Links</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="analytics-service/analytics-monitor.html">Analytics Monitor</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="eventing-service/eventing-service.html">Eventing Service</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="eventing-service/manage-functions.html">Manage Functions</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="backup-restore.html">Backup &amp; Restore</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="manage-backup.html">Manage Backups</a>
+  </span>
+</li>
+<li class="menu_list is-current-page" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link is-current-page" href="manage-restore.html">Restore a Backup</a>
+  </span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="0">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">App Services</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/index.html">Overview</a>
+  </span>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Working with App Services</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/deployment/creating-an-app-service.html">Creating an App Service</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/deployment/scaling-a-deployed-app-service.html">Scaling a Deployed App Service</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/monitoring/monitoring-app-services.html">Monitoring App Services</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/deployment/accessing-admin-apis.html">Granting Admin Access to REST APIs</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Application Endpoints</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/deployment/creating-an-app-endpoint.html">Creating App Endpoints</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/deployment/configuring-app-endpoints.html">Configuring App Endpoints</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/deployment/access-control-data-validation.html">Access Control and Data Validation for App Endpoints</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/monitoring/monitoring-app-endpoints.html">Monitoring App Endpoints</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">User Administration</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/user-management/create-user.html">App User Administration</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/user-management/create-app-role.html">Creating App Roles</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/user-management/set-up-authentication-provider.html">Setting up an Authentication Provider</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/connect/connect-apps-to-endpoint.html">Connecting your Apps to an App Endpoint</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/billing/billing.html">Billing</a>
+  </span>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Migrating</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/migrating/on-prem-to-capella.html">From Self-Managed Servers</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">References</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/channels/channels.html">Channels</a>
+  </span>
+</li>
+<li class="menu_list is-parent closed" data-depth="2">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="../app-services/references/rest-api-introduction.html">REST API</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="3">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/references/rest_api_public_static.html">Public REST API</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="3">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/references/rest_api_metrics_static.html">Metrics REST API</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="3">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/references/rest_api_admin_static.html">Admin REST API</a>
+  </span>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -245,88 +566,73 @@
     <a class="menu_title menu_link" href="../organizations/manage-account.html">Manage Your Couchbase Capella Account</a>
   </span>
 </li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Clouds Management</span>
-  </span>
-<ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../clouds/clouds.html">Overview</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../clouds/cloud-providers.html">Cloud Provider Requirements</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../clouds/manage-clouds.html">Connect &amp; Manage Clouds</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../clouds/private-network.html">Configure Private Network</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../clouds/get-capella-host-name.html">Getting the Capella Host Name</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Clusters Management</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="clusters.html">Overview</a>
+    <a class="menu_title menu_link" href="../security/security.html">Security Best Practices</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Manage Clusters</span>
+    <a class="menu_title menu_link" href="../security/auditing.html">Auditing</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="create-cluster.html">Create a Cluster</a>
+    <a class="menu_title menu_link" href="../security/audit-management.html">Audit Management</a>
+  </span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="0">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Configure Database</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="databases.html">Overview</a>
+  </span>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Manage Databases</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="create-database.html">Create a Database</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="modify-cluster.html">Modify a Cluster</a>
+    <a class="menu_title menu_link" href="modify-database.html">Modify a Database</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="delete-cluster.html">Delete a Cluster</a>
+    <a class="menu_title menu_link" href="delete-database.html">Delete a Database</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="upgrade-cluster.html">Upgrade a Cluster</a>
+    <a class="menu_title menu_link" href="upgrade-database.html">Upgrade a Database</a>
   </span>
 </li>
 </ul>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="sizing.html">Cluster Sizing</a>
+    <a class="menu_title menu_link" href="sizing.html">Database Sizing</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="scale-cluster.html">Cluster Scaling</a>
+    <a class="menu_title menu_link" href="scale-database.html">Database Scaling</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -347,7 +653,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="monitoring/activity-explorer.html">Activity Explorer</a>
+    <a class="menu_title menu_link" href="monitoring/activity-log.html">Activity Log</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
@@ -375,297 +681,12 @@
 </li>
 </ul>
 </li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="backup-restore.html">Backup &amp; Restore</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="manage-backup.html">Manage Backups</a>
-  </span>
-</li>
-<li class="menu_list is-current-page" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link is-current-page" href="manage-restore.html">Restore a Backup</a>
-  </span>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Data Management</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="data-service/data-service.html">Data Service</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="data-service/manage-buckets.html">Manage Buckets</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="data-service/scopes-collections.html">Manage Scopes &amp; Collections</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="data-service/manage-documents.html">Manage Documents</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="data-service/import-data-documents.html">Import Data</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="query-service/query-service.html">Query Service</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="query-service/query-workbench.html">Query Workbench</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="index-service/index-service.html">Index Service</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="index-service/manage-indexes.html">Manage Indexes</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="search-service/search-service.html">Search Service</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="search-service/create-full-text-indexes.html">Create Full Text Indexes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="search-service/manage-full-text-indexes.html">Manage Full Text Indexes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="search-service/perform-full-text-searches.html">Perform Full Text Searches</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="analytics-service/analytics-service.html">Analytics Service</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="analytics-service/analytics-workbench.html">Analytics Workbench</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="analytics-service/analytics-links.html">Analytics Links</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="analytics-service/analytics-monitor.html">Analytics Monitor</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="eventing-service/eventing-service.html">Eventing Service</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="eventing-service/manage-functions.html">Manage Functions</a>
-  </span>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">App Services</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/index.html">Overview</a>
-  </span>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Working with App Services</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/deployment/creating-an-app-service.html">Creating an App Service</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/monitoring/monitoring-app-services.html">Monitoring App Services</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Application Endpoints</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/deployment/app-endpoint.html">Creating App Endpoints</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/deployment/controlling-app-endpoints.html">Controlling App Endpoints</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/deployment/access-control-data-validation.html">Access Control and Data Validation for App Endpoints</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/monitoring/monitoring-app-endpoints.html">Monitoring App Endpoints</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">User Administration</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/user-management/create-user.html">App User Administration</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/user-management/create-app-role.html">Creating App Roles</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/user-management/set-up-authentication-provider.html">Setting up an Authentication Provider</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/connect/connect-apps-to-endpoint.html">Connecting your Apps to an App Endpoint</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/billing/billing.html">Billing</a>
-  </span>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">References</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/channels/channels.html">Channels</a>
-  </span>
-</li>
-<li class="menu_list is-parent closed" data-depth="2">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../app-services/references/rest-api-introduction.html">REST API</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/references/rest_api_public_static.html">Public REST API</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/references/rest_api_metrics_static.html">Metrics REST API</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/deployment/accessing-admin-apis.html">Granting Access to Admin REST APIs</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../app-services/references/rest_api_admin_static.html">Admin REST API</a>
-  </span>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Security</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../security/security.html">Security Best Practices</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Billing</span>
+    <span class="menu_title menu_text">Billing &amp; Support</span>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
@@ -683,40 +704,19 @@
     <span class="menu_title menu_text"><a href="https://www.couchbase.com/pricing" class="add-ext-icon" target="_blank" rel="noopener">Pricing Page</a></span>
   </span>
 </li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Public API</span>
-  </span>
-<ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../public-api-guide/introducing-public-api.html">Overview</a>
+    <a class="menu_title menu_link" href="../support/support.html">Overview</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../public-api-guide/using-cloud-public-api.html">How to use the API</a>
+    <a class="menu_title menu_link" href="../support/manage-support.html">Request Support</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../reference/rest-endpoints-all.html">Public API Reference</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Release Notes</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../release-notes/release-notes.html">Capella Release Notes</a>
+    <a class="menu_title menu_link" href="../support/feedback.html">Provide Feedback</a>
   </span>
 </li>
 </ul>
@@ -765,27 +765,14 @@
     <a class="menu_title menu_link" href="../reference/user-management-migration.html">User Management Migration</a>
   </span>
 </li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Support</span>
-  </span>
-<ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../support/support.html">Overview</a>
+    <a class="menu_title menu_link" href="../reference/rest-endpoints-all.html">Public API Reference</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../support/manage-support.html">Request Support</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../support/feedback.html">Provide Feedback</a>
+    <a class="menu_title menu_link" href="../release-notes/release-notes.html">Capella Release Notes</a>
   </span>
 </li>
 </ul>
@@ -799,7 +786,7 @@
 </aside>
 <aside class="toc sidebar"
       data-title="Contents"
-      data-levels="2">
+      data-levels="1">
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
@@ -862,7 +849,7 @@
 <nav class="crumbs" aria-label="breadcrumbs">
 <ul>
 <li class="crumb"><a href="../index.html">Couchbase Capella</a></li>
-<li class="crumb">Clusters Management</li>
+<li class="crumb">Your Data</li>
 <li class="crumb"><a href="backup-restore.html">Backup &amp; Restore</a></li>
 <li class="crumb"><a href="manage-restore.html">Restore a Backup</a></li>
 </ul>
@@ -880,13 +867,13 @@
 <div class="sectionbody">
 <div class="quoteblock abstract">
 <blockquote>
-A <a href="backup-restore.html" class="page">backup</a> can be restored onto the same cluster that it was created on, or it can be restored onto another cluster.
+You can restore a backup to the same database where it was created or another database in the same organization.
 </blockquote>
 </div>
 <div class="paragraph">
 <p>Use the procedures on this page to restore data from a bucket backup.
-If you would like to create and manage buckets, see <a href="manage-backup.html" class="page">Manage Backups</a>.
-To learn more about how backups work in Couchbase Capella, see <a href="backup-restore.html" class="page">Backup and Restore Cluster Data</a>.</p>
+For more information about how to create and manage backups, see <a href="manage-backup.html" class="page">Manage Backups</a>.
+For more information about how backups work in Couchbase Capella, see <a href="backup-restore.html" class="page">Backup and Restore Data</a>.</p>
 </div>
 </div>
 </div>
@@ -902,12 +889,13 @@ To learn more about how backups work in Couchbase Capella, see <a href="backup-r
 <td class="content">
 <div class="title">Permissions Required</div>
 <div class="paragraph">
-<p>To view and restore bucket data from a backup, the following permissions are required:</p>
+<p>To view and restore bucket data from a backup:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the project containing the source cluster that created the backup, as well as the project containing the destination cluster of the restore. If you have the <code>Organization Owner</code> role, you already have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role.</p>
+<p>You need the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the project with the database that created the backup and the project containing the destination database for the restore.
+If you have the <code>Organization Owner</code> role, you already have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for all projects in the organization.</p>
 </li>
 </ul>
 </div>
@@ -918,29 +906,13 @@ To learn more about how backups work in Couchbase Capella, see <a href="backup-r
 <div class="ulist">
 <ul>
 <li>
-<p>The source cluster that created the bucket backup must still exist.</p>
+<p>The source database that created the bucket backup must still exist.</p>
 </li>
 <li>
-<p>Backups can only be restored to a cluster running the same <a href="clusters.html#cluster-version" class="page">major version</a> (or higher) than the source cluster that created the backup.</p>
+<p>You can only restore backups to a database running the same <a href="databases.html#cluster-version" class="page">major version</a> or later as the database that created the backup.</p>
 </li>
 <li>
-<p>Data can only be restored to an existing bucket with the same name and <a href="data-service/manage-buckets.html#add-bucket" class="page">conflict resolution methods</a> as the bucket from the backup.
-If a bucket of the same name does not yet exist on the target cluster, you can complete a restore by choosing to <a href="#create-missing-bucket">automatically create the missing bucket</a>.</p>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Any conflicts that occur during the restore will be resolved automatically using the conflict resolution method configured for the buckets.
-This means that if a key-value pair in the target bucket is newer than the one in the backup, then the one from the backup is <em>not</em> restored unless <a href="#overwrite-docs">otherwise specified</a> in the restore settings.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
+<p>You can only restore data to an existing bucket with the same name and <a href="data-service/manage-buckets.html#add-bucket" class="page">conflict resolution methods</a> as the bucket from the backup.</p>
 </li>
 </ul>
 </div>
@@ -950,31 +922,40 @@ This means that if a key-value pair in the target bucket is newer than the one i
 <h2 id="restore-bucket"><a class="anchor" href="#restore-bucket"></a>Restore a Bucket</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Restoring data from bucket backups should only be considered in worst-case scenarios.
-Other methods of recovery, such as <a href="xdcr/xdcr.html" class="page">XDCR replication</a> from a redundant cluster, should be considered the first lines of recovery.</p>
+<p>Couchbase recommends that you only restore data from bucket backups in worst-case scenarios.
+You should use other recovery methods, such as <a href="xdcr/xdcr.html" class="page">XDCR replication</a> from a redundant database as the primary recovery method.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Capella resolves any conflicts during the restore with the conflict resolution method configured for the buckets.
+For example, if a key-value pair in the target bucket is newer than the one in the backup, then the one from the backup isn&#8217;t restored unless <a href="#overwrite-docs">otherwise specified</a> in the restore settings.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go to the <strong>Backups</strong> tab of the source cluster that created the backup that you wish to restore.</p>
+<p>Open the <strong>Backup</strong> page for your database:</p>
 <div class="openblock">
 <div class="content">
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Go to the <strong>Clusters</strong> tab in the main navigation.</p>
+<p>With the <strong>Projects</strong> tab in your organization open, click the project with the database you want to work with.</p>
 </li>
 <li>
-<p>Find and click on the source cluster.</p>
-<div class="paragraph">
-<p>This action opens the cluster with its <strong>Metrics</strong> tab selected.</p>
-</div>
+<p>With the <strong>Databases</strong> tab open, select your database.</p>
 </li>
 <li>
-<p>Click the <strong>Backups</strong> tab.</p>
-<div class="paragraph">
-<p>This action shows the <strong>Latest Backups Per Bucket</strong> list.</p>
-</div>
+<p>Click the <strong>Backup</strong> tab.</p>
 </li>
 </ol>
 </div>
@@ -982,33 +963,10 @@ Other methods of recovery, such as <a href="xdcr/xdcr.html" class="page">XDCR re
 </div>
 </li>
 <li>
-<p>You have the option of restoring the latest backup or an earlier backup.</p>
-<div class="openblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Restore the latest backup</dt>
-<dd>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>In the <strong>Latest Backups Per Bucket</strong> list, find the bucket with the backup that you want to restore and click the <strong>More options</strong> icon <span class="icon"><i class="fa fa-ellipsis-v"></i></span> on the right side of that bucket.</p>
+<p>Select the bucket you want to restore.</p>
 </li>
 <li>
-<p>Click <b class="button">Restore Latest Backup</b>.</p>
-</li>
-</ol>
-</div>
-</dd>
-<dt class="hdlist1">Restore an earlier backup</dt>
-<dd>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>In the <strong>Latest Backups Per Bucket</strong> list, click the name of the bucket that you want to restore.</p>
-</li>
-<li>
-<p>A list of backups for the current bucket based on the selected date is shown. Click the <strong>More options</strong> icon <span class="icon"><i class="fa fa-ellipsis-v"></i></span> on the right side of the backup that you want to restore.</p>
+<p>Click <b class="button">Restore</b> for the backup you want to restore.</p>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -1016,42 +974,23 @@ Other methods of recovery, such as <a href="xdcr/xdcr.html" class="page">XDCR re
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Clicking the calendar icon will produce a date picker that allows you to select a previous date when a backup cycle or on-demand backup occurred.
+Clicking the <strong>From Date</strong> date picker allows you to select a previous date for a backup cycle or on-demand backup.
 </td>
 </tr>
 </table>
 </div>
 </li>
 <li>
-<p>Click <b class="button">Restore Backup</b>.</p>
-</li>
-</ol>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-</div>
+<p>Specify the <strong>Destination Database</strong>.</p>
 <div class="paragraph">
-<p>Either option opens the <strong>Restore Backup</strong> fly-out menu.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/backup-inspect-flyout-full-hosted.png" alt="The inspect fly-out menu of a Full backup. At the bottom of the fly-out is the 'Restore backup' button." width="400">
-</div>
-</div>
-</li>
-<li>
-<p>Specify the <strong>Destination Cluster</strong>.</p>
-<div class="paragraph">
-<p>The restore location can be the current cluster (chosen by default) or a different cluster in your organization.
-If you choose the <strong>Restore to a different cluster</strong> option, the <strong>Choose Cluster</strong> drop-down menu becomes available.</p>
+<p>The restore location can be the current database (chosen by default) or a different database in your organization.
+If you select <strong>Restore to a different database</strong>, the <strong>Database</strong> list appears.</p>
 </div>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>(<em>Restore to a different cluster only</em>) Use the <strong>Cluster</strong> dropdown menu to select the cluster that is to be the destination of the restore.
-Only clusters that are located in the same <a href="../organizations/organizations.html#organizations" class="page">organization</a> are listed in the dropdown menu.</p>
+<p>When restoring to a different database, use the <strong>Database</strong> list to select the database that&#8217;s the destination of the restore.
+You can only restore to a database in the same <a href="../organizations/organizations.html#organizations" class="page">organization</a>.</p>
 </li>
 </ol>
 </div>
@@ -1061,67 +1000,51 @@ Only clusters that are located in the same <a href="../organizations/organizatio
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Use the checkboxes provided in this section to choose which services you want to restore.
-By default, all options&#8201;&#8212;&#8201;<a href="data-service/data-service.html" class="page">Data</a>, <a href="query-service/query-service.html" class="page">Query</a>, <a href="index-service/index-service.html" class="page">Index</a>, and <a href="search-service/search-service.html" class="page">Search</a>&#8201;&#8212;&#8201;are selected.
+<p>Select each service you want to restore.
+By default, all options are selected.
 You must select at least one service.</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p><a id="overwrite-docs"></a>(<em>Optional</em>) Apply <strong>Other Options</strong>.</p>
+<p><a id="overwrite-docs"></a>(Optional) Apply <strong>Other Options</strong>.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p><strong>Overwrite Documents From Backup</strong></p>
 <div class="paragraph">
-<p>When enabled, this option will overwrite later versions of documents with earlier versions from the backup.
-This option is disabled by default.</p>
+<p>When enabled, this option overwrites later versions of documents with earlier versions from the backup.
+By default, this option is deselected.</p>
 </div>
 </li>
 <li>
 <p><strong>Automatically Remove Deleted Collections</strong></p>
 <div class="paragraph">
-<p>When enabled, this option will remove empty collections from the restore.
-This option is disabled by default.</p>
-</div>
-</li>
-<li>
-<p><a id="create-missing-bucket"></a><strong>Automatically Create Missing Buckets</strong></p>
-<div class="paragraph">
-<p>This option is useful if you&#8217;re restoring a deleted bucket.
-If you leave this option disabled and try to restore a backup for a bucket that no longer exists, the restore process will fail.
-This option is disabled by default.</p>
+<p>When enabled, this option removes empty collections from the restore.
+By default, this option is deselected.</p>
 </div>
 </li>
 <li>
 <p><strong>Filter Keys</strong></p>
 <div class="paragraph">
 <p>Use this field to enter a regular expression (RE2) to filter keys.
-This allows you to specifically restore only a portion of your dataset from the backup.</p>
+You can use Filter Keys to restore a specified portion of your dataset from the backup.</p>
 </div>
 </li>
 <li>
 <p><strong>Filter Values</strong></p>
 <div class="paragraph">
 <p>Use this field to enter a regular expression (RE2) to filter values.
-This allows you to specifically restore only a portion of your dataset from the backup.</p>
-</div>
-</li>
-<li>
-<p><strong>Map Data</strong></p>
-<div class="paragraph">
-<p>This field allows you to map data from the backup to differently named data containers on the cluster.
-For example, buckets can be remapped to other buckets (<code>bucket=newbucket</code>), scopes and collections to other scopes and collections in the same bucket (<code>bucket.scope=bucket.newscope</code> or <code>bucket.scope.collection=bucket.scope.newcollection</code>).
-Note that map sources can only be specified once and cannot overlap.</p>
+You can use Filter Values to restore a specified portion of your dataset from the backup.</p>
 </div>
 </li>
 <li>
 <p><strong>Include Data</strong></p>
 <div class="paragraph">
-<p>Use this field to define only those buckets, scopes, or collections that you want to <em>include</em> from the restore.
-When items are added to this field, only those data containers will be restored and nothing else.
-Includes are defined as follows: <code>bucket</code>, <code>bucket.scope</code>, and <code>bucket.scope.collection</code>.</p>
+<p>Use this field to include only specific buckets, scopes, or collections from the backup.
+Use this field to restore only specific data containers.
+Use the following format for Include Data items: <code>bucket</code>, <code>bucket.scope</code>, or <code>bucket.scope.collection</code>.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1136,14 +1059,14 @@ As buckets can contain periods, they must be escaped: <code>my\.bucket.my-scope<
 </table>
 </div>
 <div class="paragraph">
-<p>Note that included data can only be specified once and cannot overlap (e.g. <code>bucket1</code> and <code>bucket1.scope1</code>).</p>
+<p>Included data can only be specified once and can&#8217;t overlap, for example <code>bucket1</code> and <code>bucket1.scope1</code>.</p>
 </div>
 </li>
 <li>
 <p><strong>Exclude Data</strong></p>
 <div class="paragraph">
-<p>Use this field to define any buckets, scopes, or collections that you want to <em>exclude</em> from the restore.
-When items are added to this field, all data containers will be restored except for those that are specified.
+<p>Use this field to define any buckets, scopes, or collections you want to exclude from the restore.
+Use this field to restore all data containers except the items in this field.
 Excludes are defined as follows: <code>bucket</code>, <code>bucket.scope</code>, and <code>bucket.scope.collection</code>.</p>
 </div>
 </li>
@@ -1151,10 +1074,11 @@ Excludes are defined as follows: <code>bucket</code>, <code>bucket.scope</code>,
 </div>
 </li>
 <li>
-<p>Once you&#8217;re ready to initiate the restore, click <b class="button">Restore</b>.</p>
+<p>To start the restore, click <b class="button">Restore Backup</b>.</p>
 <div class="paragraph">
-<p>There can be a delay while the restore is scheduled before the restore process takes place.
-Once the process starts, the status of the operation is shown in a <a href="scale-cluster.html#jobs" class="page">jobs panel</a> that will appear near the top of the cluster page. Corresponding events are also added to the <a href="monitoring/activity-explorer.html" class="page">Activity Explorer</a>.</p>
+<p>There can be a delay while Capella schedules the restore.
+Once the restore starts, its status appears on the Database page.
+Capella also adds backup and restore events to the <a href="monitoring/activity-log.html" class="page">Activity Log</a>.</p>
 </div>
 </li>
 </ol>
@@ -1173,12 +1097,12 @@ Once the process starts, the status of the operation is shown in a <a href="scal
 <td class="content">
 <div class="title">Permissions Required</div>
 <div class="paragraph">
-<p>To access indexes in the Couchbase Capella UI, the following roles are required:</p>
+<p>To access indexes in the Couchbase Capella UI:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-data-reader-writer" class="page"><code>Cluster Data Reader/Writer</code></a> role for the project that contains the cluster.</p>
+<p>You need the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-data-reader-writer" class="page"><code>Database Data Reader/Writer</code></a> role for the project with the database.</p>
 </li>
 </ul>
 </div>
@@ -1187,12 +1111,12 @@ Once the process starts, the status of the operation is shown in a <a href="scal
 </table>
 </div>
 <div class="paragraph">
-<p>If GSI indexes were included in the bucket that you restored, they are automatically restored in a round-robin fashion among the current nodes running the Index Service.
-However, these indexes will only be created, <em>not built</em>.</p>
+<p>If GSI indexes were included in the bucket you restored, they&#8217;re automatically restored in a round-robin fashion among the current nodes running the Index Service.
+These indexes are created, but not built.</p>
 </div>
 <div class="paragraph">
-<p>The reason that indexes are created and not built is that Couchbase Capella does not know the optimal index topology ahead of time.
-By not building the indexes, it gives you the option to manually move each index between nodes and build them yourself.
+<p>Indexes are created and not built because Couchbase Capella doesn&#8217;t know the optimal index topology ahead of time.
+By not building the indexes, Capella gives you the option to manually move each index between nodes and build them yourself.
 However, if you find the automatic index distribution acceptable, you can use the Capella UI to rebuild each index.</p>
 </div>
 <div class="dlist">
@@ -1202,22 +1126,22 @@ However, if you find the automatic index distribution acceptable, you can use th
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go to the cluster&#8217;s <strong>Tools &gt; Indexes</strong> tab.</p>
+<p>Open the <strong>Indexes</strong> page for your database:</p>
 <div class="openblock">
 <div class="content">
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Go to the <strong>Clusters</strong> tab in the main navigation.</p>
+<p>With the <strong>Projects</strong> tab in your organization open, select the project with the database you want.</p>
 </li>
 <li>
-<p>Find and click on the cluster on which you restored a backup.</p>
-<div class="paragraph">
-<p>This opens the cluster with its <strong>Metrics</strong> tab selected.</p>
-</div>
+<p>With the <strong>Databases</strong> tab open, select your database.</p>
 </li>
 <li>
-<p>Click the <strong>Tools &gt; Indexes</strong> tab.</p>
+<p>Click the <strong>Data Tools</strong> tab.</p>
+</li>
+<li>
+<p>In the navigation menu, click <b class="button">Indexes</b>.</p>
 </li>
 </ol>
 </div>
@@ -1225,301 +1149,21 @@ However, if you find the automatic index distribution acceptable, you can use th
 </div>
 </li>
 <li>
-<p>Each index that was restored will display a status of <strong>Created</strong>.
-Click the Play icon <span class="icon"><i class="fa fa-play"></i></span> in the <strong>Status</strong> column for each index that you wish to rebuild.</p>
+<p>Each restored index displays a status of <strong>Created</strong>.
+In the <strong>Status</strong> column, click the Play icon <span class="icon"><i class="fa fa-play"></i></span> for each index you want to rebuild.</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/indexes-tab-rebuild-index-after-restore-hosted.png" alt="The 'Tools &gt; Indexes' tab showing multiple indexes with a status of 'Created' with Play icons.">
 </div>
 </div>
 <div class="paragraph">
-<p>Each index that you build will display the <strong>Ready</strong> status when the process is complete.</p>
+<p>Each index you build displays the <strong>Ready</strong> status when the process is complete.</p>
 </div>
 </li>
 </ol>
 </div>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="restore-invpc"><a class="anchor" href="#restore-invpc"></a>Restore a Backup in Own VPC</h2>
-<div class="sectionbody">
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>This information is for anyone still using Couchbase Server 6.6, hosted in their own cloud provider&#8217;s VPC.
-It does not apply to Couchbase 7.0, hosted in Couchbase&#8217;s VPC and fully managed for you.</p>
-</div>
-<div class="paragraph">
-<p>For further information <a href="https://www.couchbase.com/products/capella">contact Couchbase</a>.</p>
-</div>
-<div class="paragraph">
-<p>The easiest way to get started with Capella, our fully managed DBaaS, is <a href="../get-started/get-started.html" class="page">hosting in Couchbase&#8217;s Cloud</a>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="guidelines-and-limitations"><a class="anchor" href="#guidelines-and-limitations"></a>Guidelines and Limitations</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>The source cluster that originally created the backup must still exist and be accessible within the Capella UI.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Although backups are preserved in the connected cloud even after a cluster is deleted, the only <em>user-accessible</em> method for restoring a backup requires that you be able to access the source cluster&#8217;s <strong>Backup &amp; Restore</strong> tab.</p>
-</div>
-<div class="paragraph">
-<p>If you need to restore a backup from a cluster that is no longer available in the Capella UI (such as after an accidental cluster deletion), please <a href="../support/manage-support.html" class="page">contact Couchbase Capella Support</a> for assistance.
-In the meantime, it is highly recommended that you <a href="manage-backup.html#view-backup-files" class="page">download the backup</a> from cloud storage so as to ensure it is not deleted as part of the cluster&#8217;s <a href="backup-restore.html#backup-retention" class="page">retention policy</a>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>For customers hosting Capella in their own cloud provider&#8217;s VPC, a backup can only be restored to a cluster that is deployed in the same <a href="../clouds/clouds.html" class="page">connected cloud</a> as the source cluster that created the backup.</p>
-</li>
-<li>
-<p>Backups can only be restored to a cluster that is running the same <a href="clusters.html#cluster-version" class="page">major version</a> (or higher) than the source cluster that originally created the backup.</p>
-</li>
-<li>
-<p>Data can only be restored to buckets that have the same names and <a href="data-service/manage-buckets.html#add-bucket" class="page">conflict resolution methods</a> as the buckets from the backup.
-Ensure that you&#8217;ve configured buckets on the target cluster that have the same names and conflict resolution methods as the ones you are trying to restore data from.
-If a bucket of the same name does not exist on the target cluster, no data from that bucket will be restored from the backup.</p>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Any conflicts that occur during the restore will be resolved automatically using the conflict resolution method configured for the buckets.
-This means that if a key-value pair in the target bucket is newer than the one in the backup, then the one from the backup is <em>not</em> restored.</p>
-</div>
-<div class="paragraph">
-<p>If the goal of the restore is to overwrite the current data with the data from the backup, it is recommended that you restore the data to a brand new bucket of the same name on another cluster.
-That way, all data will be restored in the state that it is in the backup.
-From there you can copy the data over to the desired bucket as you see fit.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>When restoring from a <a href="backup-restore.html#series-backup" class="page">Series backup</a>, data will be restored from the latest Incremental backup in the series.
-The restore process will take into account any failovers that may have occurred in between the time that the backups were originally taken.
-If a failover did occur in between the backups, and the backup archive contains data that no longer exists in the cluster, then the data that no longer exists will be skipped during the restore.
-If no failovers occurred in between backups, then restoring a Series backup will restore all data from the series.</p>
-</li>
-<li>
-<p>Restoring cluster backups is supported during rebalances and failovers.
-If a rebalance is in progress, the restore process will track any data movement around the cluster and ensure that data is restored to the appropriate node.
-If a failover occurs during restore, the restore process will recover so long as the failed node is removed from the cluster within three minutes.
-If the failed node is not removed, then the restore will fail.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="restore-bucket-vpc"><a class="anchor" href="#restore-bucket-vpc"></a>Restore Bucket Data</h3>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="title">Permissions Required</div>
-<div class="paragraph">
-<p>To restore bucket data from a backup, the following permissions are required:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the project containing the source cluster that created the backup, as well as the project containing the destination cluster of the restore.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Go to the <strong>Backup &amp; Restore</strong> tab of the source cluster that created the backup that you wish to restore.</p>
-<div class="openblock">
-<div class="content">
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Go to the <strong>Clusters</strong> tab in the main navigation.</p>
-</li>
-<li>
-<p>Find and click on the source cluster.</p>
-<div class="paragraph">
-<p>This opens the cluster with its <strong>Overview</strong> tab selected.</p>
-</div>
-</li>
-<li>
-<p>Click the <strong>Backup &amp; Restore</strong> tab.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>In the <strong>Backups</strong> list, find and click on the backup that you wish to restore.</p>
-<div class="paragraph">
-<p>This opens the backup&#8217;s fly-out menu.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/backup-inspect-flyout-full.png" alt="The inspect fly-out menu of a Full backup. At the bottom of the fly-out is the 'Restore backup' button." width="500">
-</div>
-</div>
-</li>
-<li>
-<p>Click <b class="button">Restore backup</b>.</p>
-</li>
-<li>
-<p>Specify the <strong>Restore Location</strong>.</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/backup-inspect-flyout-restore-location.png" alt="The Restore fly-out menu showing the 'Restore Location' section." width="500">
-</div>
-</div>
-<div class="paragraph">
-<p>The restore location is the cluster that you wish to restore the backup to.
-This can be the same cluster that created the backup, or it can be another cluster in the same connected cloud.</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Use the <strong>Project</strong> dropdown menu to select the project that contains the cluster that is to be the destination of the restore.</p>
-</li>
-<li>
-<p>Use the <strong>Cluster</strong> dropdown menu to select the cluster that is to be the destination of the restore.
-Only clusters that are located in the same connected cloud appear in the dropdown menu.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Once you&#8217;ve selected the cluster, click <b class="button">Next</b>.</p>
-</div>
-</li>
-<li>
-<p>To confirm that you&#8217;re restoring to the desired cluster, enter the name of the destination cluster.</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/backup-inspect-flyout-destination-name.png" alt="The Restore fly-out menu showing the field to enter the name of the destination cluster." width="500">
-</div>
-</div>
-</li>
-<li>
-<p>Once you&#8217;re ready, click <b class="button">Restore</b> to begin restoring the backup.</p>
-<div class="paragraph">
-<p>Note that there can be a slight delay while the restore is scheduled, after which the fly-out will close.</p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="restore-indexes-vpc"><a class="anchor" href="#restore-indexes-vpc"></a>Restoring Indexes</h3>
-<div class="paragraph">
-<p>If GSI indexes were included in the bucket that you restored, they are automatically restored in a round-robin fashion among the current nodes running the Index Service.
-However, these indexes will only be created, <em>not built</em>.</p>
-</div>
-<div class="paragraph">
-<p>The reason that indexes are created and not built is because Couchbase Capella does not know the optimal index topology ahead of time.
-By not building the indexes, it gives you the option to manually move each index between nodes and build them yourself.</p>
-</div>
-<div class="paragraph">
-<p>However, if you find the automatic index distribution acceptable, you can use the Capella UI to rebuild each index.</p>
-</div>
-<div id="permissions-required-index-vpc" class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="title">Permissions Required</div>
-<div class="paragraph">
-<p>In order to access indexes in the Couchbase Capella UI, the following roles are required:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-data-reader-writer" class="page"><code>Cluster Data Reader/Writer</code></a> role for the project that contains the cluster.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">To Rebuild an Automatically-Restored GSI Index</div>
-<ol class="arabic">
-<li>
-<p>Go to the cluster&#8217;s <strong>Tools &gt; Indexes</strong> tab.</p>
-<div class="openblock">
-<div class="content">
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Go to the <strong>Clusters</strong> tab in the main navigation.</p>
-</li>
-<li>
-<p>Find and click on the cluster on which you restored a backup.</p>
-<div class="paragraph">
-<p>This opens the cluster with its <strong>Overview</strong> tab selected.</p>
-</div>
-</li>
-<li>
-<p>Click the <strong>Tools &gt; Indexes</strong> tab.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>Each index that was restored will display a status of <strong>Created</strong>.
-Click the Play icon in the <strong>Status</strong> column for each index that you wish to rebuild.</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/indexes-tab-rebuild-index-after-restore.png" alt="The 'Tools &gt; Indexes' tab showing multiple indexes with a status of 'Created' with Play icons.">
-</div>
-</div>
-</li>
-</ol>
-</div>
 </div>
 </div>
 </div>
