@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv=content-security-policy content="default-src 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' https://fonts.gstatic.com; frame-src 'self' https:; img-src 'self' data: https:; connect-src 'self' https:; worker-src blob:;">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Query Service | Couchbase Docs</title>
+<title>SQL++ Query Service | Couchbase Docs</title>
 <link rel="canonical" href="https://dgnicholson.github.io/AV-43025/cloud/clusters/query-service/query-service.html">
 <link rel="stylesheet" href="../../../_/css/site.css">
 <script src="../../../_/js/vendor/jquery.js"></script>
@@ -114,6 +114,11 @@
     <span class="menu_title menu_text">Get Started</span>
   </span>
 <ul class="menu_row">
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="https://cloud.couchbase.com/sign-up">Sign up</a>
+  </span>
+</li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
@@ -122,22 +127,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../get-started/create-account.html">Creating Free Account, Cluster, and App Service</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../get-started/cluster-and-data.html">Connecting to Your Database</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
     <a class="menu_title menu_link" href="../../get-started/run-first-queries.html">Query Data with Query Workbench</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../get-started/other-data-tools.html">Other Utilities &amp; Services</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
@@ -147,68 +137,9 @@
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Organizations &amp; Access</span>
-  </span>
-<ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../organizations/organization-projects-overview.html">Overview</a>
-  </span>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../../organizations/organizations.html">Organizations</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../organizations/manage-organizations.html">Manage Organizations</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../organizations/manage-organization-users.html">Manage Users</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../organizations/organization-user-roles.html">Organization Roles</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../../projects/projects.html">Projects</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../projects/manage-projects.html">Manage Projects</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../projects/manage-project-users.html">Manage Project Users</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../projects/project-roles.html">Project Roles</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../organizations/manage-account.html">Manage Your Couchbase Capella Account</a>
+    <a class="menu_title menu_link" href="../../clouds/get-capella-host-name.html">Get the Capella Host Name</a>
   </span>
 </li>
 </ul>
@@ -216,145 +147,28 @@
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Clouds Management</span>
+    <span class="menu_title menu_text">Connect an App</span>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../clouds/clouds.html">Overview</a>
+    <a class="menu_title menu_link" href="../../clouds/connect-an-sdk.html">Connect an App&#8201;&#8212;&#8201;SDKs</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../clouds/cloud-providers.html">Cloud Provider Requirements</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../clouds/manage-clouds.html">Connect &amp; Manage Clouds</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../clouds/private-network.html">Configure Private Network</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../clouds/get-capella-host-name.html">Getting the Capella Host Name</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Clusters Management</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../clusters.html">Overview</a>
+    <a class="menu_title menu_link" href="../../clouds/private-network.html">Configure Private Networking to Speed up Your App</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Manage Clusters</span>
+    <a class="menu_title menu_link" href="../../public-api-guide/introducing-public-api.html">Public API</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../create-cluster.html">Create a Cluster</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../modify-cluster.html">Modify a Cluster</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../delete-cluster.html">Delete a Cluster</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../upgrade-cluster.html">Upgrade a Cluster</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../sizing.html">Cluster Sizing</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../scale-cluster.html">Cluster Scaling</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../allow-ip-address.html">Configure Allowed IPs</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../manage-database-users.html">Configure Database Credentials</a>
-  </span>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../monitoring/monitoring.html">Monitoring</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../monitoring/activity-explorer.html">Activity Explorer</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../monitoring/metrics-dashboard.html">Metrics Dashboard</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../monitoring/alerts.html">Alerts &amp; Notifications</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../xdcr/xdcr.html">Replication (XDCR)</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../xdcr/manage-xdcr-replications.html">Manage Replications</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../backup-restore.html">Backup &amp; Restore</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../manage-backup.html">Manage Backups</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../manage-restore.html">Restore a Backup</a>
+    <a class="menu_title menu_link" href="../../public-api-guide/using-cloud-public-api.html">How to use the API</a>
   </span>
 </li>
 </ul>
@@ -364,7 +178,7 @@
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Data Management</span>
+    <span class="menu_title menu_text">Your Data</span>
   </span>
 <ul class="menu_row">
 <li class="menu_list is-parent closed" data-depth="1">
@@ -393,12 +207,17 @@
     <a class="menu_title menu_link" href="../data-service/import-data-documents.html">Import Data</a>
   </span>
 </li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../data-service/storage-engines.html">Storage Engines</a>
+  </span>
+</li>
 </ul>
 </li>
 <li class="menu_list is-current-page is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link is-current-page" href="query-service.html">Query Service</a>
+    <a class="menu_title menu_link is-current-page" href="query-service.html">SQL++ Query Service</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
@@ -480,6 +299,24 @@
 </li>
 </ul>
 </li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="../backup-restore.html">Backup &amp; Restore</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../manage-backup.html">Manage Backups</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../manage-restore.html">Restore a Backup</a>
+  </span>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="menu_list is-parent closed" data-depth="0">
@@ -506,7 +343,17 @@
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
+    <a class="menu_title menu_link" href="../../app-services/deployment/scaling-a-deployed-app-service.html">Scaling a Deployed App Service</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
     <a class="menu_title menu_link" href="../../app-services/monitoring/monitoring-app-services.html">Monitoring App Services</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../app-services/deployment/accessing-admin-apis.html">Granting Admin Access to REST APIs</a>
   </span>
 </li>
 </ul>
@@ -519,12 +366,12 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../app-services/deployment/app-endpoint.html">Creating App Endpoints</a>
+    <a class="menu_title menu_link" href="../../app-services/deployment/creating-an-app-endpoint.html">Creating App Endpoints</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../app-services/deployment/controlling-app-endpoints.html">Controlling App Endpoints</a>
+    <a class="menu_title menu_link" href="../../app-services/deployment/configuring-app-endpoints.html">Configuring App Endpoints</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
@@ -614,11 +461,6 @@
 </li>
 <li class="menu_list" data-depth="3">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../app-services/deployment/accessing-admin-apis.html">Granting Access to Admin REST APIs</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
     <a class="menu_title menu_link" href="../../app-services/references/rest_api_admin_static.html">Admin REST API</a>
   </span>
 </li>
@@ -631,9 +473,98 @@
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Security</span>
+    <span class="menu_title menu_text">Organizations &amp; Access</span>
   </span>
 <ul class="menu_row">
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../organizations/organization-projects-overview.html">Overview</a>
+  </span>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="../../organizations/organizations.html">Organizations</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../organizations/manage-organizations.html">Manage Organizations</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../organizations/manage-organization-users.html">Manage Users</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../organizations/organization-user-roles.html">Organization Roles</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="../../projects/projects.html">Projects</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../projects/manage-projects.html">Manage Projects</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../projects/manage-project-users.html">Manage Project Users</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../projects/project-roles.html">Project Roles</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="../../organizations/ui-auth/capella-ui-auth.html">Capella UI Authentication</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../organizations/ui-auth/add-sso-auth.html">Add Federated &amp; SSO Authentication</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../organizations/ui-auth/manage-role-mapping.html">Manage Role Mapping</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../organizations/ui-auth/manage-identity-providers.html">Manage Identity Providers</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../organizations/ui-auth/sign-in-with-sso.html">Sign in with SSO</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../organizations/ui-auth/mfa.html">Manage Multi-Factor Authentication (MFA)</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../organizations/manage-account.html">Manage Your Couchbase Capella Account</a>
+  </span>
+</li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../../security/security.html">Security Best Practices</a>
@@ -657,7 +588,104 @@
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Billing</span>
+    <span class="menu_title menu_text">Configure Database</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../databases.html">Overview</a>
+  </span>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Manage Databases</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../create-database.html">Create a Database</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../modify-database.html">Modify a Database</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../delete-database.html">Delete a Database</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../upgrade-database.html">Upgrade a Database</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../sizing.html">Database Sizing</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../scale-database.html">Database Scaling</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../allow-ip-address.html">Configure Allowed IPs</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../manage-database-users.html">Configure Database Credentials</a>
+  </span>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="../monitoring/monitoring.html">Monitoring</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../monitoring/activity-log.html">Activity Log</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../monitoring/metrics-dashboard.html">Metrics Dashboard</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../monitoring/alerts.html">Alerts &amp; Notifications</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <a class="menu_title menu_link" href="../xdcr/xdcr.html">Replication (XDCR)</a>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../xdcr/manage-xdcr-replications.html">Manage Replications</a>
+  </span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="0">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Billing &amp; Support</span>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
@@ -675,40 +703,19 @@
     <span class="menu_title menu_text"><a href="https://www.couchbase.com/pricing" class="add-ext-icon" target="_blank" rel="noopener">Pricing Page</a></span>
   </span>
 </li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Public API</span>
-  </span>
-<ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../public-api-guide/introducing-public-api.html">Overview</a>
+    <a class="menu_title menu_link" href="../../support/support.html">Overview</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../public-api-guide/using-cloud-public-api.html">How to use the API</a>
+    <a class="menu_title menu_link" href="../../support/manage-support.html">Request Support</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/rest-endpoints-all.html">Public API Reference</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Release Notes</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../release-notes/release-notes.html">Capella Release Notes</a>
+    <a class="menu_title menu_link" href="../../support/feedback.html">Provide Feedback</a>
   </span>
 </li>
 </ul>
@@ -757,27 +764,14 @@
     <a class="menu_title menu_link" href="../../reference/user-management-migration.html">User Management Migration</a>
   </span>
 </li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Support</span>
-  </span>
-<ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../support/support.html">Overview</a>
+    <a class="menu_title menu_link" href="../../reference/rest-endpoints-all.html">Public API Reference</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../support/manage-support.html">Request Support</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../support/feedback.html">Provide Feedback</a>
+    <a class="menu_title menu_link" href="../../release-notes/release-notes.html">Capella Release Notes</a>
   </span>
 </li>
 </ul>
@@ -795,7 +789,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-41430_add-gcp-perms-to-pvt-networking-docs/docs/public/modules/clusters/pages/query-service/query-service.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/clusters/pages/query-service/query-service.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -854,14 +848,14 @@
 <nav class="crumbs" aria-label="breadcrumbs">
 <ul>
 <li class="crumb"><a href="../../index.html">Couchbase Capella</a></li>
-<li class="crumb">Data Management</li>
-<li class="crumb"><a href="query-service.html">Query Service</a></li>
+<li class="crumb">Your Data</li>
+<li class="crumb"><a href="query-service.html">SQL++ Query Service</a></li>
 </ul>
 </nav>
 </div>
 <article class="doc">
 <div class="page-heading-title">
-<h1 class="page">Query Service</h1>
+<h1 class="page">SQL++ Query Service</h1>
 </div>
 <div class="contributor-list-box">
 <span class="last-commit-date" id="commitdate">    </span>
@@ -871,21 +865,12 @@
 <div class="sectionbody">
 <div class="quoteblock abstract">
 <blockquote>
-The <em>Query Service</em> supports the querying of data by means of the <em>N1QL</em> query language.
+The Query Service supports the querying of data using the SQL++ query language.
 </blockquote>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="about-the-query-service"><a class="anchor" href="#about-the-query-service"></a>About the Query Service</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>As its primary function, the <em>Query Service</em> enables you to issue queries to extract data from Couchbase clusters.
-You can also issue queries for data definition (defining indexes) and data manipulation (adding or deleting data).</p>
-</div>
-<div class="paragraph">
-<p>The Query Service supports N1QL (pronounced "nickel"), the Couchbase Server query language.
-For detailed information, refer to the <a href="#server:n1ql:n1ql-language-reference/index.adoc" class="page unresolved">N1QL Lanaguage Reference</a>.</p>
+<p>The Query Service supports SQL++ to run queries that can extract, define, and manipulate data in Couchbase databases.
+For more information about SQL++, see the <a href="#server:n1ql:n1ql-language-reference/index.adoc" class="page unresolved">server:n1ql:n1ql-language-reference/index.adoc</a>.</p>
 </div>
 </div>
 </div>
@@ -893,13 +878,13 @@ For detailed information, refer to the <a href="#server:n1ql:n1ql-language-refer
 <h2 id="using-the-query-service"><a class="anchor" href="#using-the-query-service"></a>Using the Query Service</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Like the other Couchbase services, the Query Service can be deployed during <a href="../create-cluster.html" class="page">cluster creation</a>, or by <a href="../scale-cluster.html" class="page">adding it to an existing cluster</a>.
-The Query Service depends on both the <a href="../index-service/index-service.html" class="page"><em>Index Service</em></a> and the <a href="../data-service/data-service.html" class="page"><em>Data Service</em></a>.
-These services must also be deployed on the cluster in order to use the Query Service.
-(Information about how these services interact with one another can be found in the <a href="#server:learn:services-and-indexes/services/query-service.adoc" class="page unresolved">Couchbase Server documentation</a>.)</p>
+<p>Like the other Couchbase services, you can deploy the Query Service during <a href="#databases:create-database.adoc" class="page unresolved">database creation</a> or by <a href="../scale-database.html" class="page">adding it to an existing database</a>.
+The Query Service also depends on the <a href="../data-service/data-service.html" class="page">Data Service</a> and the <a href="../index-service/index-service.html" class="page">Index Service</a>.
+Every database in Capella has the Data Service, but you need to add the Index Service to your database to use the Query Service.
+For more information about how these services interact with one another, see <a href="#server:learn:services-and-indexes/services/query-service.adoc" class="page unresolved">server:learn:services-and-indexes/services/query-service.adoc</a>.</p>
 </div>
 <div class="paragraph">
-<p>If a cluster has the Query Service deployed, N1QL queries can be issued using the Couchbase SDK and the interactive <a href="query-workbench.html" class="page">Query Workbench</a> tool in the Capella UI.</p>
+<p>Using a database with the Query Service deployed, you can make SQL++ queries using the Couchbase SDK and the <a href="query-workbench.html" class="page">Query Workbench</a> data tool in the Capella UI.</p>
 </div>
 </div>
 </div>
