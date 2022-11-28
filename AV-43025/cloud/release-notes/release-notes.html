@@ -806,7 +806,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-46170---Oct-30th-Docs-release-branch/docs/public/modules/release-notes/pages/release-notes.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/release-notes/pages/release-notes.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -879,6 +879,185 @@
 <ul id="contributorList"></ul>
 <span  id="otherContributor"> + </span>
 </div><div class="sect1">
+<h2 id="november-2022-changelog"><a class="anchor" href="#november-2022-changelog"></a>November 2022 Changelog</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>A new developer experience UI:</p>
+<div class="paragraph">
+<p>Couchbase Capella has an updated UI.
+Highlights include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Each page has a dynamic contextually relevant menu to reduce distraction.</p>
+</li>
+<li>
+<p>The main page directly relates to your projects.</p>
+</li>
+<li>
+<p>You can more easily navigate using the top navigation bar.</p>
+</li>
+<li>
+<p>The popular Couchbase Playground is now integrated into Capella, enhancing the developer experience.
+The Playground includes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>SQL++ Playground.</p>
+</li>
+<li>
+<p>SQL++ Tutorial.</p>
+</li>
+<li>
+<p>SDK Tutorial for Node.js, Python, and Java.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Couchbase Server 7.1.3</p>
+<div class="paragraph">
+<p>Capella now supports Couchbase Server 7.1.3&#8201;&#8212;&#8201;the most recent version of Couchbase Server.
+This version includes the following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Magma storage engine:</p>
+<div class="paragraph">
+<p>Magma is a High Data Density storage option for your buckets.
+This storage engine enables you to go down to as low as a 1% Resident Ratio.
+For more information about the Magma storage engine, see <a href="../clusters/data-service/storage-engines.html" class="page">Storage Engines</a>.</p>
+</div>
+</li>
+<li>
+<p>Improved auto-failover:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Support for automatic failover of index services.</p>
+</li>
+<li>
+<p>High availability for the Analytics Service:</p>
+<div class="paragraph">
+<p>This service is now replicated by default with two replicas.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Unequal server groups:</p>
+<div class="paragraph">
+<p>Data nodes no longer require multiples of three.</p>
+</div>
+</li>
+<li>
+<p>Parquet Support:</p>
+<div class="paragraph">
+<p>Read Parquet files from AWS S3.
+Apache Parquet is an open source data file format designed for efficient data storage and retrieval.</p>
+</div>
+</li>
+<li>
+<p>Couchbase Tableau Connector:</p>
+<div class="paragraph">
+<p>Native connectivity to Tableau using a native Couchbase-built and supported driver.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Single Sign-On (SSO)</p>
+<div class="paragraph">
+<p>Secure and convenient Single Sign-On authentication for users is now available.</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Delegate authentication to your identity provider.</p>
+</li>
+<li>
+<p>Supported identity providers include:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Microsoft Azure AD</p>
+</li>
+<li>
+<p>Okta</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Users can use existing corporate credentials.</p>
+</li>
+<li>
+<p>Easy provisioning of new users, which removes the overhead of sending invites.</p>
+</li>
+<li>
+<p>Support for SSO Groups:</p>
+<div class="paragraph">
+<p>You can map SSO groups to Capella Teams&#8212;&#8203;a new way to organize users with SSO.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For more information about SSO for Capella, see <a href="../organizations/ui-auth/capella-ui-auth.html#federated-sso-authentication" class="page">Capella UI Authentication | Federated &amp; SSO Authentication</a>.
+To configure your identity provider with Capella, see <a href="../organizations/ui-auth/add-sso-auth.html" class="page">Add Federated &amp; SSO Authentication</a>.</p>
+</div>
+</li>
+<li>
+<p>AWS Private Endpoints</p>
+<div class="paragraph">
+<p>AWS Private Endpoints allow a Capella database to be offered as a Private Endpoint.
+Private Endpoints have many benefits:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Private Endpoint traffic doesn&#8217;t traverse the Internet, allowing services to function as if they&#8217;re hosted directly within your Amazon VPC.</p>
+</li>
+<li>
+<p>While VPC peering allows access to all resources, Private Endpoints only allow access to a specific service or application.</p>
+</li>
+<li>
+<p>Private Endpoints support CIDR overlap.</p>
+</li>
+<li>
+<p>Only Private Endpoints can initiate a connection.</p>
+</li>
+<li>
+<p>Private Endpoints give on-premises networks private access to Capella Databases through AWS Direct Connect, a safe and secure migration from on-prem.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For more information about AWS Private Endpoints, see <a href="../security/add-aws-private-link.html" class="page">Add an AWS PrivateLink Connection</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="october-2022-changelog"><a class="anchor" href="#october-2022-changelog"></a>October 2022 Changelog</h2>
 <div class="sectionbody">
 <div class="ulist">
