@@ -722,7 +722,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../support/support.html">Overview</a>
+    <a class="menu_title menu_link" href="../../support/support.html">Support Overview</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -763,22 +763,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/cloud-instances.html">Supported Instance Types</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
     <a class="menu_title menu_link" href="../../reference/sdk-compatibility.html">SDK Compatibility</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../../reference/browser-compatibility.html">Supported Browsers</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/user-management-migration.html">User Management Migration</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -930,19 +920,6 @@ This can be helpful if you want to create a new index that is very similar to an
 </tr>
 </table>
 </div>
-<div class="tabset is-loading">
-<div class="ulist tabs">
-<ul>
-<li>
-<p><a id="tabset1_couchbase-7-0"></a>Couchbase 7.0+</p>
-</li>
-<li>
-<p><a id="tabset1_couchbase-6-6"></a>Couchbase 6.6</p>
-</li>
-</ul>
-</div>
-<div class="content">
-<div class="tab-pane" aria-labelledby="tabset1_couchbase-7-0">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1088,127 +1065,6 @@ Refer to the section modify-full-text-index&gt;&gt; for more information.</p>
 </ol>
 </div>
 </div>
-<div class="tab-pane" aria-labelledby="tabset1_couchbase-6-6">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Go to the cluster&#8217;s <strong class="ui">Tools &gt; Full Text Search</strong> tab.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Go to the <strong class="ui">Clusters</strong> tab in the main navigation.</p>
-</li>
-<li>
-<p>Find and click on the cluster that contains the bucket on which you plan to create a Full Text Index.</p>
-<div class="paragraph">
-<p>This opens the cluster with its <strong class="ui">Metrics</strong> tab selected.</p>
-</div>
-</li>
-<li>
-<p>Click the <strong class="ui">Tools &gt; Full Text Search</strong> tab.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Click <b class="button">Add Index</b>.</p>
-<div class="paragraph">
-<p>This opens the <strong class="ui">Add Index</strong> fly-out menu.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/fts-add-index-flyout.png" alt="The 'Add Index' fly-out menu." width="500">
-</div>
-</div>
-</li>
-<li>
-<p>Specify a name for the index.</p>
-<div class="paragraph">
-<p>In the <strong class="ui">Name</strong> field, enter a unique name for the index.
-Only alphanumeric characters, hyphens, and underscores are allowed for Full Text Index names.
-Note also that the first character of the name must be an alphabetic character.</p>
-</div>
-</li>
-<li>
-<p>Use the <strong class="ui">Bucket</strong> dropdown menu to select the bucket on which the index is to be created.</p>
-</li>
-<li>
-<p>Click <b class="button">Continue to configuration</b>.</p>
-<div class="paragraph">
-<p>The fly-out menu closes and the index&#8217;s configuration screen appears.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/fts-index-configuration-page.png" alt="The configuration page of a Full Text Index.">
-</div>
-</div>
-</li>
-<li>
-<p>Configure the index.</p>
-<div class="paragraph">
-<p>From the index&#8217;s configuration page, you can begin configuring various settings for the index.
-Note that the index can actually be saved as-is at this point, because it is technically valid with just a name and a specified bucket.
-However, since a default <em>type mapping</em> is not included as part of the configuration, saving the index will not result in any content being indexed (and thus no documents will be returned if you try to <a href="#query-full-text-index">perform a search</a>).</p>
-</div>
-<div class="paragraph">
-<p>You can review the other sections on this page for explanations of the various Full Text Index settings:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#specifying-type-identifiers">Specifying Type Identifiers</a></p>
-</li>
-<li>
-<p><a href="#specifying-analyzer-defaults">Specifying Analyzer Defaults</a></p>
-</li>
-<li>
-<p><a href="#specifying-type-mappings">Specifying Type Mappings</a></p>
-</li>
-<li>
-<p><a href="#specifying-fields">Specifying Fields</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#inserting-a-child-field">Inserting a Child Field</a></p>
-</li>
-<li>
-<p><a href="#inserting-a-child-mapping">Inserting a Child Mapping</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="#creating-analyzers">Creating Analyzers</a></p>
-</li>
-<li>
-<p><a href="#adding-custom-filters">Adding Custom Filters</a></p>
-</li>
-<li>
-<p><a href="#date-time-parsers">Date/Time Parsers</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Once you&#8217;re satisfied with the configuration, click <b class="button">Create Index</b>.</p>
-<div class="paragraph">
-<p>The fly-out menu closes and the new index appears in the <strong class="ui">Full Text Indexes</strong> section.
-Note the percentage figure in the <strong class="ui">Indexing Progress</strong> column.
-This figure is incremented in correspondence with the build-progress of the index.
-When 100% is reached, the index build is considered complete.
-An index can be searched as soon as it&#8217;s created, but only partial results can be expected until the index build is complete.</p>
-</div>
-<div class="paragraph">
-<p>After creating the index, you can return to the index&#8217;s configuration page to modify the index&#8217;s configuration settings, as well as take actions such as searching the index, monitoring index statistics, and copying the index definition.
-Refer to the section <a href="#modify-full-text-index">[modify-full-text-index]</a> for more information.</p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="sect1">
 <h2 id="import-full-text-index"><a class="anchor" href="#import-full-text-index"></a>Import a Full Text Index</h2>
@@ -1352,20 +1208,6 @@ An index can be searched as soon as it&#8217;s created, but only partial results
 <div class="sect1">
 <h2 id="specifying-scopes/collections"><a class="anchor" href="#specifying-scopes/collections"></a>Specifying Scope/Collection(s)</h2>
 <div class="sectionbody">
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you are using Couchbase Server 6.6, you can&#8217;t specify the scope and collection(s) as this functionality relies on the scopes and collections feature introduced in <a href="#server:introduction:whats-new.adoc#whats-new-server-700" class="page unresolved">Couchbase Server 7.0</a>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p><a href="#server:learn:data/scopes-and-collections.adoc" class="page unresolved"><em>Scopes</em> and <em>collections</em></a> categorize and organize documents within a bucket.
 A collection is a data container within a bucket.

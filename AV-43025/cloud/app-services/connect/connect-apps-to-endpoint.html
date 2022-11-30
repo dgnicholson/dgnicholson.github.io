@@ -722,7 +722,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../support/support.html">Overview</a>
+    <a class="menu_title menu_link" href="../../support/support.html">Support Overview</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -763,22 +763,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/cloud-instances.html">Supported Instance Types</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
     <a class="menu_title menu_link" href="../../reference/sdk-compatibility.html">SDK Compatibility</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../../reference/browser-compatibility.html">Supported Browsers</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/user-management-migration.html">User Management Migration</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1010,55 +1000,53 @@ Click on <b class="button">Go to Allowed IPs &gt;</b> to access the screen, then
 <h2 id="syncing-data-to-a-client-application"><a class="anchor" href="#syncing-data-to-a-client-application"></a>Syncing Data to a Client Application</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Once the App Service has been configured, data synchronisation can be initiated from client application using calls to the Couchbase API:</p>
+<p>Once the App Service has been configured, data synchronisation can be initiated from client application using calls to the Couchbase API.</p>
+</div>
+<div class="paragraph">
+<p>In this example, first open the local database for syncing from the Capella App Service.</p>
+</div>
+<div class="paragraph">
+<p>The client application uses the address of the endpoint to sync its local databases.
+The App Endpoint address can be found under the <code>Connect</code> tab of App Endpoint configuration (See <a href="#locate-app-endpoint-connection-tab">Figure 2</a>).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift">let db = try! Database(name: "travel-sample")    <i class="conum" data-value="1"></i><b>(1)</b>
-guard let targetURL = URL(string: "wss://wss://gaoca1lnIxwdumid.apps.endpoint.com:4984/test-endpoint")    <i class="conum" data-value="2"></i><b>(2)</b>
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift">let db = try! Database(name: "travel-sample")
+
+guard let targetURL = URL(string: "wss://gaoca1lnIxwdumid.apps.endpoint.com:4984/test-endpoint")
 else {
     fatalError("Invalid URL")
-}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now create a configuration linking the local database to the App Endpoint.
+Set the sync to run bidirectionally.</p>
+</div>
+<div class="paragraph">
+<p>The authenticator takes the username and password set up when the App Endpoint&#8217;s user was created (See <a href="../user-management/create-user.html" class="page">App User Administration</a>).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift">let targetEndpoint = URLEndpoint(url: targetURL)
 
-let targetEndpoint = URLEndpoint(url: targetURL)
-
-var config = ReplicatorConfiguration(database: db, target: targetEndpoint)    <i class="conum" data-value="3"></i><b>(3)</b>
-config.replicatorType = .pushAndPull   <i class="conum" data-value="4"></i><b>(4)</b>
+var config = ReplicatorConfiguration(database: db, target: targetEndpoint)
+config.replicatorType = .pushAndPull
 config.continuous = false
 
-config.authenticator = BasicAuthenticator(username: "test-user",
-    password: "password")    <i class="conum" data-value="5"></i><b>(5)</b>
-
-let replicator = Replicator.init(config: config)
-
-
+config.authenticator = BasicAuthenticator(
+    username: "test-user",
+    password: "password")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally, start syncing.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift">let replicator = Replicator.init(config: config)
 replicator.start()</code></pre>
 </div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Open the local database for syncing from the Capella App Service.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The client application uses the address of the endpoint to sync its local databases.
-The App Endpoint address can be found under the <code>Connect</code> tab of App Endpoint configuration (See <a href="#locate-app-endpoint-connection-tab">Figure 2</a>).</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Create a configuration linking the local database to the App Endpoint.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>Set the sync to run bidirectionally.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="5"></i><b>5</b></td>
-<td>The authenticator takes the username and password set up when the App Endpoint&#8217;s user was created (See <a href="../user-management/create-user.html" class="page">App User Administration</a>).</td>
-</tr>
-</table>
 </div>
 </div>
 </div>

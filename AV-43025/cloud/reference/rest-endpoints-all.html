@@ -722,7 +722,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../support/support.html">Overview</a>
+    <a class="menu_title menu_link" href="../support/support.html">Support Overview</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -763,22 +763,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="cloud-instances.html">Supported Instance Types</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
     <a class="menu_title menu_link" href="sdk-compatibility.html">SDK Compatibility</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="browser-compatibility.html">Supported Browsers</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="user-management-migration.html">User Management Migration</a>
   </span>
 </li>
 <li class="menu_list is-current-page" data-depth="1">
@@ -901,246 +891,25 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>The <code>/v2</code> APIs are for Capella hosted in your own cloud provider&#8217;s VPC. Capella hosted in Couchbase&#8217;s own cloud uses only <code>v3</code> APIs.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="access"><a class="anchor" href="#access"></a>Access</h2>
+<div class="sect1 ClustersV3">
+<h2 id="clustersv3"><a class="anchor" href="#clustersv3"></a>ClustersV3</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Bearer</strong> Authentication</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="endpoints"><a class="anchor" href="#endpoints"></a>Endpoints</h2>
-<div class="sectionbody">
-<div class="sect2 Clouds">
-<h3 id="clouds"><a class="anchor" href="#clouds"></a>Clouds</h3>
-<div class="paragraph clouds/list">
-<p><code>GET /v2/clouds</code></p>
+<div class="paragraph clusters/v3auditlogsCreate">
+<p><code>POST /v3/clusters/{id}/auditlogs</code></p>
 </div>
 <div class="paragraph">
-<p>List Clouds</p>
+<p>Create Cluster Audit Log Export</p>
 </div>
 <div class="sect4">
 <h5 id="description"><a class="anchor" href="#description"></a>Description</h5>
 <div class="paragraph">
-<p>Returns a paginated list of clouds created by the tenant</p>
+<p>Creates a new request for the export of audit log files that cover a user-specified time-period. The returned value includes a download ID, which can be referenced in a subsequent Get Audit Log Request call. Time stamps must be in RFC3339 format.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="parameters"><a class="anchor" href="#parameters"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="query-parameters"><a class="anchor" href="#query-parameters"></a>Query Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets how many results you would like to have on each page</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">perPage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets what page you would like to view</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sortBy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets order of how you would like to sort results and also the key you would like to order by</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type"><a class="anchor" href="#return-type"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#ListCloudsResponse"><em>ListCloudsResponse</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses"><a class="anchor" href="#responses"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ListCloudsResponse"><em>ListCloudsResponse</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples"><a class="anchor" href="#samples"></a>Samples</h5>
-<div class="paragraph clouds/show">
-<p><code>GET /v2/clouds/{id}</code></p>
-</div>
-<div class="paragraph">
-<p>Get Cloud</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-2"><a class="anchor" href="#description-2"></a>Description</h5>
-<div class="paragraph">
-<p>Returns a single cloud by the ID</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-2"><a class="anchor" href="#parameters-2"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters"><a class="anchor" href="#path-parameters"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud IDA</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-2"><a class="anchor" href="#return-type-2"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#Cloud"><em>Cloud</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-2"><a class="anchor" href="#responses-2"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">On success returns a Cloud details.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Cloud"><em>Cloud</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-2"><a class="anchor" href="#samples-2"></a>Samples</h5>
-
-</div>
-</div>
-<div class="sect2 Clusters">
-<h3 id="clusters"><a class="anchor" href="#clusters"></a>Clusters</h3>
-<div class="paragraph clusters/create">
-<p><code>POST /v2/clusters</code></p>
-</div>
-<div class="paragraph">
-<p>Create cluster</p>
-</div>
-<div class="sect4">
-<h5 id="description-3"><a class="anchor" href="#description-3"></a>Description</h5>
-<div class="paragraph">
-<p>Creates cluster in cloud, returns id of the cluster on success</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-3"><a class="anchor" href="#parameters-3"></a>Parameters</h5>
 <div class="sect5">
 <h6 id="body-parameter"><a class="anchor" href="#body-parameter"></a>Body Parameter</h6>
 <table class="tableblock frame-all grid-all stretch">
@@ -1162,8 +931,8 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CreateClusterRequest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#CreateClusterRequest"><em>CreateClusterRequest</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V3ClusterAuditLogExportCreate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditLogExportCreate"><em>V3ClusterAuditLogExportCreate</em></a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -1173,9 +942,142 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
+<h5 id="return-type"><a class="anchor" href="#return-type"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#V3ClusterAuditLogExportDownloadID"><em>V3ClusterAuditLogExportDownloadID</em></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="responses"><a class="anchor" href="#responses"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditLogExportDownloadID"><em>V3ClusterAuditLogExportDownloadID</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">405</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method not allowed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="samples"><a class="anchor" href="#samples"></a>Samples</h5>
+<div class="paragraph clusters/v3auditlogsList">
+<p><code>GET /v3/clusters/{id}/auditlogs</code></p>
+</div>
+<div class="paragraph">
+<p>List Cluster Audit Log Exports</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="description-2"><a class="anchor" href="#description-2"></a>Description</h5>
+<div class="paragraph">
+<p>Returns a list of all audit log export requests. The list starts with the most recent request. The information returned for each request includes the time of the request&#8217;s creation, the start and end times of the period for which records are required, a download URL for retrieval of a compressed file that contains the log files, and the progress-status of the request. When progress-status is 'ready', the compressed file can be manually downloaded, using the download URL.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="parameters-2"><a class="anchor" href="#parameters-2"></a>Parameters</h5>
+
+</div>
+<div class="sect4">
+<h5 id="return-type-2"><a class="anchor" href="#return-type-2"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#V3ClusterAuditLogExportList"><em>V3ClusterAuditLogExportList</em></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="responses-2"><a class="anchor" href="#responses-2"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditLogExportList"><em>V3ClusterAuditLogExportList</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="samples-2"><a class="anchor" href="#samples-2"></a>Samples</h5>
+<div class="paragraph clusters/v3auditlogsShow">
+<p><code>GET /v3/clusters/{id}/auditlogs/{downloadId}</code></p>
+</div>
+<div class="paragraph">
+<p>Get Cluster Audit Log Request</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="description-3"><a class="anchor" href="#description-3"></a>Description</h5>
+<div class="paragraph">
+<p>Returns a specific audit log export request. The request is specified with a download ID, previously returned by Create Audit Log Request: the download ID must be appended to the URI of Get Audit Log Request. The information returned for the specified request includes the time of the request&#8217;s creation, the start and end times of the period for which records are required, a download URL for retrieval of a compressed file that contains the log files, and the progress-status of the request. When progress-status is 'ready', the compressed file can be manually downloaded, using the download URL.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="parameters-3"><a class="anchor" href="#parameters-3"></a>Parameters</h5>
+
+</div>
+<div class="sect4">
 <h5 id="return-type-3"><a class="anchor" href="#return-type-3"></a>Return Type</h5>
 <div class="paragraph">
-<p>-</p>
+<p><a href="#V3ClusterAuditLogExport"><em>V3ClusterAuditLogExport</em></a></p>
 </div>
 </div>
 <div class="sect4">
@@ -1195,13 +1097,13 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Success, job being processed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditLogExport"><em>V3ClusterAuditLogExport</em></a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
 </tr>
 <tr>
@@ -1219,23 +1121,23 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 <div class="sect4">
 <h5 id="samples-3"><a class="anchor" href="#samples-3"></a>Samples</h5>
-<div class="paragraph clusters/createAllowlistEntry">
-<p><code>POST /v2/clusters/{id}/allowlist</code></p>
+<div class="paragraph clusters/v3configureAudit">
+<p><code>POST /v3/clusters/{id}/audit</code></p>
 </div>
 <div class="paragraph">
-<p>Adds entry to allowlist</p>
+<p>Configure Cluster Audit Settings</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="description-4"><a class="anchor" href="#description-4"></a>Description</h5>
 <div class="paragraph">
-<p>Appends entry sent to the allowlist</p>
+<p>Configures the audit settings for the cluster. This allows auditing to be enabled or disabled for the cluster. It also allows specific audit events to be enabled, and specific users to be disabled.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="parameters-4"><a class="anchor" href="#parameters-4"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="path-parameters-2"><a class="anchor" href="#path-parameters-2"></a>Path Parameters</h6>
+<h6 id="path-parameters"><a class="anchor" href="#path-parameters"></a>Path Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -1285,8 +1187,8 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AppendAllowListRequest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#AppendAllowListRequest"><em>AppendAllowListRequest</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V3ClusterAuditSettings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditSettings"><em>V3ClusterAuditSettings</em></a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -1316,82 +1218,25 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 <th class="tableblock halign-left valign-top">Datatype</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully appended entry to allowlist</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
 </table>
 </div>
 <div class="sect4">
 <h5 id="samples-4"><a class="anchor" href="#samples-4"></a>Samples</h5>
-<div class="paragraph clusters/createBucket">
-<p><code>POST /v2/clusters/{id}/buckets</code></p>
+<div class="paragraph clusters/v3create">
+<p><code>POST /v3/clusters</code></p>
 </div>
 <div class="paragraph">
-<p>Create bucket in cluster</p>
+<p>Create Cluster V3</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="description-5"><a class="anchor" href="#description-5"></a>Description</h5>
 <div class="paragraph">
-<p>Creates bucket in cluster specified with cluster id parameter</p>
+<p>Creates a cluster with the given specifications and returns the id of the cluster on success</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="parameters-5"><a class="anchor" href="#parameters-5"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-3"><a class="anchor" href="#path-parameters-3"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="sect5">
 <h6 id="body-parameter-3"><a class="anchor" href="#body-parameter-3"></a>Body Parameter</h6>
 <table class="tableblock frame-all grid-all stretch">
@@ -1413,8 +1258,8 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CouchbaseBucketSpec</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#CouchbaseBucketSpec"><em>CouchbaseBucketSpec</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V3CreateClusterRequest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3CreateClusterRequest"><em>V3CreateClusterRequest</em></a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -1426,7 +1271,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 <div class="sect4">
 <h5 id="return-type-5"><a class="anchor" href="#return-type-5"></a>Return Type</h5>
 <div class="paragraph">
-<p><a href="#CouchbaseBucketSpec"><em>CouchbaseBucketSpec</em></a></p>
+<p>-</p>
 </div>
 </div>
 <div class="sect4">
@@ -1446,18 +1291,13 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">201</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully created bucket</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#CouchbaseBucketSpec"><em>CouchbaseBucketSpec</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
 </tr>
 <tr>
@@ -1475,23 +1315,23 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 <div class="sect4">
 <h5 id="samples-5"><a class="anchor" href="#samples-5"></a>Samples</h5>
-<div class="paragraph clusters/createUser">
-<p><code>POST /v2/clusters/{id}/users</code></p>
+<div class="paragraph clusters/v3createUser">
+<p><code>POST /v3/clusters/{id}/users</code></p>
 </div>
 <div class="paragraph">
-<p>Create Database User</p>
+<p>Create cluster user</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="description-6"><a class="anchor" href="#description-6"></a>Description</h5>
 <div class="paragraph">
-<p>Creates Database user. A database user entity is required for applications to remotely authenticate on a cluster and access bucket data</p>
+<p>Creates a new user for a cluster with access to buckets/scopes</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="parameters-6"><a class="anchor" href="#parameters-6"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="path-parameters-4"><a class="anchor" href="#path-parameters-4"></a>Path Parameters</h6>
+<h6 id="path-parameters-2"><a class="anchor" href="#path-parameters-2"></a>Path Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -1541,8 +1381,8 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CreateDatabaseUserRequest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#CreateDatabaseUserRequest"><em>CreateDatabaseUserRequest</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V3CreateClusterUserRequest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3CreateClusterUserRequest"><em>V3CreateClusterUserRequest</em></a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -1575,7 +1415,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">201</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully created database user.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully created cluster user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
 </tr>
 <tr>
@@ -1603,23 +1443,23 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 <div class="sect4">
 <h5 id="samples-6"><a class="anchor" href="#samples-6"></a>Samples</h5>
-<div class="paragraph clusters/delete">
-<p><code>DELETE /v2/clusters/{id}</code></p>
+<div class="paragraph clusters/v3delete">
+<p><code>DELETE /v3/clusters/{id}</code></p>
 </div>
 <div class="paragraph">
-<p>Delete cluster</p>
+<p>Delete Cluster V3</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="description-7"><a class="anchor" href="#description-7"></a>Description</h5>
 <div class="paragraph">
-<p>Start a delete cluster job</p>
+<p>Starts the deletion process for the cluster</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="parameters-7"><a class="anchor" href="#parameters-7"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="path-parameters-5"><a class="anchor" href="#path-parameters-5"></a>Path Parameters</h6>
+<h6 id="path-parameters-3"><a class="anchor" href="#path-parameters-3"></a>Path Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -1673,7 +1513,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully started delete cluster job</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully started the cluster deletion process</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
 </tr>
 <tr>
@@ -1701,23 +1541,494 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 <div class="sect4">
 <h5 id="samples-7"><a class="anchor" href="#samples-7"></a>Samples</h5>
-<div class="paragraph clusters/deleteAllowlistEntry">
-<p><code>DELETE /v2/clusters/{id}/allowlist</code></p>
+<div class="paragraph clusters/v3getAudit">
+<p><code>GET /v3/clusters/{id}/audit</code></p>
 </div>
 <div class="paragraph">
-<p>Delete entry from allowlist</p>
+<p>Get Cluster Audit Settings</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="description-8"><a class="anchor" href="#description-8"></a>Description</h5>
 <div class="paragraph">
-<p>Deletes entry from allowlist, will use CIDR block as key</p>
+<p>Retrieves the current audit settings for the cluster; including a list of all enabled audit events, a list of disabled users, and the overall enablement status of the cluster.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="parameters-8"><a class="anchor" href="#parameters-8"></a>Parameters</h5>
 <div class="sect5">
+<h6 id="path-parameters-4"><a class="anchor" href="#path-parameters-4"></a>Path Parameters</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="return-type-8"><a class="anchor" href="#return-type-8"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#V3ClusterAuditSettings"><em>V3ClusterAuditSettings</em></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="responses-8"><a class="anchor" href="#responses-8"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the current Audit settings for the cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditSettings"><em>V3ClusterAuditSettings</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="samples-8"><a class="anchor" href="#samples-8"></a>Samples</h5>
+<div class="paragraph clusters/v3getAuditDescriptors">
+<p><code>GET /v3/clusters/{id}/auditdescriptors</code></p>
+</div>
+<div class="paragraph">
+<p>List Filterable Audit Events</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="description-9"><a class="anchor" href="#description-9"></a>Description</h5>
+<div class="paragraph">
+<p>Returns the list of all filterable audit events for the cluster. Filterable audit events are those that can be either disabled or enabled. If a filterable audit event is currently disabled, it can be enabled through its inclusion in the enabledEventIDs field of Configure Cluster Audit Settings.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="parameters-9"><a class="anchor" href="#parameters-9"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="path-parameters-5"><a class="anchor" href="#path-parameters-5"></a>Path Parameters</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="return-type-9"><a class="anchor" href="#return-type-9"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#V3ClusterAuditFilterableEventList"><em>V3ClusterAuditFilterableEventList</em></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="responses-9"><a class="anchor" href="#responses-9"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the list of filterable Audit Events for the cluster.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditFilterableEventList"><em>V3ClusterAuditFilterableEventList</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="samples-9"><a class="anchor" href="#samples-9"></a>Samples</h5>
+<div class="paragraph clusters/v3list">
+<p><code>GET /v3/clusters</code></p>
+</div>
+<div class="paragraph">
+<p>List all clusters v3</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="description-10"><a class="anchor" href="#description-10"></a>Description</h5>
+<div class="paragraph">
+<p>Returns a paginated list of all clusters</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="parameters-10"><a class="anchor" href="#parameters-10"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="query-parameters"><a class="anchor" href="#query-parameters"></a>Query Parameters</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets how many results you would like to have on each page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">perPage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets what page you would like to view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cloudId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud ID for filtering cloud clusters.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">projectId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Project ID for filtering project clusters.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="return-type-10"><a class="anchor" href="#return-type-10"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#V3ClusterList"><em>V3ClusterList</em></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="responses-10"><a class="anchor" href="#responses-10"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterList"><em>V3ClusterList</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="samples-10"><a class="anchor" href="#samples-10"></a>Samples</h5>
+<div class="paragraph clusters/v3show">
+<p><code>GET /v3/clusters/{id}</code></p>
+</div>
+<div class="paragraph">
+<p>Get Cluster Info V3</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="description-11"><a class="anchor" href="#description-11"></a>Description</h5>
+<div class="paragraph">
+<p>Retrieves cluster information using the provided cluster ID</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="parameters-11"><a class="anchor" href="#parameters-11"></a>Parameters</h5>
+<div class="sect5">
 <h6 id="path-parameters-6"><a class="anchor" href="#path-parameters-6"></a>Path Parameters</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="return-type-11"><a class="anchor" href="#return-type-11"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#V3Cluster"><em>V3Cluster</em></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="responses-11"><a class="anchor" href="#responses-11"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If found, returns the cluster information</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3Cluster"><em>V3Cluster</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="samples-11"><a class="anchor" href="#samples-11"></a>Samples</h5>
+<div class="paragraph clusters/v3status">
+<p><code>GET /v3/clusters/{id}/status</code></p>
+</div>
+<div class="paragraph">
+<p>Get Cluster Status V3</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="description-12"><a class="anchor" href="#description-12"></a>Description</h5>
+<div class="paragraph">
+<p>Gets cluster status</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="parameters-12"><a class="anchor" href="#parameters-12"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="path-parameters-7"><a class="anchor" href="#path-parameters-7"></a>Path Parameters</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="return-type-12"><a class="anchor" href="#return-type-12"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#V3ClusterStatusResponse"><em>V3ClusterStatusResponse</em></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="responses-12"><a class="anchor" href="#responses-12"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterStatusResponse"><em>V3ClusterStatusResponse</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="samples-12"><a class="anchor" href="#samples-12"></a>Samples</h5>
+<div class="paragraph clusters/v3updateMeta">
+<p><code>PUT /v3/clusters/{id}/meta</code></p>
+</div>
+<div class="paragraph">
+<p>Update Cluster Metadata V3</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="description-13"><a class="anchor" href="#description-13"></a>Description</h5>
+<div class="paragraph">
+<p>Updates the cluster metadata</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="parameters-13"><a class="anchor" href="#parameters-13"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="path-parameters-8"><a class="anchor" href="#path-parameters-8"></a>Path Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -1767,8 +2078,8 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DeleteAllowListEntryRequest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#DeleteAllowListEntryRequest"><em>DeleteAllowListEntryRequest</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V3UpdateClusterMetaRequest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3UpdateClusterMetaRequest"><em>V3UpdateClusterMetaRequest</em></a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -1778,13 +2089,13 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="return-type-8"><a class="anchor" href="#return-type-8"></a>Return Type</h5>
+<h5 id="return-type-13"><a class="anchor" href="#return-type-13"></a>Return Type</h5>
 <div class="paragraph">
 <p>-</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="responses-8"><a class="anchor" href="#responses-8"></a>Responses</h5>
+<h5 id="responses-13"><a class="anchor" href="#responses-13"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1801,7 +2112,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">204</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully deleted allowlist entry</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully updated the cluster metadata</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
 </tr>
 <tr>
@@ -1828,24 +2139,24 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </table>
 </div>
 <div class="sect4">
-<h5 id="samples-8"><a class="anchor" href="#samples-8"></a>Samples</h5>
-<div class="paragraph clusters/deleteBucket">
-<p><code>DELETE /v2/clusters/{id}/buckets</code></p>
+<h5 id="samples-13"><a class="anchor" href="#samples-13"></a>Samples</h5>
+<div class="paragraph clusters/v3updateServers">
+<p><code>PUT /v3/clusters/{id}/servers</code></p>
 </div>
 <div class="paragraph">
-<p>Delete bucket in cluster</p>
+<p>Update Cluster Servers V3</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="description-9"><a class="anchor" href="#description-9"></a>Description</h5>
+<h5 id="description-14"><a class="anchor" href="#description-14"></a>Description</h5>
 <div class="paragraph">
-<p>Deletes bucket in cluster specified with cluster id parameter</p>
+<p>Updates the cluster server group to scale in / out, up / down</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="parameters-9"><a class="anchor" href="#parameters-9"></a>Parameters</h5>
+<h5 id="parameters-14"><a class="anchor" href="#parameters-14"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="path-parameters-7"><a class="anchor" href="#path-parameters-7"></a>Path Parameters</h6>
+<h6 id="path-parameters-9"><a class="anchor" href="#path-parameters-9"></a>Path Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -1895,8 +2206,8 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DeleteBucketRequest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#DeleteBucketRequest"><em>DeleteBucketRequest</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V3UpdateClusterServersRequest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3UpdateClusterServersRequest"><em>V3UpdateClusterServersRequest</em></a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -1906,503 +2217,9 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="return-type-9"><a class="anchor" href="#return-type-9"></a>Return Type</h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-9"><a class="anchor" href="#responses-9"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully deleted bucket</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-9"><a class="anchor" href="#samples-9"></a>Samples</h5>
-<div class="paragraph clusters/deleteSingleBucket">
-<p><code>DELETE /v2/clusters/{id}/buckets/{bucketId}</code></p>
-</div>
-<div class="paragraph">
-<p>Delete an existing bucket</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-10"><a class="anchor" href="#description-10"></a>Description</h5>
-<div class="paragraph">
-<p>Deletes a single bucket from the cluster</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-10"><a class="anchor" href="#parameters-10"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-8"><a class="anchor" href="#path-parameters-8"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">bucketId</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bucket ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-10"><a class="anchor" href="#return-type-10"></a>Return Type</h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-10"><a class="anchor" href="#responses-10"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-10"><a class="anchor" href="#samples-10"></a>Samples</h5>
-<div class="paragraph clusters/deleteUser">
-<p><code>DELETE /v2/clusters/{id}/users/{username}</code></p>
-</div>
-<div class="paragraph">
-<p>Delete Database User</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-11"><a class="anchor" href="#description-11"></a>Description</h5>
-<div class="paragraph">
-<p>Delete Cluster&#8217;s Database User and revoke its access to the bucket(s)</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-11"><a class="anchor" href="#parameters-11"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-9"><a class="anchor" href="#path-parameters-9"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">username</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Database User username</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-11"><a class="anchor" href="#return-type-11"></a>Return Type</h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-11"><a class="anchor" href="#responses-11"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">204</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully deleted Database User</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-11"><a class="anchor" href="#samples-11"></a>Samples</h5>
-<div class="paragraph clusters/getAllowlist">
-<p><code>GET /v2/clusters/{id}/allowlist</code></p>
-</div>
-<div class="paragraph">
-<p>Get current allowlist</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-12"><a class="anchor" href="#description-12"></a>Description</h5>
-<div class="paragraph">
-<p>Returns a list with all the allowed IP ranges/addresses</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-12"><a class="anchor" href="#parameters-12"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-10"><a class="anchor" href="#path-parameters-10"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-12"><a class="anchor" href="#return-type-12"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#ListAllowListResponse"><em>ListAllowListResponse</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-12"><a class="anchor" href="#responses-12"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Returns allowlist</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ListAllowListResponse"><em>ListAllowListResponse</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-12"><a class="anchor" href="#samples-12"></a>Samples</h5>
-<div class="paragraph clusters/getCertificate">
-<p><code>GET /v2/clusters/{id}/certificate</code></p>
-</div>
-<div class="paragraph">
-<p>Get Cluster Certificate</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-13"><a class="anchor" href="#description-13"></a>Description</h5>
-<div class="paragraph">
-<p>Retrieve a self-signed certificate to securely connect to the cluster. Required for both public and private connections.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-13"><a class="anchor" href="#parameters-13"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-11"><a class="anchor" href="#path-parameters-11"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-13"><a class="anchor" href="#return-type-13"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#GetCertificateResponse"><em>GetCertificateResponse</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-13"><a class="anchor" href="#responses-13"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a self-signed certificate</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#GetCertificateResponse"><em>GetCertificateResponse</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-13"><a class="anchor" href="#samples-13"></a>Samples</h5>
-<div class="paragraph clusters/health">
-<p><code>GET /v2/clusters/{id}/health</code></p>
-</div>
-<div class="paragraph">
-<p>Get Cluster Health</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-14"><a class="anchor" href="#description-14"></a>Description</h5>
-<div class="paragraph">
-<p>Retrieve Cluster health and status. Health stats of the cluster are returned only for clusters with <code>ready</code> status.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-14"><a class="anchor" href="#parameters-14"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-12"><a class="anchor" href="#path-parameters-12"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
 <h5 id="return-type-14"><a class="anchor" href="#return-type-14"></a>Return Type</h5>
 <div class="paragraph">
-<p><a href="#ClusterHealthResponse"><em>ClusterHealthResponse</em></a></p>
+<p>-</p>
 </div>
 </div>
 <div class="sect4">
@@ -2422,535 +2239,52 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Current Cluster Health and Status</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ClusterHealthResponse"><em>ClusterHealthResponse</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect4">
 <h5 id="samples-14"><a class="anchor" href="#samples-14"></a>Samples</h5>
-<div class="paragraph clusters/list">
-<p><code>GET /v2/clusters</code></p>
+<div class="paragraph clusters/v3updateSupport">
+<p><code>PUT /v3/clusters/{id}/support</code></p>
 </div>
 <div class="paragraph">
-<p>List Clusters</p>
+<p>Update Cluster Support Package V3</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="description-15"><a class="anchor" href="#description-15"></a>Description</h5>
 <div class="paragraph">
-<p>Return a paginated list of organization Clusters.</p>
+<p>Updates the cluster support package details</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="parameters-15"><a class="anchor" href="#parameters-15"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="query-parameters-2"><a class="anchor" href="#query-parameters-2"></a>Query Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets how many results you would like to have on each page</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">perPage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets what page you would like to view</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sortBy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets order of how you would like to sort results and also the key you would like to order by</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cloudId</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud ID for filtering cloud clusters.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">projectId</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Project ID for filtering project clusters.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-15"><a class="anchor" href="#return-type-15"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#ListClustersResponse"><em>ListClustersResponse</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-15"><a class="anchor" href="#responses-15"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ListClustersResponse"><em>ListClustersResponse</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-15"><a class="anchor" href="#samples-15"></a>Samples</h5>
-<div class="paragraph clusters/listBuckets">
-<p><code>GET /v2/clusters/{id}/buckets</code></p>
-</div>
-<div class="paragraph">
-<p>List cluster buckets</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-16"><a class="anchor" href="#description-16"></a>Description</h5>
-<div class="paragraph">
-<p>Returns a list of existing cluster buckets</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-16"><a class="anchor" href="#parameters-16"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-13"><a class="anchor" href="#path-parameters-13"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-16"><a class="anchor" href="#return-type-16"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#ListBucketsResponse"><em>ListBucketsResponse</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-16"><a class="anchor" href="#responses-16"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster&#39;s bucket list</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ListBucketsResponse"><em>ListBucketsResponse</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-16"><a class="anchor" href="#samples-16"></a>Samples</h5>
-<div class="paragraph clusters/listUsers">
-<p><code>GET /v2/clusters/{id}/users</code></p>
-</div>
-<div class="paragraph">
-<p>List Database Users</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-17"><a class="anchor" href="#description-17"></a>Description</h5>
-<div class="paragraph">
-<p>Returns a list of Cluster&#8217;s Database Users.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-17"><a class="anchor" href="#parameters-17"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-14"><a class="anchor" href="#path-parameters-14"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-17"><a class="anchor" href="#return-type-17"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#ListDatabaseUsersResponse"><em>ListDatabaseUsersResponse</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-17"><a class="anchor" href="#responses-17"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">On success returns a list of Database users.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ListDatabaseUsersResponse"><em>ListDatabaseUsersResponse</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-17"><a class="anchor" href="#samples-17"></a>Samples</h5>
-<div class="paragraph clusters/show">
-<p><code>GET /v2/clusters/{id}</code></p>
-</div>
-<div class="paragraph">
-<p>Get Cluster</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-18"><a class="anchor" href="#description-18"></a>Description</h5>
-<div class="paragraph">
-<p>Retrieve a cluster by ID</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-18"><a class="anchor" href="#parameters-18"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-15"><a class="anchor" href="#path-parameters-15"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-18"><a class="anchor" href="#return-type-18"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#Cluster"><em>Cluster</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-18"><a class="anchor" href="#responses-18"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">if found, returns a cluster.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Cluster"><em>Cluster</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-18"><a class="anchor" href="#samples-18"></a>Samples</h5>
-<div class="paragraph clusters/status">
-<p><code>GET /v2/clusters/{id}/status</code></p>
-</div>
-<div class="paragraph">
-<p>Get Cluster Status</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-19"><a class="anchor" href="#description-19"></a>Description</h5>
-<div class="paragraph">
-<p>Returns Cluster Status</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-19"><a class="anchor" href="#parameters-19"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-16"><a class="anchor" href="#path-parameters-16"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-19"><a class="anchor" href="#return-type-19"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#ClusterStatusResponse"><em>ClusterStatusResponse</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-19"><a class="anchor" href="#responses-19"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster Status</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ClusterStatusResponse"><em>ClusterStatusResponse</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-19"><a class="anchor" href="#samples-19"></a>Samples</h5>
-<div class="paragraph clusters/updateAllowlist">
-<p><code>PUT /v2/clusters/{id}/allowlist</code></p>
-</div>
-<div class="paragraph">
-<p>Update the allowlist for a cluster</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-20"><a class="anchor" href="#description-20"></a>Description</h5>
-<div class="paragraph">
-<p>Updates allow list to received payload</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-20"><a class="anchor" href="#parameters-20"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-17"><a class="anchor" href="#path-parameters-17"></a>Path Parameters</h6>
+<h6 id="path-parameters-10"><a class="anchor" href="#path-parameters-10"></a>Path Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -3000,1909 +2334,6 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UpdateAllowListRequest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#UpdateAllowListRequest"><em>UpdateAllowListRequest</em></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-20"><a class="anchor" href="#return-type-20"></a>Return Type</h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-20"><a class="anchor" href="#responses-20"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully update allowlist</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-20"><a class="anchor" href="#samples-20"></a>Samples</h5>
-<div class="paragraph clusters/updateBucket">
-<p><code>PUT /v2/clusters/{id}/buckets</code></p>
-</div>
-<div class="paragraph">
-<p>Update bucket in cluster</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-21"><a class="anchor" href="#description-21"></a>Description</h5>
-<div class="paragraph">
-<p>Updates bucket in cluster specified with cluster id parameter</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-21"><a class="anchor" href="#parameters-21"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-18"><a class="anchor" href="#path-parameters-18"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="body-parameter-8"><a class="anchor" href="#body-parameter-8"></a>Body Parameter</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UpdateBucketSpec</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#UpdateBucketSpec"><em>UpdateBucketSpec</em></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-21"><a class="anchor" href="#return-type-21"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#CouchbaseBucketSpec"><em>CouchbaseBucketSpec</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-21"><a class="anchor" href="#responses-21"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">201</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully updated bucket</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#CouchbaseBucketSpec"><em>CouchbaseBucketSpec</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-21"><a class="anchor" href="#samples-21"></a>Samples</h5>
-<div class="paragraph clusters/updateSingleBucket">
-<p><code>PUT /v2/clusters/{id}/buckets/{bucketId}</code></p>
-</div>
-<div class="paragraph">
-<p>Update an existing bucket</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-22"><a class="anchor" href="#description-22"></a>Description</h5>
-<div class="paragraph">
-<p>Updates the configuration of an existing bucket in a cluster</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-22"><a class="anchor" href="#parameters-22"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-19"><a class="anchor" href="#path-parameters-19"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">bucketId</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bucket ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="body-parameter-9"><a class="anchor" href="#body-parameter-9"></a>Body Parameter</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UpdateBucketRequest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#UpdateBucketRequest"><em>UpdateBucketRequest</em></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-22"><a class="anchor" href="#return-type-22"></a>Return Type</h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-22"><a class="anchor" href="#responses-22"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-22"><a class="anchor" href="#samples-22"></a>Samples</h5>
-<div class="paragraph clusters/updateUser">
-<p><code>PUT /v2/clusters/{id}/users/{username}</code></p>
-</div>
-<div class="paragraph">
-<p>Update Database User</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-23"><a class="anchor" href="#description-23"></a>Description</h5>
-<div class="paragraph">
-<p>Update a Cluster&#8217;s Database User</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-23"><a class="anchor" href="#parameters-23"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-20"><a class="anchor" href="#path-parameters-20"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">username</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Database User username</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="body-parameter-10"><a class="anchor" href="#body-parameter-10"></a>Body Parameter</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UpdateDatabaseUserRequest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#UpdateDatabaseUserRequest"><em>UpdateDatabaseUserRequest</em></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-23"><a class="anchor" href="#return-type-23"></a>Return Type</h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-23"><a class="anchor" href="#responses-23"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">204</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully updated Database User</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-23"><a class="anchor" href="#samples-23"></a>Samples</h5>
-
-</div>
-</div>
-<div class="sect2 ClustersV3">
-<h3 id="clustersv3"><a class="anchor" href="#clustersv3"></a>ClustersV3</h3>
-<div class="paragraph clusters/v3auditlogsCreate">
-<p><code>POST /v3/clusters/{id}/auditlogs</code></p>
-</div>
-<div class="paragraph">
-<p>Create Cluster Audit Log Export</p>
-</div>
-<div class="sect4">
-<h5 id="description-24"><a class="anchor" href="#description-24"></a>Description</h5>
-<div class="paragraph">
-<p>Creates a new request for the export of audit log files that cover a user-specified time-period. The returned value includes a download ID, which can be referenced in a subsequent Get Audit Log Request call. Time stamps must be in RFC3339 format.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-24"><a class="anchor" href="#parameters-24"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="body-parameter-11"><a class="anchor" href="#body-parameter-11"></a>Body Parameter</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">V3ClusterAuditLogExportCreate</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditLogExportCreate"><em>V3ClusterAuditLogExportCreate</em></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-24"><a class="anchor" href="#return-type-24"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#V3ClusterAuditLogExportDownloadID"><em>V3ClusterAuditLogExportDownloadID</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-24"><a class="anchor" href="#responses-24"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditLogExportDownloadID"><em>V3ClusterAuditLogExportDownloadID</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">405</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Method not allowed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-24"><a class="anchor" href="#samples-24"></a>Samples</h5>
-<div class="paragraph clusters/v3auditlogsList">
-<p><code>GET /v3/clusters/{id}/auditlogs</code></p>
-</div>
-<div class="paragraph">
-<p>List Cluster Audit Log Exports</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-25"><a class="anchor" href="#description-25"></a>Description</h5>
-<div class="paragraph">
-<p>Returns a list of all audit log export requests. The list starts with the most recent request. The information returned for each request includes the time of the request&#8217;s creation, the start and end times of the period for which records are required, a download URL for retrieval of a compressed file that contains the log files, and the progress-status of the request. When progress-status is 'ready', the compressed file can be manually downloaded, using the download URL.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-25"><a class="anchor" href="#parameters-25"></a>Parameters</h5>
-
-</div>
-<div class="sect4">
-<h5 id="return-type-25"><a class="anchor" href="#return-type-25"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#V3ClusterAuditLogExportList"><em>V3ClusterAuditLogExportList</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-25"><a class="anchor" href="#responses-25"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditLogExportList"><em>V3ClusterAuditLogExportList</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-25"><a class="anchor" href="#samples-25"></a>Samples</h5>
-<div class="paragraph clusters/v3auditlogsShow">
-<p><code>GET /v3/clusters/{id}/auditlogs/{downloadId}</code></p>
-</div>
-<div class="paragraph">
-<p>Get Cluster Audit Log Request</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-26"><a class="anchor" href="#description-26"></a>Description</h5>
-<div class="paragraph">
-<p>Returns a specific audit log export request. The request is specified with a download ID, previously returned by Create Audit Log Request: the download ID must be appended to the URI of Get Audit Log Request. The information returned for the specified request includes the time of the request&#8217;s creation, the start and end times of the period for which records are required, a download URL for retrieval of a compressed file that contains the log files, and the progress-status of the request. When progress-status is 'ready', the compressed file can be manually downloaded, using the download URL.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-26"><a class="anchor" href="#parameters-26"></a>Parameters</h5>
-
-</div>
-<div class="sect4">
-<h5 id="return-type-26"><a class="anchor" href="#return-type-26"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#V3ClusterAuditLogExport"><em>V3ClusterAuditLogExport</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-26"><a class="anchor" href="#responses-26"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Success, job being processed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditLogExport"><em>V3ClusterAuditLogExport</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-26"><a class="anchor" href="#samples-26"></a>Samples</h5>
-<div class="paragraph clusters/v3configureAudit">
-<p><code>POST /v3/clusters/{id}/audit</code></p>
-</div>
-<div class="paragraph">
-<p>Configure Cluster Audit Settings</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-27"><a class="anchor" href="#description-27"></a>Description</h5>
-<div class="paragraph">
-<p>Configures the audit settings for the cluster. This allows auditing to be enabled or disabled for the cluster. It also allows specific audit events to be enabled, and specific users to be disabled.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-27"><a class="anchor" href="#parameters-27"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-21"><a class="anchor" href="#path-parameters-21"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="body-parameter-12"><a class="anchor" href="#body-parameter-12"></a>Body Parameter</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">V3ClusterAuditSettings</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditSettings"><em>V3ClusterAuditSettings</em></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-27"><a class="anchor" href="#return-type-27"></a>Return Type</h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-27"><a class="anchor" href="#responses-27"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-27"><a class="anchor" href="#samples-27"></a>Samples</h5>
-<div class="paragraph clusters/v3create">
-<p><code>POST /v3/clusters</code></p>
-</div>
-<div class="paragraph">
-<p>Create Cluster V3</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-28"><a class="anchor" href="#description-28"></a>Description</h5>
-<div class="paragraph">
-<p>Creates a cluster with the given specifications and returns the id of the cluster on success</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-28"><a class="anchor" href="#parameters-28"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="body-parameter-13"><a class="anchor" href="#body-parameter-13"></a>Body Parameter</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">V3CreateClusterRequest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3CreateClusterRequest"><em>V3CreateClusterRequest</em></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-28"><a class="anchor" href="#return-type-28"></a>Return Type</h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-28"><a class="anchor" href="#responses-28"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-28"><a class="anchor" href="#samples-28"></a>Samples</h5>
-<div class="paragraph clusters/v3createUser">
-<p><code>POST /v3/clusters/{id}/users</code></p>
-</div>
-<div class="paragraph">
-<p>Create cluster user</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-29"><a class="anchor" href="#description-29"></a>Description</h5>
-<div class="paragraph">
-<p>Creates a new user for a cluster with access to buckets/scopes</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-29"><a class="anchor" href="#parameters-29"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-22"><a class="anchor" href="#path-parameters-22"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="body-parameter-14"><a class="anchor" href="#body-parameter-14"></a>Body Parameter</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">V3CreateClusterUserRequest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3CreateClusterUserRequest"><em>V3CreateClusterUserRequest</em></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-29"><a class="anchor" href="#return-type-29"></a>Return Type</h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-29"><a class="anchor" href="#responses-29"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">201</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully created cluster user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-29"><a class="anchor" href="#samples-29"></a>Samples</h5>
-<div class="paragraph clusters/v3delete">
-<p><code>DELETE /v3/clusters/{id}</code></p>
-</div>
-<div class="paragraph">
-<p>Delete Cluster V3</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-30"><a class="anchor" href="#description-30"></a>Description</h5>
-<div class="paragraph">
-<p>Starts the deletion process for the cluster</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-30"><a class="anchor" href="#parameters-30"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-23"><a class="anchor" href="#path-parameters-23"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-30"><a class="anchor" href="#return-type-30"></a>Return Type</h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-30"><a class="anchor" href="#responses-30"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully started the cluster deletion process</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-30"><a class="anchor" href="#samples-30"></a>Samples</h5>
-<div class="paragraph clusters/v3getAudit">
-<p><code>GET /v3/clusters/{id}/audit</code></p>
-</div>
-<div class="paragraph">
-<p>Get Cluster Audit Settings</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-31"><a class="anchor" href="#description-31"></a>Description</h5>
-<div class="paragraph">
-<p>Retrieves the current audit settings for the cluster; including a list of all enabled audit events, a list of disabled users, and the overall enablement status of the cluster.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-31"><a class="anchor" href="#parameters-31"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-24"><a class="anchor" href="#path-parameters-24"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-31"><a class="anchor" href="#return-type-31"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#V3ClusterAuditSettings"><em>V3ClusterAuditSettings</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-31"><a class="anchor" href="#responses-31"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the current Audit settings for the cluster</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditSettings"><em>V3ClusterAuditSettings</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-31"><a class="anchor" href="#samples-31"></a>Samples</h5>
-<div class="paragraph clusters/v3getAuditDescriptors">
-<p><code>GET /v3/clusters/{id}/auditdescriptors</code></p>
-</div>
-<div class="paragraph">
-<p>List Filterable Audit Events</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-32"><a class="anchor" href="#description-32"></a>Description</h5>
-<div class="paragraph">
-<p>Returns the list of all filterable audit events for the cluster. Filterable audit events are those that can be either disabled or enabled. If a filterable audit event is currently disabled, it can be enabled through its inclusion in the enabledEventIDs field of Configure Cluster Audit Settings.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-32"><a class="anchor" href="#parameters-32"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-25"><a class="anchor" href="#path-parameters-25"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-32"><a class="anchor" href="#return-type-32"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#V3ClusterAuditFilterableEventList"><em>V3ClusterAuditFilterableEventList</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-32"><a class="anchor" href="#responses-32"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the list of filterable Audit Events for the cluster.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterAuditFilterableEventList"><em>V3ClusterAuditFilterableEventList</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-32"><a class="anchor" href="#samples-32"></a>Samples</h5>
-<div class="paragraph clusters/v3list">
-<p><code>GET /v3/clusters</code></p>
-</div>
-<div class="paragraph">
-<p>List all clusters v3</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-33"><a class="anchor" href="#description-33"></a>Description</h5>
-<div class="paragraph">
-<p>Returns a paginated list of all clusters</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-33"><a class="anchor" href="#parameters-33"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="query-parameters-3"><a class="anchor" href="#query-parameters-3"></a>Query Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets how many results you would like to have on each page</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">perPage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets what page you would like to view</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cloudId</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud ID for filtering cloud clusters.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">projectId</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Project ID for filtering project clusters.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-33"><a class="anchor" href="#return-type-33"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#V3ClusterList"><em>V3ClusterList</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-33"><a class="anchor" href="#responses-33"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterList"><em>V3ClusterList</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-33"><a class="anchor" href="#samples-33"></a>Samples</h5>
-<div class="paragraph clusters/v3show">
-<p><code>GET /v3/clusters/{id}</code></p>
-</div>
-<div class="paragraph">
-<p>Get Cluster Info V3</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-34"><a class="anchor" href="#description-34"></a>Description</h5>
-<div class="paragraph">
-<p>Retrieves cluster information using the provided cluster ID</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-34"><a class="anchor" href="#parameters-34"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-26"><a class="anchor" href="#path-parameters-26"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-34"><a class="anchor" href="#return-type-34"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#V3Cluster"><em>V3Cluster</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-34"><a class="anchor" href="#responses-34"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If found, returns the cluster information</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3Cluster"><em>V3Cluster</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-34"><a class="anchor" href="#samples-34"></a>Samples</h5>
-<div class="paragraph clusters/v3status">
-<p><code>GET /v3/clusters/{id}/status</code></p>
-</div>
-<div class="paragraph">
-<p>Get Cluster Status V3</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-35"><a class="anchor" href="#description-35"></a>Description</h5>
-<div class="paragraph">
-<p>Gets cluster status</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-35"><a class="anchor" href="#parameters-35"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-27"><a class="anchor" href="#path-parameters-27"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-35"><a class="anchor" href="#return-type-35"></a>Return Type</h5>
-<div class="paragraph">
-<p><a href="#V3ClusterStatusResponse"><em>V3ClusterStatusResponse</em></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-35"><a class="anchor" href="#responses-35"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster status</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3ClusterStatusResponse"><em>V3ClusterStatusResponse</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-35"><a class="anchor" href="#samples-35"></a>Samples</h5>
-<div class="paragraph clusters/v3updateMeta">
-<p><code>PUT /v3/clusters/{id}/meta</code></p>
-</div>
-<div class="paragraph">
-<p>Update Cluster Metadata V3</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-36"><a class="anchor" href="#description-36"></a>Description</h5>
-<div class="paragraph">
-<p>Updates the cluster metadata</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-36"><a class="anchor" href="#parameters-36"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-28"><a class="anchor" href="#path-parameters-28"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="body-parameter-15"><a class="anchor" href="#body-parameter-15"></a>Body Parameter</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">V3UpdateClusterMetaRequest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3UpdateClusterMetaRequest"><em>V3UpdateClusterMetaRequest</em></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-36"><a class="anchor" href="#return-type-36"></a>Return Type</h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-36"><a class="anchor" href="#responses-36"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">204</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully updated the cluster metadata</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-36"><a class="anchor" href="#samples-36"></a>Samples</h5>
-<div class="paragraph clusters/v3updateServers">
-<p><code>PUT /v3/clusters/{id}/servers</code></p>
-</div>
-<div class="paragraph">
-<p>Update Cluster Servers V3</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-37"><a class="anchor" href="#description-37"></a>Description</h5>
-<div class="paragraph">
-<p>Updates the cluster server group to scale in / out, up / down</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-37"><a class="anchor" href="#parameters-37"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-29"><a class="anchor" href="#path-parameters-29"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="body-parameter-16"><a class="anchor" href="#body-parameter-16"></a>Body Parameter</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">V3UpdateClusterServersRequest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3UpdateClusterServersRequest"><em>V3UpdateClusterServersRequest</em></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="return-type-37"><a class="anchor" href="#return-type-37"></a>Return Type</h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="responses-37"><a class="anchor" href="#responses-37"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 50%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Success</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access forbidden</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource was not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">422</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request validation error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal server error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#goof"><em>Goof</em></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="samples-37"><a class="anchor" href="#samples-37"></a>Samples</h5>
-<div class="paragraph clusters/v3updateSupport">
-<p><code>PUT /v3/clusters/{id}/support</code></p>
-</div>
-<div class="paragraph">
-<p>Update Cluster Support Package V3</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="description-38"><a class="anchor" href="#description-38"></a>Description</h5>
-<div class="paragraph">
-<p>Updates the cluster support package details</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="parameters-38"><a class="anchor" href="#parameters-38"></a>Parameters</h5>
-<div class="sect5">
-<h6 id="path-parameters-30"><a class="anchor" href="#path-parameters-30"></a>Path Parameters</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="body-parameter-17"><a class="anchor" href="#body-parameter-17"></a>Body Parameter</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">V3UpdateClusterSupportRequest</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#V3UpdateClusterSupportRequest"><em>V3UpdateClusterSupportRequest</em></a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -4914,13 +2345,13 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="return-type-38"><a class="anchor" href="#return-type-38"></a>Return Type</h5>
+<h5 id="return-type-15"><a class="anchor" href="#return-type-15"></a>Return Type</h5>
 <div class="paragraph">
 <p>-</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="responses-38"><a class="anchor" href="#responses-38"></a>Responses</h5>
+<h5 id="responses-15"><a class="anchor" href="#responses-15"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4964,9 +2395,8 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </table>
 </div>
 <div class="sect4">
-<h5 id="samples-38"><a class="anchor" href="#samples-38"></a>Samples</h5>
+<h5 id="samples-15"><a class="anchor" href="#samples-15"></a>Samples</h5>
 
-</div>
 </div>
 <div class="sect2 EventsV3">
 <h3 id="eventsv3"><a class="anchor" href="#eventsv3"></a>EventsV3</h3>
@@ -4977,15 +2407,15 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 <p>List Events</p>
 </div>
 <div class="sect4">
-<h5 id="description-39"><a class="anchor" href="#description-39"></a>Description</h5>
+<h5 id="description-16"><a class="anchor" href="#description-16"></a>Description</h5>
 <div class="paragraph">
 <p>Return a paginated list of organization Events.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="parameters-39"><a class="anchor" href="#parameters-39"></a>Parameters</h5>
+<h5 id="parameters-16"><a class="anchor" href="#parameters-16"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="query-parameters-4"><a class="anchor" href="#query-parameters-4"></a>Query Parameters</h6>
+<h6 id="query-parameters-2"><a class="anchor" href="#query-parameters-2"></a>Query Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -5079,13 +2509,13 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="return-type-39"><a class="anchor" href="#return-type-39"></a>Return Type</h5>
+<h5 id="return-type-16"><a class="anchor" href="#return-type-16"></a>Return Type</h5>
 <div class="paragraph">
 <p><a href="#ListEventsResponse"><em>ListEventsResponse</em></a></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="responses-39"><a class="anchor" href="#responses-39"></a>Responses</h5>
+<h5 id="responses-16"><a class="anchor" href="#responses-16"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -5124,7 +2554,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </table>
 </div>
 <div class="sect4">
-<h5 id="samples-39"><a class="anchor" href="#samples-39"></a>Samples</h5>
+<h5 id="samples-16"><a class="anchor" href="#samples-16"></a>Samples</h5>
 <div class="paragraph events/v3show">
 <p><code>GET /v3/events/{id}</code></p>
 </div>
@@ -5133,15 +2563,15 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="description-40"><a class="anchor" href="#description-40"></a>Description</h5>
+<h5 id="description-17"><a class="anchor" href="#description-17"></a>Description</h5>
 <div class="paragraph">
 <p>Return an event</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="parameters-40"><a class="anchor" href="#parameters-40"></a>Parameters</h5>
+<h5 id="parameters-17"><a class="anchor" href="#parameters-17"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="path-parameters-31"><a class="anchor" href="#path-parameters-31"></a>Path Parameters</h6>
+<h6 id="path-parameters-11"><a class="anchor" href="#path-parameters-11"></a>Path Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -5172,13 +2602,13 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="return-type-40"><a class="anchor" href="#return-type-40"></a>Return Type</h5>
+<h5 id="return-type-17"><a class="anchor" href="#return-type-17"></a>Return Type</h5>
 <div class="paragraph">
 <p><a href="#ListEventsResponse"><em>ListEventsResponse</em></a></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="responses-40"><a class="anchor" href="#responses-40"></a>Responses</h5>
+<h5 id="responses-17"><a class="anchor" href="#responses-17"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -5217,7 +2647,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </table>
 </div>
 <div class="sect4">
-<h5 id="samples-40"><a class="anchor" href="#samples-40"></a>Samples</h5>
+<h5 id="samples-17"><a class="anchor" href="#samples-17"></a>Samples</h5>
 
 </div>
 </div>
@@ -5230,15 +2660,15 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 <p>Create project</p>
 </div>
 <div class="sect4">
-<h5 id="description-41"><a class="anchor" href="#description-41"></a>Description</h5>
+<h5 id="description-18"><a class="anchor" href="#description-18"></a>Description</h5>
 <div class="paragraph">
 <p>Creates project in tenant, returns id of project on success</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="parameters-41"><a class="anchor" href="#parameters-41"></a>Parameters</h5>
+<h5 id="parameters-18"><a class="anchor" href="#parameters-18"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="body-parameter-18"><a class="anchor" href="#body-parameter-18"></a>Body Parameter</h6>
+<h6 id="body-parameter-8"><a class="anchor" href="#body-parameter-8"></a>Body Parameter</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -5269,13 +2699,13 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="return-type-41"><a class="anchor" href="#return-type-41"></a>Return Type</h5>
+<h5 id="return-type-18"><a class="anchor" href="#return-type-18"></a>Return Type</h5>
 <div class="paragraph">
 <p><a href="#Project"><em>Project</em></a></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="responses-41"><a class="anchor" href="#responses-41"></a>Responses</h5>
+<h5 id="responses-18"><a class="anchor" href="#responses-18"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -5314,7 +2744,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </table>
 </div>
 <div class="sect4">
-<h5 id="samples-41"><a class="anchor" href="#samples-41"></a>Samples</h5>
+<h5 id="samples-18"><a class="anchor" href="#samples-18"></a>Samples</h5>
 <div class="paragraph projects/delete">
 <p><code>DELETE /v2/projects/{id}</code></p>
 </div>
@@ -5323,15 +2753,15 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="description-42"><a class="anchor" href="#description-42"></a>Description</h5>
+<h5 id="description-19"><a class="anchor" href="#description-19"></a>Description</h5>
 <div class="paragraph">
 <p>Deletes endpoint with specified ID if exists, returns true on success and error if not</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="parameters-42"><a class="anchor" href="#parameters-42"></a>Parameters</h5>
+<h5 id="parameters-19"><a class="anchor" href="#parameters-19"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="path-parameters-32"><a class="anchor" href="#path-parameters-32"></a>Path Parameters</h6>
+<h6 id="path-parameters-12"><a class="anchor" href="#path-parameters-12"></a>Path Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -5362,13 +2792,13 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="return-type-42"><a class="anchor" href="#return-type-42"></a>Return Type</h5>
+<h5 id="return-type-19"><a class="anchor" href="#return-type-19"></a>Return Type</h5>
 <div class="paragraph">
 <p>-</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="responses-42"><a class="anchor" href="#responses-42"></a>Responses</h5>
+<h5 id="responses-19"><a class="anchor" href="#responses-19"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -5412,7 +2842,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </table>
 </div>
 <div class="sect4">
-<h5 id="samples-42"><a class="anchor" href="#samples-42"></a>Samples</h5>
+<h5 id="samples-19"><a class="anchor" href="#samples-19"></a>Samples</h5>
 <div class="paragraph projects/list">
 <p><code>GET /v2/projects</code></p>
 </div>
@@ -5421,15 +2851,15 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="description-43"><a class="anchor" href="#description-43"></a>Description</h5>
+<h5 id="description-20"><a class="anchor" href="#description-20"></a>Description</h5>
 <div class="paragraph">
 <p>Returns a paginated list of projects created by the tenant</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="parameters-43"><a class="anchor" href="#parameters-43"></a>Parameters</h5>
+<h5 id="parameters-20"><a class="anchor" href="#parameters-20"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="query-parameters-5"><a class="anchor" href="#query-parameters-5"></a>Query Parameters</h6>
+<h6 id="query-parameters-3"><a class="anchor" href="#query-parameters-3"></a>Query Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -5474,13 +2904,13 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="return-type-43"><a class="anchor" href="#return-type-43"></a>Return Type</h5>
+<h5 id="return-type-20"><a class="anchor" href="#return-type-20"></a>Return Type</h5>
 <div class="paragraph">
 <p><a href="#ListProjectsResponse"><em>ListProjectsResponse</em></a></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="responses-43"><a class="anchor" href="#responses-43"></a>Responses</h5>
+<h5 id="responses-20"><a class="anchor" href="#responses-20"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -5519,7 +2949,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </table>
 </div>
 <div class="sect4">
-<h5 id="samples-43"><a class="anchor" href="#samples-43"></a>Samples</h5>
+<h5 id="samples-20"><a class="anchor" href="#samples-20"></a>Samples</h5>
 <div class="paragraph projects/show">
 <p><code>GET /v2/projects/{id}</code></p>
 </div>
@@ -5528,15 +2958,15 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="description-44"><a class="anchor" href="#description-44"></a>Description</h5>
+<h5 id="description-21"><a class="anchor" href="#description-21"></a>Description</h5>
 <div class="paragraph">
 <p>Returns the project with the ID</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="parameters-44"><a class="anchor" href="#parameters-44"></a>Parameters</h5>
+<h5 id="parameters-21"><a class="anchor" href="#parameters-21"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="path-parameters-33"><a class="anchor" href="#path-parameters-33"></a>Path Parameters</h6>
+<h6 id="path-parameters-13"><a class="anchor" href="#path-parameters-13"></a>Path Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -5567,13 +2997,13 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="return-type-44"><a class="anchor" href="#return-type-44"></a>Return Type</h5>
+<h5 id="return-type-21"><a class="anchor" href="#return-type-21"></a>Return Type</h5>
 <div class="paragraph">
 <p><a href="#Project"><em>Project</em></a></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="responses-44"><a class="anchor" href="#responses-44"></a>Responses</h5>
+<h5 id="responses-21"><a class="anchor" href="#responses-21"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -5617,7 +3047,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </table>
 </div>
 <div class="sect4">
-<h5 id="samples-44"><a class="anchor" href="#samples-44"></a>Samples</h5>
+<h5 id="samples-21"><a class="anchor" href="#samples-21"></a>Samples</h5>
 
 </div>
 </div>
@@ -5630,23 +3060,23 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 <p>API status</p>
 </div>
 <div class="sect4">
-<h5 id="description-45"><a class="anchor" href="#description-45"></a>Description</h5>
+<h5 id="description-22"><a class="anchor" href="#description-22"></a>Description</h5>
 <div class="paragraph">
 <p>Returns a public API status</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="parameters-45"><a class="anchor" href="#parameters-45"></a>Parameters</h5>
+<h5 id="parameters-22"><a class="anchor" href="#parameters-22"></a>Parameters</h5>
 
 </div>
 <div class="sect4">
-<h5 id="return-type-45"><a class="anchor" href="#return-type-45"></a>Return Type</h5>
+<h5 id="return-type-22"><a class="anchor" href="#return-type-22"></a>Return Type</h5>
 <div class="paragraph">
 <p><a href="#StatusOK"><em>StatusOK</em></a></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="responses-45"><a class="anchor" href="#responses-45"></a>Responses</h5>
+<h5 id="responses-22"><a class="anchor" href="#responses-22"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -5675,7 +3105,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </table>
 </div>
 <div class="sect4">
-<h5 id="samples-45"><a class="anchor" href="#samples-45"></a>Samples</h5>
+<h5 id="samples-22"><a class="anchor" href="#samples-22"></a>Samples</h5>
 <div class="paragraph">
 <p>To fetch the status of the Public API</p>
 </div>
@@ -5704,15 +3134,15 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 <p>List Users</p>
 </div>
 <div class="sect4">
-<h5 id="description-46"><a class="anchor" href="#description-46"></a>Description</h5>
+<h5 id="description-23"><a class="anchor" href="#description-23"></a>Description</h5>
 <div class="paragraph">
 <p>Return a paginated list of organization Users.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="parameters-46"><a class="anchor" href="#parameters-46"></a>Parameters</h5>
+<h5 id="parameters-23"><a class="anchor" href="#parameters-23"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="query-parameters-6"><a class="anchor" href="#query-parameters-6"></a>Query Parameters</h6>
+<h6 id="query-parameters-4"><a class="anchor" href="#query-parameters-4"></a>Query Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -5757,13 +3187,13 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect4">
-<h5 id="return-type-46"><a class="anchor" href="#return-type-46"></a>Return Type</h5>
+<h5 id="return-type-23"><a class="anchor" href="#return-type-23"></a>Return Type</h5>
 <div class="paragraph">
 <p><a href="#ListUsersResponse"><em>ListUsersResponse</em></a></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="responses-46"><a class="anchor" href="#responses-46"></a>Responses</h5>
+<h5 id="responses-23"><a class="anchor" href="#responses-23"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -5802,7 +3232,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </table>
 </div>
 <div class="sect4">
-<h5 id="samples-46"><a class="anchor" href="#samples-46"></a>Samples</h5>
+<h5 id="samples-23"><a class="anchor" href="#samples-23"></a>Samples</h5>
 
 </div>
 </div>
@@ -6340,7 +3770,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect5">
-<h6 id="description-47"><a class="anchor" href="#description-47"></a>Description</h6>
+<h6 id="description-24"><a class="anchor" href="#description-24"></a>Description</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -7001,7 +4431,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect5">
-<h6 id="description-48"><a class="anchor" href="#description-48"></a>Description</h6>
+<h6 id="description-25"><a class="anchor" href="#description-25"></a>Description</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -7092,7 +4522,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect5">
-<h6 id="description-49"><a class="anchor" href="#description-49"></a>Description</h6>
+<h6 id="description-26"><a class="anchor" href="#description-26"></a>Description</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -7301,7 +4731,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect5">
-<h6 id="description-50"><a class="anchor" href="#description-50"></a>Description</h6>
+<h6 id="description-27"><a class="anchor" href="#description-27"></a>Description</h6>
 <div class="paragraph">
 <p>If not defined the latest version of Couchbase Server is deployed.
 * <code>latest</code> - the a static version representing a deployment of the most recent dataplane components</p>
@@ -8790,7 +6220,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect5">
-<h6 id="description-51"><a class="anchor" href="#description-51"></a>Description</h6>
+<h6 id="description-28"><a class="anchor" href="#description-28"></a>Description</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -8954,7 +6384,7 @@ In the process, documentation may be built first&#8201;&#8212;&#8201;so it is po
 </div>
 </div>
 <div class="sect5">
-<h6 id="description-52"><a class="anchor" href="#description-52"></a>Description</h6>
+<h6 id="description-29"><a class="anchor" href="#description-29"></a>Description</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -10268,7 +7698,7 @@ Available internal users are @eventing, <code>@cbq-engine</code>, <code>@ns_serv
 </div>
 </div>
 <div class="sect5">
-<h6 id="description-53"><a class="anchor" href="#description-53"></a>Description</h6>
+<h6 id="description-30"><a class="anchor" href="#description-30"></a>Description</h6>
 <div class="ulist">
 <ul>
 <li>

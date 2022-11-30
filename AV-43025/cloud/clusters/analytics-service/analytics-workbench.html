@@ -722,7 +722,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../support/support.html">Overview</a>
+    <a class="menu_title menu_link" href="../../support/support.html">Support Overview</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -763,22 +763,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/cloud-instances.html">Supported Instance Types</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
     <a class="menu_title menu_link" href="../../reference/sdk-compatibility.html">SDK Compatibility</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../../reference/browser-compatibility.html">Supported Browsers</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../reference/user-management-migration.html">User Management Migration</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -886,18 +876,6 @@
 The Analytics Workbench provides a rich graphical user interface to perform Analytics query development.
 </blockquote>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-In the Analytics Workbench, clusters using Couchbase Server 7.0 or later use scopes and collections, while clusters using Couchbase 6.6 use dataverses and datasets.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>Using the <strong class="ui">Analytics Workbench</strong>, you can conveniently explore data, create, edit, run, and save N1QL for Analytics queries, view and save query results, explore dataverses/scopes and datasets/collections, and view the Couchbase buckets which are being shadowed&#8201;&#8212;&#8201;all in a single window.</p>
 </div>
@@ -944,19 +922,6 @@ The Analytics Workbench is only available on clusters that are running the <a hr
 <div class="paragraph">
 <p>If a cluster is running the <a href="analytics-service.html" class="page">Analytics Service</a>, the Analytics Workbench can be accessed under the cluster&#8217;s <strong>Tools &gt; Analytics Workbench</strong> tab.</p>
 </div>
-<div class="tabset is-loading">
-<div class="ulist tabs">
-<ul>
-<li>
-<p><a id="tabset1_couchbase-7-0"></a>Couchbase 7.0+</p>
-</li>
-<li>
-<p><a id="tabset1_couchbase-6-6"></a>Couchbase 6.6</p>
-</li>
-</ul>
-</div>
-<div class="content">
-<div class="tab-pane" aria-labelledby="tabset1_couchbase-7-0">
 <div class="imageblock">
 <div class="content">
 <img src="../_images/cluster-analytics-workbench-CB7.png" alt="The cluster&#8217;s 'Tools &gt; Analytics Workbench' tab.">
@@ -977,32 +942,6 @@ The Analytics Workbench is only available on clusters that are running the <a hr
 <p>The <a href="#insights-sidebar">Analytics Scopes</a>, to the right of the Analytics Workbench.</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="tab-pane" aria-labelledby="tabset1_couchbase-6-6">
-<div class="imageblock">
-<div class="content">
-<img src="../_images/cluster-analytics-workbench.png" alt="The cluster&#8217;s 'Tools &gt; Analytics Workbench' tab.">
-</div>
-</div>
-<div class="paragraph">
-<p>The <strong class="ui">Analytics Workbench</strong> consists of three working areas:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <a href="#query-editor">Analytics Editor</a>, at the top of the Analytics Workbench.</p>
-</li>
-<li>
-<p>The <a href="#results">Analytics Query Results and Plans</a>, at the bottom of the Analytics Workbench.</p>
-</li>
-<li>
-<p>The <a href="#insights-sidebar">Data Insights</a>, to the right of the Analytics Workbench.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -1132,32 +1071,9 @@ FROM breweries bw
 WHERE meta(bw).id = 'kona_brewing';</code></pre>
 </div>
 </div>
-<div class="tabset is-loading">
-<div class="ulist tabs">
-<ul>
-<li>
-<p><a id="tabset2_couchbase-7-0"></a>Couchbase 7.0+</p>
-</li>
-<li>
-<p><a id="tabset2_couchbase-6-6"></a>Couchbase 6.6</p>
-</li>
-</ul>
-</div>
-<div class="content">
-<div class="tab-pane" aria-labelledby="tabset2_couchbase-7-0">
 <div class="imageblock">
 <div class="content">
 <img src="../_images/analytics-workbench-run-query-CB7.png" alt="The cluster&#8217;s Analytics Workbench screen showing an executed query and its results.">
-</div>
-</div>
-</div>
-<div class="tab-pane" aria-labelledby="tabset2_couchbase-6-6">
-<div class="imageblock">
-<div class="content">
-<img src="../_images/analytics-workbench-run-query.png" alt="The cluster&#8217;s Analytics Workbench screen showing an executed query and its results.">
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="sect2">
@@ -1165,32 +1081,9 @@ WHERE meta(bw).id = 'kona_brewing';</code></pre>
 <div class="paragraph">
 <p>When a query finishes, the query metrics for that query are displayed between the Query Editor and the Query Results areas.</p>
 </div>
-<div class="tabset is-loading">
-<div class="ulist tabs">
-<ul>
-<li>
-<p><a id="tabset3_couchbase-7-0"></a>Couchbase 7.0+</p>
-</li>
-<li>
-<p><a id="tabset3_couchbase-6-6"></a>Couchbase 6.6</p>
-</li>
-</ul>
-</div>
-<div class="content">
-<div class="tab-pane" aria-labelledby="tabset3_couchbase-7-0">
 <div class="imageblock">
 <div class="content">
 <img src="../_images/analytics-workbench-query-metrics-CB7.png" alt="The executed query with its metrics highlighted." width="600">
-</div>
-</div>
-</div>
-<div class="tab-pane" aria-labelledby="tabset3_couchbase-6-6">
-<div class="imageblock">
-<div class="content">
-<img src="../_images/analytics-workbench-query-metrics.png" alt="The executed query with its metrics highlighted." width="600">
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="ulist">
@@ -1429,19 +1322,6 @@ The parameters are automatically labeled as "$1", "$2", and so on.</p></td>
 <div class="sect1">
 <h2 id="insights-sidebar"><a class="anchor" href="#insights-sidebar"></a>Data Insights / Analytics Scopes</h2>
 <div class="sectionbody">
-<div class="tabset is-loading">
-<div class="ulist tabs">
-<ul>
-<li>
-<p><a id="tabset4_couchbase-7-0"></a>Couchbase 7.0+</p>
-</li>
-<li>
-<p><a id="tabset4_couchbase-6-6"></a>Couchbase 6.6</p>
-</li>
-</ul>
-</div>
-<div class="content">
-<div class="tab-pane" aria-labelledby="tabset4_couchbase-7-0">
 <div class="paragraph">
 <p>The <strong>Analytics Scopes</strong> area shows scopes, any links with the link type and connection status, and collections that are being shadowed.</p>
 </div>
@@ -1469,21 +1349,6 @@ Amazon S3.</p>
 <p>Drop a collection. Remove an analytics collection from the Analytics Workbench.</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="tab-pane" aria-labelledby="tabset4_couchbase-6-6">
-<div class="paragraph">
-<p>The <strong class="ui">Data Insights</strong> area shows the Analytics dataverses and datasets, and the Couchbase buckets that are being shadowed.
-When data ingestion is in progress, an indicator below each dataset shows the number of mutations that remain to be synchronized to that dataset.
-If the indicator is not displayed, then the dataset is up-to-date.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/analytics-workbench-bucket-insights.png" alt="The 'Bucket Insights' panel." width="400">
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
