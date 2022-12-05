@@ -2197,7 +2197,7 @@ You need the information from this step to create a realm in Capella.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Click <span class="menuseq"><b class="menu">Apps &amp; Widgets</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Web Apps</b></span>.</p>
+<p>In the CyberArk Admin Portal, click <span class="menuseq"><b class="menu">Apps &amp; Widgets</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Web Apps</b></span>.</p>
 </li>
 <li>
 <p>Create the web application:</p>
@@ -2218,7 +2218,7 @@ You need the information from this step to create a realm in Capella.</p>
 <li>
 <p>Exit the <strong>Add Web Apps</strong> dialog by clicking <b class="button">Close</b>.</p>
 <div class="paragraph">
-<p>You now see the <strong>Settings</strong> page.</p>
+<p>You now see the <strong>Settings</strong> page for the SAML app.</p>
 </div>
 </li>
 <li>
@@ -2240,9 +2240,6 @@ You need the information from this step to create a realm in Capella.</p>
 <li>
 <p>Click <b class="button">Save</b>.</p>
 </li>
-<li>
-<p>Click <strong>SAML Response</strong>:</p>
-</li>
 </ol>
 </div>
 </li>
@@ -2250,6 +2247,9 @@ You need the information from this step to create a realm in Capella.</p>
 <p>Start the SAML configuration:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
+<li>
+<p>Click <strong>SAML Response</strong>:</p>
+</li>
 <li>
 <p>Use the <b class="button">Add</b> button to add the following attributes:</p>
 <div class="admonitionblock tip">
@@ -2259,7 +2259,7 @@ You need the information from this step to create a realm in Capella.</p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-After adding an attribute, you can show the <b class="button">Add</b> button again by clearing the checkbox.
+After adding an attribute, you can show the <b class="button">Add</b> button again by clearing the check box.
 </td>
 </tr>
 </table>
@@ -2283,10 +2283,6 @@ After adding an attribute, you can show the <b class="button">Add</b> button aga
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>given_name</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>LoginUser.FirstName</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>given_name</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Given Name</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>family_name</code></p></td>
@@ -2358,7 +2354,7 @@ After adding an attribute, you can show the <b class="button">Add</b> button aga
 <li>
 <p>Click the <b class="button">Trust</b> tab.</p>
 <div class="paragraph">
-<p>You will need information from this page to create a realm in Capella.</p>
+<p>You need information from this page to create a realm in Capella.</p>
 </div>
 </li>
 </ol>
@@ -2526,7 +2522,7 @@ Click its listing to open the realm information page.
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Entity ID</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-arrow-right"></i></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SP Entity ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SP Entity ID / Issuer / Audience</p></td>
 </tr>
 </tbody>
 </table>
@@ -2536,6 +2532,20 @@ Click its listing to open the realm information page.
 </li>
 <li>
 <p>Click <b class="button">Save</b>.</p>
+</li>
+<li>
+<p>Assign users to the application.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Click <b class="button">Permissions</b>.</p>
+</li>
+<li>
+<p>Add the groups whose members need access to Couchbase Capella.
+See the <a href="https://docs.cyberark.com/Product-Doc/OnlineHelp/Idaptive/Latest/en/Content/Applications/AppsOvw/AllowAppAccess.htm?tocpath=Administrator%7CIntegrate%20applications%7CIntroduction%20to%20application%20management%7CConfigure%20Single%20Sign-On%20(SSO)%7C_____3#Assignpermissionsforanapplication">Deploy applications</a> page of the CyberArk documentation for more detail.</p>
+</li>
+</ol>
+</div>
 </li>
 </ol>
 </div>
