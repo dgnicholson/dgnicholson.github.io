@@ -797,7 +797,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-47979_add-ping-config-sso-docs/docs/public/modules/organizations/pages/ui-auth/add-sso-auth.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/organizations/pages/ui-auth/add-sso-auth.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -962,6 +962,9 @@ Choose the tab corresponding to your IdP.</p>
 </li>
 <li>
 <p><a id="tabset1_ping"></a>Ping</p>
+</li>
+<li>
+<p><a id="tabset1_cyberark"></a>CyberArk</p>
 </li>
 </ul>
 </div>
@@ -2142,6 +2145,397 @@ See the <a href="https://docs.pingidentity.com/bundle/pingone/page/xgv1612384834
 </li>
 </ol>
 </div>
+</li>
+</ol>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset1_cyberark">
+<div class="paragraph">
+<p><strong>Prerequisites</strong></p>
+</div>
+<div class="paragraph">
+<p>To configure CyberArk as an IdP, you need:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#access-and-enable-sso-settings">SSO enabled</a> for your Capella organization.</p>
+</li>
+<li>
+<p>A <a href="https://www.cyberark.com">CyberArk</a> account.</p>
+</li>
+<li>
+<p>To sign in to the CyberArk Admin Portal as an admin.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Procedures</strong></p>
+</div>
+<div class="paragraph">
+<p>To configure federated and SSO authentication using CyberArk as your identity provider (IdP), you must complete three procedures in the following order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#create-cyberark-app">In CyberArk, create an Application</a></p>
+</li>
+<li>
+<p><a href="#create-cyberark-realm">In Capella, create a realm</a></p>
+</li>
+<li>
+<p><a href="#complete-cyberark-config">In CyberArk, complete the configuration</a></p>
+</li>
+</ol>
+</div>
+<hr>
+<div id="create-cyberark-app" class="paragraph">
+<div class="title">Add a CyberArk Web App</div>
+<p>Start by creating a CyberArk web application in the Cyberark Admin Portal.
+You need the information from this step to create a realm in Capella.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click <span class="menuseq"><b class="menu">Apps &amp; Widgets</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Web Apps</b></span>.</p>
+</li>
+<li>
+<p>Create the web application:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Click <b class="button">Add Web Apps</b>.</p>
+</li>
+<li>
+<p>Click the <strong>Custom</strong> tab.</p>
+</li>
+<li>
+<p>From the list of templates, find the <strong>SAML</strong> option and click <b class="button">Add</b>.</p>
+</li>
+<li>
+<p>To add this application, click <b class="button">Yes</b>.</p>
+</li>
+<li>
+<p>Exit the <strong>Add Web Apps</strong> dialog by clicking <b class="button">Close</b>.</p>
+<div class="paragraph">
+<p>You now see the <strong>Settings</strong> page.</p>
+</div>
+</li>
+<li>
+<p>Fill in the following fields:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Name</strong>: Add a unique application name.</p>
+</li>
+<li>
+<p>(Optional) <strong>Description</strong>: Add a description of the application.</p>
+</li>
+<li>
+<p>(Optional) <strong>Logo</strong>: Add the Capella logo.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <b class="button">Save</b>.</p>
+</li>
+<li>
+<p>Click <strong>SAML Response</strong>:</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Start the SAML configuration:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Use the <b class="button">Add</b> button to add the following attributes:</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+After adding an attribute, you can show the <b class="button">Add</b> button again by clearing the checkbox.
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attributes Name</th>
+<th class="tableblock halign-left valign-top">Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>email</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LoginUser.Email</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>given_name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LoginUser.FirstName</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>given_name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Given Name</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>family_name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LoginUser.LastName</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>groups</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LoginUser.RoleNames</code></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click <b class="button">Save</b>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Assign your admin account with permissions to the app:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Click <b class="button">Permissions</b>.</p>
+</li>
+<li>
+<p>Click <b class="button">Add</b>.</p>
+</li>
+<li>
+<p>In the search field, enter your admin account.</p>
+</li>
+<li>
+<p>From the list of results, select your name and click <b class="button">Add</b>.</p>
+</li>
+<li>
+<p>On the <strong>Permissions</strong> screen, grant your account the following permissions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Grant</p>
+</li>
+<li>
+<p>View</p>
+</li>
+<li>
+<p>Manage</p>
+</li>
+<li>
+<p>Delete</p>
+</li>
+<li>
+<p>Run</p>
+</li>
+<li>
+<p>Automatically Deploy</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <b class="button">Save</b>.</p>
+<div class="paragraph">
+<p>The status of your web app now shows <strong>Deployed</strong>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click the <b class="button">Trust</b> tab.</p>
+<div class="paragraph">
+<p>You will need information from this page to create a realm in Capella.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="create-cyberark-realm" class="paragraph">
+<div class="title">Create a realm in Capella</div>
+<p>With a CyberArk web application created, you need to create a realm in Capella using information from CyberArk.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Capella, open the <strong>SSO</strong> page:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In the Capella UI, click the <b class="button">Settings</b> tab.</p>
+</li>
+<li>
+<p>In the navigation menu, click <b class="button">SSO</b>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <b class="button">Create Realm</b>.</p>
+</li>
+<li>
+<p>Complete the <strong>Create Realm</strong> page:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Choose <strong>CyberArk</strong> as your identity provider.</p>
+</li>
+<li>
+<p>Copy the following information from your CyberArk configuration to Capella:</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+To find this information in the CyberArk Admin Portal, go to <span class="menuseq"><b class="menu">Apps &amp; Widgets</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Web Apps</b></span>.
+Find and open the web application that you want to view.
+Click <b class="button">Trust</b>.
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CyberArk Field</th>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">Capella Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contents of <span class="menuseq"><b class="menu">Signing Certificate</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Download</b></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-arrow-right"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SAML Signing Certificate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Single Sign On URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-arrow-right"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sign-in Endpoint URL</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Choose a default team.</p>
+<div class="paragraph">
+<p>Capella automatically assigns users to the chosen default team when they don&#8217;t match any team based on their SSO groups.
+All users assigned to the default team have its permission set.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="manage-role-mapping.html" class="page">Manage Capella Role Mapping</a> for information about Teams and how to configure their permissions.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <b class="button">Create Realm</b>.</p>
+<div class="paragraph">
+<p>Capella creates the new realm with an auto-generated name.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Users need to know the realm name to sign in with SSO.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<hr>
+<div id="complete-cyberark-config" class="paragraph">
+<div class="title">Complete the CyberArk Configuration</div>
+<p>Now that you have created the realm, you must finish configuring the CyberArk web application.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the CyberArk Portal, open the application you <a href="#create-cyberark-app">created</a> for Capella.</p>
+</li>
+<li>
+<p>Click <b class="button">Trust</b>.</p>
+</li>
+<li>
+<p>At the end of the page, edit the <strong>Service Provider Configuration</strong> settings:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select <strong>Manual Configuration</strong>.</p>
+</li>
+<li>
+<p>Copy the following fields from your Capella realm configuration to the CyberArk configuration:</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+To find this information for your organization&#8217;s Capella realm, open the <span class="menuseq"><b class="menu">Settings</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">SSO</b></span> page.
+Listed on this page is the realm you just created with an auto-generated name.
+Click its listing to open the realm information page.
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Capella Field</th>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">CyberArk Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Callback URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-arrow-right"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assertion Consumer Service (ACS) URL</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entity ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-arrow-right"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SP Entity ID</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <b class="button">Save</b>.</p>
 </li>
 </ol>
 </div>
