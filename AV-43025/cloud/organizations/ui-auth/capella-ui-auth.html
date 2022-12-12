@@ -941,12 +941,12 @@ Each organization supports one realm.</p>
 </dd>
 <dt class="hdlist1">Team</dt>
 <dd>
-<p>Map user groups from your IdP to permission sets in Capella with a Team.
-Capella creates a default Team, called "My First Team," with no pre-existing role-mapping when you create a realm.
-Each organization can support multiple Teams. You can assign users to one or more Teams.</p>
+<p>Map user groups from your IdP to permission sets in Capella with a team.
+Capella creates a default team, called "My First Team," with no pre-existing role-mapping when you create a realm.
+Each organization can support multiple teams. You can assign users to one or more teams.</p>
 <div class="paragraph">
-<p>Only users with the <a href="../organization-user-roles.html#organization-role-organization-owner" class="page"><code>Organization Owner</code></a> role can create and manage Teams.
-Every user in an organization can view Team information.</p>
+<p>Only users with the <a href="../organization-user-roles.html#organization-role-organization-owner" class="page"><code>Organization Owner</code></a> role can create and manage teams.
+Every user in an organization can view team information.</p>
 </div>
 </dd>
 </dl>
@@ -967,8 +967,12 @@ Non-SSO users can continue to use the Capella MFA.</p>
 <p>SSO Users within the organization can&#8217;t change their name, email or set a password.</p>
 </li>
 <li>
-<p>Capella adds each SSO user to the default Team ("My First Team") as they sign in, unless you specify another default Team or create IdP group mappings.
+<p>Capella adds each SSO user to the <a href="manage-role-mapping.html#default-teams" class="page">default team</a> ("My First Team") as they sign in, unless you specify another default team or create IdP group mappings.
 You can&#8217;t delete a realm&#8217;s configured default team.</p>
+</li>
+<li>
+<p>If a realm has <a href="manage-role-mapping.html#disable-group-mapping" class="page">group mapping turned off</a>, Capella uses the <a href="manage-role-mapping.html#default-teams" class="page">default team</a> to initially assign SSO users their roles.
+After SSO users sign in, you can manage their organization roles using the <strong>People</strong> tab and manage project access using each project&#8217;s <strong>Collaborators</strong> tab.</p>
 </li>
 </ul>
 </div>
