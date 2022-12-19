@@ -15,7 +15,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/invpc/invpc-manage-restore.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -797,7 +797,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/invpc/pages/invpc-manage-restore.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/invpc/pages/invpc-manage-restore.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -872,7 +872,7 @@
 <div class="sectionbody">
 <div class="quoteblock abstract">
 <blockquote>
-A <a href="../clusters/backup-restore.html" class="page">backup</a> can be restored onto the same database that it was created on, or it can be restored onto another database.
+A <a href="../clusters/backup-restore.html" class="xref page">backup</a> can be restored onto the same database that it was created on, or it can be restored onto another database.
 </blockquote>
 </div>
 <div class="admonitionblock tip">
@@ -887,7 +887,7 @@ A <a href="../clusters/backup-restore.html" class="page">backup</a> can be resto
 It does not apply to Couchbase 7.0 or later, hosted in Couchbase&#8217;s VPC and fully managed by Couchbase.</p>
 </div>
 <div class="paragraph">
-<p>All of the information for users of Server 6.6 self-managed in their own cloud provider&#8217;s VPC, such as <em>this page</em>, can be accessed at <a href="invpc-index.html" class="page">this index page</a>.</p>
+<p>All of the information for users of Server 6.6 self-managed in their own cloud provider&#8217;s VPC, such as <em>this page</em>, can be accessed at <a href="invpc-index.html" class="xref page">this index page</a>.</p>
 </div>
 </td>
 </tr>
@@ -913,8 +913,8 @@ It does not apply to Couchbase 7.0 or later, hosted in Couchbase&#8217;s VPC and
 <p>Although backups are preserved in the connected cloud even after a database is deleted, the only <em>user-accessible</em> method for restoring a backup requires that you be able to access the source database&#8217;s <strong>Backup &amp; Restore</strong> tab.</p>
 </div>
 <div class="paragraph">
-<p>If you need to restore a backup from a database that is no longer available in the Capella UI (such as after an accidental database deletion), please <a href="../support/manage-support.html" class="page">contact Couchbase Capella Support</a> for assistance.
-In the meantime, it is highly recommended that you <a href="../clusters/manage-backup.html#view-backup-files" class="page">download the backup</a> from cloud storage so as to ensure it is not deleted as part of the database&#8217;s <a href="../clusters/backup-restore.html#backup-retention" class="page">retention policy</a>.</p>
+<p>If you need to restore a backup from a database that is no longer available in the Capella UI (such as after an accidental database deletion), please <a href="../support/manage-support.html" class="xref page">contact Couchbase Capella Support</a> for assistance.
+In the meantime, it is highly recommended that you <a href="../clusters/manage-backup.html#view-backup-files" class="xref page">download the backup</a> from cloud storage so as to ensure it is not deleted as part of the database&#8217;s <a href="../clusters/backup-restore.html#backup-retention" class="xref page">retention policy</a>.</p>
 </div>
 </td>
 </tr>
@@ -922,13 +922,13 @@ In the meantime, it is highly recommended that you <a href="../clusters/manage-b
 </div>
 </li>
 <li>
-<p>For customers hosting Capella in their own cloud provider&#8217;s VPC, a backup can only be restored to a database that is deployed in the same <a href="#clouds:clouds.adoc" class="page unresolved">connected cloud</a> as the source database that created the backup.</p>
+<p>For customers hosting Capella in their own cloud provider&#8217;s VPC, a backup can only be restored to a database that is deployed in the same <a href="#clouds:clouds.adoc" class="xref unresolved">connected cloud</a> as the source database that created the backup.</p>
 </li>
 <li>
-<p>Backups can only be restored to a database that is running the same <a href="../clusters/databases.html#cluster-version" class="page">major version</a> (or higher) than the source database that originally created the backup.</p>
+<p>Backups can only be restored to a database that is running the same <a href="../clusters/databases.html#cluster-version" class="xref page">major version</a> (or higher) than the source database that originally created the backup.</p>
 </li>
 <li>
-<p>Data can only be restored to buckets that have the same names and <a href="../clusters/data-service/manage-buckets.html#add-bucket" class="page">conflict resolution methods</a> as the buckets from the backup.
+<p>Data can only be restored to buckets that have the same names and <a href="../clusters/data-service/manage-buckets.html#add-bucket" class="xref page">conflict resolution methods</a> as the buckets from the backup.
 Ensure that you&#8217;ve configured buckets on the target database that have the same names and conflict resolution methods as the ones you are trying to restore data from.
 If a bucket of the same name does not exist on the target database, no data from that bucket will be restored from the backup.</p>
 <div class="admonitionblock important">
@@ -953,7 +953,7 @@ From there you can copy the data over to the desired bucket as you see fit.</p>
 </div>
 </li>
 <li>
-<p>When restoring from a <a href="../clusters/backup-restore.html#series-backup" class="page">Series backup</a>, data will be restored from the latest Incremental backup in the series.
+<p>When restoring from a <a href="../clusters/backup-restore.html#series-backup" class="xref page">Series backup</a>, data will be restored from the latest Incremental backup in the series.
 The restore process will take into account any failovers that may have occurred in between the time that the backups were originally taken.
 If a failover did occur in between the backups, and the backup archive contains data that no longer exists in the database, then the data that no longer exists will be skipped during the restore.
 If no failovers occurred in between backups, then restoring a Series backup will restore all data from the series.</p>
@@ -985,7 +985,7 @@ If the failed node is not removed, then the restore will fail.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the project containing the source database that created the backup, as well as the project containing the destination database of the restore.</p>
+<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> role for the project containing the source database that created the backup, as well as the project containing the destination database of the restore.</p>
 </li>
 </ul>
 </div>
@@ -1023,7 +1023,7 @@ If the failed node is not removed, then the restore will fail.</p>
 <div class="paragraph">
 <p>This opens the backup&#8217;s fly-out menu.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="backup-inspect-flyout-full.png" alt="The inspect fly-out menu of a Full backup. At the bottom of the fly-out is the 'Restore backup' button." width="500">
 </div>
@@ -1034,7 +1034,7 @@ If the failed node is not removed, then the restore will fail.</p>
 </li>
 <li>
 <p>Specify the <strong>Restore Location</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="backup-inspect-flyout-restore-location.png" alt="The Restore fly-out menu showing the 'Restore Location' section." width="500">
 </div>
@@ -1064,7 +1064,7 @@ Only databases that are located in the same connected cloud appear in the dropdo
 </li>
 <li>
 <p>To confirm that you&#8217;re restoring to the desired database, enter the name of the destination database.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="backup-inspect-flyout-destination-name.png" alt="The Restore fly-out menu showing the field to enter the name of the destination database." width="500">
 </div>
@@ -1108,7 +1108,7 @@ By not building the indexes, it gives you the option to manually move each index
 <div class="ulist">
 <ul>
 <li>
-<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-data-reader-writer" class="page"><code>Database Data Reader/Writer</code></a> role for the project that contains the database.</p>
+<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-data-reader-writer" class="xref page"><code>Database Data Reader/Writer</code></a> role for the project that contains the database.</p>
 </li>
 </ul>
 </div>
@@ -1145,7 +1145,7 @@ By not building the indexes, it gives you the option to manually move each index
 <li>
 <p>Each index that was restored will display a status of <strong>Created</strong>.
 Click the Play icon in the <strong>Status</strong> column for each index that you wish to rebuild.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="indexes-tab-rebuild-index-after-restore.png" alt="The 'Tools &gt; Indexes' tab showing multiple indexes with a status of 'Created' with Play icons.">
 </div>

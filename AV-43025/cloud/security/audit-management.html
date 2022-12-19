@@ -15,7 +15,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/security/audit-management.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -797,7 +797,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/security/pages/audit-management.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/security/pages/audit-management.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -888,8 +888,8 @@ Each record is stored as a JSON document, and appended to a log file, per node.
 The Public API can be used to configure audit logging and download log files for a given time period.</p>
 </div>
 <div class="paragraph">
-<p>A conceptual overview of event auditing can be found in <a href="auditing.html" class="page">Auditing</a>.
-See <a href="auditing.html#event_tables" class="page">Event Tables</a>, for access to lists of auditable events.</p>
+<p>A conceptual overview of event auditing can be found in <a href="auditing.html" class="xref page">Auditing</a>.
+See <a href="auditing.html#event_tables" class="xref page">Event Tables</a>, for access to lists of auditable events.</p>
 </div>
 </div>
 </div>
@@ -927,7 +927,7 @@ The output includes a status for each audit log download request, and a URL to a
 <p>The sections below provide examples of these activities.</p>
 </div>
 <div class="paragraph">
-<p>Note that information on how to use the Public API, including the calls described below, is provided in <a href="../public-api-guide/using-cloud-public-api.html" class="page">Using the Public API</a>.</p>
+<p>Note that information on how to use the Public API, including the calls described below, is provided in <a href="../public-api-guide/using-cloud-public-api.html" class="xref page">Using the Public API</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="list-filterable-audit-events"><a class="anchor" href="#list-filterable-audit-events"></a>List Filterable Audit Events</h3>
@@ -998,7 +998,7 @@ Output resembles the following:</p>
 <div class="paragraph">
 <p>The value of <code>disabledUsers</code> is an empty array, meaning that no users have been <em>disabled</em>.
 If a user is disabled, no <em>filterable</em> events are logged for that user.
-For information on disabling users, see <a href="auditing.html#ignoring-events-by-user" class="page">Ignoring Filterable Events by User</a>.</p>
+For information on disabling users, see <a href="auditing.html#ignoring-events-by-user" class="xref page">Ignoring Filterable Events by User</a>.</p>
 </div>
 <div class="paragraph">
 <p>The value of <code>enabledEventIDs</code> is an array, each of whose members is the ID of a filterable event.
@@ -1043,7 +1043,7 @@ Filterable events whose ID is <em>not</em> in the array are currently <em>disabl
 <div class="paragraph">
 <p>The value of <code>disabledUsers</code> is an array, each of whose elements is an object that specifies a domain and a username.
 For each user corresponding to a username, filterable audit events are disabled.
-See <a href="auditing.html#ignoring-events-by-user" class="page">Ignoring Filterable Events by User</a>.</p>
+See <a href="auditing.html#ignoring-events-by-user" class="xref page">Ignoring Filterable Events by User</a>.</p>
 </div>
 <div class="paragraph">
 <p>The value of <code>enabledEventIDs</code> is an array of integers, each of which is the ID of a filterable audit event.
@@ -1072,7 +1072,7 @@ This can be specified with <code>POST /{id}/auditlogs</code>, using a JSON paylo
 <p>The value for <code>start</code> and <code>end</code> must in each case be a timestamp in <em>RFC3339</em> format.
 The <code>start</code> must be at least 15 minutes in the past and no more than 30 days in the past.
 The <code>end</code> must be at least 15 minutes after the <code>start</code>.
-For additional requirements, see <a href="auditing.html#limitations" class="page">Limitations on Export Requests</a>.</p>
+For additional requirements, see <a href="auditing.html#limitations" class="xref page">Limitations on Export Requests</a>.</p>
 </div>
 <div class="paragraph">
 <p>Log files for the specified time-period are thus requested to be collected and prepared for download.

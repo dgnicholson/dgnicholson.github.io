@@ -14,7 +14,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/get-started/load-data.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -796,7 +796,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/get-started/pages/load-data.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/get-started/pages/load-data.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -886,14 +886,14 @@ There are several ways to insert and interact with data in a cluster.
 <h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The procedures on this page assume that you&#8217;ve completed all of the previous <a href="create-account.html" class="page">Getting Started</a> steps&#8201;&#8212;&#8201;or you have arrived here after a quickstart set-up of our fully hosted service, which is covered <a href="create-account.html" class="page">here</a>.
+<p>The procedures on this page assume that you&#8217;ve completed all of the previous <a href="create-account.html" class="xref page">Getting Started</a> steps&#8201;&#8212;&#8201;or you have arrived here after a quickstart set-up of our fully hosted service, which is covered <a href="create-account.html" class="xref page">here</a>.
 You must have at least one of the following project roles:
-* <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a>
-* <a href="../projects/project-roles.html#project-cluster-data-reader" class="page"><code>Cluster Data Reader</code></a>
-* <a href="../projects/project-roles.html#project-cluster-data-reader-writer" class="page"><code>Cluster Data Reader/Writer</code></a></p>
+* <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a>
+* <a href="../projects/project-roles.html#project-cluster-data-reader" class="xref page"><code>Cluster Data Reader</code></a>
+* <a href="../projects/project-roles.html#project-cluster-data-reader-writer" class="xref page"><code>Cluster Data Reader/Writer</code></a></p>
 </div>
 <div class="paragraph">
-<p>If you only have the <a href="../projects/project-roles.html#project-cluster-data-reader" class="page"><code>Cluster Data Reader</code></a> role, you will not be able to write any changes to the database.</p>
+<p>If you only have the <a href="../projects/project-roles.html#project-cluster-data-reader" class="xref page"><code>Cluster Data Reader</code></a> role, you will not be able to write any changes to the database.</p>
 </div>
 </div>
 </div>
@@ -918,7 +918,7 @@ Sample buckets contain example data, as well as example indexes, for your experi
 </div>
 <div class="paragraph">
 <p>It&#8217;s recommended that you at least start with the <strong class="ui">Travel Sample</strong> bucket, since many of the examples in the documentation will act on this bucket.
-If your cluster is running the <a href="../clusters/index-service/index-service.html" class="page"><em>Index Service</em></a>, this sample bucket will automatically create indexes on the bucket data, which in turn makes it convenient to test out the features of the <a href="../clusters/query-service/query-service.html" class="page"><em>Query Service</em></a>.</p>
+If your cluster is running the <a href="../clusters/index-service/index-service.html" class="xref page"><em>Index Service</em></a>, this sample bucket will automatically create indexes on the bucket data, which in turn makes it convenient to test out the features of the <a href="../clusters/query-service/query-service.html" class="xref page"><em>Query Service</em></a>.</p>
 </div>
 </div>
 </div>
@@ -926,7 +926,7 @@ If your cluster is running the <a href="../clusters/index-service/index-service.
 <h2 id="view-sample-buckets"><a class="anchor" href="#view-sample-buckets"></a>View Sample Buckets</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In Couchbase, <em>buckets</em> serve as the mechanism for storing data, and are the principle component of the <a href="../clusters/data-service/data-service.html" class="page">Data Service</a> that runs on every cluster.
+<p>In Couchbase, <em>buckets</em> serve as the mechanism for storing data, and are the principle component of the <a href="../clusters/data-service/data-service.html" class="xref page">Data Service</a> that runs on every cluster.
 Buckets must be created before you can store any data on a cluster.</p>
 </div>
 <div class="paragraph">
@@ -942,7 +942,7 @@ Buckets must be created before you can store any data on a cluster.</p>
 You can check that a sample bucket has finished loading by inspecting the <strong class="ui">Items</strong> column to see that it has populated with a non-zero number.</p>
 </div>
 <div class="paragraph">
-<p>For more information about interacting with buckets, refer to <a href="../clusters/data-service/manage-buckets.html" class="page">Manage Buckets</a>.</p>
+<p>For more information about interacting with buckets, refer to <a href="../clusters/data-service/manage-buckets.html" class="xref page">Manage Buckets</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="default-bucket"><a class="anchor" href="#default-bucket"></a>About the Default Bucket</h3>
@@ -957,8 +957,8 @@ This bucket can be used for immediate experimentation with Couchbase features, i
 <h2 id="view-sample-indexes"><a class="anchor" href="#view-sample-indexes"></a>View Sample Indexes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In Couchbase, <em>primary</em> and <em>global secondary</em> indexes&#8201;&#8212;&#8201;also known as just <em>indexes</em>&#8201;&#8212;&#8201;are predefined subsets of bucket-data created by the <a href="../clusters/index-service/index-service.html" class="page">Index Service</a>.
-These indexes can then be queried by the <a href="../clusters/query-service/query-service.html" class="page">Query Service</a> by means of the N1QL query language.</p>
+<p>In Couchbase, <em>primary</em> and <em>global secondary</em> indexes&#8201;&#8212;&#8201;also known as just <em>indexes</em>&#8201;&#8212;&#8201;are predefined subsets of bucket-data created by the <a href="../clusters/index-service/index-service.html" class="xref page">Index Service</a>.
+These indexes can then be queried by the <a href="../clusters/query-service/query-service.html" class="xref page">Query Service</a> by means of the N1QL query language.</p>
 </div>
 <div class="paragraph">
 <p>All of the indexes in a cluster can be viewed under the cluster&#8217;s <strong class="ui">Tools &gt; Indexes</strong> tab.</p>
@@ -969,12 +969,12 @@ These indexes can then be queried by the <a href="../clusters/query-service/quer
 </div>
 </div>
 <div class="paragraph">
-<p>Normally, a N1QL <a href="#server:n1ql:n1ql-language-reference/createindex.adoc" class="page unresolved">CREATE INDEX</a> statement is required to create an index.
+<p>Normally, a N1QL <a href="#server:n1ql:n1ql-language-reference/createindex.adoc" class="xref unresolved">CREATE INDEX</a> statement is required to create an index.
 However, some of the sample buckets, such as <strong class="ui">Travel Sample</strong>, come with index definitions that are automatically used to build indexes on the sample data (which can be seen in the image above).
 Once the <strong class="ui">Status</strong> for each index displays as <strong class="ui">Ready</strong>, the indexes can be used to assist with different types of sample queries.</p>
 </div>
 <div class="paragraph">
-<p>For more information about viewing and interacting with indexes, refer to <a href="../clusters/index-service/index-service.html" class="page">Index Service</a>.</p>
+<p>For more information about viewing and interacting with indexes, refer to <a href="../clusters/index-service/index-service.html" class="xref page">Index Service</a>.</p>
 </div>
 </div>
 </div>
@@ -982,8 +982,8 @@ Once the <strong class="ui">Status</strong> for each index displays as <strong c
 <h2 id="query-sample-data"><a class="anchor" href="#query-sample-data"></a>Query Sample Data</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>On clusters running the <a href="../clusters/query-service/query-service.html" class="page">Query Service</a>, the Capella UI provides an interactive query tool called the <strong class="ui">Query Workbench</strong>.
-Using the Query Workbench, you can conveniently explore data, create, edit, run, and save <a href="#server:n1ql:n1ql-language-reference/index.adoc" class="page unresolved">N1QL queries</a>, view and save query results, and explore the document structures in a bucket&#8201;&#8212;&#8201;all in a single window.</p>
+<p>On clusters running the <a href="../clusters/query-service/query-service.html" class="xref page">Query Service</a>, the Capella UI provides an interactive query tool called the <strong class="ui">Query Workbench</strong>.
+Using the Query Workbench, you can conveniently explore data, create, edit, run, and save <a href="#server:n1ql:n1ql-language-reference/index.adoc" class="xref unresolved">N1QL queries</a>, view and save query results, and explore the document structures in a bucket&#8201;&#8212;&#8201;all in a single window.</p>
 </div>
 <div class="paragraph">
 <p>The Query Workbench is available under each cluster&#8217;s <strong class="ui">Tools &gt; Query Workbench</strong> tab.</p>
@@ -1012,7 +1012,7 @@ The results are displayed in the <strong class="ui">Query Results</strong> field
 </div>
 </div>
 <div class="paragraph">
-<p>To learn more about using the Query Workbench, refer to <a href="../clusters/query-service/query-workbench.html" class="page">Query Workbench</a>.</p>
+<p>To learn more about using the Query Workbench, refer to <a href="../clusters/query-service/query-workbench.html" class="xref page">Query Workbench</a>.</p>
 </div>
 </div>
 </div>
@@ -1022,7 +1022,7 @@ The results are displayed in the <strong class="ui">Query Results</strong> field
 <div class="paragraph">
 <p>You can directly view, create, and edit individual bucket documents under each cluster&#8217;s <strong class="ui">Tools &gt; Documents</strong> tab.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="other-data-tools/19.png'" alt="The cluster&#8217;s 'Tools &gt; Documents' tab.">
 </div>
@@ -1058,7 +1058,7 @@ To save any edits, click <b class="button">Save</b>.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>For more information about using the document viewer, refer to <a href="../clusters/data-service/manage-documents.html" class="page">Manage Documents</a>.</p>
+<p>For more information about using the document viewer, refer to <a href="../clusters/data-service/manage-documents.html" class="xref page">Manage Documents</a>.</p>
 </div>
 </div>
 </div>
@@ -1067,7 +1067,7 @@ To save any edits, click <b class="button">Save</b>.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Couchbase SDKs allow you to interact programmatically with the Data, Query, and other Couchbase services provided by the cluster, to create applications.
-Our <a href="#server:sdk:overview.adoc" class="page unresolved">SDK documentation</a> contains practical examples for all of the SDKs.</p>
+Our <a href="#server:sdk:overview.adoc" class="xref unresolved">SDK documentation</a> contains practical examples for all of the SDKs.</p>
 </div>
 <div class="paragraph">
 <p>Here is a snippet of Node.js code demonstrating iterating over the results of a query against the Travel Sample bucket:</p>
@@ -1087,21 +1087,21 @@ Our <a href="#server:sdk:overview.adoc" class="page unresolved">SDK documentatio
 You&#8217;ve successfully deployed and connected to a cluster, and started interacting with data.</p>
 </div>
 <div class="paragraph">
-<p>The Capella documentation <a href="../index.html" class="page">landing page</a> is a good resource for exploring additional features, but the following topics also provide a good starting point:</p>
+<p>The Capella documentation <a href="../index.html" class="xref page">landing page</a> is a good resource for exploring additional features, but the following topics also provide a good starting point:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../organizations/manage-organization-users.html" class="page">Invite more users to your organization</a></p>
+<p><a href="../organizations/manage-organization-users.html" class="xref page">Invite more users to your organization</a></p>
 </li>
 <li>
-<p><a href="../clusters/scale-database.html" class="page">Scale your cluster</a></p>
+<p><a href="../clusters/scale-database.html" class="xref page">Scale your cluster</a></p>
 </li>
 <li>
-<p><a href="../clusters/xdcr/xdcr.html" class="page">Replicate cluster data</a></p>
+<p><a href="../clusters/xdcr/xdcr.html" class="xref page">Replicate cluster data</a></p>
 </li>
 <li>
-<p><a href="../clusters/data-service/import-data-documents.html" class="page">Import data</a></p>
+<p><a href="../clusters/data-service/import-data-documents.html" class="xref page">Import data</a></p>
 </li>
 </ul>
 </div>

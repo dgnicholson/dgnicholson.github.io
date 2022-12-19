@@ -14,7 +14,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/clusters/search-service/perform-full-text-searches.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -796,7 +796,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/clusters/pages/search-service/perform-full-text-searches.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/clusters/pages/search-service/perform-full-text-searches.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -877,7 +877,7 @@ Full text searches can be performed directly from the Couchbase Capella UI.
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Every Full Text Search is performed on a <a href="create-full-text-indexes.html" class="page">user-created <em>Full Text Index</em></a>, which contains the targets on which searches are to be performed: these targets are values derived from the textual and other contents of documents within a specified bucket.</p>
+<p>Every Full Text Search is performed on a <a href="create-full-text-indexes.html" class="xref page">user-created <em>Full Text Index</em></a>, which contains the targets on which searches are to be performed: these targets are values derived from the textual and other contents of documents within a specified bucket.</p>
 </div>
 </div>
 </div>
@@ -894,8 +894,8 @@ Full text searches can be performed directly from the Couchbase Capella UI.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Full Text Indexes that are created through the Couchbase Capella UI do not have a default <a href="create-full-text-indexes.html#specifying-type-mappings" class="page">type mapping</a>.
-Searching a Full Text Index will not return any results until you <a href="manage-full-text-indexes.html#modify-full-text-index" class="page">modify the index configuration</a> to add a type mapping.
+Full Text Indexes that are created through the Couchbase Capella UI do not have a default <a href="create-full-text-indexes.html#specifying-type-mappings" class="xref page">type mapping</a>.
+Searching a Full Text Index will not return any results until you <a href="manage-full-text-indexes.html#modify-full-text-index" class="xref page">modify the index configuration</a> to add a type mapping.
 </td>
 </tr>
 </table>
@@ -914,7 +914,7 @@ Searching a Full Text Index will not return any results until you <a href="manag
 <div class="ulist">
 <ul>
 <li>
-<p>You must have the <a href="../../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a>, <a href="../../projects/project-roles.html#project-cluster-data-reader-writer" class="page"><code>Cluster Data Reader/Writer</code></a>, or <a href="../../projects/project-roles.html#project-cluster-data-reader" class="page"><code>Cluster Data Reader</code></a> role for the project that contains the cluster.</p>
+<p>You must have the <a href="../../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a>, <a href="../../projects/project-roles.html#project-cluster-data-reader-writer" class="xref page"><code>Cluster Data Reader/Writer</code></a>, or <a href="../../projects/project-roles.html#project-cluster-data-reader" class="xref page"><code>Cluster Data Reader</code></a> role for the project that contains the cluster.</p>
 </li>
 </ul>
 </div>
@@ -980,7 +980,7 @@ Searching a Full Text Index will not return any results until you <a href="manag
 <td class="content">
 A term without any other syntax is interpreted as a <em>match query</em> for the term in the default field.
 The default field is <code>_all</code>.
-For example, <code>pool</code> performs a <a href="#server:fts:fts-query-types.adoc#match-query" class="page unresolved">match query</a> for the term <code>pool</code>.
+For example, <code>pool</code> performs a <a href="#server:fts:fts-query-types.adoc#match-query" class="xref unresolved">match query</a> for the term <code>pool</code>.
 Refer to the section <a href="#advanced-search-settings">Advanced Searches</a> for additional information about using queries.
 </td>
 </tr>
@@ -996,7 +996,7 @@ Refer to the section <a href="#advanced-search-settings">Advanced Searches</a> f
 </div>
 <div class="paragraph">
 <p>Results are paginated with 10 results per page.
-The total number of documents matching the search is displayed at the top-right of the results alongside the amount of time it took for the Search Service to execute the search on the cluster (otherwise known as <a href="manage-full-text-indexes.html#view-full-text-index-statistics" class="page">query latency</a>).</p>
+The total number of documents matching the search is displayed at the top-right of the results alongside the amount of time it took for the Search Service to execute the search on the cluster (otherwise known as <a href="manage-full-text-indexes.html#view-full-text-index-statistics" class="xref page">query latency</a>).</p>
 </div>
 <div class="paragraph">
 <p>Clicking on any of the displayed document IDs opens the <strong class="ui">Document</strong> fly-out menu, featuring the entire contents of the document:</p>
@@ -1031,7 +1031,7 @@ The total number of documents matching the search is displayed at the top-right 
 <p><strong class="ui">Set consistency level to <code>at_plus</code></strong>: When checked, bounded consistency is implemented for the query.
 The request includes a <code>scan_vector</code> parameter and value, which is used as a lower bound, allowing you to implement Read-Your-Own-Writes (RYOW).
 Specify the value of the <code>scan_vector</code> parameter in the <strong class="ui">Consistency Vectors</strong> field.
-For more information, refer to the page <a href="#server:fts:fts-queries.adoc#scan-consistency" class="page unresolved">Understanding Queries</a> in the Couchbase Server documentation.</p>
+For more information, refer to the page <a href="#server:fts:fts-queries.adoc#scan-consistency" class="xref unresolved">Understanding Queries</a> in the Couchbase Server documentation.</p>
 </li>
 <li>
 <p><strong class="ui">Timeout (ms)</strong>: The amount of time that the Search Service will allow the query to run, specified in milliseconds.
@@ -1084,7 +1084,7 @@ If the query time reaches the specified timeout value, only partial results are 
 <div class="paragraph">
 <p>The configurable options in the <strong class="ui">Settings</strong> panel are essentially a convenient user interface for applying some of the common features available in the <em>query string syntax</em>.
 The <strong class="ui">Search</strong> field supports full query string queries, which can be used in conjunction with, or in place of, the configuration in the <strong class="ui">Settings</strong> panel.
-For an explanation of the supported query syntax, you can click <strong class="ui">query syntax help</strong> underneath the <strong class="ui">Search</strong> field, which opens the page <a href="#server:fts:query-string-queries.adoc" class="page unresolved">server:fts:query-string-queries.adoc</a> in the Couchbase Server documentation.
+For an explanation of the supported query syntax, you can click <strong class="ui">query syntax help</strong> underneath the <strong class="ui">Search</strong> field, which opens the page <a href="#server:fts:query-string-queries.adoc" class="xref unresolved">server:fts:query-string-queries.adoc</a> in the Couchbase Server documentation.
 Note that a Query String Query is the only type of query that can be executed by the <strong class="ui">Search</strong> field.</p>
 </div>
 <div class="paragraph">

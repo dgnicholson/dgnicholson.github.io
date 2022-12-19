@@ -15,7 +15,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/clusters/modify-database.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -797,7 +797,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/clusters/pages/modify-database.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/clusters/pages/modify-database.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -879,7 +879,7 @@ Review, modify, and rename Couchbase Capella databases.
 </div>
 <div class="paragraph">
 <p>Use the procedures on this page to modify an existing Couchbase Capella database.
-If you want to learn about scaling a database, see <a href="scale-database.html" class="page">Database Scaling</a>.</p>
+If you want to learn about scaling a database, see <a href="scale-database.html" class="xref page">Database Scaling</a>.</p>
 </div>
 </div>
 </div>
@@ -913,10 +913,10 @@ If you want to learn about scaling a database, see <a href="scale-database.html"
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Plan</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="../billing/manage-billing.html#modify-cluster-support-plan" class="page">Modify a Database&#8217;s Service Plan</a></p>
+<p><a href="../billing/manage-billing.html#modify-cluster-support-plan" class="xref page">Modify a Database&#8217;s Service Plan</a></p>
 </div>
 <div class="paragraph">
-<p><a href="../billing/manage-billing.html#modify-cluster-support-time-zone" class="page">Modify a Database&#8217;s Support Time Zone</a></p>
+<p><a href="../billing/manage-billing.html#modify-cluster-support-time-zone" class="xref page">Modify a Database&#8217;s Support Time Zone</a></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">You may be unable to downgrade a service plan if your database uses features specific to its current plan.</p></td>
 </tr>
@@ -991,7 +991,7 @@ It&#8217;s set based on the amount of storage you&#8217;ve assigned to a service
 </td>
 <td class="content">
 <div class="title">Permissions Required</div>
-To make any database change, you need the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-manager-role" class="page"><code>Project Manager</code></a> role for the project with the cluster you&#8217;re modifying.
+To make any database change, you need the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-manager-role" class="xref page"><code>Project Manager</code></a> role for the project with the cluster you&#8217;re modifying.
 </td>
 </tr>
 </table>
@@ -1048,7 +1048,7 @@ Node statuses are Normal, Deploying, and Unhealthy.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Database configuration options depend on the chosen cloud provider.
-For more information about the configuration options available for each cloud provider, see <a href="../reference/aws.html" class="page">Amazon Web Services (AWS)</a> and <a href="../reference/gcp.html" class="page">Google Cloud Platform (GCP)</a>.</p>
+For more information about the configuration options available for each cloud provider, see <a href="../reference/aws.html" class="xref page">Amazon Web Services (AWS)</a> and <a href="../reference/gcp.html" class="xref page">Google Cloud Platform (GCP)</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="add-service"><a class="anchor" href="#add-service"></a>Add a Service</h3>
@@ -1066,7 +1066,7 @@ You can&#8217;t add a service when that service already exists on the database.
 </table>
 </div>
 <div class="paragraph">
-<p>Service groups allow you to create node configurations for specified <a href="databases.html#couchbase-services" class="page">Couchbase services</a>.</p>
+<p>Service groups allow you to create node configurations for specified <a href="databases.html#couchbase-services" class="xref page">Couchbase services</a>.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1114,7 +1114,7 @@ You can also add another service group by clicking <b class="button">Add Service
 </div>
 <div class="paragraph">
 <p>Once you add a service to a new or existing service group, you may need to adjust its hardware configuration.
-For more information about sizing a database, see <a href="sizing.html" class="page">Sizing a Cluster</a>.</p>
+For more information about sizing a database, see <a href="sizing.html" class="xref page">Sizing a Cluster</a>.</p>
 </div>
 </li>
 <li>
@@ -1442,7 +1442,7 @@ If you need to discard your changes, click <b class="button">Cancel</b>.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>The database <a href="scale-database.html#rebalance" class="page">rebalances</a> and redistributes service data over the new superset of nodes.
+<p>The database <a href="scale-database.html#rebalance" class="xref page">rebalances</a> and redistributes service data over the new superset of nodes.
 The amount of time taken for the new nodes to rebalance into the database depends on the service of the new nodes, and how much data is redistributed.
 The database remains up and available during the rebalance, but you can&#8217;t make further changes until the rebalancing is complete.</p>
 </div>
@@ -1487,16 +1487,16 @@ The database remains up and available during the rebalance, but you can&#8217;t 
 <div class="ulist">
 <ul>
 <li>
-<p><a href="sizing.html" class="page">Sizing a Database</a></p>
+<p><a href="sizing.html" class="xref page">Sizing a Database</a></p>
 </li>
 <li>
-<p><a href="scale-database.html" class="page">Database Scaling</a></p>
+<p><a href="scale-database.html" class="xref page">Database Scaling</a></p>
 </li>
 <li>
-<p><a href="upgrade-database.html" class="page">Upgrading a Database</a></p>
+<p><a href="upgrade-database.html" class="xref page">Upgrading a Database</a></p>
 </li>
 <li>
-<p><a href="delete-database.html" class="page">Delete a Database</a></p>
+<p><a href="delete-database.html" class="xref page">Delete a Database</a></p>
 </li>
 </ul>
 </div>

@@ -15,7 +15,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/clusters/manage-database-users.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -797,7 +797,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/clusters/pages/manage-database-users.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/clusters/pages/manage-database-users.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -887,9 +887,9 @@ You will also find procedures for creating and managing database credentials for
 <h2 id="about-database-credentials"><a class="anchor" href="#about-database-credentials"></a>About Database Credentials</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>Database credentials</em> are separate from <a href="../organizations/organization-user-roles.html" class="page">organization roles</a>.
+<p><em>Database credentials</em> are separate from <a href="../organizations/organization-user-roles.html" class="xref page">organization roles</a>.
 While organization roles control what you can do within an organization, such as creating projects, a database credential is still required to access data on a database.
-Database credentials are also distinct from <a href="../projects/project-roles.html" class="page">project roles</a>, but only project members with the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role can create them.</p>
+Database credentials are also distinct from <a href="../projects/project-roles.html" class="xref page">project roles</a>, but only project members with the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> role can create them.</p>
 </div>
 <div class="paragraph">
 <p>A database credential is specific to a database and consists of a database access name, secret, and a set of <a href="#about-database-user-permissions">bucket and scope access levels</a>.
@@ -943,40 +943,40 @@ This system allows you to mix and match access levels to different buckets and s
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#server:learn:security/roles.adoc#data-reader" class="page unresolved"><code>data_reader</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#data-reader" class="xref unresolved"><code>data_reader</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#data-dcp-reader" class="page unresolved"><code>data_dcp_reader</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#data-dcp-reader" class="xref unresolved"><code>data_dcp_reader</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#data_monitor" class="page unresolved"><code>data_monitoring</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#data_monitor" class="xref unresolved"><code>data_monitoring</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#search-reader" class="page unresolved"><code>fts_searcher</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#search-reader" class="xref unresolved"><code>fts_searcher</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#query-select" class="page unresolved"><code>query_select</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#query-select" class="xref unresolved"><code>query_select</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#analytics-reader" class="page unresolved"><code>analytics_reader</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#analytics-reader" class="xref unresolved"><code>analytics_reader</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#execute-global-functions" class="page unresolved"><code>query_execute_global_functions</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#execute-global-functions" class="xref unresolved"><code>query_execute_global_functions</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#execute-global-external-functions" class="page unresolved"><code>query_execute_global_external_functions</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#execute-global-external-functions" class="xref unresolved"><code>query_execute_global_external_functions</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#analytics-select" class="page unresolved"><code>analytics_select</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#analytics-select" class="xref unresolved"><code>analytics_select</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#external-stats-reader" class="page unresolved"><code>external_stats_reader</code></a> <sup class="footnote" id="_footnote_fn-1">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+<p><a href="#server:learn:security/roles.adoc#external-stats-reader" class="xref unresolved"><code>external_stats_reader</code></a> <sup class="footnote" id="_footnote_fn-1">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#execute-scope-functions" class="page unresolved"><code>query_execute_functions</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#execute-scope-functions" class="xref unresolved"><code>query_execute_functions</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#execute-scope-external-functions" class="page unresolved"><code>query_execute_external_functions</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#execute-scope-external-functions" class="xref unresolved"><code>query_execute_external_functions</code></a></p>
 </li>
 </ul>
 </div>
@@ -997,46 +997,46 @@ This system allows you to mix and match access levels to different buckets and s
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#server:learn:security/roles.adoc#data-writer" class="page unresolved"><code>data_writer</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#data-writer" class="xref unresolved"><code>data_writer</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#search-admin" class="page unresolved"><code>fts_admin</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#search-admin" class="xref unresolved"><code>fts_admin</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#query-insert" class="page unresolved"><code>query_insert</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#query-insert" class="xref unresolved"><code>query_insert</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#query-update" class="page unresolved"><code>query_update</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#query-update" class="xref unresolved"><code>query_update</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#query-delete" class="page unresolved"><code>query_delete</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#query-delete" class="xref unresolved"><code>query_delete</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#query-manage-index" class="page unresolved"><code>query_manage_index</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#query-manage-index" class="xref unresolved"><code>query_manage_index</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#xdcr-inbound" class="page unresolved"><code>replication_target</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#xdcr-inbound" class="xref unresolved"><code>replication_target</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#analytics-admin" class="page unresolved"><code>analytics_admin</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#analytics-admin" class="xref unresolved"><code>analytics_admin</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#manage-global-functions" class="page unresolved"><code>query_manage_global_functions</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#manage-global-functions" class="xref unresolved"><code>query_manage_global_functions</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#manage-global-external-functions" class="page unresolved"><code>query_manage_global_external_functions</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#manage-global-external-functions" class="xref unresolved"><code>query_manage_global_external_functions</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#analytics-manager" class="page unresolved"><code>analytics_manager</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#analytics-manager" class="xref unresolved"><code>analytics_manager</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#manage-scopes" class="page unresolved"><code>scope_admin</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#manage-scopes" class="xref unresolved"><code>scope_admin</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#manage-scope-functions" class="page unresolved"><code>query_manage_functions</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#manage-scope-functions" class="xref unresolved"><code>query_manage_functions</code></a></p>
 </li>
 <li>
-<p><a href="#server:learn:security/roles.adoc#manage-scope-external-functions" class="page unresolved"><code>query_manage_external_functions</code></a></p>
+<p><a href="#server:learn:security/roles.adoc#manage-scope-external-functions" class="xref unresolved"><code>query_manage_external_functions</code></a></p>
 </li>
 </ul>
 </div></div></td>
@@ -1081,16 +1081,16 @@ This system allows you to mix and match access levels to different buckets and s
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a></p>
+<p><a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a></p>
 </li>
 <li>
-<p><a href="../projects/project-roles.html#project-cluster-viewer-role" class="page"><code>Database Viewer</code></a></p>
+<p><a href="../projects/project-roles.html#project-cluster-viewer-role" class="xref page"><code>Database Viewer</code></a></p>
 </li>
 <li>
-<p><a href="../projects/project-roles.html#project-cluster-data-reader" class="page"><code>Database Data Reader</code></a></p>
+<p><a href="../projects/project-roles.html#project-cluster-data-reader" class="xref page"><code>Database Data Reader</code></a></p>
 </li>
 <li>
-<p><a href="../projects/project-roles.html#project-cluster-data-reader-writer" class="page"><code>Database Data Reader/Writer</code></a></p>
+<p><a href="../projects/project-roles.html#project-cluster-data-reader-writer" class="xref page"><code>Database Data Reader/Writer</code></a></p>
 </li>
 </ul>
 </div>
@@ -1197,7 +1197,7 @@ The colors indicate the following:</p>
 <td class="content">
 <div class="title">Permissions Required</div>
 <div class="paragraph">
-<p>To create a database credential, you must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the project containing the database where you&#8217;re creating the database credential.</p>
+<p>To create a database credential, you must have the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> role for the project containing the database where you&#8217;re creating the database credential.</p>
 </div>
 </td>
 </tr>
@@ -1338,7 +1338,7 @@ Database credentials are used for reading or writing bucket data using the Couch
 <td class="content">
 <div class="title">Permissions Required</div>
 <div class="paragraph">
-<p>To modify a database credential, you must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the project with the database credential</p>
+<p>To modify a database credential, you must have the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> role for the project with the database credential</p>
 </div>
 </td>
 </tr>
@@ -1412,7 +1412,7 @@ Always make sure that you&#8217;ve updated your application to use new credentia
 <td class="content">
 <div class="title">Permissions Required</div>
 <div class="paragraph">
-<p>To delete a database credential, you must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the project with the database credential.</p>
+<p>To delete a database credential, you must have the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> role for the project with the database credential.</p>
 </div>
 </td>
 </tr>

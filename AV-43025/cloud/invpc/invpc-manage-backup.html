@@ -14,7 +14,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/invpc/invpc-manage-backup.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -796,7 +796,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/invpc/pages/invpc-manage-backup.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/invpc/pages/invpc-manage-backup.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -877,7 +877,7 @@ Backups can be taken on-demand or use a configurable automatic schedule.
 </div>
 <div class="paragraph">
 <p>Use the procedures on this page to create on-demand backups, schedule automatic backups, and manage those backups.
-To learn more about how backups work in Couchbase Capella, see <a href="../clusters/backup-restore.html" class="page">Backup and Restore Data</a>.</p>
+To learn more about how backups work in Couchbase Capella, see <a href="../clusters/backup-restore.html" class="xref page">Backup and Restore Data</a>.</p>
 </div>
 </div>
 </div>
@@ -896,7 +896,7 @@ To learn more about how backups work in Couchbase Capella, see <a href="../clust
 It does not apply to Couchbase 7.0 or later, hosted in Couchbase&#8217;s VPC and fully managed by Couchbase.</p>
 </div>
 <div class="paragraph">
-<p>All of the information for users of Server 6.6 self-managed in their own cloud provider&#8217;s VPC, such as <em>this page</em>, can be accessed at <a href="invpc-index.html" class="page">this index page</a>.</p>
+<p>All of the information for users of Server 6.6 self-managed in their own cloud provider&#8217;s VPC, such as <em>this page</em>, can be accessed at <a href="invpc-index.html" class="xref page">this index page</a>.</p>
 </div>
 </td>
 </tr>
@@ -907,7 +907,7 @@ It does not apply to Couchbase 7.0 or later, hosted in Couchbase&#8217;s VPC and
 <div class="paragraph">
 <p>Backups can be accessed under the cluster&#8217;s <strong>Backup &amp; Restore</strong> tab.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="cluster-backup-restore-tab.png" alt="The cluster&#8217;s 'Backup &amp; Restore' tab.">
 </div>
@@ -926,7 +926,7 @@ It does not apply to Couchbase 7.0 or later, hosted in Couchbase&#8217;s VPC and
 <div class="ulist">
 <ul>
 <li>
-<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code><strong>Project Owner</strong></code></a> role for the project that contains the cluster.</p>
+<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code><strong>Project Owner</strong></code></a> role for the project that contains the cluster.</p>
 </li>
 </ul>
 </div>
@@ -955,7 +955,7 @@ If the <strong>Backup Type</strong> is <strong>Series</strong>, the date range b
 <dd>
 <p>The backup&#8217;s type, as well as the backup method that was used to create the backup.
 The backup type can be <strong>Full</strong> or <strong>Series</strong>.
-Refer to <a href="../clusters/backup-restore.html#backup-types" class="page">Backup Types</a> for more information.</p>
+Refer to <a href="../clusters/backup-restore.html#backup-types" class="xref page">Backup Types</a> for more information.</p>
 <div class="paragraph">
 <p>The backup method that was used to create the backup is also listed in the same field alongside the backup type.
 The backup method can be either <strong>Autosave</strong> or <strong>Manual</strong>, depending on whether the backup was created automatically according to the cluster&#8217;s <a href="#configure-automatic-backups-vpc">automatic backup schedule</a> or if it was created <a href="#create-manual-backup-vpc">manually</a>.</p>
@@ -1003,7 +1003,7 @@ For example, production clusters may require a much smaller backup window and a 
 <div class="ulist">
 <ul>
 <li>
-<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code><strong>Project Owner</strong></code></a> role for the project that contains the cluster.</p>
+<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code><strong>Project Owner</strong></code></a> role for the project that contains the cluster.</p>
 </li>
 </ul>
 </div>
@@ -1041,7 +1041,7 @@ For example, production clusters may require a much smaller backup window and a 
 <div class="paragraph">
 <p>This opens the <strong>Autosave Schedule</strong> fly-out menu.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="backup-autosave-schedule-flyout.png" alt="The 'Autosave Schedule' fly-out menu showing the default configuration values that are set for every new cluster." width="500">
 </div>
@@ -1230,7 +1230,7 @@ A manual backup is always a Full backup, and is always scheduled immediately, ir
 <div class="ulist">
 <ul>
 <li>
-<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code><strong>Project Owner</strong></code></a> role for the project that contains the cluster.</p>
+<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code><strong>Project Owner</strong></code></a> role for the project that contains the cluster.</p>
 </li>
 </ul>
 </div>
@@ -1268,7 +1268,7 @@ A manual backup is always a Full backup, and is always scheduled immediately, ir
 <div class="paragraph">
 <p>This opens the <strong>New Manual Backup</strong> fly-out menu.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="new-manual-backup-flyout.png" alt="The 'New Manual Backup' fly-out menu." width="500">
 </div>
@@ -1318,7 +1318,7 @@ They are retained according to the retention period set in the <a href="#configu
 <div class="ulist">
 <ul>
 <li>
-<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code><strong>Project Owner</strong></code></a> role for the project that contains the cluster.</p>
+<p>You must have the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code><strong>Project Owner</strong></code></a> role for the project that contains the cluster.</p>
 </li>
 </ul>
 </div>
@@ -1357,7 +1357,7 @@ They are retained according to the retention period set in the <a href="#configu
 <p>This opens the backup&#8217;s fly-out menu.
 The details available in the fly-out menu will be different depending on whether the backup is strictly a Full backup, or whether it is a Series backup.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="backup-inspect-flyout-series.png" alt="The inspect fly-out menu of a Series backup, showing details about a Full backup at the top, with multiple Incremental backups listed below it." width="500">
 </div>
@@ -1388,7 +1388,7 @@ For Series backups, the Full backup is listed, along with all associated Increme
 <td class="content">
 This information on retention applies only to Couchbase Server 6.6, hosted in your own cloud provider’s VPC.
 It does not apply to to the majority of Capella Clusters&#8201;&#8212;&#8201;running Couchbase 7.0, hosted in Couchbase’s VPC, and fully managed for you.
-For deletion details for these, see <a href="#manage-backup.adoc#delete-backup" class="page unresolved">above</a>
+For deletion details for these, see <a href="#manage-backup.adoc#delete-backup" class="xref unresolved">above</a>
 </td>
 </tr>
 </table>
@@ -1415,7 +1415,7 @@ Refer to the <a href="#view-backup-files-vpc">View Backup Files</a> section for 
 <li>
 <p><strong>The connected cloud is deleted</strong></p>
 <div class="paragraph">
-<p>If the connected cloud in which the backup resides is <a href="#clouds:manage-clouds.adoc#delete-cloud" class="page unresolved">deleted</a>, then all of the backups that were stored in the connected cloud are deleted.</p>
+<p>If the connected cloud in which the backup resides is <a href="#clouds:manage-clouds.adoc#delete-cloud" class="xref unresolved">deleted</a>, then all of the backups that were stored in the connected cloud are deleted.</p>
 </div>
 </li>
 </ul>
@@ -1428,7 +1428,7 @@ Refer to the <a href="#view-backup-files-vpc">View Backup Files</a> section for 
 If you are hosting Capella in your own cloud provider&#8217;s VPC, then details of the Backup files are given below.</p>
 </div>
 <div class="paragraph">
-<p>For customers hosting Capella in their own cloud provider&#8217;s VPC, cluster backups are stored in the <a href="#clouds:clouds.adoc" class="page unresolved">connected cloud</a> in which the cluster resides.</p>
+<p>For customers hosting Capella in their own cloud provider&#8217;s VPC, cluster backups are stored in the <a href="#clouds:clouds.adoc" class="xref unresolved">connected cloud</a> in which the cluster resides.</p>
 </div>
 <div class="paragraph">
 <p>For AWS, the backups for all clusters in a given connected cloud are located in an S3 bucket at the following location:</p>

@@ -14,7 +14,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/get-started/configure-cluster-access.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -796,7 +796,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/get-started/pages/configure-cluster-access.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/get-started/pages/configure-cluster-access.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -904,7 +904,7 @@ However, for any entity to read or write <em>data</em> on a cluster, extra steps
 <h2 id="configure-database-access"><a class="anchor" href="#configure-database-access"></a>Configure Database Access</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In Couchbase Capella, only <a href="../clusters/manage-database-users.html#about-database-credentials" class="page"><em>database credentials</em></a> can read or write data on a cluster.
+<p>In Couchbase Capella, only <a href="../clusters/manage-database-users.html#about-database-credentials" class="xref page"><em>database credentials</em></a> can read or write data on a cluster.
 The following steps describe how to create a database credential for a cluster.</p>
 </div>
 <div class="admonitionblock note">
@@ -917,7 +917,7 @@ The following steps describe how to create a database credential for a cluster.<
 <div class="paragraph">
 <p>Database credentials are distinct and not associated with a particular user.
 They do not control access to data tools like Query Workbench in the Capella UI.
-Capella automatically manages this type of access based on a user&#8217;s <a href="../projects/project-roles.html" class="page">project role</a>.</p>
+Capella automatically manages this type of access based on a user&#8217;s <a href="../projects/project-roles.html" class="xref page">project role</a>.</p>
 </div>
 </td>
 </tr>
@@ -932,7 +932,7 @@ Capella automatically manages this type of access based on a user&#8217;s <a hre
 <td class="content">
 <div class="title">Permissions Required</div>
 <div class="paragraph">
-<p>To create a database credential, you must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the project containing the cluster where you want to create the credential.</p>
+<p>To create a database credential, you must have the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> role for the project containing the cluster where you want to create the credential.</p>
 </div>
 </td>
 </tr>
@@ -1061,7 +1061,7 @@ This option makes it more convenient for interacting with any sample or test buc
 <li>
 <p>Select access level.</p>
 <div class="paragraph">
-<p>Use the <strong>Access</strong> drop-down menu to specify the <a href="../clusters/manage-database-users.html#about-database-user-permissions" class="page">level of access</a> you want this database credential to have: <strong>Read</strong>, <strong>Write</strong>, or <strong>Read/Write</strong> access.</p>
+<p>Use the <strong>Access</strong> drop-down menu to specify the <a href="../clusters/manage-database-users.html#about-database-user-permissions" class="xref page">level of access</a> you want this database credential to have: <strong>Read</strong>, <strong>Write</strong>, or <strong>Read/Write</strong> access.</p>
 </div>
 <div class="paragraph">
 <p>For this guide, we recommend that you select <strong class="ui">Read/Write</strong> access.</p>
@@ -1098,7 +1098,7 @@ The credentials can only be used for reading or writing bucket data using the Co
 </div>
 <div class="paragraph">
 <p>Feel free to move on to <a href="#allow-ip-address">Allow Your Connecting IP Address</a> below for the next step in configuring access to your cluster.
-If you&#8217;d like more detailed information about database permissions, refer to <a href="../clusters/manage-database-users.html" class="page">Configure Database Credentials</a>.</p>
+If you&#8217;d like more detailed information about database permissions, refer to <a href="../clusters/manage-database-users.html" class="xref page">Configure Database Credentials</a>.</p>
 </div>
 </div>
 </div>
@@ -1170,7 +1170,7 @@ Any attempted connection to/from an IP address that isn&#8217;t in a cluster&#82
 <p>In the <strong class="ui">IP Address or Address Space</strong> field, enter the IP address or address space that you want to allow the cluster to communicate with.</p>
 </div>
 <div class="paragraph">
-<p>If you plan to connect to the cluster via the Couchbase SDK on your computer (described on the <a href="connect-to-cluster.html" class="page">next page</a> in this guide), then you should enter the public IP address of your computer.</p>
+<p>If you plan to connect to the cluster via the Couchbase SDK on your computer (described on the <a href="connect-to-cluster.html" class="xref page">next page</a> in this guide), then you should enter the public IP address of your computer.</p>
 </div>
 </li>
 <li>
@@ -1211,7 +1211,7 @@ If you try to immediately connect to the cluster from a newly allowed IP, your c
 </div>
 <div class="paragraph">
 <p>Feel free to move on to <a href="#next-steps">Next Steps</a> below.
-If you&#8217;d like more detailed information about allowed IPs, refer to <a href="../clusters/allow-ip-address.html" class="page">Configure Allowed IP Addresses</a>.</p>
+If you&#8217;d like more detailed information about allowed IPs, refer to <a href="../clusters/allow-ip-address.html" class="xref page">Configure Allowed IP Addresses</a>.</p>
 </div>
 </div>
 </div>
@@ -1219,7 +1219,7 @@ If you&#8217;d like more detailed information about allowed IPs, refer to <a hre
 <h2 id="next-steps"><a class="anchor" href="#next-steps"></a>Next Steps</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Now that you&#8217;ve <a href="#configure-database-access">created a database credential</a> and <a href="#allow-ip-address">added your IP address</a> to the cluster&#8217;s list of allowed IPs, you can move on to the next step: <a href="connect-to-cluster.html" class="page">Connect to Your Cluster</a>.</p>
+<p>Now that you&#8217;ve <a href="#configure-database-access">created a database credential</a> and <a href="#allow-ip-address">added your IP address</a> to the cluster&#8217;s list of allowed IPs, you can move on to the next step: <a href="connect-to-cluster.html" class="xref page">Connect to Your Cluster</a>.</p>
 </div>
 </div>
 </div>

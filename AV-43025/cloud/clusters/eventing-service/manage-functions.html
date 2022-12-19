@@ -14,7 +14,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/clusters/eventing-service/manage-functions.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -796,7 +796,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/clusters/pages/eventing-service/manage-functions.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/clusters/pages/eventing-service/manage-functions.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -914,7 +914,7 @@ Eventing in Capella is only supported by Couchbase hosted clusters.
 </table>
 </div>
 <div class="paragraph">
-<p>If a cluster is running the <a href="eventing-service.html" class="page">Eventing Service</a>, Eventing Functions can be accessed and managed from within a cluster by clicking <span class="menuseq"><b class="menu">Tools</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Eventing</b></span>.
+<p>If a cluster is running the <a href="eventing-service.html" class="xref page">Eventing Service</a>, Eventing Functions can be accessed and managed from within a cluster by clicking <span class="menuseq"><b class="menu">Tools</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Eventing</b></span>.
 A list of all existing Eventing Functions is shown in table format.</p>
 </div>
 <div class="imageblock">
@@ -1103,21 +1103,21 @@ The Function name can only start with characters in range A-Z, a-z, 0-9 and can 
 </li>
 <li>
 <p>Click the <strong>Source Bucket</strong> drop-down menu and select a bucket currently defined on the cluster.
-For more information on creating buckets, refer to <a href="../data-service/manage-buckets.html" class="page">Manage Buckets</a>.</p>
+For more information on creating buckets, refer to <a href="../data-service/manage-buckets.html" class="xref page">Manage Buckets</a>.</p>
 </li>
 <li>
 <p>Click the <strong>Source Scope</strong> drop-down menu and select a scope.
 By default, this is set to the <code>_default</code> scope and does not need to be changed for this exercise.
-For information on creating scopes, refer to <a href="../data-service/scopes-collections.html" class="page">Manage Scopes and Collections</a></p>
+For information on creating scopes, refer to <a href="../data-service/scopes-collections.html" class="xref page">Manage Scopes and Collections</a></p>
 </li>
 <li>
 <p>Click the <strong>Source Collection</strong> drop-down menu and choose a collection defined on the cluster.
 By default, this will be set to the <code>_default</code> collection and does not need to be changed for this exercise.
-For more information on creating collections, refer to <a href="../data-service/scopes-collections.html" class="page">Manage Scopes and Collections</a></p>
+For more information on creating collections, refer to <a href="../data-service/scopes-collections.html" class="xref page">Manage Scopes and Collections</a></p>
 </li>
 <li>
-<p>Click the <strong>Metadata Bucket</strong> drop-down menu and select the Eventing <a href="#server:eventing:eventing-Terminologies.adoc#buckets" class="page unresolved">metadata bucket</a> currently defined on the cluster. You can choose the same bucket as the source bucket, but the collection must differ.
-Refer to the <a href="#server:eventing:eventing-Terminologies.adoc#buckets" class="page unresolved">Couchbase Server documentation</a> for more information about creating and using a metadata bucket for the Eventing Service.</p>
+<p>Click the <strong>Metadata Bucket</strong> drop-down menu and select the Eventing <a href="#server:eventing:eventing-Terminologies.adoc#buckets" class="xref unresolved">metadata bucket</a> currently defined on the cluster. You can choose the same bucket as the source bucket, but the collection must differ.
+Refer to the <a href="#server:eventing:eventing-Terminologies.adoc#buckets" class="xref unresolved">Couchbase Server documentation</a> for more information about creating and using a metadata bucket for the Eventing Service.</p>
 </li>
 <li>
 <p>Click the <strong>Metadata Scope</strong> drop-down menu and select a scope.
@@ -1143,7 +1143,7 @@ The default is <code>3</code> (the minimum is <code>1</code> maximum is <code>64
 The default is <code>60</code>.</p>
 </li>
 <li>
-<p><strong>Deployment Feed Boundary</strong>: The <a href="#server:eventing:eventing-Terminologies.adoc#feed-boundary" class="page unresolved">Feed Boundary</a> determines whether documents previously in existence need to be included in the Function’s activities.
+<p><strong>Deployment Feed Boundary</strong>: The <a href="#server:eventing:eventing-Terminologies.adoc#feed-boundary" class="xref unresolved">Feed Boundary</a> determines whether documents previously in existence need to be included in the Function’s activities.
 When the Feed Boundary is set to <code>Everything</code>, the Function is invoked on all mutations available in the cluster.
 This is opposed to setting the Feed Boundary to <code>From Now</code>, where the Function is only invoked on future instances of data mutation post Function deployment).
 For the purpose of this exercise, set the Deployment Feed Boundary to <code>Everything</code>.</p>

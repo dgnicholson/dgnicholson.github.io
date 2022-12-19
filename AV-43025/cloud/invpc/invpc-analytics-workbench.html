@@ -14,7 +14,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/invpc/invpc-analytics-workbench.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -796,7 +796,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/invpc/pages/invpc-analytics-workbench.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/invpc/pages/invpc-analytics-workbench.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -886,7 +886,7 @@ The Analytics Workbench provides a rich graphical user interface to perform Anal
 It does not apply to Couchbase 7.0 or later, hosted in Couchbase&#8217;s VPC and fully managed by Couchbase.</p>
 </div>
 <div class="paragraph">
-<p>All of the information for users of Server 6.6 self-managed in their own cloud provider&#8217;s VPC, such as <em>this page</em>, can be accessed at <a href="invpc-index.html" class="page">this index page</a>.</p>
+<p>All of the information for users of Server 6.6 self-managed in their own cloud provider&#8217;s VPC, such as <em>this page</em>, can be accessed at <a href="invpc-index.html" class="xref page">this index page</a>.</p>
 </div>
 </td>
 </tr>
@@ -928,7 +928,7 @@ You can also save the query history to a file on disk.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>For more information on Couchbase Analytics, see the <a href="#server:learn:services-and-indexes/services/analytics-service.adoc" class="page unresolved">Analytics section</a> in our Couchbase Server documentation.</p>
+<p>For more information on Couchbase Analytics, see the <a href="#server:learn:services-and-indexes/services/analytics-service.adoc" class="xref unresolved">Analytics section</a> in our Couchbase Server documentation.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -937,7 +937,7 @@ You can also save the query history to a file on disk.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The Analytics Workbench is only available on clusters that are running the <a href="../clusters/analytics-service/analytics-service.html" class="page">Analytics Service</a>.
+The Analytics Workbench is only available on clusters that are running the <a href="../clusters/analytics-service/analytics-service.html" class="xref page">Analytics Service</a>.
 </td>
 </tr>
 </table>
@@ -948,9 +948,9 @@ The Analytics Workbench is only available on clusters that are running the <a hr
 <h2 id="accessing-the-analytics-workbench"><a class="anchor" href="#accessing-the-analytics-workbench"></a>Accessing the Analytics Workbench</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If a cluster is running the <a href="../clusters/analytics-service/analytics-service.html" class="page">Analytics Service</a>, the Analytics Workbench can be accessed under the cluster&#8217;s <strong>Tools &gt; Analytics Workbench</strong> tab.</p>
+<p>If a cluster is running the <a href="../clusters/analytics-service/analytics-service.html" class="xref page">Analytics Service</a>, the Analytics Workbench can be accessed under the cluster&#8217;s <strong>Tools &gt; Analytics Workbench</strong> tab.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="cluster-analytics-workbench.png" alt="The cluster&#8217;s 'Tools &gt; Analytics Workbench' tab.">
 </div>
@@ -972,8 +972,8 @@ The <strong class="ui">Analytics Workbench</strong> consists of three working ar
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Query Editor is where you build and run queries.
-Enter a query into the Query Editor using the <a href="#server:analytics:1_intro.adoc" class="page unresolved">N1QL for Analytics</a> language.
-Since large result sets can take a long time to display, it&#8217;s recommended that you use the <a href="#server:analytics:3_query.adoc#Limit_clauses" class="page unresolved">LIMIT</a> clause as part of your query when appropriate.</p>
+Enter a query into the Query Editor using the <a href="#server:analytics:1_intro.adoc" class="xref unresolved">N1QL for Analytics</a> language.
+Since large result sets can take a long time to display, it&#8217;s recommended that you use the <a href="#server:analytics:3_query.adoc#Limit_clauses" class="xref unresolved">LIMIT</a> clause as part of your query when appropriate.</p>
 </div>
 <div class="paragraph">
 <p>The Query Editor provides syntax highlighting: for easy viewing, N1QL keywords, numbers, and string literals are differently colored.</p>
@@ -1009,7 +1009,7 @@ To create an Analytics collection on a local link:</p>
 <div class="paragraph">
 <p>This opens the <strong>Add Collection</strong> flyout.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="analytics-workbench-add-collection.png" alt="The `Add Collection` flyout." width="400">
 </div>
@@ -1093,7 +1093,7 @@ FROM breweries bw
 WHERE meta(bw).id = 'kona_brewing';</code></pre>
 </div>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="analytics-workbench-run-query.png" alt="The cluster&#8217;s Analytics Workbench screen showing an executed query and its results.">
 </div>
@@ -1103,7 +1103,7 @@ WHERE meta(bw).id = 'kona_brewing';</code></pre>
 <div class="paragraph">
 <p>When a query finishes, the query metrics for that query are displayed between the Query Editor and the Query Results areas.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="analytics-workbench-query-metrics.png" alt="The executed query with its metrics highlighted." width="600">
 </div>
@@ -1141,7 +1141,7 @@ Possible icons include <code>&check;</code> (success) and <code>!</code> (failur
 <p>The <strong class="ui">JSON</strong> tab formats the results to make the data easy to read.
 You can also expand and collapse objects and array values using the small arrow icons next to the line numbers.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="analytics-workbench-result-json.png" alt="The Query Results area with the JSON tab selected." width="600">
 </div>
@@ -1154,7 +1154,7 @@ You can also expand and collapse objects and array values using the small arrow 
 The tool converts the JSON documents to HTML tables and presents sub-objects or sub-arrays as sub-tables.
 This format works well for queries that return an array of objects.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="analytics-workbench-result-table.png" alt="The Query Results area with the Table tab selected." width="600">
 </div>
@@ -1169,7 +1169,7 @@ This format works well for queries that return an array of objects.</p>
 <p>If you have run the query, a detailed query execution plan is shown, which includes information about how long each step in the plan took to execute.
 If you clicked <b class="button">Explain</b> without running the query, the intended query execution plan is shown, without the details that would be included if you actually executed the query.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="analytics-workbench-result-plan-text.png" alt="The Query Results area with the Plan Text tab selected." width="600">
 </div>
@@ -1202,7 +1202,7 @@ Clearing the browser history clears the history maintained by the Query Editor a
 <div class="paragraph">
 <p>Clicking the <b class="button">History</b> button above the Query Editor opens the <strong class="ui">Query History</strong> flyout menu:</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="analytics-workbench-query-history-flyout.png" alt="The 'Query History' flyout menu for the Analytics Query Workbench." width="600">
 </div>
@@ -1242,7 +1242,7 @@ This can be useful if you want a more manicured history for when you&#8217;re <a
 <p>You can load queries from a file into the Query History.
 In the Query History, click <b class="button">Import</b> to open the <strong class="ui">Import Query History</strong> flyout menu.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="analytics-import-query-history-flyout.png" alt="The 'Import Query History' flyout menu for the Analytics Query Workbench." width="600">
 </div>
@@ -1258,7 +1258,7 @@ After clicking <b class="button">Save</b>, the content of the file is added to t
 <p>You can export the query history in JSON format.
 In the Query History, click <b class="button">Export</b> to open the <strong class="ui">Export History</strong> flyout menu.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="analytics-export-query-history-flyout.png" alt="The 'Export History' flyout menu for the Analytics Query Workbench." width="600">
 </div>
@@ -1276,7 +1276,7 @@ In the Query History, click <b class="button">Export</b> to open the <strong cla
 <p>You can specify various settings for the Analytics Workbench and the Analytics Service by clicking <strong class="ui">Settings</strong>.
 This opens the <strong class="ui">Query Settings</strong> flyout menu.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="analytics-workbench-settings-flyout.png" alt="The 'Query Settings' flyout menu for the Analytics Workbench." width="600">
 </div>
@@ -1317,7 +1317,7 @@ Select one of the following options:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>For more information, refer to <a href="#server:analytics:query-params.adoc#common-parameters" class="page unresolved">Analytics Query Parameters</a> in the Couchbase Server documentation.</p>
+<p>For more information, refer to <a href="#server:analytics:query-params.adoc#common-parameters" class="xref unresolved">Analytics Query Parameters</a> in the Couchbase Server documentation.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1357,7 +1357,7 @@ image::analytics-workbench-bucket-insights.png["The 'Bucket Insights' panel.",40
 <div class="paragraph">
 <p>The Links flyout in the Analytics Workbench enables you to create, manage, and delete
 remote links.
-Refer to <a href="../clusters/analytics-service/analytics-links.html" class="page">Analytics Links</a> for details.</p>
+Refer to <a href="../clusters/analytics-service/analytics-links.html" class="xref page">Analytics Links</a> for details.</p>
 </div>
 </div>
 </div>
@@ -1366,7 +1366,7 @@ Refer to <a href="../clusters/analytics-service/analytics-links.html" class="pag
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Monitor flyout in the Analytics Workbench enables you to monitor Analytics queries and metrics.
-Refer to <a href="../clusters/analytics-service/analytics-monitor.html" class="page">Analytics Monitor</a> for details.</p>
+Refer to <a href="../clusters/analytics-service/analytics-monitor.html" class="xref page">Analytics Monitor</a> for details.</p>
 </div>
 </div>
 </div>

@@ -14,7 +14,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/clusters/data-service/data-service.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -796,7 +796,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/clusters/pages/data-service/data-service.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/clusters/pages/data-service/data-service.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -890,16 +890,16 @@ Buckets only exist on nodes that run the Data Service.</p>
 <div class="paragraph">
 <p>The Data Service must run on at least one node of every cluster.
 However, at least three nodes are required for production environments.
-(Clusters with less than three Data nodes have <a href="#server:install:deployment-considerations-lt-3nodes.adoc" class="page unresolved">several limitations</a>.)</p>
+(Clusters with less than three Data nodes have <a href="#server:install:deployment-considerations-lt-3nodes.adoc" class="xref unresolved">several limitations</a>.)</p>
 </div>
 <div class="paragraph">
 <p>The Data Service provides a fully integrated in-memory caching layer, which provides high-speed data access.
-Couchbase Capella supports the <a href="#server:learn:buckets-memory-and-storage/buckets.adoc#bucket-types" class="page unresolved"><em>Couchbase</em> bucket type</a>, which means that all data items are written to memory and persisted to disk.
+Couchbase Capella supports the <a href="#server:learn:buckets-memory-and-storage/buckets.adoc#bucket-types" class="xref unresolved"><em>Couchbase</em> bucket type</a>, which means that all data items are written to memory and persisted to disk.
 The Data Service manages memory to ensure high performance and scalability: memory quotas are established, and data not recently used can be ejected, to make room for data more frequently requested.
 You can configure a memory quota that provides caching for all or a portion of stored data items.</p>
 </div>
 <div class="paragraph">
-<p>Read more about <a href="#server:learn:buckets-memory-and-storage/memory-and-storage.adoc" class="page unresolved">Memory and Storage</a>.</p>
+<p>Read more about <a href="#server:learn:buckets-memory-and-storage/memory-and-storage.adoc" class="xref unresolved">Memory and Storage</a>.</p>
 </div>
 </div>
 </div>
@@ -913,7 +913,7 @@ A maximum of 30 buckets can be created per cluster.</p>
 </div>
 <div class="paragraph">
 <p>Buckets are protected by role-based access control (RBAC).
-Buckets can only be administered (created, modified, and deleted) by users that have the <a href="../../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> or <a href="../../projects/project-roles.html#project-cluster-manager-role" class="page"><code>Project manager</code></a> project roles.</p>
+Buckets can only be administered (created, modified, and deleted) by users that have the <a href="../../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> or <a href="../../projects/project-roles.html#project-cluster-manager-role" class="xref page"><code>Project manager</code></a> project roles.</p>
 </div>
 </div>
 </div>
@@ -933,10 +933,10 @@ You cannot recreate a default collection if you drop it.</p>
 </div>
 <div class="paragraph">
 <p>Role-based access control (RBAC) is used to protect scopes and collections.
-Only project members with the <a href="../../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> or <a href="../../projects/project-roles.html#project-cluster-manager-role" class="page"><code>Project manager</code></a> project roles can administer them.</p>
+Only project members with the <a href="../../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> or <a href="../../projects/project-roles.html#project-cluster-manager-role" class="xref page"><code>Project manager</code></a> project roles can administer them.</p>
 </div>
 <div class="paragraph">
-<p>For more information, see <a href="#server:learn:data/scopes-and-collections.adoc" class="page unresolved">Scopes and Collections</a>.</p>
+<p>For more information, see <a href="#server:learn:data/scopes-and-collections.adoc" class="xref unresolved">Scopes and Collections</a>.</p>
 </div>
 </div>
 </div>

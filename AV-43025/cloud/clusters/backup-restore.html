@@ -15,7 +15,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/clusters/backup-restore.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -797,7 +797,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/clusters/pages/backup-restore.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/clusters/pages/backup-restore.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -878,7 +878,7 @@ As part of an overall disaster recovery plan for production data, a robust sched
 </div>
 <div class="paragraph">
 <p>Couchbase Capella supports scheduled and on-demand backups of bucket data.
-All buckets can have a daily or weekly <a href="manage-backup.html#configure-automatic-backups" class="page">backup schedule</a>.</p>
+All buckets can have a daily or weekly <a href="manage-backup.html#configure-automatic-backups" class="xref page">backup schedule</a>.</p>
 </div>
 </div>
 </div>
@@ -887,8 +887,8 @@ All buckets can have a daily or weekly <a href="manage-backup.html#configure-aut
 <div class="sectionbody">
 <div class="paragraph">
 <p>Capella supports scheduled and on-demand bucket backups on a per-bucket basis.
-You can schedule backups for each bucket during <a href="data-service/manage-buckets.html#add-bucket" class="page">bucket creation</a> and <a href="manage-backup.html#configure-automatic-backups" class="page">modify</a> the schedule at any time to fit your needs.
-You can also create <a href="manage-backup.html#create-manual-backup" class="page">on-demand backups</a> as needed.</p>
+You can schedule backups for each bucket during <a href="data-service/manage-buckets.html#add-bucket" class="xref page">bucket creation</a> and <a href="manage-backup.html#configure-automatic-backups" class="xref page">modify</a> the schedule at any time to fit your needs.
+You can also create <a href="manage-backup.html#create-manual-backup" class="xref page">on-demand backups</a> as needed.</p>
 </div>
 <div class="paragraph">
 <p>Couchbase Capella uses its own backup utility.
@@ -926,7 +926,7 @@ Every Scheduled backup includes both backup types.</p>
 A Full backup includes all bucket data from the time the backup was created.
 It can be about 40% of the size of the original dataset.
 Full backups are taken automatically at the start of every <a href="#series-backup">Scheduled</a> backup series.
-You can also create Full backups <a href="manage-backup.html#create-manual-backup" class="page">on demand</a>.</p>
+You can also create Full backups <a href="manage-backup.html#create-manual-backup" class="xref page">on demand</a>.</p>
 </dd>
 <dt class="hdlist1">Incremental backups</dt>
 <dd>
@@ -952,20 +952,20 @@ By using both Full and Incremental backups, the Scheduled backups provide the be
 <div class="sect2">
 <h3 id="bucket-backup-retention"><a class="anchor" href="#bucket-backup-retention"></a>Bucket Backup Retention</h3>
 <div class="paragraph">
-<p>Capella keeps a bucket&#8217;s scheduled backups based on the <strong>Retention Time</strong> setting in the bucket&#8217;s <a href="manage-backup.html#configure-automatic-backups" class="page">Backup Schedule</a>.
+<p>Capella keeps a bucket&#8217;s scheduled backups based on the <strong>Retention Time</strong> setting in the bucket&#8217;s <a href="manage-backup.html#configure-automatic-backups" class="xref page">Backup Schedule</a>.
 Capella keeps on-demand backups for 30 days.</p>
 </div>
 <div class="paragraph">
-<p>For more information about deleting a backup, see <a href="manage-backup.html#delete-backup" class="page">Delete a Backup</a>.</p>
+<p>For more information about deleting a backup, see <a href="manage-backup.html#delete-backup" class="xref page">Delete a Backup</a>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="administering-bucket-backups"><a class="anchor" href="#administering-bucket-backups"></a>Administering Bucket Backups</h3>
 <div class="paragraph">
-<p>For information about how to create and manage bucket backups, see <a href="manage-backup.html" class="page">Manage Backups</a>.</p>
+<p>For information about how to create and manage bucket backups, see <a href="manage-backup.html" class="xref page">Manage Backups</a>.</p>
 </div>
 <div class="paragraph">
-<p>For information about restoring a bucket backup, see <a href="manage-restore.html" class="page">Restore a Backup</a>.</p>
+<p>For information about restoring a bucket backup, see <a href="manage-restore.html" class="xref page">Restore a Backup</a>.</p>
 </div>
 </div>
 </div>

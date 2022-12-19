@@ -15,7 +15,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/clusters/databases.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -797,7 +797,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/clusters/pages/databases.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/clusters/pages/databases.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -878,12 +878,12 @@ Databases are managed deployments of Couchbase Server.
 </div>
 <div class="paragraph">
 <p>This page walks you through an overview of databases in Couchbase Capella.
-A database is a managed deployment of <a href="#server:learn:architecture-overview.adoc" class="page unresolved">Couchbase Server</a>.
+A database is a managed deployment of <a href="#server:learn:architecture-overview.adoc" class="xref unresolved">Couchbase Server</a>.
 A database comprises one or more instances of Couchbase Server, each running on an independent node.</p>
 </div>
 <div class="paragraph">
-<p>In the Capella hierarchy, projects are contained in <a href="../organizations/organizations.html" class="page">organizations</a>.
-Databases are contained in <a href="../projects/projects.html" class="page">projects</a>.
+<p>In the Capella hierarchy, projects are contained in <a href="../organizations/organizations.html" class="xref page">organizations</a>.
+Databases are contained in <a href="../projects/projects.html" class="xref page">projects</a>.
 Databases are fully managed and deployed in Couchbase&#8217;s VPC for a chosen cloud provider.</p>
 </div>
 </div>
@@ -918,36 +918,36 @@ Couchbase services enable you to access and maintain your data.</p>
 <p class="tableblock">All databases must run the Data Service.
 The Data Service must run on at least one node of every database.
 However, at least three nodes are required for production environments.
-Databases with fewer than three Data nodes have <a href="#server:install:deployment-considerations-lt-3nodes.adoc" class="page unresolved">several limitations</a>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="data-service/data-service.html" class="page">Data Service</a></p></td>
+Databases with fewer than three Data nodes have <a href="#server:install:deployment-considerations-lt-3nodes.adoc" class="xref unresolved">several limitations</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="data-service/data-service.html" class="xref page">Data Service</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Query Service</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Parses queries specified in the N1QL query language, executes the queries, and returns results.
 The Query Service interacts with the Data and Index Services.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="query-service/query-service.html" class="page">Query Service</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="query-service/query-service.html" class="xref page">Query Service</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Index Service</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Creates indexes used by the Query Service.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="index-service/index-service.html" class="page">Index Service</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="index-service/index-service.html" class="xref page">Index Service</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Search Service</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Create indexes especially purposed for <em>Full Text Search</em>.
 This service supports language-aware searching. For example, it can allow users to search for <code>beauties</code> and obtain results for <code>beauty</code> and <code>beautiful</code>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="search-service/search-service.html" class="page">Search Service</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="search-service/search-service.html" class="xref page">Search Service</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Analytics Service</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Supports join, set, aggregation, and grouping operations, which are expected to be large, long-running, and highly consumptive of memory and CPU resources.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="analytics-service/analytics-service.html" class="page">Analytics Service</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="analytics-service/analytics-service.html" class="xref page">Analytics Service</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eventing Service</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Supports near real-time handling of data changes.
 Code can be executed in response to document mutations and as scheduled by timers.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="eventing-service/eventing-service.html" class="page">Eventing Service</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="eventing-service/eventing-service.html" class="xref page">Eventing Service</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1007,7 +1007,7 @@ Version upgrades are scheduled when they become available.
 You can reschedule maintenance upgrades.</p>
 </div>
 <div class="paragraph">
-<p>For more information about upgrades, see <a href="upgrade-database.html" class="page">Upgrading a Database</a>.</p>
+<p>For more information about upgrades, see <a href="upgrade-database.html" class="xref page">Upgrading a Database</a>.</p>
 </div>
 </div>
 </div>
@@ -1020,19 +1020,19 @@ You can reschedule maintenance upgrades.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="create-database.html" class="page">Create a Database</a></p>
+<p><a href="create-database.html" class="xref page">Create a Database</a></p>
 </li>
 <li>
-<p><a href="modify-database.html" class="page">Modify a Database</a></p>
+<p><a href="modify-database.html" class="xref page">Modify a Database</a></p>
 </li>
 <li>
-<p><a href="scale-database.html" class="page">Scale a Database</a></p>
+<p><a href="scale-database.html" class="xref page">Scale a Database</a></p>
 </li>
 <li>
-<p><a href="sizing.html" class="page">Database Sizing</a></p>
+<p><a href="sizing.html" class="xref page">Database Sizing</a></p>
 </li>
 <li>
-<p><a href="delete-database.html" class="page">Delete a Database</a></p>
+<p><a href="delete-database.html" class="xref page">Delete a Database</a></p>
 </li>
 </ul>
 </div>

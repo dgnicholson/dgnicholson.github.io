@@ -14,7 +14,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/app-services/migrating/on-prem-to-capella.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -796,7 +796,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/app-services/pages/migrating/on-prem-to-capella.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/app-services/pages/migrating/on-prem-to-capella.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -883,7 +883,7 @@ Once the data and users are migrated, you will have to configure the App Service
 <div class="ulist">
 <ul>
 <li>
-<p>You are running a self-hosted Couchbase Server with a Sync Gateway 2.0 or higher with <a href="#sync-gateway::upgrading.adoc#upgrade-to-shared-bucket" class="page unresolved">shared bucket access</a> enabled.</p>
+<p>You are running a self-hosted Couchbase Server with a Sync Gateway 2.0 or higher with <a href="#sync-gateway::upgrading.adoc#upgrade-to-shared-bucket" class="xref unresolved">shared bucket access</a> enabled.</p>
 </li>
 <li>
 <p>You have signed up for access to <a href="https://cloud.couchbase.com/sign-up">Capella Cloud</a>.</p>
@@ -900,10 +900,10 @@ Once the data and users are migrated, you will have to configure the App Service
 <div class="ulist">
 <ul>
 <li>
-<p>First <a href="../../clusters/create-database.html" class="page">deploy a Couchbase database on Capella</a>.</p>
+<p>First <a href="../../clusters/create-database.html" class="xref page">deploy a Couchbase database on Capella</a>.</p>
 </li>
 <li>
-<p>Now <a href="../../clusters/data-service/manage-buckets.html#add-bucket" class="page">create an appropriately named bucket</a>.</p>
+<p>Now <a href="../../clusters/data-service/manage-buckets.html#add-bucket" class="xref page">create an appropriately named bucket</a>.</p>
 </li>
 </ul>
 </div>
@@ -911,7 +911,7 @@ Once the data and users are migrated, you will have to configure the App Service
 <div class="sect2">
 <h3 id="step-2-set-up-xdcr-replication"><a class="anchor" href="#step-2-set-up-xdcr-replication"></a>Step 2. Set up XDCR replication.</h3>
 <div class="paragraph">
-<p><a href="#server:manage:manage-xdcr:create-xdcr-replication.adoc" class="page unresolved">Set up an XDCR one way data replication</a> from the self-managed cluster bucket to the Capella bucket.</p>
+<p><a href="#server:manage:manage-xdcr:create-xdcr-replication.adoc" class="xref unresolved">Set up an XDCR one way data replication</a> from the self-managed cluster bucket to the Capella bucket.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -990,28 +990,28 @@ CB -right-&gt; Cap  #red : "XDCR\t"</pre>
 <div class="sect2">
 <h3 id="step-5-set-up-capella-app-services"><a class="anchor" href="#step-5-set-up-capella-app-services"></a>Step 5.  Set up Capella App Services</h3>
 <div class="paragraph">
-<p>Now <a href="../deployment/creating-an-app-service.html" class="page">launch App Services</a> on the target Capella Cluster.</p>
+<p>Now <a href="../deployment/creating-an-app-service.html" class="xref page">launch App Services</a> on the target Capella Cluster.</p>
 </div>
 <div class="paragraph">
-<p>Then <a href="../deployment/creating-an-app-endpoint.html" class="page">create an App Endpoint</a> and configure it via Capella UI.
+<p>Then <a href="../deployment/creating-an-app-endpoint.html" class="xref page">create an App Endpoint</a> and configure it via Capella UI.
 Here are key aspects of the App Endpoint creation that you will have to handle:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../deployment/creating-an-app-endpoint.html#app-endpoint-import-filter" class="page">Import Filter</a>: If your existing setup uses a custom Import Filter function, you can write the filter function using the inline editor on Capella or import an existing Import Filter function file.</p>
+<p><a href="../deployment/creating-an-app-endpoint.html#app-endpoint-import-filter" class="xref page">Import Filter</a>: If your existing setup uses a custom Import Filter function, you can write the filter function using the inline editor on Capella or import an existing Import Filter function file.</p>
 </li>
 <li>
-<p><a href="../deployment/access-control-data-validation.html" class="page">Access Control</a>: You can write the sync function using the inline editor on Capella or import existing sync filter function file.</p>
+<p><a href="../deployment/access-control-data-validation.html" class="xref page">Access Control</a>: You can write the sync function using the inline editor on Capella or import existing sync filter function file.</p>
 </li>
 <li>
-<p><a href="../user-management/set-up-authentication-provider.html" class="page">Authentication Provider</a>: If your existing app uses basic authentication, then there are no changes required.
+<p><a href="../user-management/set-up-authentication-provider.html" class="xref page">Authentication Provider</a>: If your existing app uses basic authentication, then there are no changes required.
 Otherwise, if your existing setup was using OIDC then you will need to reconfigure the OIDC provider on Capella.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Finally, <a href="../deployment/configuring-app-endpoints.html#stopping-and-starting" class="page">bring the App Endpoint online</a>.</p>
+<p>Finally, <a href="../deployment/configuring-app-endpoints.html#stopping-and-starting" class="xref page">bring the App Endpoint online</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1027,7 +1027,7 @@ There are couple of options here:</p>
 There will be downtime as the new app is rolled out.</p>
 </li>
 <li>
-<p>You can configure the <a href="#sync-gateway::load-balancer.adoc" class="page unresolved">load balancer</a> available in the source cluster to redirect existing clients to new App Services target.</p>
+<p>You can configure the <a href="#sync-gateway::load-balancer.adoc" class="xref unresolved">load balancer</a> available in the source cluster to redirect existing clients to new App Services target.</p>
 </li>
 </ul>
 </div>

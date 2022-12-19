@@ -14,7 +14,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/clusters/xdcr/manage-xdcr-replications.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -796,7 +796,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/clusters/pages/xdcr/manage-xdcr-replications.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/clusters/pages/xdcr/manage-xdcr-replications.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -879,7 +879,7 @@ An XDCR replication allows bucket data to be replicated continuously from a spec
 </div>
 <div class="paragraph">
 <p>Use the procedures on this page to create and manage XDCR (Cross Data Center Replication) between Capella databases.
-For general information on XDCR in Capella and how it works, see <a href="xdcr.html" class="page">Cross Data Center Replication (XDCR)</a>.</p>
+For general information on XDCR in Capella and how it works, see <a href="xdcr.html" class="xref page">Cross Data Center Replication (XDCR)</a>.</p>
 </div>
 </div>
 </div>
@@ -887,7 +887,7 @@ For general information on XDCR in Capella and how it works, see <a href="xdcr.h
 <h2 id="accessing-replications"><a class="anchor" href="#accessing-replications"></a>Accessing Replications</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Replications, which can be viewed and managed by users with the <a href="../../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role, can be accessed on the <em>source</em> database&#8217;s <strong>Settings</strong> screen, by clicking on the <strong class="ui">Replication</strong> tab, which is located in the navigation panel, at the left.</p>
+<p>Replications, which can be viewed and managed by users with the <a href="../../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> role, can be accessed on the <em>source</em> database&#8217;s <strong>Settings</strong> screen, by clicking on the <strong class="ui">Replication</strong> tab, which is located in the navigation panel, at the left.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -923,12 +923,12 @@ For an example, see <a href="#observing">Observe an Ongoing Replication</a>, bel
 <h2 id="create-replication"><a class="anchor" href="#create-replication"></a>Create a Replication</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>An <a href="xdcr.html" class="page">XDCR replication</a> is created on the cluster that is to be the source of the data replication.
+<p>An <a href="xdcr.html" class="xref page">XDCR replication</a> is created on the cluster that is to be the source of the data replication.
 This cluster is known as the <em>source cluster</em>, and it contains the data you want to replicate.
 Each replication targets a bucket on a different cluster, known as the <em>destination cluster</em> or <em>target cluster</em>, in which the data will be replicated.</p>
 </div>
 <div class="paragraph">
-<p>To create a replication, you must have the <a href="../../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the projects that contain both the source <em>and</em> destination clusters.</p>
+<p>To create a replication, you must have the <a href="../../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> role for the projects that contain both the source <em>and</em> destination clusters.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -961,7 +961,7 @@ Each replication targets a bucket on a different cluster, known as the <em>desti
 </table>
 </div>
 <div class="paragraph">
-<p>Note that source and destination buckets must have the same <a href="xdcr.html#conflict-resolution" class="page">conflict resolution method</a> configured.
+<p>Note that source and destination buckets must have the same <a href="xdcr.html#conflict-resolution" class="xref page">conflict resolution method</a> configured.
 If the buckets use different conflict resolution methods, then the replication will fail to be created.</p>
 </div>
 <div class="paragraph">
@@ -1135,7 +1135,7 @@ Pausing a replication always occurs on the source cluster.
 Subsequent to being paused, a replication can be resumed.</p>
 </div>
 <div class="paragraph">
-<p>To pause a replication, you must have the <a href="../../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the project that contains the <em>source</em> cluster.
+<p>To pause a replication, you must have the <a href="../../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> role for the project that contains the <em>source</em> cluster.
 Note that when pausing a bidirectional replication, only the replication <em>from</em> the current cluster will be paused.
 To pause both directions of a bidirectional replication, you will need to pause the replication on both clusters individually.</p>
 </div>
@@ -1195,7 +1195,7 @@ Desired modifications must be configured for an <em>entirely new replication</em
 Any replicated data will not be deleted.</p>
 </div>
 <div class="paragraph">
-<p>To delete a replication, you must have the <a href="../../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the projects that contain both the source <em>and</em> destination clusters.
+<p>To delete a replication, you must have the <a href="../../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> role for the projects that contain both the source <em>and</em> destination clusters.
 Note that if the replication is bidirectional, when the replication is deleted on the source, <em>both</em> directions of the replication are thereby deleted, and are removed from the <strong class="ui">Replications</strong> tab of both clusters.</p>
 </div>
 <div class="paragraph">

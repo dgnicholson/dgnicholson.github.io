@@ -14,7 +14,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/invpc/invpc-manage-clouds.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -796,7 +796,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/invpc/pages/invpc-manage-clouds.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/invpc/pages/invpc-manage-clouds.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -886,14 +886,14 @@ Connect clouds so that users in your organization can deploy databases.
 It does not apply to Couchbase 7.0 or later, hosted in Couchbase&#8217;s VPC and fully managed by Couchbase.</p>
 </div>
 <div class="paragraph">
-<p>All of the information for users of Server 6.6 self-managed in their own cloud provider&#8217;s VPC, such as <em>this page</em>, can be accessed at <a href="invpc-index.html" class="page">this index page</a>.</p>
+<p>All of the information for users of Server 6.6 self-managed in their own cloud provider&#8217;s VPC, such as <em>this page</em>, can be accessed at <a href="invpc-index.html" class="xref page">this index page</a>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Couchbase Capella needs to create a <a href="#clouds:clouds.adoc" class="page unresolved">connected cloud environment</a> within your existing cloud provider account in order to provision the resources that your database will run on.
+<p>Couchbase Capella needs to create a <a href="#clouds:clouds.adoc" class="xref unresolved">connected cloud environment</a> within your existing cloud provider account in order to provision the resources that your database will run on.
 This means that you&#8217;ll need to connect your own cloud provider to Couchbase Capella before you can start deploying databases.</p>
 </div>
 </div>
@@ -905,7 +905,7 @@ This means that you&#8217;ll need to connect your own cloud provider to Couchbas
 <p>Connected clouds can be viewed and managed from the <strong class="ui">Clouds</strong> tab in the main navigation.
 A summary of all the connected clouds in your organization is displayed in table format.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="clouds-tab.png" alt="The 'Clouds' tab showing a table of multiple clouds, each with different statuses, providers, regions, and CIDR blocks.">
 </div>
@@ -962,14 +962,14 @@ A search field is provided at the top of the summary, which you can use to searc
 <div class="ulist">
 <ul>
 <li>
-<p>You must have the <a href="../organizations/organization-user-roles.html#organization-role-organization-owner" class="page"><code>Organization Owner</code></a> or <a href="../organizations/organization-user-roles.html#organization-role-cloud-manager" class="page"><code>Cloud Manager</code></a> organization role.</p>
+<p>You must have the <a href="../organizations/organization-user-roles.html#organization-role-organization-owner" class="xref page"><code>Organization Owner</code></a> or <a href="../organizations/organization-user-roles.html#organization-role-cloud-manager" class="xref page"><code>Cloud Manager</code></a> organization role.</p>
 </li>
 <li>
-<p>You must have a supported <a href="../clouds/cloud-providers.html" class="page">cloud provider account</a></p>
+<p>You must have a supported <a href="../clouds/cloud-providers.html" class="xref page">cloud provider account</a></p>
 <div class="ulist">
 <ul>
 <li>
-<p>The account must have <a href="../clouds/cloud-providers.html" class="page">sufficient permissions and quotas</a> for Capella to create a VPC and provision the necessary resources for the data plane.</p>
+<p>The account must have <a href="../clouds/cloud-providers.html" class="xref page">sufficient permissions and quotas</a> for Capella to create a VPC and provision the necessary resources for the data plane.</p>
 </li>
 <li>
 <p>The account must have the ability to pay for compute and infrastructure costs.</p>
@@ -1032,7 +1032,7 @@ Capella will use IPs in this range for deployed resources.
 Unless you plan on configuring a peering connection between your Couchbase database and your application server, you can feel free to accept the default CIDR block.</p>
 <div class="paragraph">
 <p>If you <em>do</em> plan on configuring a peering connection for any of the databases deployed on this connected cloud, then you must ensure that the CIDR block you enter does not overlap with the CIDR block of your application server.
-If you don&#8217;t know the CIDR block of your application server, or if you&#8217;re unsure whether or not you will need to configure a peering connection in the future, you can still move forward using the default CIDR block and just <a href="#clouds:manage-clouds.adoc" class="page unresolved">connect another cloud</a> using a different CIDR block should it be necessary in the future.</p>
+If you don&#8217;t know the CIDR block of your application server, or if you&#8217;re unsure whether or not you will need to configure a peering connection in the future, you can still move forward using the default CIDR block and just <a href="#clouds:manage-clouds.adoc" class="xref unresolved">connect another cloud</a> using a different CIDR block should it be necessary in the future.</p>
 </div>
 </dd>
 </dl>
@@ -1048,7 +1048,7 @@ If the console doesn&#8217;t open, make sure that your browser is configured to 
 </div>
 </li>
 <li>
-<p>Log into your cloud provider using an account that has <a href="../clouds/cloud-providers.html" class="page">sufficient privileges and capabilities</a> for deploying Capella resources.</p>
+<p>Log into your cloud provider using an account that has <a href="../clouds/cloud-providers.html" class="xref page">sufficient privileges and capabilities</a> for deploying Capella resources.</p>
 </li>
 <li>
 <p>Deploy the stack template.</p>
@@ -1059,7 +1059,7 @@ This template contains the necessary configuration for Capella to be able to con
 <div class="paragraph">
 <p>For AWS, the resource template will be in the form of a CloudFormation template:</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="connect-cloud-aws-template.png" alt="AWS 'Quick create stack' template showing several pre-filled fields, a required IAM acknowledgment checkbox, and buttons at the bottom to 'Create change set' or 'Create stack'." width="500">
 </div>
@@ -1095,7 +1095,7 @@ If this occurs, refer to the <a href="#troubleshoot-cloud-connection">troublesho
 <div class="paragraph">
 <p>You&#8217;ll know that the entire VPC deployment was successful once all the steps are complete, and the <strong class="ui">Connection Status</strong> changes to <strong class="ui"><em>Connected</em></strong>.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="get-started-connect-cloud-successful.png" alt="The cloud section of the 'Get Started' fly-out menu, showing all connection steps successfully completed and the 'Connection Status' displaying as 'Connected'." width="500">
 </div>
@@ -1122,7 +1122,7 @@ If this is the case, then you will need to inspect the stack within your cloud p
 Should an issue be reported that halts any of the status bars, Capella will re-attempt deployment every five minutes for five days.</p>
 </div>
 <div class="paragraph">
-<p>Refer to <a href="../clouds/cloud-providers.html" class="page">clouds:cloud-providers.adoc</a> for details about the specific account permissions and quotas that are required by Couchbase Capella.</p>
+<p>Refer to <a href="../clouds/cloud-providers.html" class="xref page">clouds:cloud-providers.adoc</a> for details about the specific account permissions and quotas that are required by Couchbase Capella.</p>
 </div>
 </td>
 </tr>
@@ -1132,7 +1132,7 @@ Should an issue be reported that halts any of the status bars, Capella will re-a
 </ol>
 </div>
 <div class="paragraph">
-<p>Once you&#8217;ve successfully connected a cloud, anyone in your organization with the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-manager-role" class="page"><code>Database Manager</code></a> roles can select that cloud for <a href="../clusters/create-database.html" class="page">deploying a database</a>.</p>
+<p>Once you&#8217;ve successfully connected a cloud, anyone in your organization with the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-manager-role" class="xref page"><code>Database Manager</code></a> roles can select that cloud for <a href="../clusters/create-database.html" class="xref page">deploying a database</a>.</p>
 </div>
 </div>
 </div>
@@ -1158,10 +1158,10 @@ If you need to change a connected cloud&#8217;s configuration, such as changing 
 <div class="ulist">
 <ul>
 <li>
-<p>You must have the <a href="../organizations/organization-user-roles.html#organization-role-organization-owner" class="page"><code>Organization Owner</code></a> or <a href="../organizations/organization-user-roles.html#organization-role-cloud-manager" class="page"><code>Cloud Manager</code></a> organization role.</p>
+<p>You must have the <a href="../organizations/organization-user-roles.html#organization-role-organization-owner" class="xref page"><code>Organization Owner</code></a> or <a href="../organizations/organization-user-roles.html#organization-role-cloud-manager" class="xref page"><code>Cloud Manager</code></a> organization role.</p>
 </li>
 <li>
-<p>You must have <a href="../clusters/delete-database.html" class="page">deleted all databases</a> on the connected cloud.
+<p>You must have <a href="../clusters/delete-database.html" class="xref page">deleted all databases</a> on the connected cloud.
 (Capella does not allow a connected cloud to be deleted if databases are present.)</p>
 </li>
 </ul>
@@ -1174,7 +1174,7 @@ If you need to change a connected cloud&#8217;s configuration, such as changing 
 </td>
 <td class="content">
 Deleting a connected cloud will delete all database backups that remain in the connected cloud VPC.
-For more information, refer to <a href="../clusters/backup-restore.html" class="page">Backup and Restore Database Data and Settings</a>.
+For more information, refer to <a href="../clusters/backup-restore.html" class="xref page">Backup and Restore Database Data and Settings</a>.
 </td>
 </tr>
 </table>
@@ -1190,7 +1190,7 @@ For more information, refer to <a href="../clusters/backup-restore.html" class="
 <p>Click the Trash icon at the end of the row on the right side.</p>
 <div class="paragraph">
 <p>Note that if there are any remaining databases in running on the connected cloud, the Trash icon will be disabled.
-Once you have <a href="../clusters/delete-database.html" class="page">deleted all remaining databases</a> from the connected cloud, the Trash icon will be enabled.</p>
+Once you have <a href="../clusters/delete-database.html" class="xref page">deleted all remaining databases</a> from the connected cloud, the Trash icon will be enabled.</p>
 </div>
 </li>
 <li>
@@ -1232,7 +1232,7 @@ Note that you may need to configure your browser to allow pop-up windows from Ca
 <p><em>For AWS</em>: The final resources are contained in the connected cloud&#8217;s CloudFormation stack.
 This stack is automatically selected upon logging into the AWS console.
 To clean up the final resources, simply delete the stack.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="delete-cloud-final-resources-aws.png" alt="The AWS console showing the auto-selected CloudFormation stack." width="600">
 </div>
@@ -1251,7 +1251,7 @@ The name of the stack will contain the <em>name of the connected cloud</em>, alo
 <div class="paragraph">
 <p><strong>Match the name of the CloudFormation stack&#8230;&#8203;</strong></p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="delete-cloud-final-resources-aws-identify-stack.png" alt="The CloudFormation stack&#8217;s name with the connected cloud&#8217;s name underlined in teal, and the last five characters of the connected cloud&#8217;s ID underlined in yellow." width="500">
 </div>
@@ -1259,7 +1259,7 @@ The name of the stack will contain the <em>name of the connected cloud</em>, alo
 <div class="paragraph">
 <p><strong>With the name and ID of the connected cloud&#8230;&#8203;</strong></p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
 <img src="delete-cloud-final-resources-aws-identify-cloud.png" alt="The connected cloud&#8217;s fly-out menu with its name underlined in teal, and the last five characters of its ID underlined in yellow." width="500">
 </div>

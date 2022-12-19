@@ -15,7 +15,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/clusters/manage-restore.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -797,7 +797,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/clusters/pages/manage-restore.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/clusters/pages/manage-restore.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -879,8 +879,8 @@ You can restore a backup to the same database where it was created or another da
 </div>
 <div class="paragraph">
 <p>Use the procedures on this page to restore data from a bucket backup.
-For more information about how to create and manage backups, see <a href="manage-backup.html" class="page">Manage Backups</a>.
-For more information about how backups work in Couchbase Capella, see <a href="backup-restore.html" class="page">Backup and Restore Data</a>.</p>
+For more information about how to create and manage backups, see <a href="manage-backup.html" class="xref page">Manage Backups</a>.
+For more information about how backups work in Couchbase Capella, see <a href="backup-restore.html" class="xref page">Backup and Restore Data</a>.</p>
 </div>
 </div>
 </div>
@@ -901,8 +901,8 @@ For more information about how backups work in Couchbase Capella, see <a href="b
 <div class="ulist">
 <ul>
 <li>
-<p>You need the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for the project with the database that created the backup and the project containing the destination database for the restore.
-If you have the <code>Organization Owner</code> role, you already have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> role for all projects in the organization.</p>
+<p>You need the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> role for the project with the database that created the backup and the project containing the destination database for the restore.
+If you have the <code>Organization Owner</code> role, you already have the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> role for all projects in the organization.</p>
 </li>
 </ul>
 </div>
@@ -916,10 +916,10 @@ If you have the <code>Organization Owner</code> role, you already have the <a hr
 <p>The source database that created the bucket backup must still exist.</p>
 </li>
 <li>
-<p>You can only restore backups to a database running the same <a href="databases.html#cluster-version" class="page">major version</a> or later as the database that created the backup.</p>
+<p>You can only restore backups to a database running the same <a href="databases.html#cluster-version" class="xref page">major version</a> or later as the database that created the backup.</p>
 </li>
 <li>
-<p>You can only restore data to an existing bucket with the same name and <a href="data-service/manage-buckets.html#add-bucket" class="page">conflict resolution methods</a> as the bucket from the backup.</p>
+<p>You can only restore data to an existing bucket with the same name and <a href="data-service/manage-buckets.html#add-bucket" class="xref page">conflict resolution methods</a> as the bucket from the backup.</p>
 </li>
 </ul>
 </div>
@@ -930,7 +930,7 @@ If you have the <code>Organization Owner</code> role, you already have the <a hr
 <div class="sectionbody">
 <div class="paragraph">
 <p>Couchbase recommends that you only restore data from bucket backups in worst-case scenarios.
-You should use other recovery methods, such as <a href="xdcr/xdcr.html" class="page">XDCR replication</a> from a redundant database as the primary recovery method.</p>
+You should use other recovery methods, such as <a href="xdcr/xdcr.html" class="xref page">XDCR replication</a> from a redundant database as the primary recovery method.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -997,7 +997,7 @@ If you select <strong>Restore to a different database</strong>, the <strong>Data
 <ol class="loweralpha" type="a">
 <li>
 <p>When restoring to a different database, use the <strong>Database</strong> list to select the database that&#8217;s the destination of the restore.
-You can only restore to a database in the same <a href="../organizations/organizations.html#organizations" class="page">organization</a>.</p>
+You can only restore to a database in the same <a href="../organizations/organizations.html#organizations" class="xref page">organization</a>.</p>
 </li>
 </ol>
 </div>
@@ -1085,7 +1085,7 @@ Excludes are defined as follows: <code>bucket</code>, <code>bucket.scope</code>,
 <div class="paragraph">
 <p>There can be a delay while Capella schedules the restore.
 Once the restore starts, its status appears on the Database page.
-Capella also adds backup and restore events to the <a href="monitoring/activity-log.html" class="page">Activity Log</a>.</p>
+Capella also adds backup and restore events to the <a href="monitoring/activity-log.html" class="xref page">Activity Log</a>.</p>
 </div>
 </li>
 </ol>
@@ -1109,7 +1109,7 @@ Capella also adds backup and restore events to the <a href="monitoring/activity-
 <div class="ulist">
 <ul>
 <li>
-<p>You need the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-data-reader-writer" class="page"><code>Database Data Reader/Writer</code></a> role for the project with the database.</p>
+<p>You need the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-data-reader-writer" class="xref page"><code>Database Data Reader/Writer</code></a> role for the project with the database.</p>
 </li>
 </ul>
 </div>

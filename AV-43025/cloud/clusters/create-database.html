@@ -15,7 +15,7 @@
 <meta name="dcterms.subject" content="cloud">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/cloud/clusters/create-database.html">
-<meta name="generator" content="Antora 3.0.0-alpha.7">
+<meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="article">
@@ -797,7 +797,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/danielnicholson/repos/couchbase-cloud/docs/public/modules/clusters/pages/create-database.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/couchbasecloud/couchbase-cloud/edit/AV-49151_ping-cyberark-sso-docs/docs/public/modules/clusters/pages/create-database.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -879,7 +879,7 @@ Create a database to store and access data in Couchbase Capella.
 </div>
 <div class="paragraph">
 <p>This page walks you through the process of creating a Couchbase Capella database.
-If you want to learn how to modify an existing Capella database, see <a href="modify-database.html" class="page">Modify a Database</a>.</p>
+If you want to learn how to modify an existing Capella database, see <a href="modify-database.html" class="xref page">Modify a Database</a>.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -888,7 +888,7 @@ If you want to learn how to modify an existing Capella database, see <a href="mo
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-To create and connect to a free 30-day Capella trial, see <a href="../get-started/create-account.html" class="page">Create a Free Account and Deploy Your Database</a>.
+To create and connect to a free 30-day Capella trial, see <a href="../get-started/create-account.html" class="xref page">Create a Free Account and Deploy Your Database</a>.
 </td>
 </tr>
 </table>
@@ -906,7 +906,7 @@ To create and connect to a free 30-day Capella trial, see <a href="../get-starte
 </td>
 <td class="content">
 <div class="title">Permissions Required</div>
-You must have the <a href="../projects/project-roles.html#project-owner-role" class="page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-manager-role" class="page"><code>Project Manager</code></a> project role.
+You must have the <a href="../projects/project-roles.html#project-owner-role" class="xref page"><code>Project Owner</code></a> or <a href="../projects/project-roles.html#project-cluster-manager-role" class="xref page"><code>Project Manager</code></a> project role.
 </td>
 </tr>
 </table>
@@ -914,7 +914,7 @@ You must have the <a href="../projects/project-roles.html#project-owner-role" cl
 <div class="ulist">
 <ul>
 <li>
-<p>You need <a href="../projects/manage-projects.html#create-project" class="page">a project</a> where you can create the database.</p>
+<p>You need <a href="../projects/manage-projects.html#create-project" class="xref page">a project</a> where you can create the database.</p>
 </li>
 <li>
 <p>If you&#8217;re using a free trial, you can&#8217;t create more than one database, and the configuration options are limited.</p>
@@ -955,10 +955,10 @@ You must have the <a href="../projects/project-roles.html#project-owner-role" cl
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../reference/aws.html" class="page">Amazon Web Services (AWS)</a></p>
+<p><a href="../reference/aws.html" class="xref page">Amazon Web Services (AWS)</a></p>
 </li>
 <li>
-<p><a href="../reference/gcp.html" class="page">Google Cloud Platform (GCP)</a></p>
+<p><a href="../reference/gcp.html" class="xref page">Google Cloud Platform (GCP)</a></p>
 </li>
 </ul>
 </div>
@@ -976,7 +976,7 @@ You must have the <a href="../projects/project-roles.html#project-owner-role" cl
 <ol class="loweralpha" type="a">
 <li>
 <p>Using the <strong>Available Regions</strong> list, choose the region where you want to create this database.
-A list of supported regions is available for <a href="../reference/gcp.html#supported-regions" class="page">Google Cloud</a> and <a href="../reference/aws.html#supported-regions" class="page">AWS</a>.</p>
+A list of supported regions is available for <a href="../reference/gcp.html#supported-regions" class="xref page">Google Cloud</a> and <a href="../reference/aws.html#supported-regions" class="xref page">AWS</a>.</p>
 </li>
 <li>
 <p>In the <strong>CIDR Block</strong> field, enter an IP range in CIDR notation.
@@ -1022,7 +1022,7 @@ This page provides template options that you can apply to your database.</p>
 Each template has a variety of different sizes, and selecting one populates the entire database configuration for you.</p>
 </div>
 <div class="paragraph">
-<p>Read more about how to use <a href="sizing.html#templates" class="page">templates</a>.</p>
+<p>Read more about how to use <a href="sizing.html#templates" class="xref page">templates</a>.</p>
 </div>
 </dd>
 <dt class="hdlist1">Custom Deployments</dt>
@@ -1036,9 +1036,9 @@ This option works well if you already have experience with Couchbase Server or w
 <li>
 <p>Select the <strong>Services</strong>.</p>
 <div class="paragraph">
-<p>In a Capella, you assign <a href="#server:learn:services-and-indexes/services/services.adoc" class="page unresolved">Couchbase Server services</a> to service groups.
+<p>In a Capella, you assign <a href="#server:learn:services-and-indexes/services/services.adoc" class="xref unresolved">Couchbase Server services</a> to service groups.
 Service groups allow you to create node configurations for specified services.
-During the database creation process, a new database automatically has one service group with the <a href="data-service/data-service.html" class="page">Data Service</a>, which is a required service.</p>
+During the database creation process, a new database automatically has one service group with the <a href="data-service/data-service.html" class="xref page">Data Service</a>, which is a required service.</p>
 </div>
 <div class="paragraph">
 <p>You can add more services to an existing group by clicking the service group&#8217;s drop-down menu and selecting the services you need.
@@ -1105,7 +1105,7 @@ Instead, it&#8217;s based on the amount of storage you&#8217;ve assigned to a se
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-For more detailed information about the node configuration options available for each cloud provider, see the Capella <a href="../reference/gcp.html#configuration-options" class="page">GCP</a> and <a href="../reference/aws.html#configuration-options" class="page">AWS</a> reference documentation.
+For more detailed information about the node configuration options available for each cloud provider, see the Capella <a href="../reference/gcp.html#configuration-options" class="xref page">GCP</a> and <a href="../reference/aws.html#configuration-options" class="xref page">AWS</a> reference documentation.
 </td>
 </tr>
 </table>
@@ -1117,10 +1117,10 @@ For more detailed information about the node configuration options available for
 <li>
 <p>Choose a <strong>Plan</strong>.</p>
 <div class="paragraph">
-<p>All databases in an organization must be on a <a href="../billing/billing.html#support-plans" class="page">Service Plan</a>.
+<p>All databases in an organization must be on a <a href="../billing/billing.html#support-plans" class="xref page">Service Plan</a>.
 The Service Plan determines the level of support a database can receive and what features and services it can support.
 While you can upgrade or downgrade the chosen plan for a given database, using a feature specific to a plan may prevent a downgrade.
-If you are using a free trial of Couchbase Capella, only the <a href="../billing/billing.html#free-trial-plan" class="page">Basic Service Plan</a> is available.</p>
+If you are using a free trial of Couchbase Capella, only the <a href="../billing/billing.html#free-trial-plan" class="xref page">Basic Service Plan</a> is available.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1135,7 +1135,7 @@ For more information about Capella&#8217;s support levels, see the <a href="http
 </table>
 </div>
 <div class="paragraph">
-<p>If you choose the Developer Pro or Enterprise plan, you must set the <a href="../support/support.html#support-time-zones" class="page">Support Time Zone</a>.
+<p>If you choose the Developer Pro or Enterprise plan, you must set the <a href="../support/support.html#support-time-zones" class="xref page">Support Time Zone</a>.
 Consider factors such as when database administrators can work with Couchbase Support staff when choosing this setting.</p>
 </div>
 </li>
@@ -1160,7 +1160,7 @@ Use the <strong>Summary</strong> pane to review the chosen configuration option 
 </td>
 <td class="content">
 While you can change most database configuration options after deployment, there are some that you can&#8217;t.
-For a list of the configuration changes you can make to a deployed Capella database, see <a href="modify-database.html#cluster-change-options" class="page">Modify a Database - Change Options</a>.
+For a list of the configuration changes you can make to a deployed Capella database, see <a href="modify-database.html#cluster-change-options" class="xref page">Modify a Database - Change Options</a>.
 </td>
 </tr>
 </table>
@@ -1171,7 +1171,7 @@ For a list of the configuration changes you can make to a deployed Capella datab
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Choose between the <a href="../billing/billing.html#up-front-payment" class="page">Credits</a> and <a href="../billing/billing.html#up-front-payment" class="page">Pay-As-You-Go</a> billing options.</p>
+<p>Choose between the <a href="../billing/billing.html#up-front-payment" class="xref page">Credits</a> and <a href="../billing/billing.html#up-front-payment" class="xref page">Pay-As-You-Go</a> billing options.</p>
 </li>
 <li>
 <p>Click <b class="button">Create Database</b>.</p>
@@ -1192,16 +1192,16 @@ When it&#8217;s fully deployed, the database shows a <strong>Healthy</strong> st
 <div class="ulist">
 <ul>
 <li>
-<p><a href="manage-database-users.html" class="page">Configure Database Credentials</a></p>
+<p><a href="manage-database-users.html" class="xref page">Configure Database Credentials</a></p>
 </li>
 <li>
-<p><a href="allow-ip-address.html" class="page">Configure Allowed IP Addresses</a></p>
+<p><a href="allow-ip-address.html" class="xref page">Configure Allowed IP Addresses</a></p>
 </li>
 <li>
-<p><a href="../../home/sdk.html" class="page">SDKs &amp; Connectors</a></p>
+<p><a href="../../home/sdk.html" class="xref page">SDKs &amp; Connectors</a></p>
 </li>
 <li>
-<p><a href="data-service/import-data-documents.html" class="page">Import Data</a></p>
+<p><a href="data-service/import-data-documents.html" class="xref page">Import Data</a></p>
 </li>
 </ul>
 </div>
