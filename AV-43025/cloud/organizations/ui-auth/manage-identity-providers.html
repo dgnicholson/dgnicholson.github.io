@@ -946,7 +946,7 @@ On the <strong>SSO</strong> page, you can copy this name from the <strong>Realm 
 </div>
 </div>
 <div class="sect1">
-<h2 id="change-the-default-team"><a class="anchor" href="#change-the-default-team"></a>Change the Default Team</h2>
+<h2 id="default-teams"><a class="anchor" href="#default-teams"></a>Change the Default Team</h2>
 <div class="sectionbody">
 <div class="admonitionblock important">
 <table>
@@ -994,7 +994,56 @@ You can&#8217;t delete any team set as the default team.</p>
 </div>
 </li>
 <li>
-<p>Click <b class="button">Apply</b>.</p>
+<p>Click <b class="button">Save</b>.</p>
+<div class="paragraph">
+<p>Any permission changes apply to affected users when they next sign in to Capella.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="group-mapping"><a class="anchor" href="#group-mapping"></a>Enable or Disable Group Mapping</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, Capella assigns roles to SSO users based on which teams map to which SSO groups.
+To manage SSO users like any other Capella user, you can disable group mapping.</p>
+</div>
+<div class="paragraph">
+<p>When you turn off group mapping for a realm, Capella still uses the <a href="#default-teams">default team</a> to assign roles when SSO users first sign in. After SSO users sign in, you manage them like other Capella users through the <strong>People</strong> tab and each project&#8217;s <strong>Collaborators</strong> tab.</p>
+</div>
+<div class="paragraph">
+<p>For more information about managing SSO users with group mapping turned off, see <a href="../manage-organization-users.html" class="xref page">Manage Organization Users</a> and <a href="../../projects/manage-project-users.html" class="xref page">Manage Project Users</a></p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When SSO users sign in for the first time after you&#8217;ve disabled group mapping, they keep their current roles.
+If they sign in after you enable group mapping, their roles sync based on any mapped SSO groups and Capella deletes the old permissions.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To enable or disable group mapping for an existing realm:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>On the <a href="#access-realms"><strong>Organization Realms</strong> page</a>, click the name of the realm you&#8217;re editing.</p>
+</li>
+<li>
+<p>Within the <strong>Group Mapping</strong> section, choose to enable or disable group mapping.</p>
+</li>
+<li>
+<p>Click <b class="button">Save</b>.</p>
 <div class="paragraph">
 <p>Any permission changes apply to affected users when they next sign in to Capella.</p>
 </div>
