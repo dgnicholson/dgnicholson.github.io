@@ -789,6 +789,11 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
+    <a class="menu_title menu_link" href="alert-reference.html">Alert Reference</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
     <a class="menu_title menu_link" href="../release-notes/release-notes.html">Capella Release Notes</a>
   </span>
 </li>
@@ -927,7 +932,7 @@ This page describes the various regions and configurations available to you when
 <th class="tableblock halign-left valign-top">Azure Region</th>
 <th class="tableblock halign-left valign-top">Location</th>
 <th class="tableblock halign-center valign-top">Ultra Disk Support</th>
-<th class="tableblock halign-center valign-top">Trial Support <sup>[<a href="#footnote-2">*</a>]</sup></th>
+<th class="tableblock halign-center valign-top">Trial Support <sup>[<a href="#footnote-1">1</a>]</sup></th>
 </tr>
 </thead>
 <tbody>
@@ -940,12 +945,6 @@ This page describes the various regions and configurations available to you when
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>canadacentral</code></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Canada Central (Toronto)</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>✔</strong></p></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>westus3</code></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">West US 3 (Arizona)</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><strong>✔</strong></p></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
@@ -971,28 +970,10 @@ This page describes the various regions and configurations available to you when
 <th class="tableblock halign-left valign-top">Azure Region</th>
 <th class="tableblock halign-left valign-top">Location</th>
 <th class="tableblock halign-center valign-top">Ultra Disk Support</th>
-<th class="tableblock halign-center valign-top">Trial Support <sup>[<a href="#footnote-2">*</a>]</sup></th>
+<th class="tableblock halign-center valign-top">Trial Support <sup>[<a href="#footnote-1">1</a>]</sup></th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>norwayeast</code></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Norway East (Oslo)</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>uksouth</code></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UK South (London)</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>✔</strong></p></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>westeurope</code></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">West Europe (Netherlands)</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>✔</strong></p></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>swedencentral</code></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sweden Central (Gävle)</p></td>
@@ -1015,16 +996,10 @@ This page describes the various regions and configurations available to you when
 <th class="tableblock halign-left valign-top">Azure Region</th>
 <th class="tableblock halign-left valign-top">Location</th>
 <th class="tableblock halign-center valign-top">Ultra Disk Support</th>
-<th class="tableblock halign-center valign-top">Trial Support <sup>[<a href="#footnote-2">*</a>]</sup></th>
+<th class="tableblock halign-center valign-top">Trial Support <sup>[<a href="#footnote-1">1</a>]</sup></th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>australiaeast</code></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Australia East (New South Wales)</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>✔</strong></p></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>koreacentral</code></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Korea Central (Seoul)</p></td>
@@ -1042,8 +1017,8 @@ This page describes the various regions and configurations available to you when
 </div>
 </div>
 </div>
-<div id="footnote-2" class="paragraph">
-<p><sup>[<a href="#supported-regions">*</a>]</sup> A <a href="https://cloud.couchbase.com/sign-up">self-service trial</a> can deploy a database to this Azure region.</p>
+<div id="footnote-1" class="paragraph">
+<p><sup>[<a href="#supported-regions">1</a>]</sup> A <a href="https://cloud.couchbase.com/sign-up">self-service trial</a> can deploy a database to this Azure region.</p>
 </div>
 </div>
 </div>
@@ -1145,7 +1120,7 @@ The service group that includes the <a href="../clusters/data-service/data-servi
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2 vCPUs <sup>[<a href="#footnote-3">3</a>]</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 vCPUs <sup>[<a href="#footnote-2">2</a>]</sup></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8 GiB</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Standard_D2s_v5</p></td>
 </tr>
@@ -1256,8 +1231,8 @@ The service group that includes the <a href="../clusters/data-service/data-servi
 </tr>
 </tbody>
 </table>
-<div id="footnote-3" class="paragraph">
-<p><sup>[<a href="#azure-configurations">3</a>]</sup> This configuration is only available for <a href="https://cloud.couchbase.com/sign-up">self-service trial</a> databases in Capella.</p>
+<div id="footnote-2" class="paragraph">
+<p><sup>[<a href="#azure-configurations">2</a>]</sup> This configuration is only available for <a href="https://cloud.couchbase.com/sign-up">self-service trial</a> databases in Capella.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1301,7 +1276,7 @@ The following Azure premium SSD sizes are available in Capella:</p>
 <tr>
 <th class="tableblock halign-left valign-top">Type</th>
 <th class="tableblock halign-left valign-top">Disk size (GiB)</th>
-<th class="tableblock halign-left valign-top">Provisioned IOPS per disk <sup>[<a href="#footnote-4">*</a>]</sup></th>
+<th class="tableblock halign-left valign-top">Provisioned IOPS per disk <sup>[<a href="#footnote-3">3</a>]</sup></th>
 </tr>
 </thead>
 <tbody>
@@ -1347,8 +1322,8 @@ The following Azure premium SSD sizes are available in Capella:</p>
 </tr>
 </tbody>
 </table>
-<div id="footnote-4" class="paragraph">
-<p><sup>[<a href="#premium-disks">*</a>]</sup> The guaranteed number of IOPS per the disk specification.
+<div id="footnote-3" class="paragraph">
+<p><sup>[<a href="#premium-disks">3</a>]</sup> The guaranteed number of IOPS per the disk specification.
 See <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types#premium-ssd-size">Premium SSD size</a> for more information.</p>
 </div>
 </div>
