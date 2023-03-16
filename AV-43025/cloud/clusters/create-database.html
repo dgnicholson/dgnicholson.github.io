@@ -591,10 +591,23 @@
 </li>
 </ul>
 </li>
-<li class="menu_list" data-depth="1">
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Add Private Endpoints</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../security/add-aws-private-link.html">Add an AWS PrivateLink Connection</a>
   </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../security/add-azure-private-link.html">Add an Azure Private Link Connection</a>
+  </span>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -775,6 +788,11 @@
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../reference/sdk-compatibility.html">SDK Compatibility</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../reference/command-line-tools.html">Command Line Tools</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1036,11 +1054,7 @@ In most cases, you can accept the default CIDR block.</p>
 <li>
 <p>Select a <strong>Couchbase Server Version</strong>.</p>
 <div class="paragraph">
-<p>If you&#8217;re using AWS or GCP as a cloud provider, you can select Couchbase Server&#160;7.0 or Couchbase Server&#160;7.1 as the backend server for your database.
-The recommended default is Couchbase Server&#160;7.1.</p>
-</div>
-<div class="paragraph">
-<p>If you&#8217;re using Azure, only Couchbase Server&#160;7.1 is available.</p>
+<p>Couchbase Server&#160;7.1 is currently the only option for all cloud providers.</p>
 </div>
 </li>
 <li>
@@ -1070,10 +1084,6 @@ You can also add more service groups by clicking <b class="button">Add Service G
 <p>Configure each service group with a node quantity.
 Individual service groups can have between 2 and 27 nodes but cannot collectively exceed 27 in a database.
 The service group that includes the Data Service requires at least 3 nodes.</p>
-</div>
-<div class="paragraph">
-<p>If the database uses Couchbase Server&#160;7.0 with multiple availability zones, any additional nodes you add to the Data Service must be added in multiples of three.
-Databases using Couchbase Server&#160;7.1 support unequal server groups and do not have this requirement.</p>
 </div>
 </li>
 <li>

@@ -591,10 +591,23 @@
 </li>
 </ul>
 </li>
-<li class="menu_list" data-depth="1">
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Add Private Endpoints</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../security/add-aws-private-link.html">Add an AWS PrivateLink Connection</a>
   </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../security/add-azure-private-link.html">Add an Azure Private Link Connection</a>
+  </span>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -779,6 +792,11 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
+    <a class="menu_title menu_link" href="../reference/command-line-tools.html">Command Line Tools</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
     <a class="menu_title menu_link" href="../reference/browser-compatibility.html">Supported Browsers</a>
   </span>
 </li>
@@ -906,7 +924,7 @@ Couchbase recommends a robust scheduled backup and retention time policy as part
 <div class="sectionbody">
 <div class="paragraph">
 <p>All buckets can have a <strong>Set Weekly Schedule</strong> for <a href="manage-backup.html#configure-automatic-backups" class="xref page">backing up</a>.
-The incremental options are 4, 6, 8, 12, or 24 hours.
+You can choose an incremental backup interval from several available hourly options.
 Alternatively, you can choose not to back up your buckets.</p>
 </div>
 </div>
@@ -1103,7 +1121,7 @@ For <strong>Set Weekly Schedule</strong>, a cycle is the weekly full backup and 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4, 6, 8,12, or 24 hours [User Chosen]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hourly</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4 Weeks</p></td>
 </tr>
 <tr>

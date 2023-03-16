@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://dgnicholson.github.io/AV-43025/cloud/get-started/sdk-playground.html">
 <link rel="stylesheet" href="../../_/css/site.css">
 <script src="../../_/js/vendor/jquery.js"></script>
-<meta name="description" content="Use the SDK Playground to learn more about Couchbase&#x27;s SDKs and SQL++.">
+<meta name="description" content="Use the SDK Playground to practice and learn more about Couchbase&#x27;s SDKs and SQL++.">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
         <link rel="prev" href="run-first-queries.html">
         <link rel="next" href="configuring-app-services.html">
@@ -600,10 +600,23 @@
 </li>
 </ul>
 </li>
-<li class="menu_list" data-depth="1">
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Add Private Endpoints</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../security/add-aws-private-link.html">Add an AWS PrivateLink Connection</a>
   </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../security/add-azure-private-link.html">Add an Azure Private Link Connection</a>
+  </span>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -788,6 +801,11 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
+    <a class="menu_title menu_link" href="../reference/command-line-tools.html">Command Line Tools</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
     <a class="menu_title menu_link" href="../reference/browser-compatibility.html">Supported Browsers</a>
   </span>
 </li>
@@ -903,12 +921,17 @@
 <div class="sectionbody">
 <div class="quoteblock abstract">
 <blockquote>
-Use the SDK Playground to learn more about Couchbase&#8217;s SDKs and SQL++.
+Use the SDK Playground to practice and learn more about Couchbase&#8217;s SDKs and SQL++.
 </blockquote>
 </div>
 <div class="paragraph">
 <p>The SDK Playground gives you interactive tutorials that let you try out Couchbase SDK and SQL++ code examples inside the Couchbase Capella UI.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how-playground-works"><a class="anchor" href="#how-playground-works"></a>How to use the SDK Playground</h2>
+<div class="sectionbody">
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -917,26 +940,7 @@ Use the SDK Playground to learn more about Couchbase&#8217;s SDKs and SQL++.
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If you want to disable the SDK Playground:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>To return to your organization, click the Couchbase Capella logo.</p>
-</li>
-<li>
-<p>On the <strong>Databases</strong> tab, select the database where you want to disable the SDK Playground.</p>
-</li>
-<li>
-<p>Go to <span class="menuseq"><b class="menu">Settings</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">General</b></span>.</p>
-</li>
-<li>
-<p>Under <strong>Playground</strong>, select <strong>Disable Playground</strong>.</p>
-</li>
-<li>
-<p>Click <b class="button">Save</b>.</p>
-</li>
-</ol>
+<p>First ensure you have the <strong>travel-sample</strong> bucket installed on your Couchbase database. If you don&#8217;t, reinstall the trial cluster or <a href="../support/manage-support.html" class="xref page">Request Support</a>.</p>
 </div>
 </td>
 </tr>
@@ -961,7 +965,7 @@ Use the SDK Playground to learn more about Couchbase&#8217;s SDKs and SQL++.
 <p>To change the scope targeted by the SDK Playground examples, in the <strong>Scope</strong> list, select a scope.</p>
 </li>
 <li>
-<p>To change the programming language for the generated code samples, above the example code, select the <strong>Node.js</strong>, <strong>Python</strong>, <strong>.NET</strong>, or <strong>Java</strong> tab.</p>
+<p>To change the programming language for the generated code samples, above the example code, select the <strong>Node.js</strong> or <strong>Python</strong> tab.</p>
 </li>
 <li>
 <p>To view the full example code for an example, select the <strong>Full Code</strong> tab.</p>
@@ -983,6 +987,72 @@ Use the SDK Playground to learn more about Couchbase&#8217;s SDKs and SQL++.
 </li>
 </ol>
 </div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how-playground-works"><a class="anchor" href="#how-playground-works"></a>How the SDK Playground works</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The code examples are run in an isolated remote execution environment that is deployed in the USA.
+There are limits on how long code examples can be executed for each language runtime.</p>
+</div>
+<div class="paragraph">
+<p>The remote execution environment is firewalled to not access any domains or networks outside of the Couchbase Cloud environment.</p>
+</div>
+<div class="paragraph">
+<p>When running any of the examples on the playground, a temporary credential is generated with Read &amp; Write access to the specified bucket.</p>
+</div>
+<div class="paragraph">
+<p>Credentials are destroyed immediately after the request is completed. For security, ensure you don&#8217;t add your database access credentials to the code examples.</p>
+</div>
+<div class="paragraph">
+<p>Similar to the temporary credentials, temporary network access to your database is provided to the remote execution environment as well.
+This network access gets automatically revoked after one hour.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="disable-the-playground"><a class="anchor" href="#disable-the-playground"></a>Disable the SDK Playground</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We maintain a high level of security in the Couchbase Capella SDK Playground, and continuously implement measures to ensure its ongoing safety.
+Here are some of our protective features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can only run the predefined examples we provide</p>
+</li>
+<li>
+<p>You can only work with the sample data we provide</p>
+</li>
+<li>
+<p>You only create temporary credentials that expire after each example execution</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you are using Couchbase Capella in a highly regulated industry, you can disable the Playground by following these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To return to your organization, click the Couchbase Capella logo.</p>
+</li>
+<li>
+<p>On the <strong>Databases</strong> tab, select the database where you want to disable the SDK Playground.</p>
+</li>
+<li>
+<p>Go to <span class="menuseq"><b class="menu">Settings</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">General</b></span>.</p>
+</li>
+<li>
+<p>Under <strong>Playground</strong>, select <strong>Disable Playground</strong>.</p>
+</li>
+<li>
+<p>Click <b class="button">Save</b>.</p>
 </li>
 </ol>
 </div>

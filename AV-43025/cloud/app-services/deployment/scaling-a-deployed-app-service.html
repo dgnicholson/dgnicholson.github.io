@@ -591,10 +591,23 @@
 </li>
 </ul>
 </li>
-<li class="menu_list" data-depth="1">
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Add Private Endpoints</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../../security/add-aws-private-link.html">Add an AWS PrivateLink Connection</a>
   </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../security/add-azure-private-link.html">Add an Azure Private Link Connection</a>
+  </span>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -779,6 +792,11 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
+    <a class="menu_title menu_link" href="../../reference/command-line-tools.html">Command Line Tools</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
     <a class="menu_title menu_link" href="../../reference/browser-compatibility.html">Supported Browsers</a>
   </span>
 </li>
@@ -929,9 +947,6 @@ Having deployed an App Service, you may wish to scale it up or down by adjusting
 <div class="paragraph">
 <p>There is no downtime associated with changing the configuration.
 The App Services will continue to run while the system is reconfigured.</p>
-</div>
-<div class="paragraph">
-<p>Capella will also allow reconfiguration of  App Services while the host database is undergoing rescaling.</p>
 </div>
 </td>
 </tr>

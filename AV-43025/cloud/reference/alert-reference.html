@@ -590,10 +590,23 @@
 </li>
 </ul>
 </li>
-<li class="menu_list" data-depth="1">
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Add Private Endpoints</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../security/add-aws-private-link.html">Add an AWS PrivateLink Connection</a>
   </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../security/add-azure-private-link.html">Add an Azure Private Link Connection</a>
+  </span>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -774,6 +787,11 @@
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="sdk-compatibility.html">SDK Compatibility</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="command-line-tools.html">Command Line Tools</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1065,22 +1083,10 @@ Note that some alerts appear in multiple categories.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A new cluster was successfully deployed and can now serve traffic. Clusters are managed deployments of Couchbase Server. Each cluster consists of Couchbase Server instances that each run on independent nodes. Remember to scale your cluster to meet your performance requirements. Running clusters consumes Couchbase Capella Credits.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serverless_database_throttled</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Serverless Database Throttled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A serverless database is currently being throttled due to usage exceeding permitted limits.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>database_deletion_completed</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Database Deletion Completed</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A database was successfully deleted.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>database_deployment_completed</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Database Deployment Completed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A new serverless database was successfully deployed and can now serve traffic.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cluster_deletion_completed</code></p></td>
@@ -1099,12 +1105,6 @@ Note that some alerts appear in multiple categories.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cluster Created</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Scale your Cluster to meet your performance requirements. Running Clusters consume Capella credits.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serverless_database_not_throttled</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Serverless Database No Longer Throttled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A serverless database is no longer being throttled as usage has returned to within permitted limits.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cluster_deleted</code></p></td>
@@ -1155,12 +1155,6 @@ Note that some alerts appear in multiple categories.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Runaway Disk Queue</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A bucket is experiencing a runaway disk queue. This is when data is added to the write queue faster than the node can write to the bucket. This issue can be caused by a sudden spike of incoming transactions or an undersized cluster that can&#8217;t keep up with its workload. Consider validating incoming data before scaling node capacity.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serverless_database_throttled</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Serverless Database Throttled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A serverless database is currently being throttled due to usage exceeding permitted limits.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>add_storage</code></p></td>
@@ -1227,12 +1221,6 @@ Note that some alerts appear in multiple categories.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bucket Hard Out Of Memory</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A bucket exceeded its available memory and requires immediate attention. This issue can be caused by changes to the incoming data, undersized service nodes, undersized service quotas, or a long time to live (TTL) setting on documents. Consider immediately adding additional memory or nodes to resolve the issue.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serverless_database_not_throttled</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Serverless Database No Longer Throttled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A serverless database is no longer being throttled as usage has returned to within permitted limits.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>kv_mem_quota_usage_high</code></p></td>
@@ -1389,12 +1377,6 @@ Note that some alerts appear in multiple categories.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An organization user was added to a project. The level of access every project user has to the clusters in a project is controlled by their assigned project role(s). You can view and manage project users by opening the project in the Projects tab and clicking the Users tab.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serverless_ip_allowlist_add</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IP Added to Allow List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">There&#8217;s a new entry in a cluster’s Allowed IP list. This IP address or CIDR block now has temporary or permanent ingress access to the cluster. We recommend that you use temporary entries whenever possible and routinely audit the Allowed IP list.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sync_gateway_user_deleted</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">App Service User Deleted</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
@@ -1459,18 +1441,6 @@ Note that some alerts appear in multiple categories.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Database Credentials Updated</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A database credential for a cluster was updated. An application can use this credential to access cluster data. We recommend the regular rotation of database credentials.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serverless_ip_allowlist_update</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IP Updated from Allow List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An entry in a cluster&#8217;s Allowed IP list was updated. Capella only allows clusters to connect to trusted IP addresses added to the Allowed IP list. Any attempted connection to or from an IP address that isn’t in a cluster’s Allowed IP list is denied.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serverless_ip_allowlist_remove</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IP Removed from Allow List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An entry was removed from a cluster’s Allowed IP list. The removed IP address or CIDR block will no longer have access to the cluster. It can take a few minutes for the cluster to reject traffic once you remove an address. Any attempted connection to or from an IP address that isn’t in a cluster’s Allowed IP list is denied.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>user_invite_declined</code></p></td>
@@ -1865,12 +1835,6 @@ Note that some alerts appear in multiple categories.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The process to peer a cluster with an application VPC or another cluster has been initiated.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serverless_database_throttled</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Serverless Database Throttled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A serverless database is currently being throttled due to usage exceeding permitted limits.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>project_created</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Project Created</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
@@ -1881,12 +1845,6 @@ Note that some alerts appear in multiple categories.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Database Deletion Completed</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A database was successfully deleted.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>database_deployment_completed</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Database Deployment Completed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A new serverless database was successfully deployed and can now serve traffic.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sync_gateway_scaling_failed</code></p></td>
@@ -1997,12 +1955,6 @@ Note that some alerts appear in multiple categories.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Scale your Cluster to meet your performance requirements. Running Clusters consume Capella credits.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>database_deletion_requested</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Database Deletion Requested</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">There has been a request to delete a serverless database.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sync_gateway_deletion_requested</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">App Service Deletion Requested</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
@@ -2013,12 +1965,6 @@ Note that some alerts appear in multiple categories.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cluster Deployment Failed</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A cluster failed to deploy. Clusters that fail deployment cannot guarantee service functionality. This issue could be due to an underlying service or limit issue. If you need immediate assistance, contact Couchbase Capella Support or try again later. You can create a support ticket by clicking on the Create Support Ticket button.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>database_deployment_failed</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Database Deployment Failed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A serverless database failed to deploy.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sync_gateway_app_endpoint_oidc_auth_disabled</code></p></td>
@@ -2063,12 +2009,6 @@ Note that some alerts appear in multiple categories.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">App endpoint access control function update has failed. Please contact Couchbase Capella Support for assistance. You can create a support ticket by clicking on the Create Support Ticket button.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>database_deletion_failed</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Database Deletion Failed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A serverless database deletion has failed.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sync_gateway_upgrade_completed</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">App Service Upgrade Completed</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
@@ -2109,12 +2049,6 @@ Note that some alerts appear in multiple categories.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cluster Upgrade Initiated</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An upgrade for a cluster was initiated.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serverless_database_not_throttled</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Serverless Database No Longer Throttled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A serverless database is no longer being throttled as usage has returned to within permitted limits.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sync_gateway_app_endpoint_resync_completed</code></p></td>
