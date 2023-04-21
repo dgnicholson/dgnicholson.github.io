@@ -13,7 +13,7 @@
 
 
 <meta name="dcterms.subject" content="cloud">
-<meta name="dcterms.identifier" content="master">
+<meta name="dcterms.identifier" content="">
 <meta name="page-url" content="/cloud/clusters/modify-database.html">
 <meta name="generator" content="Antora 3.0.0">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -107,7 +107,7 @@
       <div class="component_list-version">
         <span class="component_list_title">Couchbase Capella</span>
       </div>
-      <div class="version_items hide" data-version="master">
+      <div class="version_items hide" data-version="">
 <ul class="menu_row">
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
@@ -225,7 +225,7 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="query-service/query-service.html">SQL++ Query Service</a>
+    <a class="menu_title menu_link" href="query-service/query-service.html">Query Service</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
@@ -244,29 +244,6 @@
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
     <a class="menu_title menu_link" href="index-service/manage-indexes.html">Manage Indexes</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="search-service/search-service.html">Search Service</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="search-service/create-full-text-indexes.html">Create Full Text Indexes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="search-service/manage-full-text-indexes.html">Manage Full Text Indexes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="search-service/perform-full-text-searches.html">Perform Full Text Searches</a>
   </span>
 </li>
 </ul>
@@ -427,18 +404,20 @@
     <a class="menu_title menu_link" href="../app-services/billing/billing.html">Billing</a>
   </span>
 </li>
-<li class="menu_list is-parent closed" data-depth="1">
+<li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <span class="in-toggle"></span>
     <span class="menu_title menu_text">Migrating</span>
   </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
+</li>
+<li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../app-services/migrating/on-prem-to-capella.html">From Self-Managed Servers</a>
   </span>
 </li>
-</ul>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/maintenance/upgrading-app-services.html">Upgrading App Services</a>
+  </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
@@ -1001,9 +980,12 @@ IO2 is higher performance and more durable with better reliability.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Storage</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#increase-storage">Increase storage</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="scale-database.html#Storage-Auto-Expansion" class="xref page">Storage Auto-Expansion</a></p>
+<p class="tableblock"><a href="#increase-storage">Increase storage</a></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>You can&#8217;t decrease storage once it has been added to a database.</p>
+<p><strong>AWS</strong>: Storage can&#8217;t be automatically decreased once it has been added to a database.
+You will be required to replace and rebalance nodes manually if you wish to decrease.
+Additionally, in-place Storage Auto-Expansion can only occur once every 6 hours. Refer to the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/modify-volume-requirements.html#elastic-volumes-limitations">AWS limitations documentation</a> to learn more about storage scaling limitations.</p>
 </div>
 <div class="paragraph">
 <p><strong>Azure</strong>: To increase storage, you need to choose a new disk type.</p>
@@ -1100,15 +1082,14 @@ For more information about the configuration options available for each cloud pr
 </div>
 <div class="sect2">
 <h3 id="add-service"><a class="anchor" href="#add-service"></a>Add a Service</h3>
-<div class="admonitionblock note">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-<div class="title">Limitations</div>
-You can&#8217;t add a service when that service already exists on the database.
+You can enable Couchbase Capella&#8217;s <a href="#clusters:modules/scale-cluster.adoc#Storage-Auto-Expansion" class="xref unresolved">Storage Auto-Expansion</a> feature to automatically increase your storage capacity as your data grows.
 </td>
 </tr>
 </table>
@@ -1148,17 +1129,8 @@ You can&#8217;t add a service when that service already exists on the database.
 <img src="_images/adding-services.png" alt="Adding services to database" width="600">
 </div>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-You can also add another service group by clicking <b class="button">Add Service Group</b>.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>You can also add another service group by clicking <b class="button">Add Service Group</b>.</p>
 </div>
 <div class="paragraph">
 <p>Once you add a service to a new or existing service group, you may need to adjust its hardware configuration.
@@ -1170,9 +1142,6 @@ For more information about sizing a database, see <a href="sizing.html" class="x
 </li>
 </ol>
 </div>
-</div>
-<div class="sect2">
-<h3 id="remove-service"><a class="anchor" href="#remove-service"></a>Remove a Service</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1181,11 +1150,14 @@ For more information about sizing a database, see <a href="sizing.html" class="x
 </td>
 <td class="content">
 <div class="title">Limitations</div>
-You can&#8217;t remove the Data Service.
+You can&#8217;t add a service when that service already exists on the database.
 </td>
 </tr>
 </table>
 </div>
+</div>
+<div class="sect2">
+<h3 id="remove-service"><a class="anchor" href="#remove-service"></a>Remove a Service</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1224,9 +1196,6 @@ You can&#8217;t remove the Data Service.
 </li>
 </ol>
 </div>
-</div>
-<div class="sect2">
-<h3 id="add-remove-nodes"><a class="anchor" href="#add-remove-nodes"></a>Add or Remove Nodes</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1235,12 +1204,14 @@ You can&#8217;t remove the Data Service.
 </td>
 <td class="content">
 <div class="title">Limitations</div>
-Services require a minimum of two nodes, except for the Data Service, which needs three.
-A database can have up to 27 nodes.
+You can&#8217;t remove the Data Service.
 </td>
 </tr>
 </table>
 </div>
+</div>
+<div class="sect2">
+<h3 id="add-remove-nodes"><a class="anchor" href="#add-remove-nodes"></a>Add or Remove Nodes</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1273,6 +1244,20 @@ A database can have up to 27 nodes.
 <p>If you have no other changes, <a href="#apply-changes">review and apply the new configuration</a>.</p>
 </li>
 </ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Limitations</div>
+Services require a minimum of two nodes, except for the Data Service, which needs three.
+A database can have up to 27 nodes.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1316,25 +1301,6 @@ A database can have up to 27 nodes.
 </div>
 <div class="sect2">
 <h3 id="change-disk"><a class="anchor" href="#change-disk"></a>Change Disk Type</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="title">Limitations</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>GCP</strong>: Only supports PD-SSD.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1368,9 +1334,6 @@ A database can have up to 27 nodes.
 </li>
 </ol>
 </div>
-</div>
-<div class="sect2">
-<h3 id="increase-storage"><a class="anchor" href="#increase-storage"></a>Increase Storage</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1379,13 +1342,10 @@ A database can have up to 27 nodes.
 </td>
 <td class="content">
 <div class="title">Limitations</div>
-<div class="paragraph">
-<p>Storage can&#8217;t be removed from a service configuration once added.</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Azure</strong>: You can only increase storage by choosing a new disk type.</p>
+<p><strong>GCP</strong>: Only supports PD-SSD.</p>
 </li>
 </ul>
 </div>
@@ -1393,6 +1353,9 @@ A database can have up to 27 nodes.
 </tr>
 </table>
 </div>
+</div>
+<div class="sect2">
+<h3 id="increase-storage"><a class="anchor" href="#increase-storage"></a>Increase Storage</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1427,9 +1390,6 @@ If the database uses Azure, you must choose a new disk type to increase storage.
 </li>
 </ol>
 </div>
-</div>
-<div class="sect2">
-<h3 id="change-iops"><a class="anchor" href="#change-iops"></a>Change IOPS</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1438,18 +1398,31 @@ If the database uses Azure, you must choose a new disk type to increase storage.
 </td>
 <td class="content">
 <div class="title">Limitations</div>
+<div class="paragraph">
+<p>Storage can&#8217;t be removed from a service configuration once added.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>GCP</strong>: IOPS (Input/Output Operations per Second) isn&#8217;t a directly configurable value.
-Instead, it&#8217;s automatically set at 30 reads and 30 writes IOPS per GB of storage provisioned.</p>
-</li>
-<li>
-<p><strong>Azure</strong>: IOPS for the Premium SSD (P) disk type are based on the chosen Premium SSD disk size.
-The IOPS for the Ultra disk type can be set, but the possible range depends on the chosen storage size.</p>
+<p><strong>Azure</strong>: You can only increase storage by choosing a new disk type.</p>
 </li>
 </ul>
 </div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="change-iops"><a class="anchor" href="#change-iops"></a>Change IOPS</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can enable Couchbase Capella&#8217;s <a href="#clusters:modules/scale-cluster.adoc#Storage-Auto-Expansion" class="xref unresolved">Storage Auto-Expansion</a> feature to automatically increase your storage and maintain IOPS performance.
 </td>
 </tr>
 </table>
@@ -1490,6 +1463,30 @@ If you&#8217;re using Azure&#8217;s Premium SSD disk type, you can&#8217;t chang
 <p>If you have no other changes, <a href="#apply-changes">review and apply the new configuration</a>.</p>
 </li>
 </ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Limitations</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>GCP</strong>: IOPS (Input/Output Operations per Second) isn&#8217;t a directly configurable value.
+Instead, it&#8217;s automatically set at 30 reads and 30 writes IOPS per GB of storage provisioned.</p>
+</li>
+<li>
+<p><strong>Azure</strong>: IOPS for the Premium SSD (P) disk type are based on the chosen Premium SSD disk size.
+The IOPS for the Ultra disk type can be set, but the possible range depends on the chosen storage size.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

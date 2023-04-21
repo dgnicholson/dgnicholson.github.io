@@ -13,7 +13,7 @@
 
 
 <meta name="dcterms.subject" content="cloud">
-<meta name="dcterms.identifier" content="master">
+<meta name="dcterms.identifier" content="">
 <meta name="page-url" content="/cloud/clusters/data-service/scopes-collections.html">
 <meta name="generator" content="Antora 3.0.0">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -107,7 +107,7 @@
       <div class="component_list-version">
         <span class="component_list_title">Couchbase Capella</span>
       </div>
-      <div class="version_items hide" data-version="master">
+      <div class="version_items hide" data-version="">
 <ul class="menu_row">
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
@@ -225,7 +225,7 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../query-service/query-service.html">SQL++ Query Service</a>
+    <a class="menu_title menu_link" href="../query-service/query-service.html">Query Service</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
@@ -244,29 +244,6 @@
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../index-service/manage-indexes.html">Manage Indexes</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../search-service/search-service.html">Search Service</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../search-service/create-full-text-indexes.html">Create Full Text Indexes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../search-service/manage-full-text-indexes.html">Manage Full Text Indexes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../search-service/perform-full-text-searches.html">Perform Full Text Searches</a>
   </span>
 </li>
 </ul>
@@ -427,18 +404,20 @@
     <a class="menu_title menu_link" href="../../app-services/billing/billing.html">Billing</a>
   </span>
 </li>
-<li class="menu_list is-parent closed" data-depth="1">
+<li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <span class="in-toggle"></span>
     <span class="menu_title menu_text">Migrating</span>
   </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
+</li>
+<li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../../app-services/migrating/on-prem-to-capella.html">From Self-Managed Servers</a>
   </span>
 </li>
-</ul>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../app-services/maintenance/upgrading-app-services.html">Upgrading App Services</a>
+  </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
@@ -936,9 +915,6 @@ For a complete overview, see <a href="#server:learn:data/scopes-and-collections.
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>With the <strong>Projects</strong> tab in your organization open, click the project with the database you&#8217;re working with.</p>
-</li>
-<li>
 <p>With the <strong>Databases</strong> tab open, select your database.</p>
 </li>
 <li>
@@ -988,9 +964,6 @@ The <strong>Bucket</strong> list allows you to switch between buckets in the cur
 <div class="content">
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
-<li>
-<p>With the <strong>Projects</strong> tab in your organization open, click the project with the database you&#8217;re working with.</p>
-</li>
 <li>
 <p>With the <strong>Databases</strong> tab open, select your database.</p>
 </li>
@@ -1057,9 +1030,6 @@ You can only restore them from a previous backup.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>With the <strong>Projects</strong> tab in your organization open, click the project with the database you&#8217;re working with.</p>
-</li>
-<li>
 <p>With the <strong>Databases</strong> tab open, select your database.</p>
 </li>
 <li>
@@ -1110,9 +1080,6 @@ You can only restore them from a previous backup.</p>
 <div class="content">
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
-<li>
-<p>With the <strong>Projects</strong> tab in your organization open, click the project with the database you&#8217;re working with.</p>
-</li>
 <li>
 <p>With the <strong>Databases</strong> tab open, select your database.</p>
 </li>
@@ -1169,9 +1136,6 @@ You can change the scope whose collections you wish to view using the <strong>Sc
 <div class="content">
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
-<li>
-<p>With the <strong>Projects</strong> tab in your organization open, click the project with the database you&#8217;re working with.</p>
-</li>
 <li>
 <p>With the <strong>Databases</strong> tab open, select your database.</p>
 </li>
@@ -1269,9 +1233,6 @@ You can restore these documents from a previous backup.
 <div class="content">
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
-<li>
-<p>With the <strong>Projects</strong> tab in your organization open, click the project with the database you&#8217;re working with.</p>
-</li>
 <li>
 <p>With the <strong>Databases</strong> tab open, select your database.</p>
 </li>

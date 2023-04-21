@@ -12,7 +12,7 @@
 
 
 <meta name="dcterms.subject" content="cloud">
-<meta name="dcterms.identifier" content="master">
+<meta name="dcterms.identifier" content="">
 <meta name="page-url" content="/cloud/release-notes/release-notes.html">
 <meta name="generator" content="Antora 3.0.0">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -106,7 +106,7 @@
       <div class="component_list-version">
         <span class="component_list_title">Couchbase Capella</span>
       </div>
-      <div class="version_items hide" data-version="master">
+      <div class="version_items hide" data-version="">
 <ul class="menu_row">
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
@@ -224,7 +224,7 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../clusters/query-service/query-service.html">SQL++ Query Service</a>
+    <a class="menu_title menu_link" href="../clusters/query-service/query-service.html">Query Service</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
@@ -243,29 +243,6 @@
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../clusters/index-service/manage-indexes.html">Manage Indexes</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../clusters/search-service/search-service.html">Search Service</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../clusters/search-service/create-full-text-indexes.html">Create Full Text Indexes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../clusters/search-service/manage-full-text-indexes.html">Manage Full Text Indexes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../clusters/search-service/perform-full-text-searches.html">Perform Full Text Searches</a>
   </span>
 </li>
 </ul>
@@ -426,18 +403,20 @@
     <a class="menu_title menu_link" href="../app-services/billing/billing.html">Billing</a>
   </span>
 </li>
-<li class="menu_list is-parent closed" data-depth="1">
+<li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <span class="in-toggle"></span>
     <span class="menu_title menu_text">Migrating</span>
   </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
+</li>
+<li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../app-services/migrating/on-prem-to-capella.html">From Self-Managed Servers</a>
   </span>
 </li>
-</ul>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/maintenance/upgrading-app-services.html">Upgrading App Services</a>
+  </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
@@ -907,6 +886,138 @@
 <ul id="contributorList"></ul>
 <span  id="otherContributor"> + </span>
 </div><div class="sect1">
+<h2 id="april-2023-changelog"><a class="anchor" href="#april-2023-changelog"></a>April 2023 Changelog</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Azure Private Link is now available as a network access management option.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>With private endpoints, you can use <a href="https://azure.microsoft.com/en-us/services/private-link/">Azure Private Link</a> to connect an Azure VNET to Couchbase Capella. The benefits of this include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Private endpoint traffic doesn&#8217;t traverse the Internet, allowing services to function as if you host them within your Azure VNET.</p>
+</li>
+<li>
+<p>Private endpoints provide access to only a specific service or application, unlike <a href="../clouds/private-network.html" class="xref page">VNET peering</a>, which allows access to all resources.</p>
+</li>
+<li>
+<p>Private endpoints support CIDR overlap.</p>
+</li>
+<li>
+<p>Only private endpoints can initiate a connection.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>To start using Azure Private Link with Capella, see <a href="../security/add-azure-private-link.html" class="xref page">Add an Azure Private Link Connection</a>.</p>
+</div>
+</li>
+<li>
+<p>Larger instance types are available.</p>
+<div class="paragraph">
+<p>These additional compute and memory configurations are now available when deploying a database using AWS or GCP as your cloud provider:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 75%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">AWS</th>
+<th class="tableblock halign-left valign-top">GCP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64 vCPUs
+512 GB</p>
+<p class="tableblock">96 vCPUs
+192 GB</p>
+<p class="tableblock">96 vCPUs
+384 GB</p>
+<p class="tableblock">96 vCPUs
+768 GB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">96 vCPUs
+384 GB</p>
+<p class="tableblock">96 vCPUs
+768 GB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>To see a full list of the available instance types for AWS and GCP, see <a href="../reference/aws.html#compute-and-memory" class="xref page">Amazon Web Services (AWS)
+</a> and <a href="../reference/gcp.html#compute-and-memory" class="xref page">Google Cloud Platform (GCP)</a>.</p>
+</div>
+</li>
+<li>
+<p>Storage Auto-Expansion is now available.</p>
+<div class="paragraph">
+<p>Capella now provides a <a href="../clusters/scale-database.html#Storage-Auto-Expansion" class="xref page">Storage Auto-Expansion</a> feature that automatically scales your storage capacity as your data grows over time. This scaling occurs seamlessly, without adding new nodes or rebalancing data, ensuring uninterrupted and smooth database operations.</p>
+</div>
+<div class="paragraph">
+<p>The system enables Storage Auto-Expansion by default when you create a new Service Group, provided you are an AWS or GCP user. Remember, you will only incur charges for the extra storage when the system triggers a capacity increase.</p>
+</div>
+</li>
+<li>
+<p>Memory Only buckets are now available</p>
+<div class="paragraph">
+<p>Use Memory Only buckets in Capella for use cases such as caching where you need low latencies.
+Please use caution with memory only buckets as the data resides in-memory only and data can be lost on database restart.
+For more information, see <a href="../clusters/data-service/manage-buckets.html" class="xref page">Manage Buckets</a>.</p>
+</div>
+</li>
+<li>
+<p>Server audit logging is now available for GCP-hosted databases</p>
+<div class="paragraph">
+<p>Capella provides <a href="../security/auditing.html" class="xref page">event auditing</a>, where you can download server-logged events for inspection or archiving.
+This feature helps with investigations and meeting organizational security or compliance requirements.
+Server auditing is now available on Capella GCP-hosted databases with the <a href="../support/support.html#support-levels" class="xref page">Enterprise plan</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This feature is available on new databases.
+Couchbase is upgrading existing databases so all GCP enterprise customers can use this feature.
+If GCP auditing isn&#8217;t yet available for your database, open a support ticket so we can prioritize your database upgrade to get you using audit logging with your existing GCP databases as soon as possible.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="march-2023-changelog"><a class="anchor" href="#march-2023-changelog"></a>March 2023 Changelog</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>App Services Self-Service Maintenance Schedules</p>
+<div class="paragraph">
+<p>Capella now automatically notifies you about upcoming upgrades and maintenance jobs on App Services clusters that you manage.
+A new self-serve maintenance screen enables you to upgrade your App Service, reschedule upcoming maintenance jobs or set your preferred maintenance times.
+For more information, see <a href="../app-services/maintenance/upgrading-app-services.html" class="xref page">App Services Maintenance</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="february-2023-changelog"><a class="anchor" href="#february-2023-changelog"></a>February 2023 Changelog</h2>
 <div class="sectionbody">
 <div class="ulist">
@@ -1896,7 +2007,7 @@ Note that the Analytics Service depends on the <a href="../clusters/data-service
 </div>
 </li>
 <li>
-<p>For a cluster with Analytics Service deployed, N1QL for Analytics queries can be issued using the Couchbase SDK and the interactive <a href="../clusters/analytics-service/analytics-workbench.html" class="xref page">Analytics Workbench</a> Analytics.</p>
+<p>For a cluster with Analytics Service deployed, SQL++ for Analytics queries can be issued using the Couchbase SDK and the interactive <a href="../clusters/analytics-service/analytics-workbench.html" class="xref page">Analytics Workbench</a> Analytics.</p>
 </li>
 </ul>
 </div>

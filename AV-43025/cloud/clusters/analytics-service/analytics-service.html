@@ -12,7 +12,7 @@
 
 
 <meta name="dcterms.subject" content="cloud">
-<meta name="dcterms.identifier" content="master">
+<meta name="dcterms.identifier" content="">
 <meta name="page-url" content="/cloud/clusters/analytics-service/analytics-service.html">
 <meta name="generator" content="Antora 3.0.0">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -106,7 +106,7 @@
       <div class="component_list-version">
         <span class="component_list_title">Couchbase Capella</span>
       </div>
-      <div class="version_items hide" data-version="master">
+      <div class="version_items hide" data-version="">
 <ul class="menu_row">
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
@@ -224,7 +224,7 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../query-service/query-service.html">SQL++ Query Service</a>
+    <a class="menu_title menu_link" href="../query-service/query-service.html">Query Service</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
@@ -243,29 +243,6 @@
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../index-service/manage-indexes.html">Manage Indexes</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../search-service/search-service.html">Search Service</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../search-service/create-full-text-indexes.html">Create Full Text Indexes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../search-service/manage-full-text-indexes.html">Manage Full Text Indexes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../search-service/perform-full-text-searches.html">Perform Full Text Searches</a>
   </span>
 </li>
 </ul>
@@ -426,18 +403,20 @@
     <a class="menu_title menu_link" href="../../app-services/billing/billing.html">Billing</a>
   </span>
 </li>
-<li class="menu_list is-parent closed" data-depth="1">
+<li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <span class="in-toggle"></span>
     <span class="menu_title menu_text">Migrating</span>
   </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
+</li>
+<li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../../app-services/migrating/on-prem-to-capella.html">From Self-Managed Servers</a>
   </span>
 </li>
-</ul>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../app-services/maintenance/upgrading-app-services.html">Upgrading App Services</a>
+  </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
@@ -929,9 +908,9 @@ The Analytics Service also enables you to create
 <em>remote links</em> to analyze data on remote Couchbase databases.</p>
 </div>
 <div class="paragraph">
-<p>The Analytics Service supports the <em>N1QL for Analytics</em> query language, a next-generation declarative query language for JSON data.
-N1QL for Analytics has much in common with SQL, but it also includes a small number of extensions that address the different data models that the two languages were designed to query.
-For detailed information, refer to <a href="#server:analytics:6_n1ql.adoc" class="xref unresolved">N1QL for Analytics vs. N1QL for Query</a> and the <a href="#server:analytics:1_intro.adoc" class="xref unresolved">N1QL for Analytics Language Reference</a>.</p>
+<p>The Analytics Service supports the <em>SQL++ for Analytics</em> query language, a next-generation declarative query language for JSON data.
+SQL++ for Analytics has much in common with SQL, but it also includes a small number of extensions that address the different data models that the two languages were designed to query.
+For detailed information, refer to <a href="#server:analytics:6_n1ql.adoc" class="xref unresolved">SQL++ for Analytics vs. SQL++ for Query</a> and the <a href="#server:analytics:1_intro.adoc" class="xref unresolved">SQL++ for Analytics Language Reference</a>.</p>
 </div>
 </div>
 </div>
@@ -945,7 +924,7 @@ This service must also be deployed on the database in order to use the Analytics
 (Information about how these services interact with one another can be found in the <a href="#server:learn:services-and-indexes/services/analytics-service.adoc" class="xref unresolved">Couchbase Server documentation</a>.)</p>
 </div>
 <div class="paragraph">
-<p>If a database has the Analytics Service deployed, N1QL for Analytics queries can be issued using the Couchbase SDK and the interactive <a href="analytics-workbench.html" class="xref page">Analytics Workbench</a>.</p>
+<p>If a database has the Analytics Service deployed, SQL++ for Analytics queries can be issued using the Couchbase SDK and the interactive <a href="analytics-workbench.html" class="xref page">Analytics Workbench</a>.</p>
 </div>
 </div>
 </div>

@@ -13,7 +13,7 @@
 
 
 <meta name="dcterms.subject" content="cloud">
-<meta name="dcterms.identifier" content="master">
+<meta name="dcterms.identifier" content="">
 <meta name="page-url" content="/cloud/clusters/scale-database.html">
 <meta name="generator" content="Antora 3.0.0">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -107,7 +107,7 @@
       <div class="component_list-version">
         <span class="component_list_title">Couchbase Capella</span>
       </div>
-      <div class="version_items hide" data-version="master">
+      <div class="version_items hide" data-version="">
 <ul class="menu_row">
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
@@ -225,7 +225,7 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="query-service/query-service.html">SQL++ Query Service</a>
+    <a class="menu_title menu_link" href="query-service/query-service.html">Query Service</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
@@ -244,29 +244,6 @@
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
     <a class="menu_title menu_link" href="index-service/manage-indexes.html">Manage Indexes</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="search-service/search-service.html">Search Service</a>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="search-service/create-full-text-indexes.html">Create Full Text Indexes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="search-service/manage-full-text-indexes.html">Manage Full Text Indexes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="search-service/perform-full-text-searches.html">Perform Full Text Searches</a>
   </span>
 </li>
 </ul>
@@ -427,18 +404,20 @@
     <a class="menu_title menu_link" href="../app-services/billing/billing.html">Billing</a>
   </span>
 </li>
-<li class="menu_list is-parent closed" data-depth="1">
+<li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <span class="in-toggle"></span>
     <span class="menu_title menu_text">Migrating</span>
   </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
+</li>
+<li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../app-services/migrating/on-prem-to-capella.html">From Self-Managed Servers</a>
   </span>
 </li>
-</ul>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../app-services/maintenance/upgrading-app-services.html">Upgrading App Services</a>
+  </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
@@ -915,7 +894,7 @@ Databases can be multi-dimensionally scaled by adding or removing service instan
 </blockquote>
 </div>
 <div class="paragraph">
-<p>This page walks you through multi-dimensional database scaling.
+<p>This page will walk you through multi-dimensional database scaling.
 It includes information about database services, rebalancing, statuses, events, and jobs.</p>
 </div>
 <div class="paragraph">
@@ -973,7 +952,7 @@ These scaling techniques, together with the ability to add and remove whole serv
 <h2 id="rebalance"><a class="anchor" href="#rebalance"></a>Rebalance</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>All types of scaling result in the addition or removal of nodes from a database.
+<p>Many of the scaling actions result in the addition or removal of nodes from a database.
 Even changing a service instance size adds new nodes to the database, since Capella swaps out the underlying virtual machines for new ones.
 After performing any of these procedures, the database rebalances to accommodate the new number of active member nodes.</p>
 </div>
@@ -985,6 +964,87 @@ During rebalance, the database continues to service requests for data while the 
 <p>Couchbase Server maintains consistent availability and performance during rebalancing.
 See the <a href="#server:learn:clusters-and-availability/rebalance.adoc" class="xref unresolved">rebalance documentation</a> to learn about how each service behaves during a rebalance.
 It can help you assess the impacts of this process on your deployments.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Storage-Auto-Expansion"><a class="anchor" href="#Storage-Auto-Expansion"></a>Storage Auto-Expansion</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Storage Auto-Expansion is available on AWS and GCP only.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Couchbase Capella’s Storage Auto-Expansion automatically expands your storage capacity.
+When your usage exceeds 75%, the system triggers a 50% increase in disk storage to ensure smooth database operation.
+This feature is especially helpful in preventing downtime and service interruptions that result from running out of storage capacity.</p>
+</div>
+<div class="paragraph">
+<p>Storage Auto-Expansion manages the entire scaling process and underlying infrastructure changes without manual intervention.</p>
+</div>
+<div class="paragraph">
+<p>On the <a href="#clusters:modules/create-database.adoc" class="xref unresolved">Create Database</a> page, the Auto-Expansion toggle is enabled by default when creating a new database or Service Group.
+With Storage Auto-Expansion enabled, you&#8217;ll be charged only for the additional storage capacity when the limit increase is triggered.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/auto-expansion-toggle-on.png" alt="auto expansion toggle on">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Couchbase recommends enabling the Auto-Expansion toggle for all existing Service Groups to automatically scale the storage of your production databases.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To minimize the risk of disruptions to your database, it’s critical to carefully review all cloud provider limitations and plan accordingly before making any changes to your storage configuration.
+Additionally, monitor your systems closely after making adjustments to ensure they function as expected.</p>
+</div>
+<div class="sect2">
+<h3 id="aws-storage-scaling-limitations"><a class="anchor" href="#aws-storage-scaling-limitations"></a>AWS Storage Scaling Limitations</h3>
+<div class="paragraph">
+<p>If you’re hosting your database on AWS, you must be aware of the storage scaling limitations.
+You can only change your IOPS or increase storage capacity once every 6 hours.
+For more information about storage scaling limitations, see the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/modify-volume-requirements.html#elastic-volumes-limitations">AWS Limitations Documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you need to scale your storage during these 6 hours, you must replace and <a href="#server:learn:clusters-and-availability/rebalance.adoc" class="xref unresolved">rebalance</a> nodes manually. Rebalancing can result in data movement and slower performance depending on the size of your data and available computing resources.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/auto-expansion-toggle-off.png" alt="auto expansion toggle off">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+AWS and GCP do not allow a decrease in storage capacity.
+However, Couchbase Capella allows for manual decreases in storage capacity by replacing and rebalancing nodes.
+While this approach provides greater flexibility, it can result in data movement and a slower process depending on the size of your data and available computing resources.
+As such, it&#8217;s essential to carefully consider the impact of decreasing storage capacity before making any changes to ensure the stability and performance of your systems are not compromised.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -1019,6 +1079,9 @@ It can help you assess the impacts of this process on your deployments.</p>
 </li>
 <li>
 <p><code>Scaling</code></p>
+</li>
+<li>
+<p><code>Scaling Failed</code></p>
 </li>
 <li>
 <p><code>Rebalance Failed</code></p>
