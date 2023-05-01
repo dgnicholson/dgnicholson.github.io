@@ -1074,8 +1074,30 @@ Select <strong>Magma</strong> if your data set is very large in relation to avai
 Note that Couchstore requires 100 MiB of memory as the minimum allocation; and that Magma requires 1 GiB.
 For more detailed information on Couchstore and Magma, see <a href="#server:learn:buckets-memory-and-storage/storage-engines.adoc" class="xref unresolved">Storage Engines</a>.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Note that the storage backend cannot be changed after the bucket has been created.</p>
+<p>The memory quota specified for a bucket is allocated on a per-node basis.
+The total memory quota for the bucket is equal to the number of data nodes in the service group multiplied by the memory quota you specified.
+If the number of data service nodes in the database changes, the total memory allocated to the bucket changes based on the new number of data nodes.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example:</strong>
+If you have deployed Data Services on 3 nodes of your Capella database and then created a new bucket, the bucket memory quota will default to 100 MiB.
+This setting means each node will be allocated 100 MiB, giving the bucket a total of 300 MiB memory.
+If you then scale your database to run Data Services on six nodes at 100 MiB, then this will give 600 MiB maximum memory for the bucket.</p>
+</div>
+<div class="paragraph">
+<p>Also note that the storage backend cannot be changed after the bucket has been created.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </li>
 <li>
