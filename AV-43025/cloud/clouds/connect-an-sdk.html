@@ -652,22 +652,22 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../clusters/monitoring/monitoring.html">Monitoring</a>
+    <a class="menu_title menu_link" href="../clusters/monitoring/monitoring.html">Monitoring and Alerting</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../clusters/monitoring/activity-log.html">Activity Log</a>
+    <a class="menu_title menu_link" href="../clusters/monitoring/metrics-dashboard.html">View Database Metrics</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../clusters/monitoring/metrics-dashboard.html">Metrics Dashboard</a>
+    <a class="menu_title menu_link" href="../clusters/monitoring/activity-log.html">View Activity Logs</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../clusters/monitoring/alerts.html">Alerts &amp; Notifications</a>
+    <a class="menu_title menu_link" href="../clusters/monitoring/alerts.html">Recieve Alerts</a>
   </span>
 </li>
 </ul>
@@ -805,7 +805,7 @@
 </aside>
 <aside class="toc sidebar"
       data-title="Contents"
-      data-levels="1">
+      data-levels="2">
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
@@ -894,13 +894,33 @@ SDKs enable you to connect client code in popular languages to Capella.
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Once you have <a href="https://cloud.couchbase.com/sign-up">signed up</a> for a Capella Database, you&#8217;ll probably want to get started connecting an app.</p>
+<p>After you <a href="https://cloud.couchbase.com/sign-up">sign up</a> for a Capella Database, get started with connecting an app.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="sdks"><a class="anchor" href="#sdks"></a>SDKs</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>For more information on the SDKs and where to find their respective documentation, see <a href="#choose-your-language">Choose Your Language</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="connecting-your-sdk-to-capella"><a class="anchor" href="#connecting-your-sdk-to-capella"></a>Connecting your SDK to Capella</h3>
+<div class="paragraph">
+<p>The <a href="../reference/sdk-compatibility.html" class="xref page">SDK Compatibility page</a> lists the minimum supported SDK versions.
+Couchbase recommends using the latest version of your chosen SDK, as it contains bug fixes and feature enhancements.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="#java-sdk:hello-world:start-using-sdk.adoc" class="xref unresolved">Getting Started page</a> for each SDK features a Hello World program to show you how to connect to a Capella database.
+The Getting Started pages also cover installing the SDK, and link to pages with further platform information.
+For links to each SDK, see <a href="#choose-your-language">Choose Your Language</a>.</p>
+</div>
+<div class="paragraph">
+<p>See the <strong>Connect</strong> section of the Capella UI for the connection string to use in your SDK code.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="choose-your-language"><a class="anchor" href="#choose-your-language"></a>Choose Your Language</h3>
 <div class="paragraph">
 <p>Couchbase has SDKs in ten popular programming languages:</p>
 </div>
@@ -975,6 +995,26 @@ SDKs enable you to connect client code in popular languages to Capella.
 </div>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="connection-troubleshooting"><a class="anchor" href="#connection-troubleshooting"></a>Connection Troubleshooting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The documentation for each SDK provides guidance for working around problems that may arise in development, when your development laptop is most likely not in the same cloud provider Availability Zone as your database&#8201;&#8212;&#8201;something not supported in a production environment, but often found in evaluation and early stages of development.
+For example, see <a href="#java-sdk/current/howtos/managing-connections.html#working-in-the-cloud" class="xref unresolved">Working in the Cloud</a> in the Java SDK documentation.
+The documentation for each supported language links to client settings options, and to <a href="#java-sdk:howtos:troubleshooting-cloud-connections.adoc" class="xref unresolved">troubleshooting tools</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="security-certificate"><a class="anchor" href="#security-certificate"></a>Security Certificate</h3>
+<div class="paragraph">
+<p>Recent versions of the SDK (except the C SDK)&#8201;&#8212;&#8201;<a href="#java-sdk:project-docs:compatibility.adoc#api-version" class="xref unresolved">since API version 3.2</a>&#8201;&#8212;&#8201;ship with the client certificate for Capella, which enables an easy connection.</p>
+</div>
+<div class="paragraph">
+<p>You can download a copy of the client certificate from the Capella UI, under <span class="menuseq"><b class="menu">Data Settings</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Security Certificate</b></span>.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="mobile-apps-and-sdks"><a class="anchor" href="#mobile-apps-and-sdks"></a>Mobile Apps and SDKs</h2>
 <div class="sectionbody">
@@ -1027,6 +1067,14 @@ SDKs enable you to connect client code in popular languages to Capella.
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="other-ways-of-connecting"><a class="anchor" href="#other-ways-of-connecting"></a>Other Ways of Connecting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can also also connect to Capella using the Couchbase <a href="../reference/command-line-tools.html" class="xref page">Command Line Tools</a>.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
