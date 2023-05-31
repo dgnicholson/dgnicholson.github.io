@@ -155,12 +155,17 @@
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Connect an App</span>
+    <span class="menu_title menu_text">Connect to Your Database</span>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../clouds/connect-an-sdk.html">Connect an App&#8201;&#8212;&#8201;SDKs</a>
+    <a class="menu_title menu_link" href="../../get-started/connect.html">Generate Your Connection Code </a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../../clouds/connect-an-sdk.html">Connect SDKs</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -652,22 +657,22 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="../monitoring/monitoring.html">Monitoring and Alerting</a>
+    <a class="menu_title menu_link" href="../monitoring/monitoring.html">Monitoring</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../monitoring/metrics-dashboard.html">View Database Metrics</a>
+    <a class="menu_title menu_link" href="../monitoring/activity-log.html">Activity Log</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../monitoring/activity-log.html">View Activity Logs</a>
+    <a class="menu_title menu_link" href="../monitoring/metrics-dashboard.html">Metrics Dashboard</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../monitoring/alerts.html">Recieve Alerts</a>
+    <a class="menu_title menu_link" href="../monitoring/alerts.html">Alerts &amp; Notifications</a>
   </span>
 </li>
 </ul>
@@ -933,10 +938,10 @@ You can perform some index management tasks using the Couchbase Capella UI.
 <p>With the <strong>Databases</strong> tab open, select your database.</p>
 </li>
 <li>
-<p>Click the <strong>Data Tools</strong> tab.</p>
+<p>Go to <span class="menuseq"><b class="menu">Data Tools</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Indexes</b></span>.</p>
 </li>
 <li>
-<p>In the navigation menu, click <b class="button">Indexes</b>.</p>
+<p>Click the <strong>Indexes</strong> tab.</p>
 </li>
 </ol>
 </div>
@@ -951,14 +956,9 @@ It includes sortable columns and a row for each index.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Index Name</dt>
+<dt class="hdlist1">Name</dt>
 <dd>
 <p>The name of the index or replica.</p>
-</dd>
-<dt class="hdlist1">Status</dt>
-<dd>
-<p>The current state of the Index Service on the node where this index is stored.
-The possible statuses include <strong>ready</strong>, <strong>pause</strong>, or <strong>warmup</strong>.</p>
 </dd>
 <dt class="hdlist1">Requests/sec</dt>
 <dd>
@@ -976,17 +976,18 @@ The possible statuses include <strong>ready</strong>, <strong>pause</strong>, or
 <dd>
 <p>The size of indexable data that&#8217;s maintained for the index or replica.</p>
 </dd>
-<dt class="hdlist1">Bucket</dt>
+<dt class="hdlist1">Status</dt>
 <dd>
-<p>The bucket for which the index or replica was created.</p>
+<p>The current state of the Index Service on the node where this index is stored.
+The possible statuses include <strong>ready</strong>, <strong>pause</strong>, or <strong>warmup</strong>.</p>
 </dd>
-<dt class="hdlist1">Scope</dt>
+<dt class="hdlist1">Last Scan</dt>
 <dd>
-<p>The scope for which the index or replica was created.</p>
+<p>The latest scan time.</p>
 </dd>
-<dt class="hdlist1">Collection</dt>
+<dt class="hdlist1">Keyspace</dt>
 <dd>
-<p>The collection for which the index or replica was created.</p>
+<p>The keyspace for which the index or replica was created.</p>
 </dd>
 </dl>
 </div>
@@ -1012,19 +1013,11 @@ The <a href="../query-service/query-workbench.html" class="xref page">Query Work
 <ul>
 <li>
 <p>To view the details of an index, select its name on the Indexes page.</p>
-<div class="paragraph">
-<p>This action opens the index fly-out menu:</p>
-</div>
 </li>
 </ul>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/index-inspect-flyout.png" alt="An index&#8217;s individual fly-out menu." width="500">
-</div>
-</div>
 <div class="paragraph">
-<p>At the top of the fly-out menu is the <strong>Index Definition</strong> section.
+<p>At the top is the <strong>Index Definition</strong> section.
 This section displays the SQL++ statement used to define the index.
 Directly below it is a snippet of the information from the <a href="#index-summary">index list</a>.</p>
 </div>
@@ -1033,7 +1026,7 @@ Directly below it is a snippet of the information from the <a href="#index-summa
 <div class="ulist">
 <ul>
 <li>
-<p>Click <b class="button">Open in Workbench</b> to open the index definition in the <a href="../query-service/query-workbench.html" class="xref page">Query Workbench</a>.</p>
+<p>Click <b class="button">Open definition in Query Editor</b> to open the index definition in the <a href="../query-service/query-workbench.html" class="xref page">Query Workbench</a>.</p>
 <div class="paragraph">
 <p>The index definition is added to the <strong>Query Editor</strong>.</p>
 </div>
@@ -1041,14 +1034,9 @@ Directly below it is a snippet of the information from the <a href="#index-summa
 </ul>
 </div>
 <div class="paragraph">
-<p>The defining and editing of indexes is performed using the SQL++ query language.
+<p>Use the SQL++ query language to define and edit indexes.
 Using the <strong>Query Editor</strong>, you can modify the index definition as required to create a new index.
 You can&#8217;t change the definition of the existing index, but you can create a new index with the modified definition and then drop the old index.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/query-workbench-CB7-index-definition.png" alt="The Query Workbench showing the index definition displayed in the Query Editor.">
-</div>
 </div>
 </div>
 <div class="sect2">
@@ -1111,7 +1099,7 @@ This indicates the percentage of disk space consumed by the indexes, but not uti
 <p>On the Indexes page, find the index you wish to drop and click the Trash icon <span class="icon"><i class="fa fa-trash-alt"></i></span> at the end of its row.</p>
 </li>
 <li>
-<p>When prompted to confirm the deletion, click <b class="button">Confirm</b> to drop the index.</p>
+<p>When prompted to confirm the deletion, type "delete" and click <b class="button">Delete Index</b> to drop the index.</p>
 </li>
 </ol>
 </div>
