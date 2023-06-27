@@ -159,7 +159,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../get-started/connect.html">Generate Your Connection Code </a>
+    <a class="menu_title menu_link" href="../../get-started/connect.html">Generate Your Code Snippet </a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -536,7 +536,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../organizations/ui-auth/add-sso-auth.html">Add Federated &amp; SSO Authentication</a>
+    <a class="menu_title menu_link" href="../../organizations/ui-auth/add-sso-auth.html">Add Federated and SSO Authentication</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
@@ -1003,7 +1003,7 @@ If the buckets use different conflict resolution methods, then the replication w
 This is described immediately below, in <a href="#between-capella-dbs">Create a Replication Between Capella Databases</a>.</p>
 </div>
 <div class="paragraph">
-<p>A replication can also be created from an <em>on-premises</em> database to a Capella database: this procedure is described below, in <a href="#from-on-prem-to-capella">Create a Replication to Capella from a VPN-Accessed Cluster</a>.</p>
+<p>A replication can also be created from an <em>on-premises</em> (or <em>self-managed</em>) cluster to a Capella cluster: this procedure is described below, in <a href="#from-on-prem-to-capella">Create a Replication to Capella from a Self-Managed Cluster</a>.</p>
 </div>
 </div>
 </div>
@@ -1274,10 +1274,12 @@ Then click on <strong class="ui">Delete Replication</strong>.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="from-on-prem-to-capella"><a class="anchor" href="#from-on-prem-to-capella"></a>Create a Replication to Capella from a VPN-Accessed Cluster</h2>
+<h2 id="from-on-prem-to-capella"><a class="anchor" href="#from-on-prem-to-capella"></a>Create a Replication to Capella from a Self-Managed Cluster</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You may have a cluster that you access through a VPN, such as an on-premises cluster behind a company firewall.</p>
+<p>You can create an XDCR replication to a Capella cluster from a self-managed cluster that is located either in an <em>on-prem</em> data center, or on a non-Capella cloud.
+If the replication goes across the public internet, you must add the IP addresses of the self-managed cluster Data-Service nodes to the <em>Allowed IP</em> list of the Capella cluster (this is covered in step 2 of the instructions below&#8201;&#8212;&#8201;for further information, see <a href="../allow-ip-address.html" class="xref page">Configure Allowed IP Addresses</a>).
+However, you do <em>not</em> need to do this if the replication goes over a <em>private network</em> (for example, if you have <em>peered</em> the self-managed cluster’s VPC with the Capella cluster’s VPC): in such cases, you can skip step 2 of the instructions provided below.</p>
 </div>
 <div class="paragraph">
 <p>To set up XDCR from the on-premises cluster, follow these steps.</p>

@@ -160,7 +160,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../get-started/connect.html">Generate Your Connection Code </a>
+    <a class="menu_title menu_link" href="../get-started/connect.html">Generate Your Code Snippet </a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -537,7 +537,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../organizations/ui-auth/add-sso-auth.html">Add Federated &amp; SSO Authentication</a>
+    <a class="menu_title menu_link" href="../organizations/ui-auth/add-sso-auth.html">Add Federated and SSO Authentication</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
@@ -1201,11 +1201,40 @@ This link is to your default VPC security group.</p>
 </div>
 </li>
 <li>
-<p>In the <strong>Edit inbound rules</strong> dialog, add the VPC IPv4 CIDR you recorded earlier.</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/aws-edit-inbound-rules.png" alt="AWS VPC Edit Inbound Rules" width="700">
+<p>In the <strong>Edit inbound rules</strong> dialog, add the VPC IPv4 CIDR you recorded earlier and use the following port ranges:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>18091–18096</p>
+</li>
+<li>
+<p>11207–(11207 + Number of data nodes)</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For example, if your database has three data nodes, then open the following ports:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>18091–18096</p>
+</li>
+<li>
+<p>11207–11210</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
 </div>
 </li>
 <li>

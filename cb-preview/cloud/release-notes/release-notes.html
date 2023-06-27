@@ -159,7 +159,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../get-started/connect.html">Generate Your Connection Code </a>
+    <a class="menu_title menu_link" href="../get-started/connect.html">Generate Your Code Snippet </a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -536,7 +536,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../organizations/ui-auth/add-sso-auth.html">Add Federated &amp; SSO Authentication</a>
+    <a class="menu_title menu_link" href="../organizations/ui-auth/add-sso-auth.html">Add Federated and SSO Authentication</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
@@ -901,6 +901,51 @@
 <ul id="contributorList"></ul>
 <span  id="otherContributor"> + </span>
 </div><div class="sect1">
+<h2 id="june-2023-changelog"><a class="anchor" href="#june-2023-changelog"></a>June 2023 Changelog</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Database audit logging is now available for Azure-hosted databases</p>
+<div class="paragraph">
+<p>Capella provides auditing, where you can download database audit logs for inspection or archiving.
+This feature helps with investigations and meeting organizational security or compliance requirements.
+Database auditing is now available on Capella Azure-hosted databases with the Enterprise plan.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This feature is available on new databases.
+Couchbase is upgrading existing databases so all Azure enterprise customers can use this feature.
+If auditing isn&#8217;t yet available for your database, open a support ticket so we can prioritize your database upgrade to get you using audit logging with your existing Azure databases as soon as possible.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Connect tab in the Capella UI</p>
+<div class="paragraph">
+<p>To simplify the developer journey of connecting to Capella, a new Connect tab is now available on Capella UI.
+The Connect tab has information about the necessary connection parameters, prerequisites, installation instructions, code snippets, full code samples, and examples for different connection methods&#8212;&#8203;including SDK samples and snippets for three languages, Couchbase Shell, and Couchbase CLI tools for managing the database.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="../get-started/connect.html" class="xref page">Generate Your Connection Code</a> and <a href="../connect/cli-import-export.html" class="xref page">Import and Export Data with Command Line Tools</a> for more information.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="may-2023-changelog"><a class="anchor" href="#may-2023-changelog"></a>May 2023 Changelog</h2>
 <div class="sectionbody">
 <div class="ulist">
@@ -1163,7 +1208,7 @@ When selected, the cost optimized retention policy applies to your bucket backup
 </div>
 </div>
 <div class="paragraph">
-<p>To configure Capella with any of these supported identity providers, see <a href="../organizations/ui-auth/add-sso-auth.html" class="xref page">Add Federated &amp; SSO Authentication</a>.</p>
+<p>To configure Capella with any of these supported identity providers, see <a href="../organizations/ui-auth/add-sso-auth.html" class="xref page">Add Federated and SSO Authentication</a>.</p>
 </div>
 </li>
 <li>
@@ -1319,7 +1364,7 @@ Apache Parquet is an open source data file format designed for efficient data st
 </div>
 <div class="paragraph">
 <p>For more information about SSO for Capella, see <a href="../organizations/ui-auth/capella-ui-auth.html#federated-sso-authentication" class="xref page">Capella UI Authentication | Federated &amp; SSO Authentication</a>.
-To configure your identity provider with Capella, see <a href="../organizations/ui-auth/add-sso-auth.html" class="xref page">Add Federated &amp; SSO Authentication</a>.</p>
+To configure your identity provider with Capella, see <a href="../organizations/ui-auth/add-sso-auth.html" class="xref page">Add Federated and SSO Authentication</a>.</p>
 </div>
 </li>
 <li>

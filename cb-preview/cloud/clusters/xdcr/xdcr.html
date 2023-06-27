@@ -159,7 +159,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../get-started/connect.html">Generate Your Connection Code </a>
+    <a class="menu_title menu_link" href="../../get-started/connect.html">Generate Your Code Snippet </a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -536,7 +536,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../organizations/ui-auth/add-sso-auth.html">Add Federated &amp; SSO Authentication</a>
+    <a class="menu_title menu_link" href="../../organizations/ui-auth/add-sso-auth.html">Add Federated and SSO Authentication</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
@@ -984,9 +984,14 @@ A bidirectional topology is created by implementing two unidirectional replicati
 </dl>
 </div>
 <div class="paragraph">
-<p>When creating a replication, you will specify whether to make the replication <em>bidirectional</em>.
+<p>When creating a replication from one Capella cluster to another, you will specify whether to make the replication <em>bidirectional</em>.
 If left unspecified, the replication will be unidirectional from the source bucket to the destination bucket and will appear under the <strong class="ui">Replication</strong> tab of the source database.
 If the replication is configured to be bidirectional, the replication will appear under the <strong class="ui">Replication</strong> tab of both the source database <em>and</em> the destination database.</p>
+</div>
+<div class="paragraph">
+<p>When creating a replication from Capella to a <em>self-managed</em> cluster (which is a cluster established outside Capella), the replication can only be specified as <em>unidirectional</em>.
+This is because a replication from the self-managed cluster to Capella <em>cannot</em> be entirely configured on Capella: it needs partially to be configured <em>on the self-managed</em> cluster itself.
+For instructions, see <a href="manage-xdcr-replications.html#from-on-prem-to-capella" class="xref page">Create a Replication to Capella from a Self-Managed Cluster</a>.</p>
 </div>
 <div class="paragraph">
 <p>Learn more about XDCR direction and topology in the <a href="#server:learn:clusters-and-availability/xdcr-overview.adoc#xdcr-direction-and-topology" class="xref unresolved">Couchbase Server documentation</a>.</p>
