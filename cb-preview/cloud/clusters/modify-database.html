@@ -537,7 +537,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../organizations/ui-auth/add-sso-auth.html">Add Federated and SSO Authentication</a>
+    <a class="menu_title menu_link" href="../organizations/ui-auth/add-sso-auth.html">Add Federated &amp; SSO Authentication</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
@@ -1009,7 +1009,24 @@ Additionally, in-place Storage Auto-Expansion can only occur once every 6 hours.
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>IOPS</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#change-iops">Change IOPS</a></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Adjusting the IOPS rate affects performance and cost.
+When creating or modifying a database with AWS gp3, AWS io2, or Azure Ultra Disk, Capella populates recommended defaults into the IOPS field when you choose a storage option.
+You can replace the default IOPS value with one higher than the default but not lower.
+For the recommended IOPS values for databases using the AWS gp3, AWS io2, or Azure Ultra Disk, see <a href="scale-database.html#IOPS-Defaults" class="xref page">IOPS Defaults</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
 <p><strong>AWS</strong>: The available IOPS range depends on the disk type.</p>
 </div>
 <div class="paragraph">
@@ -1430,14 +1447,19 @@ If the database uses Azure, you must choose a new disk type to increase storage.
 </div>
 <div class="sect2">
 <h3 id="change-iops"><a class="anchor" href="#change-iops"></a>Change IOPS</h3>
-<div class="admonitionblock tip">
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-You can enable Couchbase Capella&#8217;s <a href="#clusters:modules/scale-cluster.adoc#Storage-Auto-Expansion" class="xref unresolved">Storage Auto-Expansion</a> feature to automatically increase your storage and maintain IOPS performance.
+<div class="paragraph">
+<p>Adjusting the IOPS rate affects performance and cost.
+When creating or modifying a database with AWS gp3, AWS io2, or Azure Ultra Disk, Capella populates recommended defaults into the IOPS field when you choose a storage option.
+You can replace the default IOPS value with one higher than the default but not lower.
+For the recommended IOPS values for databases using the AWS gp3, AWS io2, or Azure Ultra Disk, see <a href="scale-database.html#IOPS-Defaults" class="xref page">IOPS Defaults</a>.</p>
+</div>
 </td>
 </tr>
 </table>

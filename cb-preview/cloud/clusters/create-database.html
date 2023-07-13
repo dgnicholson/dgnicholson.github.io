@@ -537,7 +537,7 @@
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../organizations/ui-auth/add-sso-auth.html">Add Federated and SSO Authentication</a>
+    <a class="menu_title menu_link" href="../organizations/ui-auth/add-sso-auth.html">Add Federated &amp; SSO Authentication</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
@@ -1056,6 +1056,9 @@ In most cases, you can accept the default CIDR block.</p>
 <div class="paragraph">
 <p>Using service groups, you can create custom configurations with granular control over sizing and service functionality.</p>
 </div>
+<div class="paragraph">
+<p>For more information about the node configuration options available for each cloud provider, see the Couchbase <a href="../reference/aws.html#configuration-options" class="xref page">AWS</a>, <a href="../reference/gcp.html#configuration-options" class="xref page">GCP</a>, and <a href="../reference/azure.html#configuration-options" class="xref page">Microsoft Azure</a> reference pages.</p>
+</div>
 <div class="openblock">
 <div class="content">
 <div class="olist loweralpha">
@@ -1121,6 +1124,23 @@ If you&#8217;re using the Ultra disk type, you can choose between fixed storage 
 </li>
 <li>
 <p>Select the <strong>IOPS</strong>.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Adjusting the IOPS rate affects performance and cost.
+When creating or modifying a database with AWS gp3, AWS io2, or Azure Ultra Disk, Capella populates recommended defaults into the IOPS field when you choose a storage option.
+You can replace the default IOPS value with one higher than the default but not lower.
+For the recommended IOPS values for databases using the AWS gp3, AWS io2, or Azure Ultra Disk, see <a href="scale-database.html#IOPS-Defaults" class="xref page">IOPS Defaults</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -1141,18 +1161,6 @@ The IOPS for the Ultra disk type can be set, but the possible range depends on t
 </ol>
 </div>
 </div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-For more detailed information about the node configuration options available for each cloud provider, see the Capella <a href="../reference/aws.html#configuration-options" class="xref page">AWS</a>, <a href="../reference/gcp.html#configuration-options" class="xref page">GCP</a>, and <a href="../reference/azure.html#configuration-options" class="xref page">Microsoft Azure</a> reference documentation.
-</td>
-</tr>
-</table>
 </div>
 </li>
 <li>
