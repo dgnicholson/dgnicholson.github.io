@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://dgnicholson.github.io/cb-preview/cloud/reference/aws.html">
 <link rel="stylesheet" href="../../_/css/site.css">
 <script src="../../_/js/vendor/jquery.js"></script>
-<meta name="description" content="Couchbase Capella supports deploying databases onto Amazon Web Services (AWS).">
+<meta name="description" content="Couchbase Capella supports deploying clusters onto Amazon Web Services (AWS).">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 
 
@@ -801,7 +801,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="alert-reference.html">Alert Reference</a>
+    <a class="menu_title menu_link" href="alert-reference.html">Event and Alert Reference</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -893,8 +893,7 @@
 <div class="page-heading-title">
 <h1 class="page">Amazon Web Services (AWS)</h1>
 <div class="labels">
-<ul><li class="reference"><span><i class="fas fa-book"></i></i> reference</span></li>
-</ul>
+<ul></ul>
 </div>
 
 
@@ -907,11 +906,11 @@
 <div class="sectionbody">
 <div class="quoteblock abstract">
 <blockquote>
-Couchbase Capella supports deploying databases onto Amazon Web Services (AWS).
+Couchbase Capella supports deploying clusters onto Amazon Web Services (AWS).
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Couchbase Capella provides fully managed Couchbase Server databases that can be deployed onto AWS.
+<p>Couchbase Capella provides fully managed Couchbase Server clusters that can be deployed onto AWS.
 This page describes the various regions and configurations that are available to you when using Capella with AWS.</p>
 </div>
 </div>
@@ -1055,11 +1054,11 @@ This page describes the various regions and configurations that are available to
 <div class="paragraph">
 <p>Every AWS region includes a number of independent availability zones.
 These consist of one or more discrete data centers that are isolated from failures in other availability zones.
-Capella can automatically distribute database nodes across multiple availability zones in a region for the highest availability.
-Every database in Capella is deployed with a minimum of three <a href="#nodes">nodes</a>.</p>
+Capella can automatically distribute cluster nodes across multiple availability zones in a region for the highest availability.
+Every cluster in Capella is deployed with a minimum of three <a href="#nodes">nodes</a>.</p>
 </div>
 <div class="paragraph">
-<p>The <strong>Multiple Availability Zones</strong> option is the default when creating databases using the Developer Pro or Enterprise <a href="../billing/billing.html#support-plans" class="xref page">Service Plans</a>.</p>
+<p>The <strong>Multiple Availability Zones</strong> option is the default when creating clusters using the Developer Pro or Enterprise <a href="../billing/billing.html#support-plans" class="xref page">Service Plans</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1068,7 +1067,7 @@ Every database in Capella is deployed with a minimum of three <a href="#nodes">n
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The option to deploy across multiple AWS availability zones is only available for databases that use the Developer Pro or Enterprise Service Plans.
+The option to deploy across multiple AWS availability zones is only available for clusters that use the Developer Pro or Enterprise Service Plans.
 Clusters using the Basic service plan deploy all nodes to the same availability zone.
 </td>
 </tr>
@@ -1080,7 +1079,7 @@ Clusters using the Basic service plan deploy all nodes to the same availability 
 <h2 id="configuration-options"><a class="anchor" href="#configuration-options"></a>Configuration Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Clusters deployed onto AWS have several configuration options that allow you to customize databases to fit your requirements.</p>
+<p>Clusters deployed onto AWS have several configuration options that allow you to customize clusters to fit your requirements.</p>
 </div>
 <div class="sect2">
 <h3 id="nodes"><a class="anchor" href="#nodes"></a>Nodes</h3>
@@ -1089,7 +1088,7 @@ Clusters using the Basic service plan deploy all nodes to the same availability 
 </div>
 <div class="paragraph">
 <p>Clusters consist of service groups that include the Couchbase services deployed and system resources.
-Each service group has a node quantity to represent the number of nodes in the database with that configuration.
+Each service group has a node quantity to represent the number of nodes in the cluster with that configuration.
 Individual service groups can have between 2 and 27 nodes but cannot collectively exceed 27.
 The service group that includes the <a href="../clusters/data-service/data-service.html" class="xref page">Data Service</a> requires at least 3 nodes.</p>
 </div>
@@ -1100,7 +1099,7 @@ The service group that includes the <a href="../clusters/data-service/data-servi
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-As they&#8217;re intended for evaluation purposes only, self-service trial databases only include 1 node.
+As they&#8217;re intended for evaluation purposes only, self-service trial clusters only include 1 node.
 </td>
 </tr>
 </table>
@@ -1109,7 +1108,7 @@ As they&#8217;re intended for evaluation purposes only, self-service trial datab
 <div class="sect2">
 <h3 id="compute-and-memory"><a class="anchor" href="#compute-and-memory"></a>Compute and Memory</h3>
 <div class="paragraph">
-<p>Capella provides the following compute configurations for databases deployed onto AWS.</p>
+<p>Capella provides the following compute configurations for clusters deployed onto AWS.</p>
 </div>
 <table id="aws-configurations" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. AWS compute configurations</caption>
@@ -1211,32 +1210,32 @@ As they&#8217;re intended for evaluation purposes only, self-service trial datab
 </tbody>
 </table>
 <div id="footnote-1" class="paragraph">
-<p><span class="icon"><i class="fa fa-star fa-star"></i></span> This configuration is only available for <a href="https://cloud.couchbase.com/sign-up">self-service trial</a> databases in Capella.</p>
+<p><span class="icon"><i class="fa fa-star fa-star"></i></span> This configuration is only available for <a href="https://cloud.couchbase.com/sign-up">self-service trial</a> clusters in Capella.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="storage-size"><a class="anchor" href="#storage-size"></a>Storage Size</h3>
 <div class="paragraph">
-<p>Capella databases deployed onto AWS use the SSDs in AWS EBS.
+<p>Capella clusters deployed onto AWS use the SSDs in AWS EBS.
 You have the option to choose between the GP3 and IO2 volume types per service group.</p>
 </div>
 <div class="paragraph">
-<p>The amount of storage available per node in your database is configurable from a minimum of 50 GB to a maximum of 16 TB.</p>
+<p>The amount of storage available per node in your cluster is configurable from a minimum of 50 GB to a maximum of 16 TB.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="storage-speed"><a class="anchor" href="#storage-speed"></a>Storage Speed</h3>
 <div class="paragraph">
-<p>Each service group has an input/output operations per second (IOPS) rate.
-This storage speed is configurable based on the volume type used:</p>
+<p>Each cluster service group has a default input/output operations per second (IOPS) rate of 3000.
+The storage speed is configurable based on the volume type used:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>gp3</strong>: 3000 to 16000 IOPS</p>
+<p><strong>GP3</strong>: 3000 to 16000 IOPS</p>
 </li>
 <li>
-<p><strong>io2</strong>: 1000 to 64000 IOPS</p>
+<p><strong>IO2</strong>: 1000 to 64000 IOPS</p>
 </li>
 </ul>
 </div>
@@ -1247,12 +1246,7 @@ This storage speed is configurable based on the volume type used:</p>
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-<div class="paragraph">
-<p>Adjusting the IOPS rate affects performance and cost.
-When creating or modifying a database, Capella populates recommended defaults into the IOPS field when you enter a storage value for gp3 or io2 volume types.
-You can replace the default IOPS value with one higher than the default but not lower.
-For the recommended IOPS values for databases using AWS gp3 or io2 volume types with typical enterprise workloads, see <a href="../clusters/scale-database.html#IOPS-Defaults" class="xref page">IOPS Defaults</a>.</p>
-</div>
+Adjusting the IOPS rate affects performance and cost.
 </td>
 </tr>
 </table>
@@ -1276,7 +1270,7 @@ For the recommended IOPS values for databases using AWS gp3 or io2 volume types 
 <div class="sect2">
 <h3 id="next-steps"><a class="anchor" href="#next-steps"></a>Next Steps</h3>
 <div class="paragraph">
-<p>To create or modify a Couchbase Capella database deployed onto AWS, see:</p>
+<p>To create or modify a Couchbase Capella cluster deployed onto AWS, see the following pages:</p>
 </div>
 <div class="ulist">
 <ul>

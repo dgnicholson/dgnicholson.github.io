@@ -800,7 +800,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../reference/alert-reference.html">Alert Reference</a>
+    <a class="menu_title menu_link" href="../reference/alert-reference.html">Event and Alert Reference</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1024,24 +1024,8 @@ If you&#8217;re using the Ultra disk type, you can choose between fixed storage 
 <div class="sect2">
 <h3 id="iops"><a class="anchor" href="#iops"></a>IOPS</h3>
 <div class="paragraph">
-<p>The required amount of input and output operations per second (IOPS) for the service.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Adjusting the IOPS rate affects performance and cost.
-When creating or modifying a database with AWS gp3, AWS io2, or Azure Ultra Disk, Capella populates recommended defaults into the IOPS field when you choose a storage option.
-You can replace the default IOPS value with one higher than the default but not lower.
-For the recommended IOPS values for databases using the AWS gp3, AWS io2, or Azure Ultra Disk, see <a href="scale-database.html#IOPS-Defaults" class="xref page">IOPS Defaults</a>.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>The required amount of input and output operations per second (IOPS) for the service.
+Increase the IOPS for a better disk throughput, but this does cost more to do so.</p>
 </div>
 <div class="paragraph">
 <div class="title">AWS</div>
@@ -1051,10 +1035,10 @@ The storage speed is configurable based on the volume type used:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>gp3</strong>: 3000 to 16000 IOPS</p>
+<p><strong>GP3</strong>: 3000 to 16000 IOPS</p>
 </li>
 <li>
-<p><strong>io2</strong>: 1000 to 64000 IOPS</p>
+<p><strong>IO2</strong>: 1000 to 64000 IOPS</p>
 </li>
 </ul>
 </div>

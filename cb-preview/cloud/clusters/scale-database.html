@@ -801,7 +801,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../reference/alert-reference.html">Alert Reference</a>
+    <a class="menu_title menu_link" href="../reference/alert-reference.html">Event and Alert Reference</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -976,7 +976,7 @@ After performing any of these procedures, the database rebalances to accommodate
 During rebalance, the database continues to service requests for data while the database map is correspondingly updated and distributed to clients.</p>
 </div>
 <div class="paragraph">
-<p>Capella maintains consistent availability and performance during rebalancing.
+<p>Couchbase Server maintains consistent availability and performance during rebalancing.
 See the <a href="#server:learn:clusters-and-availability/rebalance.adoc" class="xref unresolved">rebalance documentation</a> to learn about how each service behaves during a rebalance.
 It can help you assess the impacts of this process on your deployments.</p>
 </div>
@@ -998,42 +998,36 @@ Storage Auto-Expansion is available on AWS and GCP only.
 </table>
 </div>
 <div class="paragraph">
-<p>Couchbase Capella&#8217;s Storage Auto-Expansion automatically expands your storage capacity.
-When your usage exceeds 75%, the system triggers a 50% increase in storage capacity.
-At the same time, Capella also adjusts the IOPS to match the <a href="#IOPS-Defaults">recommended default IOPS</a> for the new storage capacity.
-When the existing IOPS value is already above the recommended default IOPS value for the new storage capacity, the IOPS value remains unchanged.
-This feature is most helpful in preventing downtime and service interruptions that result from running out of storage capacity.</p>
+<p>Couchbase Capella’s Storage Auto-Expansion automatically expands your storage capacity.
+When your usage exceeds 75%, the system triggers a 50% increase in disk storage to ensure smooth database operation.
+This feature is especially helpful in preventing downtime and service interruptions that result from running out of storage capacity.</p>
 </div>
 <div class="paragraph">
 <p>Storage Auto-Expansion manages the entire scaling process and underlying infrastructure changes without manual intervention.</p>
 </div>
 <div class="paragraph">
-<p>When creating a new database, the <strong>Auto-Expansion</strong> toggle is on by default, and you can&#8217;t turn it off.
-With Storage Auto-Expansion turned on, Couchbase bills you only for the additional storage capacity when the limit increase triggers.</p>
+<p>On the <a href="#clusters:modules/create-database.adoc" class="xref unresolved">Create Database</a> page, the Auto-Expansion toggle is enabled by default when creating a new database or Service Group.
+With Storage Auto-Expansion enabled, you&#8217;ll be charged only for the additional storage capacity when the limit increase is triggered.</p>
 </div>
-<div class="admonitionblock tip">
+<div class="imageblock">
+<div class="content">
+<img src="_images/auto-expansion-toggle-on.png" alt="auto expansion toggle on">
+</div>
+</div>
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Couchbase recommends turning on Storage Auto-Expansion for existing databases to automatically scale the storage of your production databases.</p>
-</li>
-<li>
-<p>If you have questions about Storage Auto-Expansion for your database, contact <a href="../support/manage-support.html" class="xref page">Support</a>.</p>
-</li>
-</ul>
-</div>
+Couchbase recommends enabling the Auto-Expansion toggle for all existing Service Groups to automatically scale the storage of your production databases.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>To minimize the risk of disruptions to your database, it&#8217;s critical to carefully review all cloud provider limitations and plan accordingly before making any changes to your storage configuration.
+<p>To minimize the risk of disruptions to your database, it’s critical to carefully review all cloud provider limitations and plan accordingly before making any changes to your storage configuration.
 Additionally, monitor your systems closely after making adjustments to ensure they function as expected.</p>
 </div>
 <div class="sect2">
@@ -1070,10 +1064,8 @@ As such, it&#8217;s essential to carefully consider the impact of decreasing sto
 <div class="sect2">
 <h3 id="IOPS-Defaults"><a class="anchor" href="#IOPS-Defaults"></a>IOPS Defaults</h3>
 <div class="paragraph">
-<p>The following tables contain recommended default IOPS values for AWS gp3, AWS io2, and Azure Ultra Disk.
-These defaults are based on disk utilization for typical enterprise workloads.
-When creating or modifying a database, Capella populates these defaults into the IOPS field when you choose a storage option.
-You can replace the default IOPS value with one higher than the default but not lower.</p>
+<p>For newly-created databases, a default IOPS setting (shown below) for AWS GP3, AWS IO2, and Azure Ultra Disk will be recommended, with users having the chance to override this with a higher or lower setting.
+The values given, are based upon disk utilization for typical enterprise workloads.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1082,13 +1074,13 @@ You can replace the default IOPS value with one higher than the default but not 
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-If you&#8217;re using different IOPS values for existing databases, consider reviewing them to see if they should use these defaults.
+We strongly recommend existing customers to look at their workloads and IOPS settings, to see if they should change to these values.
 </td>
 </tr>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. AWS gp3 and io2</caption>
+<caption class="title">Table 1. AWS GP3 &amp; IO2</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
